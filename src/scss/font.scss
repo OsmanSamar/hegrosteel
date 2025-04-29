@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Funnel+Display:wght@300..800&display=swap');
+
+
 h1,
 .h1 {
   color: #fff;
@@ -30,10 +33,6 @@ h2,
   font-weight: 700;
   line-height: 48px;
 
-  @media (min-width: 776px) {
-    font-size: 40px;
-    line-height: 48px;
-  }
 
   @media (min-width: 992px) {
     font-size: 55px;

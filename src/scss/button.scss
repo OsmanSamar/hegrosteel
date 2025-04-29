@@ -17,7 +17,7 @@
 }
 
 .secondary-button {
-  @extend .button;
+ 
 
   background: var(--Secondary-500);
 
@@ -31,7 +31,7 @@
 }
 
 .primary-button {
-  @extend .button;
+ 
   border: 2px solid var(--Secondary-500, #dc0d1a);
 
   &:hover {
