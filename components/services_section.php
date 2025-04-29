@@ -8,7 +8,7 @@ $fields = $args['fields'];
                 data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h1 >
                     <?= $fields['title']; ?>
-                    TEST
+                 
                 </h1>
                 <h2>
                     <?= $fields['text']; ?>
