@@ -5,7 +5,7 @@
   align-items: center;
   gap: 14px;
   border-radius: 10px;
-  width: fit-content;
+  width:fit-content;
   font-family: Figtree;
   font-size: 18px;
   font-style: normal;
@@ -14,16 +14,16 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid transparent;
+  color: #FFF;
 }
 
 .secondary-button {
- 
-
   background: var(--Secondary-500);
 
   &:hover {
     background: var(--Primary-500);
-    color: #fff !important;
+    // color: #fff !important;
+    border: 1px solid  #fff;
     .arrow {
       filter: brightness(0) invert(1);
     }
