@@ -1,3 +1,30 @@
 .header {
-    
 }
+
+.header {
+  width: 100vw;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  top: 20px;
+}
+.navbar {
+  margin-top: 10px;
+}
+.navbar {
+  display: flex;
+  width: 880px;
+  padding: 15px 39px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 0px 0px 20px 20px;
+  background: var(--Primary-500);
+}
+
+.logo {
+    width: 165.603px;
+    height: 57.484px;
+    aspect-ratio: 165.60/57.48;
+}
+

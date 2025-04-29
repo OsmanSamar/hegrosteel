@@ -1,38 +1,70 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <?php wp_head(); ?>
-        <title><?php wp_title() ?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    </head>
 
-    <body <?php body_class(); ?>>
-        <?php wp_body_open(); ?>
+<head>
+    <?php wp_head(); ?>
+    <title><?php wp_title() ?></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
 
-        <header class="header">
-            <nav>
-                <div class="container">
-                    <div class="navbar navbar-expand-lg navbar-light sans-serif">
-                        <a href="<?= home_url() ?>" class="navbar-brand">
-                            <img src="<?= get_images_url() ?>/logo.svg" alt="<?php // TODO Website name ?>">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <?php
-                            wp_nav_menu(array(
-                                'menu'            => 'header-menu',
-                                'depth'           => 2,
-                                'container'       => false,
-                                'menu_class'      => 'navbar-nav ms-auto',
-                                'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
-                                'walker'          => new WP_Bootstrap_Navwalker(),
-                            ));
-                            ?>
-                        </div>
+<body <?php body_class(); ?>>
+    <?php wp_body_open(); ?>
+
+    <header class="header position-absolute d-flex justify-content-center">
+        <nav>
+            <div class="container">
+                <div class="navbar navbar-expand-lg navbar-light sans-serif ">
+                    <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>"
+                        class="navbar-brand d-flex">
+                        <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Logo" class=" logo" />
+                    </a>
+                
+                     <!-- Navigation Menu -->
+
+                     <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto justify-content-start justify-content-xl-end flex-grow-1">
+                            <?php foreach ($menu as $item):
+                                $active = get_permalink() == $item->url;
+                                ?>
+                                <li class="nav-item dropdown">
+
+                                    <?php if ($item->children): ?>
+                                        <a class="nav-link nav-link-ltr dropdown-toggle d-flex align-items-center <?= $active ? "active" : "" ?>"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <?= $item->title ?>
+                                            <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
+                                                alt="Dropdown Icon" style="" class="dropdownarrow">
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                            style="top:52px; left: 11px;">
+                                            <?php foreach ($item->children as $child): ?>
+                                                <li>
+                                                    <a class="dropdown-item nav-link-ltr d-flex justify-content-between align-items-center"
+                                                        href="<?= $child->url; ?>">
+                                                        <?= $child->title ?>
+                                                        <img src="<?= get_template_directory_uri(); ?>/images/nextarrow.svg"
+                                                            alt="Arrow" class="dropdown-arrow">
+                                                    </a>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                        <?php
+                                    else:
+                                        ?>
+                                        <a class="nav-link  d-flex align-items-center <?= $active ? "active" : "" ?>"
+                                            href="<?= $item->url; ?>" role="button">
+                                            <?= $item->title ?> </a>
+                                        <?php
+                                    endif; ?>
+                                </li>
+                            <?php endforeach; ?>
+                           
+                        </ul>
+
+
                     </div>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>

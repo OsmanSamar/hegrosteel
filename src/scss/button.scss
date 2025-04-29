@@ -1,0 +1,44 @@
+.button {
+  display: inline-flex;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  border-radius: 10px;
+  width: fit-content;
+  font-family: Figtree;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28.8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.secondary-button {
+  @extend .button;
+
+  background: var(--Secondary-500);
+
+  &:hover {
+    background: var(--Primary-500);
+    color: #fff !important;
+    .arrow {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
+
+.primary-button {
+  @extend .button;
+  border: 2px solid var(--Secondary-500, #dc0d1a);
+
+  &:hover {
+    background: var(--Primary-500);
+    color: #fff !important;
+    .arrow {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
