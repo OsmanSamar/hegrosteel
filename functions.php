@@ -62,4 +62,25 @@ function new_excerpt_more( $more ) {
 	return '...';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-?>
+
+function create_project_post_type()
+{
+
+    register_post_type(
+        'project',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('project'),
+                'singular_name' => __('projecten')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'projecten'),
+            'show_in_rest' => true,
+            'publicly_queryable' => false,
+            'supports' => ['title', 'editor', 'thumbnail']
+        )
+    );
+}
+add_action('init', 'create_project_post_type');
