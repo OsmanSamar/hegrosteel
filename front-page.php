@@ -1,6 +1,6 @@
-<?php get_header()
+<?php get_header();
     //Template Name: frontpage 
-
+    $fields=get_fields();
     ?>
 
 <main class="front-page">
@@ -42,11 +42,10 @@
 
         <!-- Service-section -->
         <?php
-        get_template_part('components/services_section');
+        foreach( $fields['content'] as $content){
+            get_template_part('components/'.$content['acf_fc_layout'],null, ['fields' => $content]);    
+        }
         ?>
-
-
-
     </div>
 </main>
 
