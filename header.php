@@ -92,8 +92,8 @@ unset($menu_items);
                         <a  href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
                             class="button secondary-button ms-lg-3 mt-2 ">
                             Neem contact op
-                               <!-- <img src="<?= get_template_directory_uri(); ?>/images/nextarrow.svg"
-                                                            alt="Arrow" class="dropdown-arrow"> -->
+                               <img src="<?= get_template_directory_uri(); ?>/images/vector.svg"
+                                                            alt="Arrow" class="dropdown-arrow">
                         </a>
 
                     </div>
