@@ -7,6 +7,24 @@
     <title><?php wp_title() ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 </head>
+<?php
+    $menu_id = get_nav_menu_locations()['header-menu'];
+    $items = wp_get_nav_menu_items($menu_id);
+    $menu_items = array();
+    foreach ((array) $items as $key => $menu_item) {
+        $menu_items[$menu_item->menu_item_parent][] = $menu_item;
+    }
+    $menu = [];
+    foreach ($items as $item) {
+        if ($item->menu_item_parent == 0) {
+            $menu[] = $item;
+        }
+        if (isset($menu_items[$item->ID])) {
+            $item->children = $menu_items[$item->ID];
+        }
+    }
+    unset($menu_items);
+?>
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
@@ -19,14 +37,14 @@
                         class="navbar-brand d-flex">
                         <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Logo" class=" logo" />
                     </a>
-                
-                     <!-- Navigation Menu -->
 
-                     <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
+                    <!-- Navigation Menu -->
+
+                    <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto justify-content-start justify-content-xl-end flex-grow-1">
                             <?php foreach ($menu as $item):
                                 $active = get_permalink() == $item->url;
-                                ?>
+                            ?>
                                 <li class="nav-item dropdown">
 
                                     <?php if ($item->children): ?>
@@ -49,17 +67,17 @@
                                                 </li>
                                             <?php endforeach; ?>
                                         </ul>
-                                        <?php
+                                    <?php
                                     else:
-                                        ?>
+                                    ?>
                                         <a class="nav-link  d-flex align-items-center <?= $active ? "active" : "" ?>"
                                             href="<?= $item->url; ?>" role="button">
                                             <?= $item->title ?> </a>
-                                        <?php
+                                    <?php
                                     endif; ?>
                                 </li>
                             <?php endforeach; ?>
-                           
+
                         </ul>
 
 
