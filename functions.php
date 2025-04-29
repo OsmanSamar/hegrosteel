@@ -43,7 +43,7 @@ add_action('admin_menu', 'remove_menus');
 
 // Add thumbnail support
 function thumbnails(){
-    add_theme_support( 'post-thumbnails', array('post', 'page') );
+    add_theme_support( 'post-thumbnails', array('post', 'page','project') );
 }
 add_action( 'init', 'thumbnails' );
 
@@ -77,10 +77,69 @@ function create_project_post_type()
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'projecten'),
-            'show_in_rest' => true,
-            'publicly_queryable' => false,
-            'supports' => ['title', 'editor', 'thumbnail']
+            'show_in_rest' => false,
+            'publicly_queryable' => true,
+            'supports' => ['title', 'thumbnail']
         )
     );
 }
 add_action('init', 'create_project_post_type');
+
+function create_categories_taxonomy()
+{
+    // Add new taxonomy, make it hierarchical (like categories)
+    $labels = array(
+        'name' => 'Project Categorieën',
+        'singular_name' => 'Project Categorie',
+        'search_items' => 'Search Categories',
+        'all_items' => 'All Categories',
+        'parent_item' => 'Parent Category',
+        'parent_item_colon' => 'Parent Category:',
+        'edit_item' => 'Edit Category',
+        'update_item' => 'Update Category',
+        'add_new_item' => 'Add New Category',
+        'new_item_name' => 'New Category Name',
+        'menu_name' => 'Categories',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'project-category'),
+    );
+
+    register_taxonomy('project_category', 'project', $args);
+
+      // Add new taxonomy, make it hierarchical (like categories)
+      $labels2 = array(
+        'name' => 'plaats',
+        'singular_name' => 'plaats',
+        'search_items' => 'Search plaats',
+        'all_items' => 'All plaats',
+        'parent_item' => 'Parent plaats',
+        'parent_item_colon' => 'Parent plaats:',
+        'edit_item' => 'Edit plaats',
+        'update_item' => 'Update plaats',
+        'add_new_item' => 'Add New plaats',
+        'new_item_name' => 'New plaats Name',
+        'menu_name' => 'Categories',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels2,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'plaats'),
+    );
+
+    register_taxonomy('plaats', 'project', $args);
+
+}
+add_action('init', 'create_categories_taxonomy');
