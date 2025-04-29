@@ -1,0 +1,55 @@
+@import "variables";
+
+@import "~bootstrap";
+
+/* General styling */
+html, body {
+    margin: 0 !important;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+a:any-link {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+.bg-contain {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imports */
+@import "header";
+@import "footer";
+@import "pages/front-page";
+@import "pages/page";
+@import "pages/login";

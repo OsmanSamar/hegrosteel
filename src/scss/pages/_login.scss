@@ -1,0 +1,113 @@
+.login.wp-core-ui {
+    background-color: #f1f1f1;
+}
+.login.wp-core-ui #login {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100%;
+    width: 400px;
+    & > h1 {
+        width: 320px;
+        height: 50px;
+        max-width: 100%;
+        margin: 0 auto;
+        background-size: contain;
+        background: url('../images/logo-code-blauw.svg') center no-repeat;
+        a {
+            display: none;
+        }
+    }
+    form {
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        border: none;
+        label {
+            visibility: hidden;
+            width: 100%;
+            display: inline-block;
+            line-height: 0;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 22px;
+                width: 18px;
+                height: 20px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                color: white;
+                z-index: 999;
+                visibility: visible;
+            }
+            &[for='user_pass']:before {
+                background-image: url("data:image/svg+xml,%3Csvg class='svg-inline--fa fa-key' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='key' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' data-fa-i2svg=''%3E%3Cpath fill='%23fff' d='M282.3 343.7L248.1 376.1C244.5 381.5 238.4 384 232 384H192V424C192 437.3 181.3 448 168 448H128V488C128 501.3 117.3 512 104 512H24C10.75 512 0 501.3 0 488V408C0 401.6 2.529 395.5 7.029 391L168.3 229.7C162.9 212.8 160 194.7 160 176C160 78.8 238.8 0 336 0C433.2 0 512 78.8 512 176C512 273.2 433.2 352 336 352C317.3 352 299.2 349.1 282.3 343.7zM376 176C398.1 176 416 158.1 416 136C416 113.9 398.1 96 376 96C353.9 96 336 113.9 336 136C336 158.1 353.9 176 376 176z'%3E%3C/path%3E%3C/svg%3E");
+            }
+            &[for='user_login']:before {
+                background-image: url("data:image/svg+xml,%3Csvg class='svg-inline--fa fa-user' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='user' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512' data-fa-i2svg=''%3E%3Cpath fill='%23fff' d='M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z'%3E%3C/path%3E%3C/svg%3E");
+            }
+        }
+        input {
+            text-align: left;
+            visibility: visible;
+            border-radius: 20px;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            font-weight: normal;
+            outline: none;
+            border: none;
+            box-shadow: none;
+            color: white;
+            background: #A5A5A5;
+            font-size: 15px;
+            padding-left: 50px;
+            padding-right: 25px;
+            &::placeholder {
+                color: white;
+            }
+        }
+        .user-pass-wrap {
+            margin-top: -22px;
+        }
+        .submit input.button {
+            width: 100%;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            line-height: 40px;
+            box-shadow: none;
+            outline: none;
+            background-color: #008ec2;
+            text-transform: none;
+            text-shadow: none;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 0 12px 2px !important;
+            text-align: center;
+        }
+        .forgetmenot {
+            display: none;
+        }
+    }
+    #nav {
+        text-align: center;
+        a {
+            box-shadow: none;
+            &:hover, &:active, &:focus {
+                color: #008ec2;
+            }
+        }
+    }
+    #backtoblog {
+        display: none;
+    }
+}
