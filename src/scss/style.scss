@@ -1,6 +1,19 @@
 @import "variables";
-
 @import "~bootstrap";
+@import "~bootstrap/scss/_variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Solitreo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Funnel+Display:wght@300..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Solitreo&display=swap');
+
+
+:root {
+    --Primary-500: #1C1C1C;
+    --Primary-600: #020202;
+    --Secondary-500: #DC0D1A;
+}
+
+
+
 
 /* General styling */
 html, body {
@@ -9,6 +22,7 @@ html, body {
     width: 100%;
     font-family: Arial, sans-serif;
     overflow-x: hidden;
+    background: var(--Primary-500);
 }
 
 a:any-link {
