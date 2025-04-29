@@ -6,6 +6,11 @@
     <?php wp_head(); ?>
     <title><?php wp_title() ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Swiper -->
 </head>
 <?php
 $menu_id = get_nav_menu_locations()['header-menu'];
@@ -38,8 +43,8 @@ unset($menu_items);
                     </a>
 
 
-                      <!-- Hamburger button for mobile -->
-                      <div class="d-xl-none navbar-toggler-wrapper ">
+                    <!-- Hamburger button for mobile -->
+                    <div class="d-xl-none navbar-toggler-wrapper ">
                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation" style="">
@@ -89,11 +94,11 @@ unset($menu_items);
                             <?php endforeach; ?>
 
                         </ul>
-                        <a  href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
+                        <a href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
                             class="button secondary-button ms-lg-3 mt-2 ">
                             Neem contact op
-                               <img src="<?= get_template_directory_uri(); ?>/images/vector.svg"
-                                                            alt="Arrow" class="dropdown-arrow">
+                            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                                class="dropdown-arrow">
                         </a>
 
                     </div>

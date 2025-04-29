@@ -19,3 +19,43 @@ jQuery(document).ready(function($){
 });
 
 
+
+
+document.querySelectorAll(".projecten-slider").forEach((x) => {
+    let slideCount = x.querySelectorAll(".swiper-slide").length;
+    let swiperlimonari = new Swiper(x.querySelector(".projecten-swiper"), {
+        slidesPerView: 1.2,
+        centeredSlides: true,
+        grabCursor: true,
+        spaceBetween: 24,
+        loop: true,
+        navigation: {
+            nextEl: ".projecten-slider .swiper-button-next",
+            prevEl: ".projecten-slider .swiper-button-prev",
+        },
+
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            },
+            1280: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 5,
+            },
+        },
+
+        // Reinitialize AOS after Swiper initialization
+        on: {
+            init: function () {
+                AOS.refresh();
+            },
+            slideChangeTransitionEnd: function () {
+                AOS.refresh();
+            },
+        },
+    });
+
+   
+});
