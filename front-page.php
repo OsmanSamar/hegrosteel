@@ -1,7 +1,7 @@
 <?php get_header();
-    //Template Name: frontpage 
-    $fields=get_fields();
-    ?>
+//Template Name: frontpage 
+$fields = get_fields();
+?>
 
 <main class="front-page">
     <div class="container">
@@ -42,10 +42,21 @@
 
         <!-- Service-section -->
         <?php
-        foreach( $fields['content'] as $content){
-            get_template_part('components/'.$content['acf_fc_layout'],null, ['fields' => $content]);    
+        foreach ($fields['content'] as $content) {
+            get_template_part('components/' . $content['acf_fc_layout'], null, ['fields' => $content]);
         }
         ?>
+
+        <!-- Fetch project-swiper -->
+        <?php
+        foreach ($posts as $post) {
+
+            get_template_part('components/project_swiper', null, ['post' => $post]);
+        }
+        wp_reset_postdata();
+        ?>
+
+
     </div>
 </main>
 

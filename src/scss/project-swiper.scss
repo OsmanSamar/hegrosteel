@@ -1,0 +1,46 @@
+.projecten-swiper {
+    padding: 40px 0;
+  }
+  
+  .swiper-slide {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .swiper-slide:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .project-content {
+    background-color: #f8f9fa;
+  }
+  
+  .project-content h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .project-categories span {
+    background-color: #eee;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 5px;
+  }
