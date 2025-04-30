@@ -24,10 +24,10 @@ jQuery(document).ready(function($){
 document.querySelectorAll(".projecten-slider").forEach((x) => {
     let slideCount = x.querySelectorAll(".swiper-slide").length;
     let swiper = new Swiper(x.querySelector(".projecten-swiper"), {
-        slidesPerView: 1.2,
+        slidesPerView: 1,
         centeredSlides: true,
         grabCursor: true,
-        spaceBetween: 24,
+        spaceBetween: 20,
         loop: true,
         navigation: {
             nextEl: x.querySelector(".swiper-button-next"),
@@ -39,7 +39,7 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
                 slidesPerView: 2,
             },
             1280: {
-                slidesPerView: 4,
+                slidesPerView: 3.8,
             },
             1440: {
                 slidesPerView: 5,
