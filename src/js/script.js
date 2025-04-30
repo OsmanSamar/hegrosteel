@@ -30,8 +30,8 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
         spaceBetween: 24,
         loop: true,
         navigation: {
-            nextEl: ".projecten-slider .swiper-button-next",
-            prevEl: ".projecten-slider .swiper-button-prev",
+            nextEl: x.querySelector(".swiper-button-next"),
+            prevEl: x.querySelector(".swiper-button-prev"),
         },
 
         breakpoints: {
@@ -49,10 +49,10 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
         // Reinitialize AOS after Swiper initialization
         on: {
             init: function () {
-                AOS.refresh();
+                // AOS.refresh();
             },
             slideChangeTransitionEnd: function () {
-                AOS.refresh();
+                // AOS.refresh();
             },
         },
     });

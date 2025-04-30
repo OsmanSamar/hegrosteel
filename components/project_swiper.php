@@ -18,7 +18,11 @@ if ($projects->have_posts()) : ?>
     <div class="swiper-container projecten-swiper">
         <div class="swiper-wrapper">
             <?php while ($projects->have_posts()) : $projects->the_post();
-                $image = get_field('image');
+                $image_id=get_post_thumbnail_id(get_the_ID());
+                $image=[
+                    'url'=>get_the_post_thumbnail_url(get_the_ID()),
+                    'alt'=>wp_get_attachment_metadata($image_id)['image_meta']['alt']
+                ];
                 $categories = get_the_terms(get_the_ID(), 'project_category');
             ?>
                 <div class="swiper-slide">
