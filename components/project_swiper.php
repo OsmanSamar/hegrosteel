@@ -11,7 +11,10 @@ if ($projects->have_posts()): ?>
         <div class="d-flex justify-content-between gap-3 flex-wrap">
             <h2><?= $fields['title']; ?></h2>
             <a href="<?= get_post_type_archive_link('project') ?>"
-                class="button secondary-button"><?= __('Bekijk alle projecten', 'hegrosteel') ?></a>
+                class="button primary-button"><?= __('Bekijk alle projecten', 'hegrosteel') ?>
+                <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                class="dropdown-arrow">
+            </a>
         </div>
         <div class="swiper-container swipers projecten-swiper">
             <div class="swiper-wrapper">

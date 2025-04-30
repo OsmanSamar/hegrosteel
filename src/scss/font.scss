@@ -47,15 +47,16 @@ h2,
 h3,
 .h3 {
   color: #fff;
-  text-align: right;
+  // text-align: right;
   font-family: Figtree;
-  font-size: 30px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 36px;
 
   @media (min-width: 776px) {
     font-weight: 700;
+    font-size: 30px;
   }
   @media (min-width: 992px) {
     font-size: 40px;

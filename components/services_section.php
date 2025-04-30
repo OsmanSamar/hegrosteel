@@ -1,7 +1,7 @@
 <?php
 $fields = $args['fields'];
 ?>
-<div class="services_section" style="margin:80px 0px">
+<div class="services_section" >
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-4 d-flex flex-column justify-content-start align-items-start" data-aos="fade-up"

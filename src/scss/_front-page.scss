@@ -29,12 +29,11 @@
       left: 50%;
       transform: translateX(-50%);
       object-fit: cover;
-    //   background: linear-gradient(
-    //     180deg,
-    //     rgba(43, 5, 4, 0) -11.36%,
-    //     rgba(0, 0, 0, 0.81) 82.88%
-    //   );
-     
+      //   background: linear-gradient(
+      //     180deg,
+      //     rgba(43, 5, 4, 0) -11.36%,
+      //     rgba(0, 0, 0, 0.81) 82.88%
+      //   );
     }
   }
 
@@ -47,4 +46,21 @@
     flex-direction: column;
     justify-content: end;
   }
+}
+
+.services_section {
+  margin: 80px 0px;
+}
+
+.call_to_action_section {
+  margin: 80px 0px;
+  display: flex;
+  // width: 1320px;
+  padding: 40px 60px 40px 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 30px;
+  background: var(--Secondary-500, #dc0d1a);
 }

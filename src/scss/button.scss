@@ -1,6 +1,6 @@
 .button {
   display: inline-flex;
-  padding: 18px 20px;
+  padding: 11px 19px;
   justify-content: center;
   align-items: center;
   gap: 14px;
@@ -31,9 +31,7 @@
 }
 
 .primary-button {
- 
-  border: 2px solid var(--Secondary-500, #dc0d1a);
-
+  border: 2px solid var(--Secondary-500);
   &:hover {
     background: var(--Primary-500);
     color: #fff !important;
@@ -41,4 +39,15 @@
       filter: brightness(0) invert(1);
     }
   }
+}
+.custom-button{
+  border: 2px solid #FFF;
+  &:hover {
+    background: var(--Primary-500);
+    color: #fff !important;
+    .arrow {
+      filter: brightness(0) invert(1);
+    }
+  }
+
 }
