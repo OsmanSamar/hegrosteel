@@ -26,6 +26,7 @@ if ($projects->have_posts()): ?>
                         'alt' => wp_get_attachment_metadata($image_id)['image_meta']['alt']
                     ];
                     $categories = get_the_terms(get_the_ID(), 'project_category');
+                    $plaats = get_the_terms(get_the_ID(), 'plaats');
                     ?>
                     <div class="swiper-slide">
                     <div class="container-card">
@@ -40,11 +41,7 @@ if ($projects->have_posts()): ?>
                                    </div>
                                 <?php endif; ?>
 
-                               
-
-
                                 <div class="project-content p-3">
-
                                     <?php if ($categories): ?>
                                         <div class="project-categories">
                                             <?php foreach ($categories as $cat): ?>
@@ -59,7 +56,6 @@ if ($projects->have_posts()): ?>
                                             <span class="lead"><?= esc_html($term->name); ?></span>
                                         <?php endforeach; ?>
                                     <?php endif; ?>
-
 
                                 </div>
                             </div>
