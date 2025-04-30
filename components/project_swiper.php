@@ -53,12 +53,12 @@ if ($projects->have_posts()): ?>
                                         </div>
                                     <?php endif; ?>
                                     <h4><?php the_title(); ?></h4>
-                                    <!-- 
+                                    
                                     <?php if ($plaats): ?>
                                         <?php foreach ($plaats as $term): ?>
                                             <span class="lead"><?= esc_html($term->name); ?></span>
                                         <?php endforeach; ?>
-                                    <?php endif; ?> -->
+                                    <?php endif; ?>
 
 
                                 </div>
