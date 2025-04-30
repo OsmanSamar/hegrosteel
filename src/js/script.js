@@ -23,7 +23,7 @@ jQuery(document).ready(function($){
 
 document.querySelectorAll(".projecten-slider").forEach((x) => {
     let slideCount = x.querySelectorAll(".swiper-slide").length;
-    let swiperlimonari = new Swiper(x.querySelector(".projecten-swiper"), {
+    let swiper = new Swiper(x.querySelector(".projecten-swiper"), {
         slidesPerView: 1.2,
         centeredSlides: true,
         grabCursor: true,

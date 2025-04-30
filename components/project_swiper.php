@@ -2,7 +2,7 @@
 
 
 <?php
-
+$fields=$args['fields'];
 $args = array(
     'post_type' => 'project',
     'posts_per_page' => -1,
@@ -10,6 +10,11 @@ $args = array(
 $projects = new WP_Query($args);
 
 if ($projects->have_posts()) : ?>
+<div class="projecten-slider">
+    <div class="d-flex justify-content-between gap-3 flex-wrap">
+        <h2><?= $fields['title']; ?></h2>
+        <a href="<?= get_post_type_archive_link('project') ?>" class="button secondary-button"><?= __('Bekijk alle projecten','hegrosteel')?></a>
+    </div>
     <div class="swiper-container projecten-swiper">
         <div class="swiper-wrapper">
             <?php while ($projects->have_posts()) : $projects->the_post();
@@ -44,6 +49,7 @@ if ($projects->have_posts()) : ?>
         <div class="swiper-button-next"></div>
         
     </div>
+</div>
 <?php endif;
 wp_reset_postdata();
 ?>

@@ -47,16 +47,6 @@ $fields = get_fields();
         }
         ?>
 
-        <!-- Fetch project-swiper -->
-        <?php
-        foreach ($posts as $post) {
-
-            get_template_part('components/project_swiper', null, ['post' => $post]);
-        }
-        wp_reset_postdata();
-        ?>
-
-
     </div>
 </main>
 
