@@ -33,7 +33,7 @@
 .primary-button {
   border: 2px solid var(--Secondary-500);
   &:hover {
-    background: var(--Primary-500);
+    border: 2px solid #FFF;
     color: #fff !important;
     .arrow {
       filter: brightness(0) invert(1);

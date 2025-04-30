@@ -10,12 +10,9 @@ $fields = $args['fields'];
                 <div class="d-flex flex-column flex-lg-row  align-items-center ">
                     <div class="content">
                         <h2><?= $fields['text']; ?></h2>
-
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </div>

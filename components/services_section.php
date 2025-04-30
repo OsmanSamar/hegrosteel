@@ -13,10 +13,7 @@ $fields = $args['fields'];
                 <div class="regular">
                     <?= $fields['text']; ?>
                 </div>
-
-
                 <!-- List Repeater -->
-
                 <?php if (!empty($fields['list'])): ?>
                     <div class="repeater-list mt-5 mb-5">
                         <?php foreach ($fields['list'] as $list_item): ?>
@@ -39,9 +36,6 @@ $fields = $args['fields'];
                         alt="Arrow" class="dropdown-arrow">
                     </a>
                 <?php endif; ?>
-
-
-
             </div>
 
             <div class="col-12 col-lg-6 offset-lg-2">
