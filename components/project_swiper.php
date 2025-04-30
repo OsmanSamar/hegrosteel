@@ -32,9 +32,17 @@ if ($projects->have_posts()): ?>
                     <a href="<?php the_permalink(); ?>" class="text-decoration-none">
                             <div class="project-card">
                                 <?php if ($image): ?>
-                                    <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
-                                        class="swiper-img" />
+                                   <div class="position-relative">
+                                   <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
+                                   class="swiper-img " />
+                                   <img src="<?= get_template_directory_uri(); ?>/images/open-btn.svg" alt="Arrow"
+                                   class="open-arrow ">
+                                   </div>
                                 <?php endif; ?>
+
+                               
+
+
                                 <div class="project-content p-3">
 
                                     <?php if ($categories): ?>
