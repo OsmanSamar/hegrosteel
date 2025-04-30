@@ -1,3 +1,124 @@
 .footer {
-
+  padding: 65px 82px;
+  gap: 10px;
+  border-radius: 60px;
+  background: #121212;
 }
+
+.footer-divider{
+    margin: 60px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.50);;
+}
+.footer-logo {
+  width: 165.603px;
+  height: 57.484px;
+  aspect-ratio: 165.6/57.48;
+  object-fit: cover;
+  margin-left: 20px;
+}
+.media-container {
+  margin-left: 20px;
+}
+
+.made-with-link {
+  transition: all 0.3s ease;
+  color: var(--Neutral-light) !important;
+  text-align: center;
+  font-family: "Red Hat Display" !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19.2px;
+}
+
+.footer-li {
+    color: var(--Neutral-500, #808282);
+    font-family: Figtree;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; 
+  }
+
+
+.footer-link {
+  color: var(--Neutral-500);
+  font-family: Figtree;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%; /* 32px */
+
+  //Added to apply the hover effect
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  width: fit-content;
+}
+.footer-link-ltr::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--Secondary-500);
+  transition: width 0.3s ease;
+}
+.footer-link-ltr:hover {
+  color: var(--Secondary-500) !important;
+}
+.footer-link-ltr:hover::before {
+  width: 100%;
+}
+
+.footer-link-ltr {
+  position: relative;
+  width: fit-content;
+  transition: all 0.3s ease;
+
+  &-underline {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100% !important;
+      background-color: white;
+      transition: background-color 0.3s ease;
+    }
+    &:hover::before {
+      background-color: var(--Secondary-500) !important;
+    }
+  }
+}
+
+.footer-link.active {
+    color: var(--Neutral-light);
+    font-weight: 700;
+  }
+
+
+
+.footer-icon {
+  width: 13.156px;
+  height: 13.182px;
+  display: inline-block;
+}
+
+.media-icon {
+  width: 20px;
+  height: 20px;
+  transition: all 0.5s ease;
+  border-radius: 50px;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
+    
+  }
+}
+
+
+
+

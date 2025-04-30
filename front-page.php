@@ -4,7 +4,8 @@ $fields = get_fields();
 ?>
 
 <main class="front-page">
-    <div class="container">
+   <div class="position-relative">
+   <div class="container">
         <!-- Hero Section -->
         <div class="hero-section bg-holder">
             <img class="bg-content" src="<?= get_the_post_thumbnail_url() ?>" alt="" style="  background: linear-gradient(
@@ -50,6 +51,7 @@ $fields = get_fields();
 
 
     </div>
+   </div>
 </main>
 
 <?php get_footer() ?>

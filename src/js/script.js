@@ -39,10 +39,10 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
                 slidesPerView: 2,
             },
             1280: {
-                slidesPerView: 2,
+                slidesPerView: 3,
             },
             1440: {
-                slidesPerView: 3,
+                slidesPerView: 6,
             },
         },
 
