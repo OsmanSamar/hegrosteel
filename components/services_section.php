@@ -46,7 +46,7 @@ $fields = $args['fields'];
 
                             <div class="repeater-item d-flex align-items-start justify-content-between">
                                 <?php if (!empty($list_item['number'])): ?>
-                                    <p class="number regular mb-0 flex-shrink-0"><?= $list_item['number']; ?></p>
+                                    <p class="number typography mb-0 flex-shrink-0"><?= $list_item['number']; ?></p>
                                 <?php endif; ?>
                                 <?php if (!empty($list_item['text'])): ?>
                                     <h3 class=" mb-0"><?= $list_item['text']; ?></h3>
