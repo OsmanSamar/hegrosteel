@@ -18,7 +18,45 @@ jQuery(document).ready(function($){
     }
 });
 
+//Scrollbar
 
+function swiperScrollbar(swiper, scrollbarEl, slideCount) {
+    if (typeof scrollbarEl == "string") {
+        scrollbarEl = document.querySelector(scrollbarEl);
+    }
+    scrollbarEl.innerHTML = "";
+    let inputElement = document.createElement("input");
+    inputElement.type = "range";
+    inputElement.classList.add("custom-scrollbar");
+    inputElement.min = 0;
+    inputElement.max = 1000;
+    inputElement.value = 0;
+    inputElement.style.setProperty("--width", `${100 / slideCount}%`);
+    let stepSize = 1000 / (slideCount - 1);
+    inputElement.addEventListener("input", () => {
+        let truevalue = Math.round((inputElement.value / 1000) * (slideCount - 1));
+        swiper.slideTo(truevalue);
+    });
+    inputElement.addEventListener("change", () => {
+        // smoothly lock onto true value for the slide in the range element
+        let truevalue = Math.round(inputElement.value / stepSize);
+
+        let difference = truevalue * stepSize - inputElement.value;
+
+        let interval = setInterval(() => {
+            let newValue = inputElement.value + difference / 10 < truevalue * stepSize ? inputElement.value + difference / 10 : truevalue * stepSize;
+            inputElement.value = newValue;
+            if (inputElement.value >= truevalue * stepSize) {
+                clearInterval(interval);
+            }
+        }, 100);
+    });
+    swiper.on("slideChange", () => {
+        inputElement.value = swiper.realIndex * stepSize;
+    });
+   
+    scrollbarEl.insertAdjacentElement("beforeend", inputElement);
+}
 
 
 document.querySelectorAll(".projecten-slider").forEach((x) => {
@@ -36,13 +74,13 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
 
         breakpoints: {
             768: {
-                slidesPerView: 2,
+                slidesPerView: 1,
             },
             1280: {
                 slidesPerView: 3,
             },
             1440: {
-                slidesPerView: 6,
+                slidesPerView: 3.3,
             },
         },
 
@@ -56,6 +94,8 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
             },
         },
     });
+
+    swiperScrollbar(swiper, x.querySelector(".custom-swiper-scrollbar"), slideCount);
 
    
 });
