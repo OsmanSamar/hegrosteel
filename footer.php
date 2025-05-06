@@ -1,24 +1,3 @@
-<div class="whatsapp-fixed">
-
-    
-    <div class="background-text">
-       
-        <div class=" mt-3">
-            <a href="https://wa.me/<?= get_field('whatsapp_number', 'option') ?>?text=<?= strip_tags(get_field("offer_message",'option'))?> <?= urlencode($title) ?>"
-                class="custom-button">
-                <span class="d-flex justify-content-center align-items-center arrow">
-                    <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="go Contact page" />
-                </span>
-            </a>
-        </div>
-    </div>
-
-</div>
-
-
-
-
-
 <?php
 
 $menu_id = get_nav_menu_locations()['footer-menu'];
@@ -131,33 +110,28 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
     </div>
 
 
+</footer>
+<div class="container mt-3 mb-3">
+    <div class="row">
+        <div class="col-lg-5 d-flex align-items-center justify-content-between">
+            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">© HegroSteel,
+                2025</span>
+            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Algemene
+                voorwaarden</span>
+            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Privacy
+                statement</span>
+        </div>
 
-
-    <div class="container">
-        <div class="row">
-           
-
-               <div class="col-lg-5 d-flex align-items-center justify-content-between">
-               <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">© HegroSteel,
-                    2025</span>
-                <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Algemene
-                    voorwaarden</span>
-                <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Privacy
-                    statement</span>
-               </div>
-
-               <div class="col-lg-2 offset-lg-5 d-flex justify-content-end">
-               <a href="https://code-blauw.nl/" target="_blank"
-                    class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
-                    Door: Code Blauw
-                </a>
-               </div>
-           
-
+        <div class="col-lg-2 offset-lg-5 d-flex justify-content-end">
+            <a href="https://code-blauw.nl/" target="_blank"
+                class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
+                Door: <span class="made-door"> Code Blauw</span>
+            </a>
         </div>
     </div>
+</div>
 
-</footer>
+
 
 <?php wp_footer(); ?>
 </body>

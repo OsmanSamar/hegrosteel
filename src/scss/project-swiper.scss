@@ -15,15 +15,7 @@
     
     .container-card {
         padding: 18px;
-        // border: 1px solid #fff;
-        // border-radius: 20px 0 20px 20px;
-        // clip-path: polygon(0 0, calc(91% - 82px) 0, 100% 86px, 100% 100%, 0 100%);
         overflow: hidden;
-
-        // -webkit-clip-path: var(--beveled-shape-right);
-        // clip-path: var(--beveled-shape-right);
-        // clip path for border
-        
     }
 
     .projecten-swiper {
@@ -49,16 +41,14 @@
         height: auto;
     }
 
-    .custom-shape {
-        // clip-path: polygon(80px 0, 100% 0, 100% 100%, 0 100%, 0 80px);
-        //  clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 80px, 100% 100%, 0 100%);
-
-        border-radius: 20px 0 0 20px;
-        //clip-path: polygon(0 0, calc(91% - 82px) 0, 100% 86px, 100% 100%, 0 100%);
-        clip-path: polygon(0 0, calc(90% - 61px) 0, 100% 75px, 100% 100%, 0 100%);
-
-        overflow: hidden;
-    }
+    // .custom-shape {
+    //     // clip-path: polygon(80px 0, 100% 0, 100% 100%, 0 100%, 0 80px);
+    //     //  clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 80px, 100% 100%, 0 100%);
+    //     border-radius: 20px 0 0 20px;
+    //     //clip-path: polygon(0 0, calc(91% - 82px) 0, 100% 86px, 100% 100%, 0 100%);
+    //     clip-path: polygon(0 0, calc(90% - 61px) 0, 100% 75px, 100% 100%, 0 100%);
+    //     overflow: hidden;
+    // }
 
     .open-arrow {
         position: absolute;

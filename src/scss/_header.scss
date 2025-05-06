@@ -1,8 +1,7 @@
 .header {
+  position: fixed;
   width: 100vw;
   z-index: 4;
-  display: flex;
-  justify-content: center;
   top: 20px;
 }
 .navbar {
@@ -10,7 +9,7 @@
 }
 .navbar {
   display: flex;
-  padding: 15px 39px;
+  // padding: 15px 39px;
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
@@ -228,33 +227,29 @@
 
 .shared-content {
   display: flex;
-  padding: 20px;
+  // padding: 20px;
+  padding: 53px 20px 45px 53px;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
   border-radius: 20px;
+  overflow: hidden;
 }
 
-
-.first-content {
-  background-color: var(--Primary-600);
-}
-
-.second-content {
-  border: 1px solid #fff;
-}
-
-.third-content {
-  background-color: #fff;
-}
 .werk-bij-arrow{
   width: 51.636px;
 height: 51.636px;
 margin-top: 42px;
+// transform: rotate(-41deg);
+}
+.white-arrow{
+  transform: rotate(-41deg);
 }
 .back-text{
-  color: #191919;
+  color: #191919 !important;
+  position: relative;
+  z-index: 0;
 }
 
 

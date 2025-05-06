@@ -42,11 +42,12 @@
   background: var(--Secondary-500);
 
   &:hover {
-    background: var(--Primary-500);
-     color: #fff !important;
-    border: 1px solid  #fff;
-    .arrow {
-      filter: brightness(0) invert(1);
+    background: var(--Neutral-light);
+     color: var(--Primary-600) !important;
+    border: 1px solid   var(--Primary-600);
+    .dropdown-arrow{
+     // filter: brightness(0) invert(1);
+     filter: brightness(0);
     }
   }
 }

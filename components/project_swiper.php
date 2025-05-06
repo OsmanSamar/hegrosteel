@@ -20,7 +20,8 @@ if ($projects->have_posts()): ?>
                     </a>
                 </div>
                 <!-- Updated  -->
-               <div class="col-lg-12  overflow-visible overflow-right">
+               <div class="col-lg-12  overflow-visible ">
+                <!-- overflow-right -->
 
                <div class=" swiper-container swipers projecten-swiper ">
                     <div class="swiper-wrapper">
@@ -40,7 +41,7 @@ if ($projects->have_posts()): ?>
                                     <a href="<?php the_permalink(); ?>" class="text-decoration-none">
                                         <div class="project-card">
                                             <?php if ($image): ?>
-                                                <div class="custom-shape position-relative">
+                                                <div class="bevel-right position-relative">
                                                     <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
                                                         class="swiper-img " />
                                                     <img src="<?= get_template_directory_uri(); ?>/images/open-btn.svg" alt="Arrow"
