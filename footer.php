@@ -1,3 +1,24 @@
+<div class="whatsapp-fixed">
+
+    
+    <div class="background-text">
+       
+        <div class=" mt-3">
+            <a href="https://wa.me/<?= get_field('whatsapp_number', 'option') ?>?text=<?= strip_tags(get_field("offer_message",'option'))?> <?= urlencode($title) ?>"
+                class="custom-button">
+                <span class="d-flex justify-content-center align-items-center arrow">
+                    <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="go Contact page" />
+                </span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
 <?php
 
 $menu_id = get_nav_menu_locations()['footer-menu'];

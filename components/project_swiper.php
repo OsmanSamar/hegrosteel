@@ -35,11 +35,12 @@ if ($projects->have_posts()): ?>
                             $plaats = get_the_terms(get_the_ID(), 'plaats');
                             ?>
                             <div class="swiper-slide">
-                                <div class="container-card">
+                            
+                             <div class="container-card">
                                     <a href="<?php the_permalink(); ?>" class="text-decoration-none">
                                         <div class="project-card">
                                             <?php if ($image): ?>
-                                                <div class="position-relative">
+                                                <div class="custom-shape position-relative">
                                                     <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
                                                         class="swiper-img " />
                                                     <img src="<?= get_template_directory_uri(); ?>/images/open-btn.svg" alt="Arrow"
@@ -67,6 +68,7 @@ if ($projects->have_posts()): ?>
                                         </div>
                                     </a>
                                 </div>
+                             
                             </div>
                         <?php endwhile; ?>
                     </div>
