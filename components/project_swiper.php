@@ -36,7 +36,7 @@ if ($projects->have_posts()): ?>
                             ?>
                             <div class="swiper-slide">
                             
-                             <div class="container-card">
+                             <div class="container-card border-wrap">
                                     <a href="<?php the_permalink(); ?>" class="text-decoration-none">
                                         <div class="project-card">
                                             <?php if ($image): ?>
