@@ -2,7 +2,7 @@ import 'babel-polyfill'
 import 'bootstrap'
 
 // Styling
-import '../scss/style.scss'
+ import '../scss/style.scss'
 
 // Fontawesome
 import { dom, library } from '@fortawesome/fontawesome-svg-core'

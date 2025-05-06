@@ -85,7 +85,7 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
                         <div class="d-block mb-3 list">
                             <?= get_field("meer_over_link_title", 'option') ?>
                         </div>
-                      
+
                         <div class="row">
                             <?php foreach ($footer_menu as $items): ?>
                                 <div class="col-lg-12">
@@ -112,13 +112,29 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
 
 
 
-    <!-- <div class="text-center mt-3">
-        <a href="https://code-blauw.nl/" target="_blank"
-            class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
-            Made with <span class="heart-icon">❤️</span> by Code Blauw
-        </a>
-    </div> -->
+    <div class="container">
+        <div class="row">
+           
 
+               <div class="col-lg-5 d-flex align-items-center justify-content-between">
+               <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">© HegroSteel,
+                    2025</span>
+                <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Algemene
+                    voorwaarden</span>
+                <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Privacy
+                    statement</span>
+               </div>
+
+               <div class="col-lg-2 offset-lg-5 d-flex justify-content-end">
+               <a href="https://code-blauw.nl/" target="_blank"
+                    class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
+                    Door: Code Blauw
+                </a>
+               </div>
+           
+
+        </div>
+    </div>
 
 </footer>
 

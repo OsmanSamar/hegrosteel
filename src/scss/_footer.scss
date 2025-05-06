@@ -1,6 +1,5 @@
 .footer {
   padding: 65px 82px;
-  gap: 10px;
   border-radius: 60px;
   background: #121212;
 }
@@ -14,11 +13,11 @@
   height: 57.484px;
   aspect-ratio: 165.6/57.48;
   object-fit: cover;
-  margin-left: 20px;
+ // margin-left: 20px;
 }
-.media-container {
-  margin-left: 20px;
-}
+// .media-container {
+//   margin-left: 20px;
+// }
 
 .made-with-link {
   transition: all 0.3s ease;
@@ -108,10 +107,10 @@
 }
 
 .media-icon {
-  width: 20px;
-  height: 20px;
+  width: 42px;
+  height: 42px;
+  gap: 18px;
   transition: all 0.5s ease;
-  border-radius: 50px;
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
