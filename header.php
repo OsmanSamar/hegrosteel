@@ -85,7 +85,7 @@ unset($menu_items);
                                         <?php
                                     else:
                                         ?>
-                                        <a class="nav-link  d-flex align-items-center <?= $active ? "active" : "" ?>"
+                                        <a class="nav-link  nav-link-ltr  d-flex align-items-center <?= $active ? "active" : "" ?>"
                                             href="<?= $item->url; ?>" role="button">
                                             <?= $item->title ?> </a>
                                         <?php

@@ -45,6 +45,51 @@
   font-weight: 700;
 }
 
+
+.nav-link-ltr::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--Secondary-500);
+  transition: width 0.3s ease;
+}
+
+.nav-link-ltr:hover{
+  color: var(--Secondary-500) !important;
+}
+
+
+.nav-link-ltr:hover::before{
+  width: 100%;
+}
+
+.nav-link-ltr {
+  position: relative;
+  width: fit-content;
+  transition: all 0.3s ease;
+
+  &-underline {
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 100% !important;
+      background-color: white;
+      transition: background-color 0.3s ease;
+    }
+    &:hover::before {
+      background-color: var(--Secondary-500) !important;
+    }
+  }
+}
+
+
+
 .dropdown-toggle::after {
   display: none;
   //Removed the defualt icon of dropdown

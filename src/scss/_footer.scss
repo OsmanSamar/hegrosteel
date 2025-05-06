@@ -13,11 +13,7 @@
   height: 57.484px;
   aspect-ratio: 165.6/57.48;
   object-fit: cover;
- // margin-left: 20px;
 }
-// .media-container {
-//   margin-left: 20px;
-// }
 
 .made-with-link {
   transition: all 0.3s ease;
@@ -46,7 +42,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 200%; /* 32px */
+  line-height: 200%; 
 
   //Added to apply the hover effect
   position: relative;
