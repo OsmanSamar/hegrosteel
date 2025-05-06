@@ -74,7 +74,7 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
 
         breakpoints: {
             768: {
-                slidesPerView: 1,
+                slidesPerView: 2,
             },
             1280: {
                 slidesPerView: 3,
