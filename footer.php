@@ -5,7 +5,7 @@ $items = wp_get_nav_menu_items($menu_id);
 $footer_menu = array_chunk($items, ceil(count($items) / 2));
 ?>
 
-<footer class="footer  ">
+<footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-10">

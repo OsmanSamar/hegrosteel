@@ -2,9 +2,9 @@
   padding: 65px 82px;
   border-radius: 60px;
   background: #121212;
-}
 
-.footer-divider{
+// The rest of footer styling
+  .footer-divider{
     margin: 60px 0px;
     border: 1px solid rgba(255, 255, 255, 0.50);;
 }
@@ -14,34 +14,6 @@
   aspect-ratio: 165.6/57.48;
   object-fit: cover;
 }
-
-.made-with-link {
-  transition: all 0.3s ease;
-  color: var(--Neutral-500) !important;
-  text-align: center;
-  font-family: "Red Hat Display" !important;
-  font-size: 14px !important;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 19.2px;
-  cursor: pointer;
-}
-.made-door{
-  transition: all 0.3s ease;
-  color: var(--Neutral-light);
-  text-align: center;
-  font-family: "Red Hat Display" !important;
-  font-size: 14px !important;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 19.2px;
-  cursor: pointer;
-  &:hover{
-    color: var(--Secondary-500) ;
-    
-  }
-}
-
 .footer-li {
     color: var(--Neutral-500, #808282);
     font-family: Figtree;
@@ -50,8 +22,6 @@
     font-weight: 400;
     line-height: 160%; 
   }
-
-
 .footer-link {
   color: var(--Neutral-500);
   font-family: Figtree;
@@ -59,7 +29,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 200%; 
-
   //Added to apply the hover effect
   position: relative;
   text-decoration: none;
@@ -82,7 +51,6 @@
 .footer-link-ltr:hover::before {
   width: 100%;
 }
-
 .footer-link-ltr {
   position: relative;
   width: fit-content;
@@ -109,15 +77,11 @@
     color: var(--Neutral-light);
     font-weight: 700;
   }
-
-
-
 .footer-icon {
   width: 13.156px;
   height: 13.182px;
   display: inline-block;
 }
-
 .media-icon {
   width: 42px;
   height: 42px;
@@ -126,8 +90,48 @@
   &:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
-    
   }
+}
+}
+
+.made-with-link {
+  transition: all 0.3s ease;
+  color: var(--Neutral-500);
+  text-align: center;
+  font-family: "Red Hat Display";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.2px;
+  cursor: pointer;
+  position: relative; // Necessary for effect ::before
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    background-color: var(--Secondary-500);
+    transition: width 0.3s ease;
+  }
+
+  &:hover {
+    color: var(--Secondary-500);
+
+    &::before {
+      width: 100%;
+    }
+
+    .made-door {
+      color: var(--Secondary-500); 
+    }
+  }
+}
+
+.made-door {
+  transition: all 0.3s ease;
+  color: var(--Neutral-light);
 }
 
 
