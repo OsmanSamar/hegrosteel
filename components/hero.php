@@ -4,7 +4,7 @@
     $bgImg= get_the_post_thumbnail_url( $id);
 ?>
 <div class="hero" style="    margin-top:130px">
-    <div class="hero-section bg-holder flex-column">
+    <div class="hero-section bg-holder d-flex align-items-start flex-column">
 
         <?php get_template_part('components/breadcrumb') ?>
         <div class="bg-img"
@@ -25,6 +25,7 @@
                 <h1  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <?= get_field("hero_title",$id) ?>
+                   
                 </h1>
             </div>
         </div>

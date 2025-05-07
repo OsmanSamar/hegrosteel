@@ -9,9 +9,9 @@
     object-fit: cover;
     // overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     color: white !important;
     // width: 100% !important;
     // max-width: 120vw;
@@ -24,6 +24,11 @@
     position: relative;
     overflow: clip;
     border-radius: 30px;
+
+    @media (min-width: 992px) {
+      width: 108%;
+      transform: translateX(-45px);
+    }
   }
 
   .bg-content {
@@ -40,6 +45,13 @@
     position: relative;
     z-index: 1;
     width: 94%;
+
+    @media (min-width: 992px) {
+     
+        width: 94%;
+      
+    }
+
   }
 
   .bg-img {
@@ -54,18 +66,14 @@
   }
 
   @media (min-width: 768px) {
-   
   }
-  @media (min-width: 992px) {
-
-    .bg-holder {
-      width: 108%;
-      transform: translateX(-45px);
-     
-    }
-    .hero-content {
-      width: 94%;
-    }
-  
-  }
+  // @media (min-width: 992px) {
+  //   // .bg-holder {
+  //   //   width: 108%;
+  //   //   transform: translateX(-45px);
+  //   // }
+  //   .hero-content {
+  //     width: 94%;
+  //   }
+  // }
 }

@@ -1,3 +1,29 @@
+
+
+.breadcrumbs {
+  color: #fff;
+  font-family: Figtree;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+.breadcrumb-wrap {
+  z-index: 3;
+  align-items: flex-start;
+}
+
+#breadcrumbs span a,
+#breadcrumbs span strong {
+  color: #fff;
+  font-family: Figtree;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+
 .header {
   position: fixed;
   width: 100vw;
