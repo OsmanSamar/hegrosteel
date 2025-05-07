@@ -1,6 +1,8 @@
 <?php
 $fields = $args['fields'];
-$hasBackground = !empty($fields['has_background']); 
+$hasBackground = !empty($fields['has_background']);
+$backgroundColor = $fields['background_color'] ?? ''; 
+
 $args = array(
     'post_type' => 'project',
     'posts_per_page' => -1,
@@ -9,7 +11,8 @@ $projects = new WP_Query($args);
 
 if ($projects->have_posts()): ?>
 
-    <div class="projecten-slider <?= $hasBackground ? 'with-background' : ''; ?>">
+    <div class="projecten-slider <?= $hasBackground ? 'with-background' : ''; ?>"
+    style="<?= $hasBackground && $backgroundColor ? 'background-color: ' . esc_attr($backgroundColor) . ';' : ''; ?>">
         <div class="container">
             <div class="row">
                 <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">

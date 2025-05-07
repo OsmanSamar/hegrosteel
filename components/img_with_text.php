@@ -14,7 +14,7 @@ $hasBackground = !empty($fields['has_background']);
             </div>
 
             <!-- Content Column -->
-            <div class="col-md-6 col-lg-5 offset-lg-1 d-flex align-items-center justify-content-center <?= $imageOnLeft ? 'order-2' : 'order-1'; ?>">
+            <div class="col-md-6 col-lg-5 offset-lg-1 d-flex align-items-center justify-content-center mb-5 <?= $imageOnLeft ? 'order-2' : 'order-1'; ?>">
                 <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
                     <div class="content">
                         <h3><?= $fields['title']; ?></h3>
