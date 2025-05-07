@@ -6,18 +6,18 @@ $fields = $args['fields'];
     <div class="container">
         <div class="row d-flex flex-wrap">
 
-            <div class="col-12 col-md-6 col-lg-6 d-flex flex-column mb-5" data-aos="fade-up" data-aos-offset="100"
+            <div class="col-12 col-md-6 col-lg-5 offset-lg-1 d-flex flex-column mb-5" data-aos="fade-up" data-aos-offset="100"
                 data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="regular mb-4 mt-4"><?= $fields['left_text']; ?></div>
             </div>
 
             <!-- Content Column -->
-            <div class="col-md-6 col-lg-5 offset-lg-1 d-flex align-items-center justify-content-center mb-5">
+            <div class="col-md-6 col-lg-5  d-flex align-items-center justify-content-center mb-5">
                 <div
                     class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
                     <div class="content">
 
-                        <div class="regular mb-4 mt-4"><?= $fields['right_text']; ?></div>
+                        <div class="regular mb-5 mt-4"><?= $fields['right_text']; ?></div>
 
                         <?php if (!empty($fields['buttons'])): ?>
                             <?php foreach ($fields['buttons'] as $button_row):

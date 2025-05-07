@@ -9,6 +9,7 @@
   --Secondary-500: #dc0d1a;
   --Primary-400: #303030;
   --Neutral-500: #808282;
+  --Neutral-400: #d5d3cd;
   --Secondary-400: #656572;
   --Neutral-light: #FFF;
 }
@@ -57,5 +58,6 @@ img {
 @import "pages/front-page";
 @import "pages/page";
 @import "pages/login";
+@import "werken-bij";
 
 @import "components/swiper-scrollbar";

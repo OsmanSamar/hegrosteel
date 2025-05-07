@@ -64,6 +64,7 @@ unset($menu_items);
                 d="M0.213,1 C0.192,1,0.172,0.999,0.156,0.977 L0.155,0.975 L0.031,0.794 C0.014,0.77,0.005,0.735,0.005,0.699 V0.142 C0.005,0.07,0.043,0.011,0.09,0.011 H0.92 C0.967,0.011,1,0.07,1,0.142 V0.877 C1,0.948,0.968,1,0.923,1 L0.92,1 L0.213,1">
             </path>
         </clipPath>
+        <clipPath id="top-right-shape" clipPathUnits="objectBoundingBox"><path d="M0.75,0.004 C0.77,0.004,0.79,0.012,0.805,0.025 L0.806,0.027 L0.979,0.191 C0.995,0.206,1,0.227,1,0.25 V0.923 C1,0.968,0.968,1,0.923,1 H0.085 C0.041,1,0.004,0.968,0.004,0.923 V0.088 C0.004,0.044,0.039,0.008,0.083,0.007 L0.085,0.007 L0.75,0.004"></path></clipPath>
     </svg>
     <style>
         .svg {
@@ -213,6 +214,42 @@ unset($menu_items);
                 position: relative !important;
                 z-index: 1 !important;
             }
+        }
+
+        .top-right-shape{
+            --background-color: #1c1c1c;
+            --border-color: #6B6B6B;
+            --border-width: 2px;
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                transform: translateX(-50%) translateY(-50%);
+                left: 50%;
+                top: 50%;
+                clip-path: url(#top-right-shape) !important;
+                z-index: 0;
+            }
+
+            &::before {
+                /* z-index: 2; */
+                background-color: var(--border-color);
+            }
+
+            &::after {
+                /* z-index: 2; */
+               background-color: var(--background-color);
+               width: calc(100% - calc(2 * var(--border-width)));
+                 height: calc(100% - calc(2 * var(--border-width)));
+            }
+
+            >* {
+                position: relative !important;
+                z-index: 1 !important;
+            }
+
         }
 
     </style>

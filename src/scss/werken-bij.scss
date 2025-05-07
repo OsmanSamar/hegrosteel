@@ -1,0 +1,106 @@
+.werken-bij {
+  .bel-of-app-container {
+    display: flex;
+    padding: 10px 10px 10px 30px;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    border-radius: 20px;
+    background: var(--Primary-400, #303030);
+  }
+
+  .whatsappimg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .contact-form {
+    background: #1c1c1c;
+    border-radius: 30px;
+    opacity: 1;
+    display: flex;
+    padding: 60px;
+    gap: 10px;
+    border: 2px solid var(--Secondary-500, #dc0d1a) !important;
+  }
+
+  .form-1 .gform_wrapper .gform_body .gform_fields .gfield {
+    width: 100%;
+  }
+
+  /* Input field */
+  .gform-theme--foundation .gfield input,
+ 
+  .gform-theme--foundation .gfield select {
+    width: 96% !important;
+    box-sizing: border-box !important;
+    border-radius: 8px !important;
+    margin-bottom: 5px !important;
+    border: 1px solid var(--Neutral-400) !important;
+    background: #1c1c1c !important;
+    padding: 16px !important;
+    color: var(--Neutral-light) !important;
+    font-family: Figtree !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 700 !important;
+    line-height: 120% !important;
+    --gf-local-height: unset !important;
+  }
+
+  .gform_wrapper .gform_footer .gform_button {
+    padding: 18px 20px !important;
+    border-radius: 10px !important;
+    background: var(--Secondary-500) !important;
+    color: #fff !important;
+    font-family: Figtree !important;
+    font-weight: 600;
+    line-height: 160%;
+    border: none !important;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 25.2px;
+  }
+
+  .gform_wrapper .gform_footer .gform_button:hover {
+    box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6) !important;
+  }
+
+  .gform-theme--framework,
+  .gform-field-label,
+  .gform-label,
+  .gfield_label,
+  .name-label {
+    &:not(.gfield_consent_label) {
+      color: var(--Neutral-light) !important;
+      font-family: Figtree !important;
+      font-size: 16px !important;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120% !important;
+    }
+  }
+
+  .gform-theme--foundation .gform_fields {
+    grid-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(auto-fill, auto);
+
+    grid-row-gap: 20px !important;
+  }
+
+  .gform-theme--framework .gfield--type-choice .gchoice,
+  .gform-theme--framework .gfield--type-choice .ginput_container_consent {
+    label {
+      color: var(--Primary-500) !important;
+      font-size: 16px !important;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

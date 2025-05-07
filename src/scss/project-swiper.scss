@@ -11,19 +11,13 @@
     gap: 10px;
     flex-shrink: 0;
     border-radius: 40px;
-    //  background: var(--Primary-600);
-
-  
-    
     .container-card {
         padding: 18px;
         overflow: hidden;
     }
-
     .projecten-swiper {
         padding: 40px 0;
     }
-
     .project-card {
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -42,20 +36,10 @@
         width: 100%;
         height: auto;
     }
-
-    // .custom-shape {
-    //     // clip-path: polygon(80px 0, 100% 0, 100% 100%, 0 100%, 0 80px);
-    //     //  clip-path: polygon(0 0, calc(100% - 80px) 0, 100% 80px, 100% 100%, 0 100%);
-    //     border-radius: 20px 0 0 20px;
-    //     //clip-path: polygon(0 0, calc(91% - 82px) 0, 100% 86px, 100% 100%, 0 100%);
-    //     clip-path: polygon(0 0, calc(90% - 61px) 0, 100% 75px, 100% 100%, 0 100%);
-    //     overflow: hidden;
-    // }
-
     .open-arrow {
         position: absolute;
-        bottom: 8px;
-        right: 16px;
+        bottom: 0px;
+        right: 0px;
         display: flex;
         width: 52px;
         height: 52px;
@@ -66,13 +50,8 @@
         gap: 10px;
         flex-shrink: 0;
         border-radius: 10px 10px 0px 10px;
-        background: #dc0d1a;
+        background: #DC0D1A;;
     }
-
-    .project-content {
-        background: var(--Primary-600);
-    }
-    
     .project-content h5 {
         font-size: 1.2rem;
         font-weight: bold;
