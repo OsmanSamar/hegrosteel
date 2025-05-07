@@ -27,20 +27,17 @@
 
 
 .button::before {
-
   content: " ";
   position: absolute;
   top: 0;
   left: 0;
   width: 0;
   height: 100%;
- 
   transition: 0.5s;
 }
 
 .secondary-button {
   background: var(--Secondary-500);
-
   &:hover {
     background: var(--Neutral-light);
      color: var(--Primary-600) !important;
