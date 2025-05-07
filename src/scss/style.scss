@@ -22,6 +22,8 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   background: var(--Primary-500);
+  scroll-behavior: smooth;
+
 }
 
 a:any-link {

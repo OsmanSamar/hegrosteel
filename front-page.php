@@ -35,32 +35,28 @@ $fields = get_fields();
                             </div>
                             <div class="col-12 col-lg-7 d-flex justify-content-between">
 
-                            <div class="go-down">
-                                        <div class="arrow-container mt-3">
-                                            <a href="https://wa.me/<?= get_field('whatsapp_number', 'option') ?>"
-                                                class="">
-                                                <span class="d-flex justify-content-center align-items-center">
-                                                    <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg"
-                                                        alt="Go down" />
-                                                </span>
-                                            </a>
-                                        </div>
+                                <div class="go-down">
+                                    <div class="arrow-container mt-3">
+                                        <a href="#Service-Section" aria-label="Go to the content">
+                                            <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg"
+                                                alt="Go down" />
+                                        </a>
+                                    </div>
                                 </div>
 
                                 <div class="whatsapp-fixed">
-                                        <div class=" mt-3">
-                                            <a href="https://wa.me/<?= get_field('whatsapp_number', 'option') ?>"
-                                                class="">
-                                                <span class="d-flex justify-content-center align-items-center">
-                                                    <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
-                                                        alt="Open whatsapp" />
-                                                </span>
-                                            </a>
-                                        </div>
+                                    <div class=" mt-3">
+                                        <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" class="">
+                                            <span class="d-flex justify-content-center align-items-center">
+                                                <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
+                                                    alt="Open whatsapp" />
+                                            </span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
 
-                           
+
 
 
 

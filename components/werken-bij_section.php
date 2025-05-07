@@ -2,9 +2,9 @@
 $fields = $args['fields'];
 ?>
 <div class="werken-bij_section">
-    <div class="container">
+    <div class="">
         <div class="row">
-            <div class="col-12 col-md-12 col-lg-5 offset-lg-1  d-flex flex-column justify-content-start align-items-start mb-5"
+            <div class="col-12 col-md-6 col-lg-5 offset-lg-1  d-flex flex-column justify-content-start align-items-start mb-5"
                 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <div class="d-flex flex-column flex-lg-row  align-items-center ">
@@ -23,9 +23,9 @@ $fields = $args['fields'];
                 </div>
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-md-6">
                 <div class="row mb-4">
-                    <div class="col-lg-10 ">
+                    <div class="col-lg-10">
                         <div class="shared-content  left-bottom-shape  position-relative">
                             <a href="<?= esc_url($fields['blok_2']['link']['url']); ?>">
                                 <div class="lead  "><?= $fields['blok_2']['sub_title']; ?></div>
@@ -38,7 +38,7 @@ $fields = $args['fields'];
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-8 col-md-11">
                         <div class="shared-content  left-top-shape">
                             <a href="<?= esc_url($fields['blok_3']['link']['url']); ?>">
                                 <div class="lead back-text"><?= $fields['blok_3']['sub_title']; ?></div>

@@ -1,10 +1,10 @@
 <?php
 $fields = $args['fields'];
 ?>
-<div class="services_section" >
-    <div class="container">
+<div class="services_section" id="Service-Section">
+    <div class="">
         <div class="row">
-            <div class="col-12 col-lg-4 d-flex flex-column justify-content-start align-items-start" data-aos="fade-up"
+            <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start align-items-start" data-aos="fade-up"
                 data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <h2>
                     <?= $fields['title']; ?>
@@ -38,7 +38,7 @@ $fields = $args['fields'];
                 <?php endif; ?>
             </div>
 
-            <div class="col-12 col-lg-6 offset-lg-2">
+            <div class="col-12 col-md-6  col-lg-6 offset-lg-2">
                 <!-- work list Repeater -->
                 <?php if (!empty($fields['work_list'])): ?>
                     <div class="row repeater-list mt-5 mb-5">

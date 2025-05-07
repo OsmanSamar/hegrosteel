@@ -2,7 +2,7 @@
 $fields = $args['fields'];
 ?>
 <div class="call_to_action_section">
-    <div class="container">
+    <div class="">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-5 col-xl-8 d-flex flex-column justify-content-start align-items-start mb-5"
                 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
