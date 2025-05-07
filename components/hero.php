@@ -1,11 +1,9 @@
 <?php 
     $id= $args['id'] ?? 0;
-
     $bgImg= get_the_post_thumbnail_url( $id);
 ?>
 <div class="hero" style="    margin-top:130px">
     <div class="hero-section bg-holder d-flex align-items-start flex-column">
-
         <?php get_template_part('components/breadcrumb') ?>
         <div class="bg-img"
             style="
@@ -30,5 +28,4 @@
             </div>
         </div>
     </div>
-
 </div>

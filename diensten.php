@@ -1,14 +1,22 @@
 <?php get_header()
-
     //Template Name: diensten
     ?>
-
 <main class="diensten">
     <div class="container">
-
         <div>
             <?= get_template_part("components/hero") ?>
         </div>
+
+        <!-- Service-section -->
+        <?php
+        $content = get_field('content');
+
+        if (!empty($content) && is_array($content)) {
+            foreach ($content as $block) {
+                get_template_part('components/' . $block['acf_fc_layout'], null, ['fields' => $block]);
+            }
+        }
+        ?>
     </div>
 </main>
 

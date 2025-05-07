@@ -6,7 +6,7 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
 ?>
 
 <footer class="footer">
-    <div class="">
+    <div class="container">
         <div class="row">
             <div class="col-lg-10">
                 <div class="d-flex justify-content-between gap-3 flex-wrap">

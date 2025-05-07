@@ -1,3 +1,18 @@
+.img_with_text .order-1 { order: 1; }
+.img_with_text .order-2 { order: 2; }
+
+
+.img_with_text.with-background {
+  border-radius: 40px;
+  background: var(--Primary-600);
+    padding: 60px 60px;
+}
+
+.img_with_text{
+ 
+  margin-bottom: 100px;
+}
+
 
 
 .breadcrumbs {
