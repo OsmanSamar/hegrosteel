@@ -13,7 +13,7 @@ $fields = $args['fields'];
 
                         <a href="<?= esc_url($fields['blok_1']['link']['url']); ?>">
                             <div class="lead "><?= $fields['blok_1']['sub_title']; ?></div>
-                            <h3 ><?= $fields['blok_1']['title']; ?></h3>
+                            <h3><?= $fields['blok_1']['title']; ?></h3>
                             <div class="lead"><?= $fields['blok_1']['text']; ?></div>
 
                             <img src="<?= get_template_directory_uri(); ?>/images/redarrow.svg" alt="Arrow"
@@ -26,10 +26,10 @@ $fields = $args['fields'];
             <div class="col-lg-6">
                 <div class="row mb-4">
                     <div class="col-lg-10 ">
-                        <div class="shared-content  left-bottom-shape position-relative">
+                        <div class="shared-content  left-bottom-shape  position-relative">
                             <a href="<?= esc_url($fields['blok_2']['link']['url']); ?>">
-                                <div class="lead "><?= $fields['blok_2']['sub_title']; ?></div>
-                                <h3 ><?= $fields['blok_2']['title']; ?></h3>
+                                <div class="lead  "><?= $fields['blok_2']['sub_title']; ?></div>
+                                <h3><?= $fields['blok_2']['title']; ?></h3>
                                 <div class="lead"><?= $fields['blok_2']['text']; ?></div>
                                 <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
                                     class="werk-bij-arrow white-arrow">

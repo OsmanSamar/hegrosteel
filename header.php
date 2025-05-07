@@ -180,10 +180,9 @@ unset($menu_items);
         }
 
         .left-bottom-shape {
-            --background-color: #000000;
+            --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-
             &::before,
             &::after {
                 position: absolute;
@@ -194,33 +193,27 @@ unset($menu_items);
                 left: 50%;
                 top: 50%;
                 clip-path: url(#left-bottom-shape) !important;
+                z-index: 0;
             }
 
             &::before {
-                z-index: -1;
-                 /* background-color: var(--background-color);  */
-                /* border: var(--background-color); */
-                border: #ffffff;
-
+                /* z-index: 2; */
+                background-color: var(--border-color);
             }
 
             &::after {
-                z-index: -2;
-                background-color: #000000;
-                /* background-color: var(--border-color); */
-                /* border: var(--border-color); */
-
-                width: calc(100% - calc(2 * var(--border-width)));
-                height: calc(100% - calc(2 * var(--border-width)));
+                /* z-index: 2; */
+               background-color: var(--background-color);
+               width: calc(100% - calc(2 * var(--border-width)));
+                 height: calc(100% - calc(2 * var(--border-width)));
             }
 
             >* {
-                position: relative;
-                z-index: 2;
+                position: relative !important;
+                z-index: 1 !important;
             }
-
-
         }
+
     </style>
 
     <?php wp_body_open(); ?>
