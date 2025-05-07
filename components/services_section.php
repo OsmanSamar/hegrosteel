@@ -4,8 +4,9 @@ $fields = $args['fields'];
 <div class="services_section" id="Service-Section">
     <div class="">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start align-items-start" data-aos="fade-up"
-                data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+            <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start align-items-start"
+                data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
                 <h2>
                     <?= $fields['title']; ?>
 
@@ -32,8 +33,8 @@ $fields = $args['fields'];
                     <a href="<?= esc_url($fields['button']['url']); ?>"
                         target="<?= esc_attr($fields['button']['target']); ?>" class="button secondary-button">
                         <?= esc_html($fields['button']['title']); ?>
-                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg"
-                        alt="Arrow" class="dropdown-arrow">
+                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                            class="dropdown-arrow">
                     </a>
                 <?php endif; ?>
             </div>
@@ -43,13 +44,13 @@ $fields = $args['fields'];
                 <?php if (!empty($fields['work_list'])): ?>
                     <div class="row repeater-list mt-5 mb-5">
                         <?php foreach ($fields['work_list'] as $list_item): ?>
-
-                            <div class="repeater-item d-flex align-items-start justify-content-between">
+                            <div class="repeater-item d-flex align-items-start justify-content-between w-100">
                                 <?php if (!empty($list_item['number'])): ?>
-                                    <p class="number typography mb-0 flex-shrink-0"><?= $list_item['number']; ?></p>
+                                    <p class="number typography mb-0"><?= $list_item['number']; ?></p>
                                 <?php endif; ?>
+
                                 <?php if (!empty($list_item['text'])): ?>
-                                    <h3 class=" mb-0"><?= $list_item['text']; ?></h3>
+                                    <h3 class="mb-0 text-hover-underline"><?= $list_item['text']; ?></h3>
                                 <?php endif; ?>
                             </div>
                             <hr class="divider mt-3 ">

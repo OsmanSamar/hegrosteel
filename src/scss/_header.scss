@@ -9,12 +9,13 @@
 }
 .navbar {
   display: flex;
-  // padding: 15px 39px;
+  //  padding: 15px 39px;
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
   border-radius: 0px 0px 20px 20px;
-  background: var(--Primary-500);
+  // background: var(--Primary-500);
+  background: transparent;
 }
 
 .logo {
@@ -187,8 +188,15 @@
   border-radius: 10px;
   background: var(--Primary-400);
   cursor: pointer;
-  &:hover {
-    background: var(--Secondary-500);
+  
+  &:hover{
+    background: var(--Secondary-500);;
+  }
+  &:hover + h3,
+  &:hover  ~ .text-hover-underline 
+  {
+    text-decoration: underline;
+  
   }
 }
 
