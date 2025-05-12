@@ -48,8 +48,11 @@ $textOnLeft = !empty($fields['text_on_left']);
                             <span class="bold">
                             <?= $fields['bel_of_app'];?>
                         </span>
-                            <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
-                                class="whatsappimg" />
+                       
+                           <span  class="whatsapp-container">
+                           <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
+                           class="whatsappimg" />
+                           </span>
                         </a>
                     </div>
                 </div>

@@ -40,10 +40,13 @@
             <h3> <?= get_field("left_title") ?></h3>
             <class class="regular mb-5 mt-4"> <?= get_field("left_text") ?></class>
             <div class="bel-of-app-container">
+                <span class="whatsapp-container">
                 <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" class="d-flex align-items-center justify-content-between w-100">
                         <span class="bold">Bel of app Hermen</span>
                         <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp" class="whatsappimg" />
                 </a>
+                </span>
+               
             </div>
         </div>
     </div>

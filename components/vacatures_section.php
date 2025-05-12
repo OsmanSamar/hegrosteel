@@ -11,7 +11,7 @@ if ($vacatures->have_posts()): ?>
 
     <div class="services_section" id="Service-Section">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start align-items-start"
+            <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-start"
                 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <h2>
@@ -53,7 +53,7 @@ if ($vacatures->have_posts()): ?>
                     $uren = get_the_terms(get_the_ID(), 'uren');
                     ?>
                     <a href="<?php the_permalink(); ?>">
-                        <div class="row repeater-list mt-5 mb-5">
+                        <div class="row repeater-list mt-4 mb-4">
                             <div class="repeater-item d-flex align-items-start justify-content-between w-100">
                                 <?php if ($i): ?>
                                     <p class="number typography mb-0"><?= $i < 10 ? '0' . $i : $i ?></p>

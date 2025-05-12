@@ -9,11 +9,7 @@
     background: var(--Primary-400, #303030);
   }
 
-  .whatsappimg {
-    width: 52px;
-    height: 52px;
-  }
-
+ 
   .contact-form {
     background: #1c1c1c;
     border-radius: 30px;
@@ -30,7 +26,6 @@
 
   /* Input field */
   .gform-theme--foundation .gfield input,
- 
   .gform-theme--foundation .gfield select {
     width: 96% !important;
     box-sizing: border-box !important;

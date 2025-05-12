@@ -1,3 +1,34 @@
+.whatsapp-container {
+  display: flex;
+  width: 52px;
+  height: 52px;
+  padding: 14px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 60px;
+  background: #fff;
+}
+.whatsappimg {
+  width: 22.048px;
+  height: 22.04px;
+  flex-shrink: 0;
+}
+.whatsapp-fixed {
+   
+  position: absolute;
+  // bottom: 0;
+  right: 0px;
+  bottom: -37px;
+  // z-index: 1000;
+  // box-shadow: 0px 0px 50px 0px rgba(36, 44, 48, 0.1);
+  // transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  // transform: translateY(100%);
+  opacity: 1;
+}
+
 .img_with_text .order-1 {
   order: 1;
 }
@@ -236,9 +267,12 @@
 }
 
 //Style for Vactures section
-
+.number + div > h3 {
+  font-weight: 400;
+}
 .number:hover + div > h3 {
   text-decoration: underline;
+  font-weight: 700;
 }
 .lead-container {
   border-radius: 10px;
