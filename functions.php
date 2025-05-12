@@ -63,6 +63,7 @@ function new_excerpt_more( $more ) {
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
+//To create porjecten post
 function create_project_post_type()
 {
 
@@ -143,3 +144,118 @@ function create_categories_taxonomy()
 
 }
 add_action('init', 'create_categories_taxonomy');
+
+
+//
+function create_vacature_post_type()
+{
+
+    register_post_type(
+        'vacature',
+        // CPT Options
+        array(
+            'labels' => array(
+                'name' => __('vacature'),
+                'singular_name' => __('vacatures')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'vacature'),
+            'show_in_rest' => false,
+            'publicly_queryable' => true,
+            'supports' => ['title', 'thumbnail']
+        )
+    );
+}
+add_action('init', 'create_vacature_post_type');
+
+
+//
+function create_vacature_categories_taxonomy()
+{
+
+      //1 Add new taxonomy, make it hierarchical (like categories)
+      $labels = array(
+        'name' => 'number',
+        'singular_name' => 'number',
+        'search_items' => 'Search number',
+        'all_items' => 'All number',
+        'parent_item' => 'Parent number',
+        'parent_item_colon' => 'Parent number:',
+        'edit_item' => 'Edit number',
+        'update_item' => 'Update number',
+        'add_new_item' => 'Add New number',
+        'new_item_name' => 'New number Name',
+        'menu_name' => 'Categories',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'number'),
+    );
+
+    register_taxonomy('number', 'vacature', $args); 
+
+      //1 Add new taxonomy, make it hierarchical (like categories)
+      $labels2 = array(
+        'name' => 'salary',
+        'singular_name' => 'salary',
+        'search_items' => 'Search salary',
+        'all_items' => 'All salary',
+        'parent_item' => 'Parent salary',
+        'parent_item_colon' => 'Parent salary:',
+        'edit_item' => 'Edit salary',
+        'update_item' => 'Update salary',
+        'add_new_item' => 'Add New salary',
+        'new_item_name' => 'New salary Name',
+        'menu_name' => 'Categories',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels2,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'salary'),
+    );
+
+    register_taxonomy('salary', 'vacature', $args);
+
+  
+
+      //2 Add new taxonomy, make it hierarchical (like categories)
+      $labels3 = array(
+        'name' => 'uren',
+        'singular_name' => 'uren',
+        'search_items' => 'Search uren',
+        'all_items' => 'All uren',
+        'parent_item' => 'Parent uren',
+        'parent_item_colon' => 'Parent uren:',
+        'edit_item' => 'Edit uren',
+        'update_item' => 'Update uren',
+        'add_new_item' => 'Add New uren',
+        'new_item_name' => 'New uren Name',
+        'menu_name' => 'Categories',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels3,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'uren'),
+    );
+
+    register_taxonomy('uren', 'vacature', $args);
+
+}
+add_action('init', 'create_vacature_categories_taxonomy');

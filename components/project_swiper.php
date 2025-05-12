@@ -110,6 +110,6 @@ if ($projects->have_posts()): ?>
 
     </div>
 
-<?php endif;
+  <?php endif;
 wp_reset_postdata();
 ?>
