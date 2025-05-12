@@ -174,35 +174,10 @@ add_action('init', 'create_vacature_post_type');
 function create_vacature_categories_taxonomy()
 {
 
+    
+
       //1 Add new taxonomy, make it hierarchical (like categories)
       $labels = array(
-        'name' => 'number',
-        'singular_name' => 'number',
-        'search_items' => 'Search number',
-        'all_items' => 'All number',
-        'parent_item' => 'Parent number',
-        'parent_item_colon' => 'Parent number:',
-        'edit_item' => 'Edit number',
-        'update_item' => 'Update number',
-        'add_new_item' => 'Add New number',
-        'new_item_name' => 'New number Name',
-        'menu_name' => 'Categories',
-    );
-
-    $args = array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'query_var' => true,
-        'show_in_rest' => true,
-        'rewrite' => array('slug' => 'number'),
-    );
-
-    register_taxonomy('number', 'vacature', $args); 
-
-      //1 Add new taxonomy, make it hierarchical (like categories)
-      $labels2 = array(
         'name' => 'salary',
         'singular_name' => 'salary',
         'search_items' => 'Search salary',
@@ -218,7 +193,7 @@ function create_vacature_categories_taxonomy()
 
     $args = array(
         'hierarchical' => true,
-        'labels' => $labels2,
+        'labels' => $labels,
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
@@ -231,7 +206,7 @@ function create_vacature_categories_taxonomy()
   
 
       //2 Add new taxonomy, make it hierarchical (like categories)
-      $labels3 = array(
+      $labels2 = array(
         'name' => 'uren',
         'singular_name' => 'uren',
         'search_items' => 'Search uren',
@@ -247,7 +222,7 @@ function create_vacature_categories_taxonomy()
 
     $args = array(
         'hierarchical' => true,
-        'labels' => $labels3,
+        'labels' => $labels2,
         'show_ui' => true,
         'show_admin_column' => true,
         'query_var' => true,
