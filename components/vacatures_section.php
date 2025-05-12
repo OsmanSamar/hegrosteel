@@ -27,22 +27,21 @@ if ($vacatures->have_posts()): ?>
 
             <div class="col-12 col-md-6  col-lg-6 offset-lg-2">
                 <!-- vactures list Repeater -->
-                <?php while ($vacatures->have_posts()):
+                <?php 
+                $i=1;
+                while ($vacatures->have_posts()):
                     $vacatures->the_post();
 
                     $salary = get_the_terms(get_the_ID(), 'salary');
                     $uren = get_the_terms(get_the_ID(), 'uren');
-                    $number = get_the_terms(get_the_ID(), 'number');
                     ?>
 
                     <a href="<?php the_permalink(); ?>">
                         <div class="repeater-item d-flex align-items-start justify-content-between w-100">
                             <div class="">
-                                <?php if ($number): ?>
+                                <?php if ($i): ?>
                                     <div class="">
-                                        <?php foreach ($number as $term): ?>
-                                            <p class="number typography mb-0"><?= esc_html($cat->name); ?></p>
-                                        <?php endforeach; ?>
+                                        <p class="number typography mb-0"><?= $i<10?'0'.$i:$i ?></p>
                                     </div>
                                 <?php endif; ?>
 
@@ -60,7 +59,9 @@ if ($vacatures->have_posts()): ?>
                         <hr class="divider mt-3 ">
                     </a>
 
-                <?php endwhile; ?>
+                <?php
+                $i++;
+                endwhile; ?>
 
             </div>
         </div>
