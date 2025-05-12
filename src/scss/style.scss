@@ -12,6 +12,7 @@
   --Neutral-400: #d5d3cd;
   --Secondary-400: #656572;
   --Neutral-light: #FFF;
+
 }
 
 /* General styling */
@@ -59,5 +60,6 @@ img {
 @import "pages/page";
 @import "pages/login";
 @import "werken-bij";
+@import "tab";
 
 @import "components/swiper-scrollbar";

@@ -49,7 +49,7 @@ if ($vacatures->have_posts()): ?>
                 $i = 1;
                 while ($vacatures->have_posts()):
                     $vacatures->the_post();
-                    $salary = get_the_terms(get_the_ID(), 'salary');
+                    // $salary = get_the_terms(get_the_ID(), 'salary');
                     $uren = get_the_terms(get_the_ID(), 'uren');
                     ?>
                     <a href="<?php the_permalink(); ?>">
@@ -62,15 +62,7 @@ if ($vacatures->have_posts()): ?>
                                     <h3 class="mb-2 text-hover-underline"><?php the_title(); ?></h3>
 
                                     <div class="d-flex justify-content-end gap-3">
-                                        <?php if ($salary): ?>
-                                            <?php foreach ($salary as $term): ?>
-                                                <div class="lead-container">
-                                                    <span class="lead">
-                                                        <?= esc_html($term->name); ?>
-                                                    </span>
-                                                </div>
-                                            <?php endforeach; ?>
-                                        <?php endif; ?>
+                                       
 
                                         <?php if ($uren): ?>
                                             <?php foreach ($uren as $term): ?>

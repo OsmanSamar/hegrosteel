@@ -27,7 +27,7 @@ if ($projects->have_posts()): ?>
             <div class="col-lg-12  overflow-visible ">
                 <!-- overflow-right -->
 
-               <div class=" swiper-container swipers projecten-swiper ">
+               <div class="swiper-container swipers projecten-swiper ">
                     <div class="swiper-wrapper">
                         <?php while ($projects->have_posts()):
                             $projects->the_post();

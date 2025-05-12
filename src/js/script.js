@@ -66,6 +66,35 @@ function swiperScrollbar(swiper, scrollbarEl, slideCount) {
   scrollbarEl.insertAdjacentElement("beforeend", inputElement);
 }
 
+
+//Tabs
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabLinks = document.querySelectorAll(".tab-link");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = this.getAttribute("data-tab");
+
+      // Remove active class from all links and hide all content
+      tabLinks.forEach(l => l.classList.remove("active"));
+      tabContents.forEach(content => content.style.display = "none");
+
+      // Add active class to clicked link and show content
+      this.classList.add("active");
+      document.getElementById(target).style.display = "block";
+    });
+  });
+});
+
+  
+
+
+
+
+//
 document.querySelectorAll(".projecten-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
   let swiper = new Swiper(x.querySelector(".projecten-swiper"), {
