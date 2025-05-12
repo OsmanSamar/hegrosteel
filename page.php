@@ -1,12 +1,24 @@
-<?php get_header() ?>        
 
-<main class="page">
+
+<?php get_header()
+ 
+    ?>
+<main class="diensten">
     <div class="container">
-        <?php if(have_posts()) : while(have_posts()) : the_post(); ?>
-            <h1><?php the_title(); ?></h1>
+        <div>
+            <?= get_template_part("components/hero") ?>
+        </div>
 
-            <?php the_content(); ?>
-        <?php endwhile; endif; ?>
+        <!-- Service-section -->
+        <?php
+        $content = get_field('content');
+
+        if (!empty($content) && is_array($content)) {
+            foreach ($content as $block) {
+                get_template_part('components/' . $block['acf_fc_layout'], null, ['fields' => $block]);
+            }
+        }
+        ?>
     </div>
 </main>
 
