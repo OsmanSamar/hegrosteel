@@ -16,10 +16,10 @@
             endif; ?>
             ">
         </div>
-        <div class="hero-content container text-left"> 
-        <?php get_template_part('components/breadcrumb') ?>
+        <div class="hero-content container <?= $bgImg ? 'text-left' : 'text-center' ?>"> 
+        <?php get_template_part('components/breadcrumb',null,['center'=>!$bgImg]) ?>
         <div class="row">
-            <div class="col-12 col-lg-4 col-md-4 my-auto align-self-start d-flex flex-column justify-content-start align-items-start">
+            <div class="col-12 col-lg-4 col-md-4 my-auto d-flex flex-column <?= $bgImg ? 'justify-content-start align-items-start align-self-start' : 'justify-content-center align-items-center align-self-center mx-auto' ?>">
                 <h1 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <?= get_field("hero_title",$id) ?>
