@@ -173,9 +173,6 @@ add_action('init', 'create_vacature_post_type');
 //
 function create_vacature_categories_taxonomy()
 {
-
-    
-
       //1 Add new taxonomy, make it hierarchical (like categories)
       $labels = array(
         'name' => 'salary',
@@ -188,7 +185,7 @@ function create_vacature_categories_taxonomy()
         'update_item' => 'Update salary',
         'add_new_item' => 'Add New salary',
         'new_item_name' => 'New salary Name',
-        'menu_name' => 'Categories',
+        'menu_name' => 'Salary',
     );
 
     $args = array(
@@ -217,7 +214,7 @@ function create_vacature_categories_taxonomy()
         'update_item' => 'Update uren',
         'add_new_item' => 'Add New uren',
         'new_item_name' => 'New uren Name',
-        'menu_name' => 'Categories',
+        'menu_name' => 'Uren',
     );
 
     $args = array(
@@ -231,6 +228,64 @@ function create_vacature_categories_taxonomy()
     );
 
     register_taxonomy('uren', 'vacature', $args);
+
+
+
+      //3Add new taxonomy, make it hierarchical (like categories)
+      $labels3 = array(
+        'name' => 'vakantiedagen',
+        'singular_name' => 'vakantiedagen',
+        'search_items' => 'Search vakantiedagen',
+        'all_items' => 'All vakantiedagen',
+        'parent_item' => 'Parent vakantiedagen',
+        'parent_item_colon' => 'Parent vakantiedagen:',
+        'edit_item' => 'Edit vakantiedagen',
+        'update_item' => 'Update vakantiedagen',
+        'add_new_item' => 'Add New vakantiedagen',
+        'new_item_name' => 'New vakantiedagen Name',
+        'menu_name' => 'Vakantiedagen',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels3,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'vakantiedagen'),
+    );
+
+    register_taxonomy('vakantiedagen', 'vacature', $args);
+
+
+
+      //4 Add new taxonomy, make it hierarchical (like categories)
+      $labels4 = array(
+        'name' => 'pensioenregeling',
+        'singular_name' => 'pensioenregeling',
+        'search_items' => 'Search pensioenregeling',
+        'all_items' => 'All pensioenregeling',
+        'parent_item' => 'Parent pensioenregeling',
+        'parent_item_colon' => 'Parent pensioenregeling:',
+        'edit_item' => 'Edit pensioenregeling',
+        'update_item' => 'Update pensioenregeling',
+        'add_new_item' => 'Add New pensioenregeling',
+        'new_item_name' => 'New pensioenregeling Name',
+        'menu_name' => 'Pensioenregeling',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels4,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'pensioenregeling'),
+    );
+
+    register_taxonomy('pensioenregeling', 'vacature', $args);
 
 }
 add_action('init', 'create_vacature_categories_taxonomy');
