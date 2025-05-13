@@ -1,10 +1,12 @@
 <?php
 $fields = $args['fields'];
 $imageOnLeft = !empty($fields['image_on_the_left']); 
+$backgroundColor = $fields['background_color'] ?? ''; 
 $hasBackground = !empty($fields['has_background']); 
+$backgroundClass= $fields['background'] ?? '';
 ?>
 
-<div class="img_with_text  <?= $hasBackground ? 'with-background' : ''; ?>">
+<div class="img_with_text  <?= $backgroundClass ?> <?= $hasBackground ? 'with-background' : ''; ?>">
     <div class="container">
         <div class="row d-flex flex-wrap">
             <!-- Image Column -->

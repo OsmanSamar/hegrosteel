@@ -38,9 +38,17 @@
 
 .img_with_text.with-background {
   border-radius: 40px;
-  background: var(--Primary-600);
   padding: 60px 10px;
+  &.bg-light {
+    background: var(--Primary-400) !important;
+  }
+  
+  &.bg-dark {
+    background: var(--Primary-600, #020202) !important;
+  }
 }
+
+
 
 .img_with_text {
   margin-bottom: 100px;
