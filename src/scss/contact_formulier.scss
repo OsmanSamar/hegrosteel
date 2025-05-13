@@ -1,0 +1,41 @@
+.contact-formulier {
+    margin: 80px 0px;
+  .diffrent-color {
+    color: var(--Primary-200, #6b6b6b);
+    min-width: 124px;
+  }
+
+  .shared-content {
+    padding: 50px 58px 60px 58px;
+  }
+  .contact-row {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+
+  .regular {
+    flex: 1;
+  }
+  a:hover {
+    color: var(--Secondary-500);
+  }
+
+  .contact-form {
+    border-radius: 30px !important;
+    background: var(--Primary-600, #020202) !important;
+
+    border: unset !important;
+  }
+
+  .gform-theme--foundation .gfield textarea.small {
+    color: var(--Neutral-400) !important;
+    font-family: Figtree !important;
+    font-size: 16px !important;
+    font-style: normal !important;
+    font-weight: 400 !important;
+    line-height: 160% !important;
+  }
+}

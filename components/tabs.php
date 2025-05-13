@@ -32,9 +32,9 @@ $fields = $args['fields'];
                             ?>
                             <div class="tab-content" <?= $i == 0 ? "" : 'style="display: none;"' ?> id="content<?= $i ?>">
                                 <div class="row">
-                                    <div class="col-lg-6">
-                                        <h3><?= $tab['title']; ?></h3>
-                                        <h4><?= $tab['text']; ?></h4>
+                                    <div class="col-lg-5">
+                                        <h3 class="mb-4"><?= $tab['title']; ?></h3>
+                                        <div class="regular mb-4"><?= $tab['text']; ?></div>
 
 
                                         <?php if (!empty($tab['buttons'])): ?>
@@ -63,7 +63,7 @@ $fields = $args['fields'];
                                         <?php endif; ?>
 
                                     </div>
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6 offset-lg-1">
                                         <div class="tabs-img">
                                             <img src="<?= $tab['image']['url'] ?>" alt="<?= $tab['image']['alt'] ?>" />
                                         </div>
