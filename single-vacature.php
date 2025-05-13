@@ -75,8 +75,9 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
         </div>
 
         <div class="row second-row">
-            <div class="col-lg-7 offset-lg-1">
+            <div class="col-lg-7 offset-lg-1 ">
                 <div class="d-flex flex-column gap-3">
+                    <!--  -->
                     <span class="regular">
                         <?= get_field("text"); ?>
                     </span>
@@ -115,7 +116,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
         <!-- Swiper -->
 
         <div class="row align-items-center vacature-block mb-5 third-row">
-            <div class="col-lg-6 offset-1 ">
+            <div class="col-lg-6 offset-1 d-flex flex-column gap-3 ">
                 <?php if (have_rows('vacature_repeater')): ?>
                     <?php while (have_rows('vacature_repeater')):
                         the_row(); ?>
@@ -126,10 +127,10 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                         $image = get_sub_field('image');
                         ?>
                         <?php if (!empty($title)): ?>
-                            <h3 class=""><?= esc_html($title); ?></h3>
+                            <h3 class="mt-5"><?= esc_html($title); ?></h3>
                         <?php endif; ?>
                         <?php if (!empty($text)): ?>
-                            <div class="regular mb-5 mt-5"><?= esc_html($text); ?></div>
+                            <div class="regular mb- mt-"><?= esc_html($text); ?></div>
                         <?php endif; ?>
                         <?php if ($hasalist && have_rows('list')): ?>
                             <div>
@@ -175,7 +176,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                     <?php endwhile; ?>
                 <?php endif; ?>
             </div>
-            <div class="col-lg-4 offset-1">
+            <div class="col-lg-4 offset-1 overflow-right">
                 <?php if (have_rows('vacature_repeater')): ?>
                     <?php while (have_rows('vacature_repeater')):
                         the_row(); ?>
