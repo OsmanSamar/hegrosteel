@@ -5,7 +5,7 @@
   align-items: center;
   gap: 14px;
   border-radius: 10px;
-  width:fit-content;
+  width: fit-content;
   font-family: Figtree;
   font-size: 18px;
   font-style: normal;
@@ -14,9 +14,8 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid transparent;
-  color: #FFF;
+  color: #fff;
 
-  
   //Added to apply the hover effect
 
   position: relative;
@@ -24,7 +23,6 @@
   transition: color 0.3s ease;
   width: fit-content;
 }
-
 
 .button::before {
   content: " ";
@@ -40,11 +38,11 @@
   background: var(--Secondary-500);
   &:hover {
     background: var(--Neutral-light);
-     color: var(--Primary-600) !important;
-    border: 1px solid   var(--Primary-600);
-    .dropdown-arrow{
-     // filter: brightness(0) invert(1);
-     filter: brightness(0);
+    color: var(--Primary-600) !important;
+    border: 1px solid var(--Primary-600);
+    .dropdown-arrow {
+      // filter: brightness(0) invert(1);
+      filter: brightness(0);
     }
   }
 }
@@ -52,15 +50,15 @@
 .primary-button {
   border: 2px solid var(--Secondary-500);
   &:hover {
-    border: 2px solid #FFF;
+    border: 2px solid #fff;
     color: #fff !important;
     .arrow {
       filter: brightness(0) invert(1);
     }
   }
 }
-.custom-button{
-  border: 2px solid #FFF;
+.custom-button {
+  border: 2px solid #fff;
   &:hover {
     background: var(--Primary-500);
     color: #fff !important;
@@ -68,9 +66,18 @@
       filter: brightness(0) invert(1);
     }
   }
-
 }
-
+.outline-white-button {
+  background: var(--Primary-200, #6b6b6b);
+  border: 2px solid #fff;
+  &:hover {
+    background: var(--Primary-500);
+    color: #fff !important;
+    .arrow {
+      filter: brightness(0) invert(1);
+    }
+  }
+}
 
 // .button {
 //   display: inline-flex;
@@ -132,7 +139,6 @@
 
 // .secondary-button {
 
-
 //   &:hover {
 //      background: var(--Primary-500);
 //      color: #fff !important;
@@ -142,4 +148,3 @@
 //     }
 //   }
 // }
-

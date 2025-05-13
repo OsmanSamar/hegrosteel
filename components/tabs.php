@@ -8,6 +8,7 @@ $fields = $args['fields'];
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="border-wrap d-flex flex-wrap">
+                            <!-- Repeater inside Flexible content -->
                             <?php
                             foreach ($fields['tab'] as $i => $tab):
                                 ;
@@ -30,19 +31,48 @@ $fields = $args['fields'];
                         foreach ($fields['tab'] as $i => $tab):
                             ?>
                             <div class="tab-content" <?= $i == 0 ? "" : 'style="display: none;"' ?> id="content<?= $i ?>">
-                            <div class="row">
-                                <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <h3><?= $tab['title']; ?></h3>
+                                        <h4><?= $tab['text']; ?></h4>
 
+
+                                        <?php if (!empty($tab['buttons'])): ?>
+                                            <?php foreach ($tab['buttons'] as $button_row):
+                                                $button = $button_row['button'];
+                                                $button_style = $button_row['button_style'];
+
+                                                // Convert ACF value to custom CSS class
+                                                $custom_class = '';
+                                                if ($button_style === 'btn-primary') {
+                                                    $custom_class = 'secondary-button';
+                                                } elseif ($button_style === 'outline-white-button') {
+                                                    $custom_class = 'outline-white-button';
+                                                }
+
+                                                if (!empty($button['url'])):
+                                                    ?>
+                                                    <a href="<?= esc_url($button['url']); ?>"
+                                                        target="<?= esc_attr($button['target'] ?: '_self'); ?>"
+                                                        class="button <?= esc_attr($custom_class); ?>">
+                                                        <?= esc_html($button['title']); ?>
+                                                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                                                            class="dropdown-arrow">
+                                                    </a>
+                                                <?php endif; endforeach; ?>
+                                        <?php endif; ?>
+
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="tabs-img">
+                                            <img src="<?= $tab['image']['url'] ?>" alt="<?= $tab['image']['alt'] ?>" />
+                                        </div>
+                                    </div>
                                 </div>
-
-                            </div>
-
-                                <h3><?= $tab['title']; ?></h3>
-                                <h4><?=$tab['text']; ?></h4>
                             </div>
                         <?php endforeach; ?>
-                       
                     </div>
+
                 </div>
             </div>
         </div>

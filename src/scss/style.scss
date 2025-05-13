@@ -4,15 +4,15 @@
 @import "font";
 
 :root {
+  --Primary-200: #6B6B6B;
+  --Primary-400: #303030;
   --Primary-500: #1c1c1c;
   --Primary-600: #020202;
-  --Secondary-500: #dc0d1a;
-  --Primary-400: #303030;
-  --Neutral-500: #808282;
-  --Neutral-400: #d5d3cd;
   --Secondary-400: #656572;
+  --Secondary-500: #dc0d1a;
   --Neutral-light: #FFF;
-
+  --Neutral-400: #d5d3cd;
+  --Neutral-500: #808282;
 }
 
 /* General styling */
