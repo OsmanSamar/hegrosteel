@@ -43,7 +43,7 @@ add_action('admin_menu', 'remove_menus');
 
 // Add thumbnail support
 function thumbnails(){
-    add_theme_support( 'post-thumbnails', array('post', 'page','project') );
+    add_theme_support( 'post-thumbnails', array('post', 'page','project','vacature') );
 }
 add_action( 'init', 'thumbnails' );
 

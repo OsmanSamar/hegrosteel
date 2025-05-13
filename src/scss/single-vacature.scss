@@ -1,4 +1,11 @@
 .single-vacature {
+  .first-row{
+    margin: 60px 0px;
+  }
+  .third-row{
+margin: 100px 0px;
+  }
+ 
   .vacture-items {
     display: flex;
     flex-grow: 1;
@@ -16,4 +23,13 @@
 //     font-size: 22px !important;
    
 //   }
+
+.vacature-img{
+height: 400px;
+    object-fit: cover;
+    border-radius: 40px 0px 0px 40px;
+}
+
+
+
 }
