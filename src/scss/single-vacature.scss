@@ -1,0 +1,19 @@
+.single-vacature {
+  .vacture-items {
+    display: flex;
+    flex-grow: 1;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    background: var(--Primary-400, #303030);
+  }
+
+  .second-row{
+    margin: 53px 0px 110px 0px;
+  }
+//   .regular {
+//     font-size: 22px !important;
+   
+//   }
+}

@@ -33,8 +33,9 @@ $backgroundClass= $fields['background'] ?? '';
                             </div>
                         <?php endif; ?>
 
-                        <!-- Button in Repeater -->
-                        <?php if (!empty($fields['buttons'])): ?>
+                        <!-- Button in Repeater  -->
+                       <div class="d-flex  gap-3">
+                       <?php if (!empty($fields['buttons'])): ?>
                             <?php foreach ($fields['buttons'] as $button_row):
                                 $button = $button_row['button'];
                                 $button_style = $button_row['button_style'];
@@ -58,6 +59,7 @@ $backgroundClass= $fields['background'] ?? '';
                                     </a>
                                 <?php endif; endforeach; ?>
                         <?php endif; ?>
+                       </div>
                     </div>
                 </div>
             </div>
