@@ -178,6 +178,53 @@ document.querySelectorAll(".images-slider").forEach((x) => {
 });
 
 
+// Swiper img
+
+document.querySelectorAll(".image-slider").forEach((x) => {
+  let slideCount = x.querySelectorAll(".swiper-slide").length;
+  let swiper = new Swiper(x.querySelector(".image-swiper"), {
+    slidesPerView: 1,
+    centeredSlides: false,
+    grabCursor: true,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: x.querySelector(".swiper-button-next"),
+      prevEl: x.querySelector(".swiper-button-prev"),
+    },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+      },
+      1440: {
+        slidesPerView: 3.3,
+      },
+    },
+
+    // Reinitialize AOS after Swiper initialization
+    on: {
+      init: function () {
+        // AOS.refresh();
+      },
+      slideChangeTransitionEnd: function () {
+        // AOS.refresh();
+      },
+    },
+  });
+
+  swiperScrollbar(
+    swiper,
+    x.querySelector(".custom-swiper-scrollbar"),
+    slideCount
+  );
+});
+
+
+
 
 
 

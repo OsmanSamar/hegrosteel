@@ -142,6 +142,62 @@ function create_categories_taxonomy()
 
     register_taxonomy('plaats', 'project', $args);
 
+
+       // Add new taxonomy, make it hierarchical (like categories)
+       $labels3 = array(
+        'name' => 'ontwerp',
+        'singular_name' => 'ontwerp',
+        'search_items' => 'Search ontwerp',
+        'all_items' => 'All ontwerp',
+        'parent_item' => 'Parent ontwerp',
+        'parent_item_colon' => 'Parent ontwerp:',
+        'edit_item' => 'Edit ontwerp',
+        'update_item' => 'Update ontwerp',
+        'add_new_item' => 'Add New ontwerp',
+        'new_item_name' => 'New ontwerp Name',
+        'menu_name' => 'Ontwerp',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels3,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'ontwerp'),
+    );
+
+    register_taxonomy('ontwerp', 'project', $args);
+
+
+       // Add new taxonomy, make it hierarchical (like categories)
+       $labels4 = array(
+        'name' => 'opdrachtgever',
+        'singular_name' => 'opdrachtgever',
+        'search_items' => 'Search opdrachtgever',
+        'all_items' => 'All opdrachtgever',
+        'parent_item' => 'Parent opdrachtgever',
+        'parent_item_colon' => 'Parent opdrachtgever:',
+        'edit_item' => 'Edit opdrachtgever',
+        'update_item' => 'Update opdrachtgever',
+        'add_new_item' => 'Add New opdrachtgever',
+        'new_item_name' => 'New opdrachtgever Name',
+        'menu_name' => 'Opdrachtgever',
+    );
+
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels4,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'show_in_rest' => true,
+        'rewrite' => array('slug' => 'opdrachtgever'),
+    );
+
+    register_taxonomy('opdrachtgever', 'project', $args);
+
 }
 add_action('init', 'create_categories_taxonomy');
 
