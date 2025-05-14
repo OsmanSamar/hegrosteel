@@ -26,13 +26,14 @@ $paginator = [
 
 $plaaten = get_terms('plaats', ['hide_empty' => true]);
 $categories = get_terms('project_category', ['hide_empty' => true]);
+$projectPage= get_page_by_path('projecten');
 ?>
 
 <main class="projecten">
     <div class="container">
 
         <div>
-            <?= get_template_part("components/hero") ?>
+            <?= get_template_part("components/hero",null,['id'=>$projectPage->ID]) ?>
         </div>
 
         <div class="container project-container">
