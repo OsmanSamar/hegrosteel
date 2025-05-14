@@ -32,7 +32,7 @@ margin: 100px 0px;
   }
 
 .vacature-img{
-height: 400px;
+   height: 400px;
     object-fit: cover;
     border-radius: 40px 0px 0px 40px;
 }
@@ -79,6 +79,7 @@ height: 400px;
   height: 100%;
   object-fit: cover;
    display: block;
+   border-radius: 40px 0px 0px 40px;
 }
 
 
@@ -98,8 +99,11 @@ height: 400px;
     width: 100%;
     height: auto;
   }
-  .images-swiper {
-    padding: 40px 0;
+ 
+
+  .images-slider{
+
+    padding: 80px 0;
   }
   .swiper-slide {
     &:hover {

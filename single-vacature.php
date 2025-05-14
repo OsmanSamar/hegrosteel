@@ -86,7 +86,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
                    
                       <!-- Buttons -->
-                            <div class="d-flex flex-row gap-3 mt-5">
+                            <div class="d-flex  gap-3 mt-5 flex-wrap">
                             <a type="button" class="button secondary-button" href="#solliciteerform">Direct solliciteren
                             <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
@@ -119,14 +119,14 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                     <?php $hasabutton = get_sub_field('has_a_button'); ?>
                                      
                                     <?php if ($title): ?>
-                                        <h3 class="headline"><?= esc_html($title); ?></h3>
+                                        <h3 class=" mb-4"><?= esc_html($title); ?></h3>
                                     <?php endif; ?>
                                     <?php if ($text): ?>
-                                        <span class="regular mb- mt-"><?= esc_html($text); ?></span>
+                                        <span class="regular"><?= esc_html($text); ?></span>
                                     <?php endif; ?>
 
                                     <?php if ($hasalist && have_rows('list')): ?>
-                                   <div>
+                                   <div class="mt-4">
                                    <?php while (have_rows('list')):
                                     the_row(); ?>
                                     <?php $list_item = get_sub_field('text'); ?>

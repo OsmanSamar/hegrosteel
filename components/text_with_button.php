@@ -18,7 +18,7 @@ $fields = $args['fields'];
                     <div class="content">
 
                         <div class="regular mb-5 mt-4"><?= $fields['right_text']; ?></div>
-                        <div class="d-flex gap-3 ">
+                        <div class="d-flex gap-3 flex-wrap">
 
                             <?php if (!empty($fields['buttons'])): ?>
                                 <?php foreach ($fields['buttons'] as $button_row):
