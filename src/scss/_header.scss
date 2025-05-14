@@ -10,6 +10,11 @@
   flex-shrink: 0;
   border-radius: 60px;
   background: #fff;
+  transition: all 0.5s ease;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
+  }
 }
 .whatsappimg {
   width: 22.048px;
@@ -17,16 +22,11 @@
   flex-shrink: 0;
 }
 .whatsapp-fixed {
-   
-  position: absolute;
-  // bottom: 0;
-  right: 0px;
-  bottom: -37px;
-  // z-index: 1000;
-  // box-shadow: 0px 0px 50px 0px rgba(36, 44, 48, 0.1);
-  // transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  // transform: translateY(100%);
-  opacity: 1;
+  position: fixed;
+  bottom: 10px;
+    right: 18px;
+  z-index: 1000;
+   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .bel-of-app-container {

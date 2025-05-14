@@ -44,16 +44,7 @@ $fields = get_fields();
                                     </div>
                                 </div>
 
-                                <div class="whatsapp-fixed">
-                                    <div class=" mt-3">
-                                      <span class="whatsapp-container">  <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" class="">
-                                            <span class="d-flex justify-content-center align-items-center">
-                                                <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
-                                                    alt="Open whatsapp" class="whatsappimg" />
-                                            </span>
-                                        </a></span>
-                                    </div>
-                                </div>
+                               
                             </div>
 
                         </div>
