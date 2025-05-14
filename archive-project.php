@@ -3,7 +3,7 @@ $categories = get_terms('project-category', ['hide_empty' => true]);
 //Template Name: projecten
 $args = [
     'post_type' => 'project',
-    'posts_per_page' => 9,
+    'posts_per_page' => 8,
     'orderby' => 'date',
     'order' => 'DESC',
 ];
@@ -23,6 +23,9 @@ $paginator = [
     'max_num_pages' => $query->max_num_pages,
     'current_page' => intval($_GET['page'] ?? 1),
 ];
+
+$plaaten = get_terms('plaats', ['hide_empty' => true]);
+$categories = get_terms('project_category', ['hide_empty' => true]);
 ?>
 
 <main class="projecten">
@@ -40,12 +43,12 @@ $paginator = [
                     <div class=" filter-section  bottom-right-shape position-relative">
                         <!-- Woningbouw Dropdown -->
                         <div class="plaats-group mb-3">
-                            <label for="woningbouw" class="bold">Categorie</label>
-                            <select name="woningbouw" id="woningbouw" class="form-select filter-input">
-                                <option selected value="">Woningbouw</option>
-                                <option value="1">Woningbouw</option>
-                                <option value="2">Woningbouw</option>
-                                <option value="3">Woningbouw</option>
+                            <label for="project_category" class="bold">Categorie</label>
+                            <select name="project_category" id="project_category" class="form-select filter-input">
+                                <option selected value="">Alle Categorieën</option>
+                                <?php foreach ($categories as $category) { ?>
+                                    <option value="<?= $category->slug ?>"><?= $category->name ?></option>
+                                <?php } ?>
                             </select>
                           
                         </div>
@@ -53,11 +56,11 @@ $paginator = [
                         <!-- Plaats Dropdown -->
                         <div class="plaats-group mb-3">
                             <label for="plaats" class="bold">Plaats</label>
-                            <select name="plaats" id="woningbouw" class="form-select filter-input">
-                                <option selected value="">Amersfoort</option>
-                                <option value="1">Barneveld</option>
-                                <option value="1">Plaatsnaam</option>
-                                <option value="2">Voorthuizen</option>
+                            <select name="plaats" id="plaats" class="form-select filter-input">
+                                <option selected value="">Alle Plaatsen</option>
+                                <?php foreach ($plaaten as $plaat) { ?>
+                                    <option value="<?= $plaat->slug ?>"><?= $plaat->name ?></option>
+                                <?php } ?>
 
                             </select>
                            

@@ -289,3 +289,70 @@ function create_vacature_categories_taxonomy()
 
 }
 add_action('init', 'create_vacature_categories_taxonomy');
+
+
+
+add_action('rest_api_init', function () {
+    register_rest_route('hegrosteel/v1', '/project', [
+        'methods' => 'GET',
+        'callback' => function () {
+            $args = [
+                'post_type' => 'project',
+                'posts_per_page' => 8,
+                'orderby' => 'date',
+                'order' => 'DESC',
+                'paged' => intval($_GET['page'] ?? 1),
+                's' => $_GET['search'] ?? '',
+                'meta_query' => [],
+                'tax_query' => [],
+            ];
+
+            if(isset($_GET['project_category'])) {
+                $args['tax_query'] = [
+                    [
+                        'taxonomy' => 'project_category',
+                        'field' => 'slug',
+                        'terms' => $_GET['project_category'],
+                    ],
+                ];
+            }
+
+            if(isset($_GET['plaats'])) {
+                $args['tax_query'] = [
+                    [
+                        'taxonomy' => 'plaats',
+                        'field' => 'slug',
+                        'terms' => $_GET['plaats'],
+                    ],
+                ];
+            }
+
+          
+
+            $query = new \WP_Query($args);
+            $posts = $query->posts;
+
+            $html = '';
+            ob_start();
+            foreach ($posts as $post) {
+                get_template_part( 'components/projectcard', null, ['post'=>$post]);
+            }
+            $html = ob_get_clean();
+            
+            ob_start();
+            get_template_part( 'components/pagination', null, ['paginator' => [
+                'max_num_pages' => $query->max_num_pages,
+                'current_page' => intval($_GET['page'] ?? 1),
+            ]]);
+            $pagination = ob_get_clean();
+            return [
+                'html' => $html,
+                'count' => $query->found_posts,
+                'pages' => $query->max_num_pages,
+                'more' => $query->max_num_pages > ($_GET['page'] ?? 1),
+                'pagination' => $pagination,
+            ];
+        },
+        'permission_callback' => '__return_true',
+    ]);
+});

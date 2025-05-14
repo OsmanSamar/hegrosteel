@@ -252,33 +252,12 @@ function loadMore() {
     });
     postholder.scrollIntoView();
 
-    fetch(JSONURL+`/limnonari/v1/${postholder.dataset.type}?${params.toString()}`)
+    fetch("/wp-json/hegrosteel/v1/"+postholder.dataset.type+"?"+params.toString())
         .then((response) => response.json())
         .then((data) => {
             postholder.innerHTML = data.html;
             document.querySelector(".pagination-wrap").innerHTML = data.pagination;
         });
-}
-if (document.querySelectorAll(".filter-input").length) {
-    const selects = document.querySelectorAll(".filter-input");
-    var hasSelection = false;
-    try {
-        hasSelection = [...selects].some((select) => select.name != "sort" && select.options[select.selectedIndex].value != "");
-    } catch (e) {
-        // cant find selectedIndex
-    }
-    const hasChecked = [...document.querySelectorAll(".filter-input")].some((input) => (input.type == "checkbox" || input.type == "radio") && input.checked);
-    if (hasSelection || hasChecked) {
-        loadMore();
-    } else {
-        const pageAccessedByReload =
-            (window.performance.navigation && window.performance.navigation.type === 1) ||
-            window.performance
-                .getEntriesByType("navigation")
-                .map((nav) => nav.type)
-                .includes("reload");
-
-    }
 }
 let timeout;
 document.querySelectorAll(".filter-input").forEach((input) => {
@@ -299,27 +278,5 @@ document.querySelectorAll(".pagination-wrap").forEach((x) => {
             postholder.scrollIntoView();
             loadMore();
         }
-    });
-});
-
-document.querySelectorAll(".reset").forEach((x) => {
-    x.addEventListener("click", () => {
-        document.querySelectorAll(".filter-input").forEach((input) => {
-            if (input.type == "checkbox" || input.type == "radio") {
-                input.checked = false;
-            } else if (input.type == "select") {
-                input.value = "";
-            } else {
-                if(input.name.includes('min')) {
-                    input.value = input.min;
-                }else if(input.name.includes('max')) {
-                    input.value = input.max;
-                } else {
-                    input.value = "";
-                }
-            }
-        });
-        page = 1;
-        loadMore();
     });
 });
