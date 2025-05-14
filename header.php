@@ -13,12 +13,12 @@
     <!-- Swiper -->
 
 
-<!-- Load GSAP and ScrollTrigger -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- Load GSAP and ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
 
-  
+
 
 </head>
 <?php
@@ -72,8 +72,22 @@ unset($menu_items);
                 d="M0.213,1 C0.192,1,0.172,0.999,0.156,0.977 L0.155,0.975 L0.031,0.794 C0.014,0.77,0.005,0.735,0.005,0.699 V0.142 C0.005,0.07,0.043,0.011,0.09,0.011 H0.92 C0.967,0.011,1,0.07,1,0.142 V0.877 C1,0.948,0.968,1,0.923,1 L0.92,1 L0.213,1">
             </path>
         </clipPath>
-        <clipPath id="tab-path" clipPathUnits="objectBoundingBox"><path d="M0.77,0 H0.086 C0.039,0,0,0.238,0,0.53 v0.47 h1 l-0.142,-0.788 c-0.024,-0.135,-0.056,-0.21,-0.089,-0.21"></path></clipPath>
-        <clipPath id="top-right-shape" clipPathUnits="objectBoundingBox"><path d="M0.75,0.004 C0.77,0.004,0.79,0.012,0.805,0.025 L0.806,0.027 L0.979,0.191 C0.995,0.206,1,0.227,1,0.25 V0.923 C1,0.968,0.968,1,0.923,1 H0.085 C0.041,1,0.004,0.968,0.004,0.923 V0.088 C0.004,0.044,0.039,0.008,0.083,0.007 L0.085,0.007 L0.75,0.004"></path></clipPath>
+        <clipPath id="tab-path" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0.77,0 H0.086 C0.039,0,0,0.238,0,0.53 v0.47 h1 l-0.142,-0.788 c-0.024,-0.135,-0.056,-0.21,-0.089,-0.21">
+            </path>
+        </clipPath>
+        <clipPath id="top-right-shape" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0.75,0.004 C0.77,0.004,0.79,0.012,0.805,0.025 L0.806,0.027 L0.979,0.191 C0.995,0.206,1,0.227,1,0.25 V0.923 C1,0.968,0.968,1,0.923,1 H0.085 C0.041,1,0.004,0.968,0.004,0.923 V0.088 C0.004,0.044,0.039,0.008,0.083,0.007 L0.085,0.007 L0.75,0.004">
+            </path>
+        </clipPath>
+        <clipPath id="bottom-right-shape" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0.75,1 C0.77,1,0.79,0.997,0.805,0.981 L0.806,0.98 L0.979,0.795 C0.995,0.778,1,0.754,1,0.729 V0.096 C1,0.046,0.968,0.005,0.923,0.005 H0.085 C0.041,0.005,0.004,0.046,0.004,0.096 V0.91 C0.004,0.96,0.039,1,0.083,1 L0.085,1 L0.75,1">
+            </path>
+        </clipPath>
+        <clipPath id="project-right-top" clipPathUnits="objectBoundingBox"><path d="M0.747,0.002 C0.768,0.002,0.788,0.01,0.804,0.025 L0.805,0.026 L0.975,0.201 C0.992,0.218,1,0.242,1,0.267 V0.912 C1,0.961,0.964,1,0.918,1 H0.085 C0.039,1,0.001,0.961,0.001,0.912 V0.094 C0.001,0.046,0.037,0.006,0.082,0.004 L0.084,0.004 L0.747,0.002"></path></clipPath>
     </svg>
     <style>
         .svg {
@@ -194,6 +208,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
+
             &::before,
             &::after {
                 position: absolute;
@@ -214,9 +229,9 @@ unset($menu_items);
 
             &::after {
                 /* z-index: 2; */
-               background-color: var(--background-color);
-               width: calc(100% - calc(2 * var(--border-width)));
-                 height: calc(100% - calc(2 * var(--border-width)));
+                background-color: var(--background-color);
+                width: calc(100% - calc(2 * var(--border-width)));
+                height: calc(100% - calc(2 * var(--border-width)));
             }
 
             >* {
@@ -225,10 +240,86 @@ unset($menu_items);
             }
         }
 
-        .top-right-shape{
+        .bottom-right-shape{
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                transform: translateX(-50%) translateY(-50%);
+                left: 50%;
+                top: 50%;
+                clip-path: url(#bottom-right-shape) !important;
+                z-index: 0;
+            }
+
+            &::before {
+                /* z-index: 2; */
+                background-color: var(--border-color);
+            }
+
+            &::after {
+                /* z-index: 2; */
+                background-color: var(--background-color);
+                width: calc(100% - calc(2 * var(--border-width)));
+                height: calc(100% - calc(2 * var(--border-width)));
+            }
+
+            >* {
+                position: relative !important;
+                z-index: 1 !important;
+            }
+
+
+        }
+
+        .project-right-top{
+            --background-color: #1c1c1c;
+            --border-color: #6B6B6B;
+            --border-width: 2px;
+
+            &::before,
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                transform: translateX(-50%) translateY(-50%);
+                left: 50%;
+                top: 50%;
+                clip-path: url(#project-right-top) !important;
+                z-index: 0;
+            }
+
+            &::before {
+                /* z-index: 2; */
+                background-color: var(--border-color);
+            }
+
+            &::after {
+                /* z-index: 2; */
+                background-color: var(--background-color);
+                width: calc(100% - calc(2 * var(--border-width)));
+                height: calc(100% - calc(2 * var(--border-width)));
+            }
+
+            >* {
+                position: relative !important;
+                z-index: 1 !important;
+            }
+
+        }
+
+        .top-right-shape {
+            --background-color: #1c1c1c;
+            --border-color: #6B6B6B;
+            --border-width: 2px;
+
             &::before,
             &::after {
                 position: absolute;
@@ -249,9 +340,9 @@ unset($menu_items);
 
             &::after {
                 /* z-index: 2; */
-               background-color: var(--background-color);
-               width: calc(100% - calc(2 * var(--border-width)));
-                 height: calc(100% - calc(2 * var(--border-width)));
+                background-color: var(--background-color);
+                width: calc(100% - calc(2 * var(--border-width)));
+                height: calc(100% - calc(2 * var(--border-width)));
             }
 
             >* {
@@ -260,7 +351,6 @@ unset($menu_items);
             }
 
         }
-
     </style>
 
     <?php wp_body_open(); ?>

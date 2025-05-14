@@ -172,8 +172,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
                             <?php while (have_rows('vacature_repeater')):
                                 the_row(); ?>
-                                <div class="row">
-                                    <div class="">
                                         <?php
                                         $image = get_sub_field('image');
                                         if (!empty($image)): ?>
@@ -181,8 +179,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                                 <img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" />
                                             </div>
                                         <?php endif; ?>
-                                    </div>
-                                </div>
 
                                 <?php $index++; ?>
 

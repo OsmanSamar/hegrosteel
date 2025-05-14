@@ -1,0 +1,30 @@
+.projecten {
+  margin-top: 100px;
+
+  .filter-section {
+    padding: 53px 30px 83px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .form-select .filter-input {
+   
+  }
+
+  #guests {
+    border: 1px solid var(--Neutral-400, #d5d3cd) !important;
+    background-color: black !important;
+    color: var(--Neutral-400, #d5d3cd) !important;
+    font-family: Figtree;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    background-image: url("../images/next-btn.svg") !important;
+    
+}
+}
