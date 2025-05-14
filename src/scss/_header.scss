@@ -363,6 +363,14 @@
   z-index: 0;
 }
 
+.center_text_button{
+  margin: 100px 0px;
+padding: 60px;
+gap: 40px;
+border-radius: 30px;
+border: 2px solid var(--Secondary-500, #DC0D1A);
+}
+
 @media (min-width: 992px) {
   .img_with_text.with-background {
     padding: 60px 80px;
