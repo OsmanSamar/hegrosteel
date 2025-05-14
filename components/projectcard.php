@@ -29,13 +29,9 @@ if ($categories) {
                         <img src="<?= get_template_directory_uri(); ?>/images/open-btn.svg" alt="Arrow" class="open-arrow ">
                     </div>
                 <?php endif; ?>
-
                 <div class="project-content p-3">
-
-
                     <div class="project-content p-3">
                         <?php if ($categories): ?>
-
                             <?php foreach ($categories as $cat): ?>
                                 <span class="lead project-categories"><?= esc_html($cat->name); ?></span>
                             <?php endforeach; ?>
