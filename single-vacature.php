@@ -21,7 +21,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             <?php get_template_part("components/hero"); ?>
         </div>
 
-        <!-- Frst Section -->
+        <!-- First Section -->
         <div class="first-row">
             <div class="row g-3 ">
                 <div class="col-6 col-lg-3 ">
@@ -84,51 +84,19 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                         <?= get_field("text"); ?>
                     </span>
 
-                    <!-- Buttons on just repeater  -->
-                    <div class="d-flex flex-row gap-3 mt-4">
-                        <?php if (have_rows('buttons')): ?>
-                            <?php while (have_rows('buttons')):
-                                the_row();
-                                $button = get_sub_field('button');
-                                $button_style = get_sub_field('button_style');
-                                $button_type = get_sub_field('button_type');
-
-                                // Convert ACF value to custom CSS class
-                                $custom_class = '';
-                                if ($button_style === 'btn-primary') {
-                                    $custom_class = 'secondary-button';
-                                } elseif ($button_style === 'btn-outline-primary') {
-                                    $custom_class = 'primary-button';
-                                }
-
-                 // Determine href and behavior
-                 $href ='#';
-                       $target ='_self';
-
-                   if ($button_type === 'scroll') {
-                             $href ='#solliciteerform'; 
-                         } elseif ($button_type === 'whatsapp') {
-                            $href = 'https://wa.me/0123456789'; 
-                                     $target = '_blank';
-                                } elseif (!empty($button['url'])) {
-                                  $href = esc_url($button['url']);
-                             $target = esc_attr($button['target'] ?: '_self');
-                                 }
-
-                                if (!empty($button['url'])): ?>
-                                    <a href="<?= esc_url($button['url']); ?>"
-                                        target="<?= esc_attr($button['target'] ?: '_self'); ?>"
-                                        class="button <?= esc_attr($custom_class); ?>">
-                                        <?= esc_html($button['title']); ?>
-                                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
-                                            class="dropdown-arrow">
-                                    </a>
-                                <?php endif;
-
-
-                            endwhile; ?>
-                        <?php endif; ?>
-                    </div>
+                   
+                      <!-- Buttons -->
+                            <div class="d-flex flex-row gap-3 mt-5">
+                            <a type="button" class="button secondary-button" href="#solliciteerform">Direct solliciteren
+                            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                            class="dropdown-arrow">
+                            </a>
+                               <a type="button " class= "button primary-button"  href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" >
+                                 Vragen? App Hermen
+                                   <img src="<?= get_template_directory_uri() ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp"
+                                     class="whatsappimg" />
+                               </a>
+                            </div>
                 </div>
             </div>
         </div>
@@ -140,21 +108,63 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 <div class="col-lg-6 left offset-1 d-flex flex-column gap-3">
                     <div class="detailsWrapper">
                         <?php if (have_rows('vacature_repeater')): ?>
-
                             <?php $index = 0; ?>
-
                             <?php while (have_rows('vacature_repeater')):
                                 the_row(); ?>
                                 <div class="details">
                                     <?php $title = get_sub_field('title'); ?>
                                     <?php $text = get_sub_field('text'); ?>
+                                    <?php $hasalist =get_sub_field('has_a_list'); ?>
+                                    <?php $image = get_sub_field('image'); ?>
+                                    <?php $hasabutton = get_sub_field('has_a_button'); ?>
+                                     
                                     <?php if ($title): ?>
                                         <h3 class="headline"><?= esc_html($title); ?></h3>
                                     <?php endif; ?>
                                     <?php if ($text): ?>
                                         <span class="regular mb- mt-"><?= esc_html($text); ?></span>
                                     <?php endif; ?>
-                                </div>
+
+                                    <?php if ($hasalist && have_rows('list')): ?>
+                                   <div>
+                                   <?php while (have_rows('list')):
+                                    the_row(); ?>
+                                    <?php $list_item = get_sub_field('text'); ?>
+                                    <?php if (!empty($list_item)): ?>
+                                        <div class="repeater-item  d-flex  align-items-center gap-2 w-100">
+                                            <img src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Arrow"
+                                                class="dropdown-arrow">
+                                            <p class=" regular mb-2"><?= esc_html($list_item); ?></p>
+                                        </div>
+                                    <?php endif; ?>
+                                <?php endwhile; ?>
+                               </div>
+
+                                 <!-- Buttons -->
+                             
+
+
+
+
+                              <?php if ($hasabutton) : ?>
+                       <div class="d-flex flex-row gap-3 mt-5">
+                        <a type="button" class="button secondary-button" href="#solliciteerform">
+            Direct solliciteren
+            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+        </a>
+        <a type="button" class="button primary-button" href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>">
+            Vragen? App Hermen
+            <img src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp" class="whatsappimg" />
+        </a>
+    </div>
+<?php endif; ?>
+<!-- End of Button -->
+
+                                   <?php endif; ?>
+                       
+                            
+                           
+                       </div>
 
                                 <?php $index++; ?>
 
@@ -191,50 +201,47 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
 
 
-
-
-
-
         <!-- Image swiper -->
-      <div class="images-swiper">
+        <div class="images-swiper">
 
-     <div class="images-slider">
-            <div class="container">
-                <div class="row">
-                    <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
-                        <!-- <h2><?= get_field("title")?></h2> -->
-                    </div>
-                    <div class="col-lg-12 ">
-                        <div class="swiper-container swiper images-swiper ">
-                            <div class="swiper-wrapper">
-                                <?php if (have_rows('images_repeater')): ?>
-                                    <?php while (have_rows('images_repeater')):
-                                        the_row(); ?>
-                                        <div class="swiper-slide">
-                                                <?php
-                                                $image = get_sub_field('img');
-                                                if ($image): ?>
-                                                <div class="">
-                                                    <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
-                                                        class="swiper-img " />
-                                                </div>
-                                               <?php endif; ?>
-                                        </div>
-                                    <?php endwhile; ?>
-                                <?php endif; ?>
-                            </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div
-                                        class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
-                                        <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
-                                            <img src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"
-                                                alt="Prev arrow" class="dropdown-arrow">
-                                        </div>
-                                        <div class="custom-swiper-scrollbar"></div>
-                                        <div class="swiper-button-next d-none d-md-flex d-lg-flex">
-                                            <img src="<?= get_template_directory_uri(); ?>/images/next-btn.svg"
-                                                alt="Next arrow" class="dropdown-arrow">
+            <div class="images-slider">
+                <div class="container">
+                    <div class="row">
+                        <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
+                            <!-- <h2><?= get_field("title")?></h2> -->
+                        </div>
+                        <div class="col-lg-12 ">
+                            <div class="swiper-container swiper images-swiper ">
+                                <div class="swiper-wrapper">
+                                    <?php if (have_rows('images_repeater')): ?>
+                                        <?php while (have_rows('images_repeater')):
+                                            the_row(); ?>
+                                            <div class="swiper-slide">
+                                                    <?php
+                                                    $image = get_sub_field('img');
+                                                    if ($image): ?>
+                                                    <div class="">
+                                                        <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
+                                                            class="swiper-img " />
+                                                    </div>
+                                                <?php endif; ?>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    <?php endif; ?>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div
+                                            class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
+                                            <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
+                                                <img src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"
+                                                    alt="Prev arrow" class="dropdown-arrow">
+                                            </div>
+                                            <div class="custom-swiper-scrollbar"></div>
+                                            <div class="swiper-button-next d-none d-md-flex d-lg-flex">
+                                                <img src="<?= get_template_directory_uri(); ?>/images/next-btn.svg"
+                                                    alt="Next arrow" class="dropdown-arrow">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -244,7 +251,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 </div>
             </div>
         </div>
-       </div>
         
 
 
