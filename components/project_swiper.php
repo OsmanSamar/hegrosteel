@@ -24,7 +24,7 @@ if ($projects->have_posts()): ?>
                     </a>
                 </div>
                 <!-- Updated  -->
-            <div class="col-lg-12  overflow-visible ">
+               <div class="col-lg-12  overflow-visible ">
                 <!-- overflow-right -->
 
                <div class="swiper-container swipers projecten-swiper ">
@@ -96,7 +96,7 @@ if ($projects->have_posts()): ?>
 
                 </div>
 
-            </div>
+               </div>
 
                <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
                     <a href="<?= get_post_type_archive_link('project') ?>"

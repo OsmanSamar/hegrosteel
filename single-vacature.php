@@ -208,7 +208,13 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 <div class="container">
                     <div class="row">
                         <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
-                            <!-- <h2><?= get_field("title")?></h2> -->
+                            <h2><?= get_field("swiper_title")?></h2>
+                            <a href="<?= get_field("button")['url'] ?>"
+                             class="button primary-button ">
+                             <?= get_field("button")['title'] ?>
+                            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                            class="dropdown-arrow">
+                           </a>
                         </div>
                         <div class="col-lg-12 ">
                             <div class="swiper-container swiper images-swiper ">
