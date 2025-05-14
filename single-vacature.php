@@ -80,7 +80,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             <div class="col-lg-7 offset-lg-1 ">
                 <div class="d-flex flex-column gap-3">
                     <!--  -->
-                    <span class="regular">
+                    <span class="regular left-text">
                         <?= get_field("text"); ?>
                     </span>
 
@@ -91,6 +91,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                 the_row();
                                 $button = get_sub_field('button');
                                 $button_style = get_sub_field('button_style');
+                                $button_type = get_sub_field('button_type');
 
                                 // Convert ACF value to custom CSS class
                                 $custom_class = '';
@@ -99,6 +100,20 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                 } elseif ($button_style === 'btn-outline-primary') {
                                     $custom_class = 'primary-button';
                                 }
+
+                 // Determine href and behavior
+                 $href ='#';
+                       $target ='_self';
+
+                   if ($button_type === 'scroll') {
+                             $href ='#solliciteerform'; 
+                         } elseif ($button_type === 'whatsapp') {
+                            $href = 'https://wa.me/0123456789'; 
+                                     $target = '_blank';
+                                } elseif (!empty($button['url'])) {
+                                  $href = esc_url($button['url']);
+                             $target = esc_attr($button['target'] ?: '_self');
+                                 }
 
                                 if (!empty($button['url'])): ?>
                                     <a href="<?= esc_url($button['url']); ?>"
@@ -109,6 +124,8 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                             class="dropdown-arrow">
                                     </a>
                                 <?php endif;
+
+
                             endwhile; ?>
                         <?php endif; ?>
                     </div>
@@ -116,7 +133,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             </div>
         </div>
 
-        <!--Swiper  Test Code  -->
+        <!--Gasp Swiper animation  Test Code  -->
         <div class="container gallery">
             <div class="row align-items-center vacature-block mb-5 third-row">
                 <!-- Left Column: Texts -->
@@ -142,7 +159,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                 <?php $index++; ?>
 
                             <?php endwhile; ?>
-                        <?php endif; ?>
+                        <?php endif; ?> 
                     </div>
                 </div>
 
@@ -182,8 +199,62 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
 
 
+        <!-- Image swiper -->
+      <div class="images-swiper">
+
+     <div class="images-slider">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
+                        <!-- <h2><?= get_field("title")?></h2> -->
+                    </div>
+                    <div class="col-lg-12 ">
+                        <div class="swiper-container swiper images-swiper ">
+                            <div class="swiper-wrapper">
+                                <?php if (have_rows('images_repeater')): ?>
+                                    <?php while (have_rows('images_repeater')):
+                                        the_row(); ?>
+                                        <div class="swiper-slide">
+                                                <?php
+                                                $image = get_sub_field('img');
+                                                if ($image): ?>
+                                                <div class="">
+                                                    <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
+                                                        class="swiper-img " />
+                                                </div>
+                                               <?php endif; ?>
+                                        </div>
+                                    <?php endwhile; ?>
+                                <?php endif; ?>
+                            </div>
+                            <div class="container">
+                                <div class="row">
+                                    <div
+                                        class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
+                                        <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
+                                            <img src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"
+                                                alt="Prev arrow" class="dropdown-arrow">
+                                        </div>
+                                        <div class="custom-swiper-scrollbar"></div>
+                                        <div class="swiper-button-next d-none d-md-flex d-lg-flex">
+                                            <img src="<?= get_template_directory_uri(); ?>/images/next-btn.svg"
+                                                alt="Next arrow" class="dropdown-arrow">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+        
+
+
+
         <!-- Service-section -->
-        <div class="solliciteer-form col-12 col-lg-12 mt-5">
+        <div class="solliciteer-form col-12 col-lg-12" id="solliciteerform">
             <div class="d-flex flex-column contact-form form-1 position-relative">
                 <h3>Meer weten of solliciteren?</h3>
                 <?= do_shortcode('[gravityform id="3" title="false" description="false"   cssClass="form-1"]') ?>
