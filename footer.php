@@ -134,6 +134,9 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
 
 
 <?php wp_footer(); ?>
+
+
+
 </body>
 
 </html>

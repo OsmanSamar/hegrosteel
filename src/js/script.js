@@ -66,21 +66,20 @@ function swiperScrollbar(swiper, scrollbarEl, slideCount) {
   scrollbarEl.insertAdjacentElement("beforeend", inputElement);
 }
 
-
 //Tabs
 
 document.addEventListener("DOMContentLoaded", function () {
   const tabLinks = document.querySelectorAll(".tab-link");
   const tabContents = document.querySelectorAll(".tab-content");
 
-  tabLinks.forEach(link => {
+  tabLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
       const target = this.getAttribute("data-tab");
 
       // Remove active class from all links and hide all content
-      tabLinks.forEach(l => l.classList.remove("active"));
-      tabContents.forEach(content => content.style.display = "none");
+      tabLinks.forEach((l) => l.classList.remove("active"));
+      tabContents.forEach((content) => (content.style.display = "none"));
 
       // Add active class to clicked link and show content
       this.classList.add("active");
@@ -88,11 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
-  
-
-
-
 
 //
 document.querySelectorAll(".projecten-slider").forEach((x) => {
@@ -140,11 +134,50 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
 
 // Scroll to down
 
-document
-  .querySelector(".arrow-container a")
-  .addEventListener("click", function (e) {
-    e.preventDefault();
-    document.querySelector("#Service-Section").scrollIntoView({
-      behavior: "smooth",
-    });
-  });
+// document
+//   .querySelector(".arrow-container a")
+//   .addEventListener("click", function (e) {
+//     e.preventDefault();
+//     document.querySelector("#Service-Section").scrollIntoView({
+//       behavior: "smooth",
+//     });
+//   });
+
+
+  //Gsap Scroll animation
+  document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+  
+    // To check the forst image
+    const photos = document.querySelectorAll(".photo:not(:first-child)");
+  
+    if (photos.length > 0) {
+      // To hide the first image
+      gsap.set(photos, { opacity: 0, scale: 0.5 });
+  
+      // To Scroll the image
+      const animation = gsap.to(photos, {
+        opacity: 1,
+        scale: 1,
+        duration: 1,
+        stagger: 1
+      });
+  
+      ScrollTrigger.create({
+        trigger: ".gallery",
+        start: "top top",
+        end: "bottom bottom",
+        pin: ".right",
+        animation: animation,
+        scrub: true,
+        // markers: false
+      });
+    } else {
+      console.warn("No .photo:not(:first-child) found.");
+    }
+
+
+  }
+);
+
+
