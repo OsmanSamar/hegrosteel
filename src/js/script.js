@@ -327,3 +327,13 @@ document.querySelectorAll(".pagination-wrap").forEach((x) => {
         }
     });
 });
+
+
+//shown collapse event
+const navbar = document.querySelector('#navbarSupportedContent');
+navbar.addEventListener('shown.bs.collapse', () => {
+  navbar.classList.add('menu-open');
+});
+navbar.addEventListener('hidden.bs.collapse', () => {
+  navbar.classList.remove('menu-open');
+});

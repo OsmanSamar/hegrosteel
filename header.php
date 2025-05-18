@@ -416,6 +416,7 @@ unset($menu_items);
                             <span class="toggler-icon bottom-bar"></span>
                         </button>
                     </div>
+                   
                     <!-- Navigation Menu -->
 
                     <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">

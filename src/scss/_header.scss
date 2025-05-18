@@ -255,7 +255,42 @@
   .navbar-toggler {
     display: flex;
   }
+
+  //Added Nav links appear one by one from left to right
+  .navbar-nav .nav-link {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .ul-bg.menu-open .nav-item:nth-child(1) .nav-link {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.1s;
+  }
+  .ul-bg.menu-open .nav-item:nth-child(2) .nav-link {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.2s;
+  }
+  .ul-bg.menu-open .nav-item:nth-child(3) .nav-link {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.3s;
+  }
+  .ul-bg.menu-open .nav-item:nth-child(4) .nav-link {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 0.4s;
+  }
+  
+  
+
 }
+
+
+
+
 
 .divider {
   border: 1px solid #6b6b6b;
