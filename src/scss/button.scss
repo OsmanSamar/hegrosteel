@@ -17,11 +17,14 @@
   color: #fff;
 
   //Added to apply the hover effect
-
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease;
-  width: fit-content;
+ 
+  //1
+  // z-index: 1;
+  // background: transparent;
+  // overflow: hidden;
 }
 
 .button::before {
@@ -32,7 +35,26 @@
   width: 0;
   height: 100%;
   transition: 0.5s;
+
+  //2Added
+
+  // width: 100%;
+  //  height: 100%;
+  //    transform: scaleX(0);
+  //  transform-origin: left;
+  //   transition: transform 0.5s ease;
+  //    z-index: 0;
+  //    background-color: rgba(255, 255, 255, 0.2);
+  
 }
+
+//3
+// .button:hover::before {
+//      transform: scaleX(1);
+//  }
+
+
+
 
 .secondary-button {
   background: var(--Secondary-500);
@@ -79,72 +101,3 @@
   }
 }
 
-// .button {
-//   display: inline-flex;
-//   padding: 11px 19px;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 14px;
-//   border-radius: 10px;
-//   width: fit-content;
-//   font-family: Figtree;
-//   font-size: 18px;
-//   font-style: normal;
-//   font-weight: 600;
-//   line-height: 28.8px;
-//   cursor: pointer;
-//   border: 1px solid transparent;
-//   color: #FFF;
-//   position: relative;
-//   text-decoration: none;
-//   overflow: hidden;
-//   z-index: 1;
-// }
-
-// .button::before {
-//   content: "";
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   transform: scaleX(0);
-//   transform-origin: left;
-//   transition: transform 0.5s ease;
-//   z-index: 0;
-// }
-
-// .button:hover::before {
-//   transform: scaleX(1);
-// }
-
-// .button .arrow,
-// .button span,
-// .button i {
-//   position: relative;
-//   z-index: 1;
-// }
-
-// .secondary-button::before {
-//   background: var(--Primary-500);
-// }
-
-// .primary-button::before {
-//   background: var(--Secondary-500);
-// }
-
-// .custom-button::before {
-//   background: var(--Primary-500);
-// }
-
-// .secondary-button {
-
-//   &:hover {
-//      background: var(--Primary-500);
-//      color: #fff !important;
-//     border: 1px solid  #fff;
-//     .arrow {
-//       filter: brightness(0) invert(1);
-//     }
-//   }
-// }
