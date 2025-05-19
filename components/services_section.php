@@ -7,9 +7,8 @@ $fields = $args['fields'];
             <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start align-items-start"
                 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
-                <h2>
+                <h2 class="mb-4">
                     <?= $fields['title']; ?>
-
                 </h2>
                 <div class="regular">
                     <?= $fields['text']; ?>
@@ -50,10 +49,12 @@ $fields = $args['fields'];
                                 <?php endif; ?>
 
                                 <?php if (!empty($list_item['text'])): ?>
-                                    <h3 class="mb-0 text-hover-underline"><?= $list_item['text']; ?></h3>
+                                   <div>
+                                     <h3 class="mb-2 text-hover-underline"><?= $list_item['text']; ?></h3>
+                                   </div>
                                 <?php endif; ?>
                             </div>
-                            <hr class="divider mt-3 ">
+                            <hr class="divider mt-4">
 
                         <?php endforeach; ?>
                     </div>
