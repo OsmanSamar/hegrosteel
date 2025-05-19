@@ -11762,10 +11762,8 @@ img {
 .call_to_action_section {
   margin: 80px 0px;
   display: flex;
-  padding: 40px 60px 40px 40px;
+  padding: 30px;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   gap: 10px;
   border-radius: 30px;
   background: var(--Secondary-500);
