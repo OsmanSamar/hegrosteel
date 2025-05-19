@@ -387,10 +387,17 @@
   width: 51.636px;
   height: 51.636px;
   margin-top: 42px;
-  // transform: rotate(-41deg);
+   transform: rotate(-41deg);
 }
-.white-arrow {
-  transform: rotate(-41deg);
+// .white-arrow {
+//   transform: rotate(-41deg);
+// }
+.red-arrow{
+  filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(5000%) hue-rotate(340deg) brightness(90%);
+ 
+}
+.black-arrow{
+  filter: brightness(0);
 }
 .back-text {
   color: #191919 !important;

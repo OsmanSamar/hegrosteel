@@ -16,8 +16,8 @@ $fields = $args['fields'];
                             <h3><?= $fields['blok_1']['title']; ?></h3>
                             <div class="lead"><?= $fields['blok_1']['text']; ?></div>
 
-                            <img src="<?= get_template_directory_uri(); ?>/images/redarrow.svg" alt="Arrow"
-                                class="werk-bij-arrow">
+                            <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
+                                class="werk-bij-arrow red-arrow">
                         </a>
                     </div>
                 </div>
@@ -44,8 +44,8 @@ $fields = $args['fields'];
                                 <div class="lead back-text"><?= $fields['blok_3']['sub_title']; ?></div>
                                 <h3 class="back-text"><?= $fields['blok_3']['title']; ?></h3>
                                 <div class="lead"><?= $fields['blok_3']['text']; ?></div>
-                                <img src="<?= get_template_directory_uri(); ?>/images/blackarrow.svg" alt="Arrow"
-                                    class="werk-bij-arrow">
+                                <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
+                                    class="werk-bij-arrow black-arrow">
                             </a>
                         </div>
                     </div>
