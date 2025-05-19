@@ -25,8 +25,8 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
        <div class="first-section">
 
        <div class="row">
-        <div class="col-lg-7 d-flex flex-column justify-content-start align-items-start gap-3">
-                 <?php if ($categories): ?>
+          <div class="col-lg-7 d-flex flex-column justify-content-start align-items-start gap-3">
+                   <?php if ($categories): ?>
                         <?php foreach ($categories as $term): ?>
                             <div class="project-items mb-3 gap-2">
                                 <span class="lead ">
@@ -41,18 +41,16 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                     <span class="regular"> <?=get_field("text")?></span>
 
                     <!-- Buttons -->
-                    <div class="">
+                    <div class="mt-4">
                             <a type="button" class="button secondary-button" href="<?=get_field("button")['url']?>" >
                             <?=get_field("button")['title']?>
                             <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                             </a>
-                  </div>
-        </div>
-        <div class="col-lg-4 offset-lg-1">
+                    </div>
+              </div>
 
-
-      
+             <div class="col-lg-4 offset-lg-1">
                     
                     <div class="right-section  right-bottom-border position-relative" style="padding: 50px;">
                         
@@ -64,7 +62,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php if ($ontwerp): ?>
                         <?php foreach ($ontwerp as $term): ?>
                             <div class=" mb-3 gap-2">
-                                <span class="lead ">
+                                <span class="regular">
                                     <?= esc_html($term->name); ?>
                                 </span>
                             </div>
@@ -72,22 +70,22 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php endforeach; ?>
                        <?php endif; ?>
                        
-<h4>Opdrachtgever</h4>
+                          <h4>Opdrachtgever</h4>
                        <?php if ($opdrachtgever): ?>
                         <?php foreach ($opdrachtgever as $term): ?>
                             <div class=" mb-3 gap-2">
-                                <span class="lead ">
+                                <span class="regular ">
                                     <?= esc_html($term->name); ?>
                                 </span>
                             </div>
 
                         <?php endforeach; ?>
                        <?php endif; ?>
-<h4>Plaats</h4>
+                          <h4>Plaats</h4>
                         <?php if ($plaats): ?>
                         <?php foreach ($plaats as $term): ?>
                             <div class=" mb-3 gap-2">
-                                <span class="lead ">
+                                <span class="regular">
                                     <?= esc_html($term->name); ?>
                                 </span>
                             </div>
@@ -98,23 +96,34 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
 
 
                         <h4>Delen</h4>
-                        </div>
+                       
+
+                     <div class="d-flex align-items-center gap-2 mt-2">
+                    
+                        <a href="#" target="_blank">
+                        <img src="<?= get_template_directory_uri() ?>/images/insta-icon.svg" alt="Instagram-logo"
+                            class="share-icon" />
+                        </a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=">
+                        <img src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg" alt="Instagram-logo"
+                        class="share-icon" />
+                        </a>
+                         <a href="https://www.facebook.com/sharer/sharer.php?u=">  
+                            <img src="<?= get_template_directory_uri() ?>/images/facebook-icon.svg" alt="Instagram-logo"
+                           class="share-icon" /></a>
+                 
+                      </div>
+                   </div>
 
                        
-                    </div>
+              </div>
                 
 
 
 
-        </div>
+              </div>
+          </div>
        </div>
-       </div>
-
-      
-
-      
-
-
 
         <!-- Image swiper -->
         <div class="images-swiper">
@@ -164,11 +173,17 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                 </div>
             </div>
         </div>
-        
 
+         <!-- Content-section -->
+         <?php
+        $content = get_field('content');
 
-
-       
+        if (!empty($content) && is_array($content)) {
+            foreach ($content as $block) {
+                get_template_part('components/' . $block['acf_fc_layout'], null, ['fields' => $block]);
+            }
+        }
+        ?>
 
     </div>
 </main>
