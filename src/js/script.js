@@ -243,6 +243,7 @@ document.querySelectorAll(".image-slider").forEach((x) => {
 
 
   //Gsap Scroll animation
+  gsap.config({ trialWarn: false });
   document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
   
@@ -336,4 +337,55 @@ navbar.addEventListener('shown.bs.collapse', () => {
 });
 navbar.addEventListener('hidden.bs.collapse', () => {
   navbar.classList.remove('menu-open');
+});
+
+
+
+
+
+
+//ScrollTrigger Text Reveal 
+document.addEventListener('DOMContentLoaded', () => {
+
+console.clear();
+gsap.registerPlugin(ScrollTrigger, SplitText);
+
+
+let split = new SplitText("h2", { type: "lines" });
+let masks;
+function makeItHappen() {
+  masks = [];
+  split.lines.forEach((target) => {
+    let mask = document.createElement("span");
+    mask.className = "mask";
+    target.append(mask);
+    masks.push(mask);
+    gsap.to(mask, {
+      scaleX: 0,
+      transformOrigin: "right center",
+      ease: "none",
+      scrollTrigger: {
+        trigger: target,
+       
+        scrub: true,
+        start: "top center",
+        end: "bottom center"
+      }
+    });
+  });
+}
+
+window.addEventListener("resize", newTriggers);
+
+function newTriggers() {
+  ScrollTrigger.getAll().forEach((trigger, i) => {
+    trigger.kill();
+    masks[i].remove();
+  });
+  split.split();
+  makeItHappen();
+}
+
+makeItHappen();
+
 });

@@ -17,6 +17,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
+    <!--ScrollTrigger Text Reveal  -->
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
 
 
 
@@ -87,9 +92,21 @@ unset($menu_items);
                 d="M0.75,1 C0.77,1,0.79,0.997,0.805,0.981 L0.806,0.98 L0.979,0.795 C0.995,0.778,1,0.754,1,0.729 V0.096 C1,0.046,0.968,0.005,0.923,0.005 H0.085 C0.041,0.005,0.004,0.046,0.004,0.096 V0.91 C0.004,0.96,0.039,1,0.083,1 L0.085,1 L0.75,1">
             </path>
         </clipPath>
-        <clipPath id="project-right-top" clipPathUnits="objectBoundingBox"><path d="M0.747,0.002 C0.768,0.002,0.788,0.01,0.804,0.025 L0.805,0.026 L0.975,0.201 C0.992,0.218,1,0.242,1,0.267 V0.912 C1,0.961,0.964,1,0.918,1 H0.085 C0.039,1,0.001,0.961,0.001,0.912 V0.094 C0.001,0.046,0.037,0.006,0.082,0.004 L0.084,0.004 L0.747,0.002"></path></clipPath>
-        <clipPath id="right-bottom-border" clipPathUnits="objectBoundingBox"><path d="M0.75,1 C0.77,1,0.79,0.997,0.805,0.985 L0.806,0.984 L0.979,0.833 C0.995,0.819,1,0.799,1,0.779 V0.079 C1,0.037,0.968,0.004,0.923,0.004 H0.085 C0.041,0.004,0.004,0.037,0.004,0.079 V0.927 C0.004,0.967,0.039,1,0.083,1 L0.085,1 L0.75,1"></path></clipPath>
-         <clipPath id="beveled-shape-left" clipPathUnits="objectBoundingBox"><path d="M0.292,0.027 C0.304,0.01,0.32,0.001,0.337,0.001 L0.937,0.001 C0.972,0.001,1,0.042,1,0.092 V0.377 V0.91 C1,0.96,0.972,1,0.937,1 L0.063,1 C0.028,1,0,0.96,0,0.91 V0.486 C0,0.461,0.007,0.438,0.019,0.421 L0.292,0.027"></path></clipPath>
+        <clipPath id="project-right-top" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0.747,0.002 C0.768,0.002,0.788,0.01,0.804,0.025 L0.805,0.026 L0.975,0.201 C0.992,0.218,1,0.242,1,0.267 V0.912 C1,0.961,0.964,1,0.918,1 H0.085 C0.039,1,0.001,0.961,0.001,0.912 V0.094 C0.001,0.046,0.037,0.006,0.082,0.004 L0.084,0.004 L0.747,0.002">
+            </path>
+        </clipPath>
+        <clipPath id="right-bottom-border" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0.75,1 C0.77,1,0.79,0.997,0.805,0.985 L0.806,0.984 L0.979,0.833 C0.995,0.819,1,0.799,1,0.779 V0.079 C1,0.037,0.968,0.004,0.923,0.004 H0.085 C0.041,0.004,0.004,0.037,0.004,0.079 V0.927 C0.004,0.967,0.039,1,0.083,1 L0.085,1 L0.75,1">
+            </path>
+        </clipPath>
+        <clipPath id="beveled-shape-left" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0.292,0.027 C0.304,0.01,0.32,0.001,0.337,0.001 L0.937,0.001 C0.972,0.001,1,0.042,1,0.092 V0.377 V0.91 C1,0.96,0.972,1,0.937,1 L0.063,1 C0.028,1,0,0.96,0,0.91 V0.486 C0,0.461,0.007,0.438,0.019,0.421 L0.292,0.027">
+            </path>
+        </clipPath>
     </svg>
     <style>
         .svg {
@@ -102,10 +119,11 @@ unset($menu_items);
             clip-path: url(#beveled-shape-right) !important;
         }
 
-        .beveled-left{
-             clip-path: url(#beveled-shape-left) !important;
-           
+        .beveled-left {
+            clip-path: url(#beveled-shape-left) !important;
+
         }
+
         .border-wrap {
             position: relative;
             --background-color: #000000;
@@ -246,7 +264,7 @@ unset($menu_items);
             }
         }
 
-        .bottom-right-shape{
+        .bottom-right-shape {
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
@@ -286,8 +304,8 @@ unset($menu_items);
 
 
 
-.right-bottom-border{
-    --background-color: #1c1c1c;
+        .right-bottom-border {
+            --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
 
@@ -321,10 +339,10 @@ unset($menu_items);
                 z-index: 1 !important;
             }
 
-}
+        }
 
 
-        .project-right-top{
+        .project-right-top {
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
@@ -421,7 +439,7 @@ unset($menu_items);
                             <span class="toggler-icon bottom-bar"></span>
                         </button>
                     </div>
-                   
+
                     <!-- Navigation Menu -->
 
                     <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
