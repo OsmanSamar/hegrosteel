@@ -1,7 +1,11 @@
 .footer {
-  padding: 65px 82px;
+  padding: 60px 20px;
   border-radius: 60px;
   background: #121212;
+ 
+  @media(min-width:992px){
+     padding: 65px 82px;
+  }
 
 
   // The rest of footer styling
@@ -95,16 +99,7 @@
   }
 }
 
-// @media(max-width: 991px) {
-//   .footer {
-//     padding: 65px 82px !important;
-//   }
-// }
-// @media(min-width: 776px) {
-//   .footer {
-//     padding: 65px 67px !important;
-//   }
-// }
+
 
 .made-with-link {
   transition: all 0.3s ease;
@@ -113,7 +108,7 @@
   font-family: "Red Hat Display";
   font-size: 14px;
   font-weight: 400;
-  line-height: 19.2px;
+  line-height: 180%;
   cursor: pointer;
   position: relative; // Necessary for effect ::before
 

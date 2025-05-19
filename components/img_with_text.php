@@ -4,22 +4,26 @@ $imageOnLeft = !empty($fields['image_on_the_left']);
 $backgroundColor = $fields['background_color'] ?? ''; 
 $hasBackground = !empty($fields['has_background']); 
 $backgroundClass= $fields['background'] ?? '';
+$columnClass = $imageOnLeft ? 'col-lg-5 offset-lg-1' : 'col-lg-5 ';
+$columnRight = $imageOnLeft ? 'col-lg-6 ' : 'col-lg-6 offset-lg-1 ';
+
 ?>
 
 <div class="img_with_text  <?= $backgroundClass ?> <?= $hasBackground ? 'with-background' : ''; ?>">
     <div class="container">
         <div class="row d-flex flex-wrap">
             <!-- Image Column -->
-            <div class="col-12 col-md-12 col-lg-6 d-flex flex-column mb-5 mb-lg-0 <?= $imageOnLeft ? 'order-1' : 'order-2'; ?>"
+            <div class="col-12 col-md-12 <?= $columnRight ?> d-flex flex-column mb-5 mb-lg-0 <?= $imageOnLeft ? 'order-1' : 'order-2'; ?>"
                 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <img src="<?= esc_url($fields['image']['url']); ?>" alt="<?= esc_html($fields['image']['alt']); ?>" class="img-text" />
             </div>
 
             <!-- Content Column -->
-            <div class="col-12 col-md-12 col-lg-5 offset-lg-1 d-flex align-items-center justify-content-center mb-5 <?= $imageOnLeft ? 'order-2' : 'order-1'; ?>">
+            <div class="col-12 col-md-12 <?= $columnClass ?> d-flex align-items-center justify-content-center mb-5  mb-lg-0  <?= $imageOnLeft ? 'order-2' : 'order-1'; ?>">
+                <!-- my-auto py-4 -->
                 <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
                     <div class="content">
-                        <h3><?= $fields['title']; ?></h3>
+                        <h3 style="font-family:Funnel Display"><?= $fields['title']; ?></h3>
                         <div class="regular mb-4 mt-4"><?= $fields['text']; ?></div>
 
                         <?php if (!empty($fields['list'])): ?>

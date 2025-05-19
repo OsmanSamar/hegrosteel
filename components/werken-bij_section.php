@@ -13,7 +13,7 @@ $fields = $args['fields'];
 
                         <a href="<?= esc_url($fields['blok_1']['link']['url']); ?>">
                             <div class="lead "><?= $fields['blok_1']['sub_title']; ?></div>
-                            <h3><?= $fields['blok_1']['title']; ?></h3>
+                            <h3 style="font-family: Funnel Display" ><?= $fields['blok_1']['title']; ?></h3>
                             <div class="lead"><?= $fields['blok_1']['text']; ?></div>
 
                             <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
@@ -29,7 +29,7 @@ $fields = $args['fields'];
                         <div class="shared-content  left-bottom-shape  position-relative">
                             <a href="<?= esc_url($fields['blok_2']['link']['url']); ?>">
                                 <div class="lead  "><?= $fields['blok_2']['sub_title']; ?></div>
-                                <h3><?= $fields['blok_2']['title']; ?></h3>
+                                <h3 style="font-family: Funnel Display"><?= $fields['blok_2']['title']; ?></h3>
                                 <div class="lead"><?= $fields['blok_2']['text']; ?></div>
                                 <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
                                     class="werk-bij-arrow white-arrow">
@@ -42,7 +42,7 @@ $fields = $args['fields'];
                         <div class="shared-content  left-top-shape">
                             <a href="<?= esc_url($fields['blok_3']['link']['url']); ?>">
                                 <div class="lead back-text"><?= $fields['blok_3']['sub_title']; ?></div>
-                                <h3 class="back-text"><?= $fields['blok_3']['title']; ?></h3>
+                                <h3 class="back-text" style="font-family: Funnel Display"><?= $fields['blok_3']['title']; ?></h3>
                                 <div class="lead"><?= $fields['blok_3']['text']; ?></div>
                                 <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
                                     class="werk-bij-arrow black-arrow">

@@ -21,12 +21,12 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-10">
+            <div class="col-lg-12">
                 <div class="d-flex justify-content-between gap-3 flex-wrap">
                     <h2>Kunnen wij het bouwen?</h2>
                     <a href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
                         class="button secondary-button ms-lg-3 mt-2 ">
-                        Neem contact op
+                       App, bel of mail ons
                         <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                     </a>
@@ -126,7 +126,7 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
 </footer>
 <div class="container mt-3 mb-3">
     <div class="row">
-        <div class="col-lg-5 d-flex align-items-center justify-content-between">
+        <div class="col-lg-5 d-flex align-items-center justify-content-between flex-column flex-lg-row gap-3 gap-lg-0">
             <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">© HegroSteel,
                 2025</span>
             <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Algemene
@@ -135,7 +135,7 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
                 statement</span>
         </div>
 
-        <div class="col-lg-2 offset-lg-5 d-flex justify-content-end">
+        <div class="col-lg-2 offset-lg-5 d-flex justify-content-lg-end justify-content-center mt-3 mt-lg-0">
             <a href="https://code-blauw.nl/" target="_blank"
                 class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
                 Door: <span class="made-door"> Code Blauw</span>

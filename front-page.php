@@ -26,7 +26,7 @@ $fields = get_fields();
                 ?>
                     <div class="hero-content">
                         <div class="row ">
-                            <div class="col-12 col-lg-5">
+                            <div class="col-12 col-lg-5 text-left">
                                 <h1>HEGRO Steel. Stand strong.</h1>
                                 <div class="lead">Wij monteren staalconstructies, plaatsten daken en wanden, installeren
                                     prefab beton en bouwen huizen en bedrijfspanden vanaf nul. Als jij het kunt

@@ -1,39 +1,32 @@
-.quote_section{
-    
-  margin: 80px 0px;
+.quote_section {
+  margin: 60px 0px;
 
+  /* ScrollTrigger Text Reveal */
+  .lenis.lenis-smooth {
+    scroll-behavior: auto;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-scrolling iframe {
+    pointer-events: none;
+  }
 
-    /* ScrollTrigger Text Reveal */
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
+  #smooth-content {
+    will-change: transform;
+  }
 
+  .content {
+    padding: 5vh 0;
+  }
 
-#smooth-content {
-  will-change: transform;
-}
-
-
-
-.content{
-  padding: 5vh 0;
-}
-
-.mask {
-  width: 100%;
-  height: 115%;
-  position: absolute;
-  background: #1C1C1C;;
-  left: 0;
-  top: 0;
-  opacity: 0.8;
-}
-
-    
+  .mask {
+    width: 100%;
+    height: 115%;
+    position: absolute;
+    background: #1c1c1c;
+    left: 0;
+    top: 0;
+    opacity: 0.8;
+  }
 }
