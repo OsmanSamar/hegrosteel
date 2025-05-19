@@ -1,71 +1,56 @@
 .custom-swiper-scrollbar {
   flex-grow: 1;
-
-  ///
-
-  &:not(.d-flex .custom-swiper-scrollbar) {
-    width: 100%;
-  }
+  // &:not(.d-flex .custom-swiper-scrollbar) {
+  //   width: 100%;
+  // }
   input[type="range"] {
     -webkit-appearance: none;
     width: 100%;
-    height: 5px;
+    height: 2px;
+    background: #e3e3e3;
     border-radius: 5px;
-    // background: #E3E3E3;
-    
-    background: linear-gradient(to right, #dc0d1a 0%, #fff 0%);
-    //No ffect
-
-   
-
+    background-image: linear-gradient(#dc0d1a, #dc0d1a);
+    background-repeat: no-repeat;
     outline: none;
-    // opacity: 0.7;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
+  }
+
+  /* Input Track */
+  input[type="range"]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  input[type="range"]::-moz-range-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
+
+  input[type="range"]::-ms-track {
+    -webkit-appearance: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
   }
 
   input[type="range"]:hover {
     opacity: 1;
   }
 
-  // input[type='range']::-webkit-slider-thumb {
-  //     -webkit-appearance: none;
-  //     appearance: none;
-  //     width: var(--width);
-  //     height: 5px;
-  //     background: #dc0d1a;
-  //     cursor: pointer;
-  //     border-radius: 5px;
-  // }
-
-  input[type="range"]::-moz-range-thumb {
-    width: var(--width);
-    height: 25px;
-    background: #dc0d1a;
-    cursor: pointer;
-  }
-
-  //I added
+  /* Input Thumb */
   input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    appearance: none;
-    width: var(--width);
-    height: 5px;
-    //background: #dc0d1a;
+    height: 15px;
+    width: 30px;
+    background: #e3e3e3;
+    border-radius: 50px;
     cursor: pointer;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    border: 1px solid #000000;
-    height: 36px;
-    width: 16px;
-    border-radius: 3px;
-    //Added
-    background: linear-gradient(to right, #dc0d1a 0%, #fff 0%);
-    //background: #dc0d1a;
+    box-shadow: 1px 1px 1px #604d4d, 0px 0px 1px #b18e8e;
+    // transition: background 0.3s ease-in-out;
   }
-
-
- 
-
- 
 }
