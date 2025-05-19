@@ -349,9 +349,7 @@
   background: var(--Secondary-500);
 }
 
-.quote_section {
-  margin: 80px 0px;
-}
+
 .text{
   margin: 80px 0px;
 }
@@ -418,42 +416,6 @@ border: 2px solid var(--Secondary-500, #DC0D1A);
 
 
 
-/* ScrollTrigger Text Reveal */
-.lenis.lenis-smooth {
-  scroll-behavior: auto;
-}
-.lenis.lenis-stopped {
-  overflow: hidden;
-}
-.lenis.lenis-scrolling iframe {
-  pointer-events: none;
-}
-
-
-#smooth-content {
-  will-change: transform;
-}
-
-.content > h2 {
- max-width: 90vw;
-  margin: auto;
-  line-height: 1.2;
-   color: gold;
-}
-
-.content{
-  padding: 10vh 0;
-}
-
-.mask {
-  width: 100%;
-  height: 115%;
-  position: absolute;
-  background: #1C1C1C;;
-  left: 0;
-  top: 0;
-  opacity: 0.8;
-}
 
 
 
