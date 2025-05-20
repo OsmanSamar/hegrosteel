@@ -83,15 +83,15 @@ if ($projects->have_posts()): ?>
 
                       <div class="container">
                             <div class="row">
-                                <div class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
-                                <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
+                                <div class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-5">
+                                  <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
                                     <img src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg" alt="Prev arrow"
                                          class="dropdown-arrow">
-                                 </div>
+                                  </div>
                                     <div class="custom-swiper-scrollbar"></div>
                                     <div class="swiper-button-next d-none d-md-flex d-lg-flex">
-                                     <img src="<?= get_template_directory_uri(); ?>/images/next-btn.svg" alt="Next arrow"
-                                   class="dropdown-arrow">
+                                      <img src="<?= get_template_directory_uri(); ?>/images/next-btn.svg" alt="Next arrow"
+                                      class="dropdown-arrow">
                                    </div>
                                 </div>
                             </div>

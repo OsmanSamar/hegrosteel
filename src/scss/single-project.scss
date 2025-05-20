@@ -90,10 +90,11 @@
     transition: all 0.5s ease;
     border-radius: 10px;
     background: var(--Primary-400);
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
-    }
+     &:hover {
+       transform: scale(1.05);
+    //   box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
+     background: var(--Secondary-500);
+     }
   }
 
   .lead {

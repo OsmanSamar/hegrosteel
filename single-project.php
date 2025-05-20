@@ -25,7 +25,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
        <div class="first-section">
 
        <div class="row">
-          <div class="col-lg-7 d-flex flex-column justify-content-start align-items-start gap-3">
+          <div class="col-lg-7 d-flex flex-column justify-content-start align-items-start gap-3 mb-5 mb-lg-0">
                    <?php if ($categories): ?>
                         <?php foreach ($categories as $term): ?>
                             <div class="project-items mb-3 gap-2">

@@ -27,7 +27,7 @@ $columnRight = $imageOnLeft ? 'col-lg-6 ' : 'col-lg-6 offset-lg-1 ';
                         <div class="regular mb-4 mt-4"><?= $fields['text']; ?></div>
 
                         <?php if (!empty($fields['list'])): ?>
-                            <div class="repeater-list mt-5 mb-5">
+                            <div class="repeater-list mt- mb-4">
                                 <?php foreach ($fields['list'] as $list_item): ?>
                                     <div class="repeater-item d-flex align-items-center gap-3">
                                         <img src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Check" class="dropdown-arrow">
