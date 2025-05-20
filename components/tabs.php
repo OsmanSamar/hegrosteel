@@ -14,7 +14,7 @@ $fields = $args['fields'];
                                 ;
                                 $tab_title = $tab['tab_title'];
                                 ?>
-                                <div class="col-lg-4">
+                                <div class="col-4 col-lg-4">
                                     <a href="#tab<?= $i; ?>" class="tab-link <?= $i == 0 ? 'active' : ''; ?>"
                                         data-tab="content<?= $i; ?>">
                                         <h4><?= $tab_title; ?></h4>
@@ -32,7 +32,7 @@ $fields = $args['fields'];
                             ?>
                             <div class="tab-content" <?= $i == 0 ? "" : 'style="display: none;"' ?> id="content<?= $i ?>">
                                 <div class="row">
-                                    <div class="col-lg-5">
+                                    <div class="col-lg-5 mb-4 mb-lg-0">
                                         <h3 class="mb-4"><?= $tab['title']; ?></h3>
                                         <div class="regular mb-4"><?= $tab['text']; ?></div>
 
