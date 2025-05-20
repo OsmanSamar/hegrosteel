@@ -12775,6 +12775,10 @@ img {
   opacity: 0.8;
 }
 
+.services_section .lead {
+  font-size: 16px;
+}
+
 .custom-swiper-scrollbar {
   flex-grow: 1;
   /* Input Track */

@@ -21,7 +21,7 @@ $bgImg = get_the_post_thumbnail_url($id);
             <div class="row">
                 <div
                     class="col-12 
-                  <?= $bgImg ? 'col-lg-8 col-md-4' : 'col-lg-8 offset-lg-2' ?> 
+                  <?= $bgImg ? 'col-lg-8 col-md-12' : 'col-lg-8 offset-lg-2' ?> 
                          my-auto d-flex flex-column 
                      <?= $bgImg ? 'justify-content-start align-items-start align-self-start' : 'justify-content-center align-items-center align-self-center mx-auto' ?>">
                     <h1 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
