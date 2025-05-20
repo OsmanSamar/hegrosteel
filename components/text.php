@@ -1,6 +1,12 @@
 <?php
 $fields = $args['fields'];
 $textOnLeft = !empty($fields['text_on_left']); 
+//To Add e-mail link
+$email = 'stage@hegrosteel.nl';
+$search = $email;
+$replace = '<a href="mailto:' . $email . '"><strong>' . $email . '</strong></a>';
+$second_text_with_link = str_replace($search, $replace, $fields['second_text']);
+
 ?>
 
 <div class="text">
@@ -8,8 +14,10 @@ $textOnLeft = !empty($fields['text_on_left']);
         <div class="row  mt-5 mb-5">
             <div class="col-12 <?= $textOnLeft ? 'col-lg-7 order-1' : 'col-lg-6 order-2 offset-lg-1'; ?> d-flex flex-column mb-4">
                    <h2><?= $fields['title']; ?></h2>
-                    <div class="regular mb-5 mt-4"><?= $fields['text']; ?></div>
-                    <div class="d-flex  flex-lg-row gap-3 flex-wrap mt-4">
+                    <div class="regular  mt-4"><?= $fields['text']; ?></div>
+                      <div class="regular mt-5" style="font-weight:700"><?= $second_text_with_link; ?></div>
+
+                    <div class="d-flex  flex-lg-row gap-3 flex-wrap mt-">
                         <?php if (!empty($fields['buttons'])): ?>
                             <?php foreach ($fields['buttons'] as $button_row):
                                 $button = $button_row['button'];
@@ -48,7 +56,6 @@ $textOnLeft = !empty($fields['text_on_left']);
                             <span class="bold">
                             <?= $fields['bel_of_app'];?>
                         </span>
-                       
                            <span  class="whatsapp-container">
                            <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
                            class="whatsappimg" />
