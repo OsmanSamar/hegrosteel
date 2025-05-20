@@ -11762,7 +11762,7 @@ img {
 .lead-container {
   border-radius: 10px;
   background: var(--Primary-400);
-  padding: 8px;
+  padding: 5px 8px;
 }
 
 .services_section {
@@ -11803,7 +11803,7 @@ img {
 
 .shared-content {
   display: flex;
-  padding: 53px 20px 45px 53px;
+  padding: 53px 53px 45px 53px;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
@@ -12250,16 +12250,16 @@ img {
   border: 1px solid var(--Neutral-400) !important;
   background: #1c1c1c !important;
   padding: 16px !important;
-  color: var(--Neutral-light) !important;
+  color: var(--Neutral-500, #808282) !important;
   font-family: Figtree !important;
   font-size: 16px !important;
   font-style: normal !important;
-  font-weight: 700 !important;
-  line-height: 120% !important;
+  font-weight: 400 !important;
+  line-height: 160% !important;
   --gf-local-height: unset !important;
 }
 .solliciteer-form .gform_wrapper .gform_footer .gform_button {
-  padding: 18px 40px !important;
+  padding: 18px 40px 18px 20px !important;
   border-radius: 10px !important;
   background: var(--Secondary-500) !important;
   color: #fff !important;
@@ -12271,8 +12271,8 @@ img {
   font-style: normal !important;
   line-height: 25.2px !important;
   background-image: url("../images/next-btn.svg") !important;
-  background-size: 19px 18px !important;
-  background-position: right 16px center !important;
+  background-size: 20px 16px !important;
+  background-position: right 14px center !important;
   background-repeat: no-repeat !important;
 }
 .solliciteer-form #input_1_11,

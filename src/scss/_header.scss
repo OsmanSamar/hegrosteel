@@ -318,10 +318,12 @@
   text-decoration: underline;
   font-weight: 700;
 }
+
+
 .lead-container {
   border-radius: 10px;
   background: var(--Primary-400);
-  padding: 8px;
+  padding: 5px 8px;
 }
 
 .services_section {
@@ -364,7 +366,7 @@
 .shared-content {
   display: flex;
   // padding: 20px;
-  padding: 53px 20px 45px 53px;
+  padding: 53px 53px 45px 53px;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;

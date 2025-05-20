@@ -60,10 +60,7 @@ if ($vacatures->have_posts()): ?>
                                 <?php endif; ?>
                                 <div class="d-flex flex-column ">
                                     <h3 class="mb-2 text-hover-underline"><?php the_title(); ?></h3>
-
                                     <div class="d-flex justify-content-end gap-3">
-                                       
-
                                         <?php if ($uren): ?>
                                             <?php foreach ($uren as $term): ?>
                                                 <div class="lead-container"><span class="lead">
