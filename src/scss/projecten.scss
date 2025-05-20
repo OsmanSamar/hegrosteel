@@ -15,9 +15,9 @@
    
   }
 
-  #woningbouw {
+  #project_category, #plaats {
     border: 1px solid var(--Neutral-400, #d5d3cd) !important;
-    background-color: black !important;
+    background-color: var( --Primary-500)!important;
     color: var(--Neutral-400, #d5d3cd) !important;
     font-family: Figtree;
     font-size: 16px;

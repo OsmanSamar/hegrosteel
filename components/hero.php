@@ -26,7 +26,16 @@ $bgImg = get_the_post_thumbnail_url($id);
                      <?= $bgImg ? 'justify-content-start align-items-start align-self-start' : 'justify-content-center align-items-center align-self-center mx-auto' ?>">
                     <h1 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                         data-aos-easing="ease-in-out">
-                        <?= get_the_title($id); ?>
+                        <?php if ($hero_title): ?>
+                            <?= get_field("hero_title", $id) ?> 
+                            <?php
+                        else: ?>
+                            <?= get_the_title($id); ?>
+                            <?php
+                        endif; ?>
+
+                        <!-- <?= get_the_title($id); ?> -->
+                        <!-- <?= get_field("hero_title", $id) ?> -->
                     </h1>
 
                 </div>
