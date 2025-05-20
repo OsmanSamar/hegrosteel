@@ -11274,6 +11274,9 @@ img {
 .projecten-slider.bg-dark {
   background: var(--Primary-600, #020202) !important;
 }
+.projecten-slider h2, .projecten-slider .h2 {
+  line-height: 0 !important;
+}
 
 .button {
   display: inline-flex;
@@ -11831,14 +11834,17 @@ img {
 
 .center_text_button {
   margin: 100px 0px;
-  padding: 60px;
+  padding: 40px;
   gap: 40px;
   border-radius: 30px;
-  border: 2px solid var(--Secondary-500, #DC0D1A);
+  border: 2px solid var(--Secondary-500, #dc0d1a);
 }
 
 @media (min-width: 992px) {
   .img_with_text.with-background {
+    padding: 60px;
+  }
+  .center_text_button {
     padding: 60px;
   }
 }

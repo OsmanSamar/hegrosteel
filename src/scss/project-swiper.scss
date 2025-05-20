@@ -104,4 +104,7 @@
   &.bg-dark {
     background: var(--Primary-600, #020202) !important;
   }
+  h2{
+    line-height: 0 !important;
+  }
 }

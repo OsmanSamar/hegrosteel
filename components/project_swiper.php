@@ -15,13 +15,15 @@ if ($projects->have_posts()): ?>
     <div class="projecten-slider <?= $backgroundClass ?> <?= $hasBackground ? 'with-background' : ''; ?>">
         <div class="container">
             <div class="row">
-                <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
-                    <h2><?= $fields['title']; ?></h2>
+                <div class=" col-lg-12 ">
+                  <div class="d-flex justify-content-between gap-3 flex-wrap ">
+                      <h2><?= $fields['title']; ?></h2>
                     <a href="<?= get_post_type_archive_link('project') ?>"
                         class="button primary-button d-none d-lg-flex"><?= __('Bekijk alle projecten', 'hegrosteel') ?>
                         <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                     </a>
+                  </div>
                 </div>
                 <!-- Updated  -->
                <div class="col-lg-12  overflow-visible ">
