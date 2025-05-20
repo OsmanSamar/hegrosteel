@@ -4,15 +4,19 @@
     border-radius: 30px;
     opacity: 1;
     display: flex;
-    padding: 60px;
+    padding: 25px;
     gap: 10px;
     border: 2px solid var(--Secondary-500, #dc0d1a) !important;
+  }
+  @media (min-width: 992px) {
+    .contact-form {
+      padding: 60px;
+    }
   }
 
   .form-1 .gform_wrapper .gform_body .gform_fields .gfield {
     width: 100%;
   }
-
 
   /* Input field */
   .gform-theme--foundation .gfield input,
@@ -24,7 +28,7 @@
     border: 1px solid var(--Neutral-400) !important;
     background: #1c1c1c !important;
     padding: 16px !important;
-   color: var(--Neutral-500, #808282) !important;
+    color: var(--Neutral-500, #808282) !important;
     font-family: Figtree !important;
     font-size: 16px !important;
     font-style: normal !important;
@@ -46,7 +50,7 @@
     font-style: normal !important;
     line-height: 25.2px !important;
     background-image: url("../images/next-btn.svg") !important;
-   background-size: 20px 16px !important;
+    background-size: 20px 16px !important;
     background-position: right 14px center !important;
     background-repeat: no-repeat !important;
   }
@@ -138,8 +142,8 @@
     line-height: 160%;
     a {
       text-decoration: underline;
-       color: var(--Neutral-500, #808282) !important;
-       //color: #fff !important;
+      color: var(--Neutral-500, #808282) !important;
+      //color: #fff !important;
       font-family: Figtree;
       font-size: 16px;
       font-style: normal;
