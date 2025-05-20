@@ -9,9 +9,9 @@ $vacatures = new WP_Query($args);
 
 if ($vacatures->have_posts()): ?>
 
-    <div class="services_section" id="Service-Section">
+    <div class="services_section">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-start"
+            <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-start mb-5 mb-lg-0"
                 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
                 <h2>
