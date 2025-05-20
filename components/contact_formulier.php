@@ -9,7 +9,7 @@ $fields = $args['fields'];
 
             <div class="shared-content  top-right-shape  position-relative">
                 <h3> <?= $fields['left_tilte']; ?></h3>
-                <div class="regular mb-5 mt-4"> <?= $fields['left_sub_title']; ?></div>
+                <div class="h4 mb-4 mt-4"> <?= $fields['left_sub_title']; ?></div>
                 <div class="contact-row">
                     <span class=" regular diffrent-color"><?= $fields['adress_title']; ?></span>
                     <a href="https://www.google.com/maps/search/?api=1&query=<?= urlencode($fields['adress']); ?>"
@@ -45,7 +45,7 @@ $fields = $args['fields'];
                     <span class=" regular"><?= $fields['btw_text']; ?></span>
                 </div>
 
-                <div class="bel-of-app-container">
+                <div class="bel-of-app-container mt-4">
                     <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>"
                         class="d-flex align-items-center justify-content-between w-100">
                         <span class="bold">

@@ -20,7 +20,8 @@
 
   /* Input field */
   .gform-theme--foundation .gfield input,
-  .gform-theme--foundation .gfield select {
+  .gform-theme--foundation .gfield select,
+  .gform-theme--foundation .textarea  {
     width: 96% !important;
     box-sizing: border-box !important;
     border-radius: 8px !important;
