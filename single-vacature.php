@@ -141,29 +141,22 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                </div>
 
                                  <!-- Buttons -->
-                             
-
-
-
 
                               <?php if ($hasabutton) : ?>
-                       <div class="d-flex flex-row gap-3 mt-5">
-                        <a type="button" class="button secondary-button" href="#solliciteerform">
-            Direct solliciteren
-            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
-        </a>
-        <a type="button" class="button primary-button" href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>">
-            Vragen? App Hermen
-            <img src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp" class="whatsappimg" />
-        </a>
-    </div>
-<?php endif; ?>
-<!-- End of Button -->
+                                  <div class="d-flex flex-row gap-3 mt-5">
+                                   <a type="button" class="button secondary-button" href="#solliciteerform">
+                                    Direct solliciteren
+                                   <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+                                   </a>
+                                   <a type="button" class="button primary-button" href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>">
+                                       Vragen? App Hermen
+                                      <img src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp" class="whatsappimg" />
+                                    </a>
+                                 </div>
+                             <?php endif; ?>
+                                 <!-- End of Button -->
 
                                    <?php endif; ?>
-                       
-                            
-                           
                        </div>
 
                                 <?php $index++; ?>
