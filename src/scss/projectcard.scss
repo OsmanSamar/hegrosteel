@@ -10,11 +10,13 @@
     overflow: hidden;
     transition: transform 0.3s ease;
   }
+
   .swiper-img {
     object-fit: cover;
     width: 100%;
     height: auto;
   }
+
   .project-categories {
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.1);
@@ -32,13 +34,20 @@
     color: #555;
     margin-bottom: 0.5rem;
   }
+
+  .swiper-arrow {
+    width: 27.712px;
+    height: 27.712px;
+    transform: rotate(-46deg);
+  }
+
   .open-arrow {
     position: absolute;
     bottom: 0px;
     right: 0px;
     display: flex;
-    width: 52px;
-    height: 52px;
+    width: 52px !important;
+    height: 52px !important;
     padding: 14px 8px;
     flex-direction: column;
     justify-content: center;
@@ -48,9 +57,8 @@
     border-radius: 10px 10px 0px 10px;
     background: #dc0d1a;
   }
+
   .lead {
     font-size: 16px !important;
   }
-
- 
 }

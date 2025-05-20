@@ -26,7 +26,9 @@ if ($categories) {
                 <?php if ($image): ?>
                     <div class="bevel-right position-relative">
                         <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>" class="swiper-img">
-                        <img src="<?= get_template_directory_uri(); ?>/images/open-btn.svg" alt="Arrow" class="open-arrow ">
+                       <div class="open-arrow">
+                         <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow" class="swiper-arrow">
+                       </div>
                     </div>
                 <?php endif; ?>
                 <div class="project-content p-3">
@@ -37,7 +39,7 @@ if ($categories) {
                             <?php endforeach; ?>
 
                         <?php endif; ?>
-                        <h4 class="mb-3 mt-3"><?php the_title(); ?></h4>
+                        <h4 class="mt-3"><?php the_title(); ?></h4>
 
                         <?php if ($plaats): ?>
                             <?php foreach ($plaats as $term): ?>
