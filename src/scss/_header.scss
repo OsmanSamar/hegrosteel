@@ -13,7 +13,11 @@
   transition: all 0.5s ease;
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
+    // box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
+    background: var(--Secondary-500);
+    .whatsappimg {
+      filter:brightness(0) invert(1);
+    }
   }
 }
 .whatsappimg {
@@ -319,7 +323,6 @@
   font-weight: 700;
 }
 
-
 .lead-container {
   border-radius: 10px;
   background: var(--Primary-400);
@@ -348,8 +351,8 @@
 .project-container {
   margin: 80px 0px;
 }
-.text_with_button{
-   margin: 0px 0px 60px 0px;
+.text_with_button {
+  margin: 0px 0px 60px 0px;
 }
 
 .img-text {
