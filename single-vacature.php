@@ -216,6 +216,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                             class="dropdown-arrow">
                            </a>
                         </div>
+                        
                         <div class="col-lg-12 ">
                             <div class="swiper-container swiper images-swiper ">
                                 <div class="swiper-wrapper">

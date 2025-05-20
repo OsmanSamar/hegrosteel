@@ -37,7 +37,8 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php endforeach; ?>
                     <?php endif; ?>
 
-                    <h3 class="mb-3 mt-3"><?php the_title(); ?></h3>
+                    <!-- <h3 class="mb-3 mt-3"><?php the_title(); ?></h3> -->
+                       <h3 class="mb-3 mt-3"><?=get_field("title")?></h3>
                     <span class="regular"> <?=get_field("text")?></span>
 
                     <!-- Buttons -->
@@ -129,7 +130,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
         <div class="images-swiper">
 
             <div class="image-slider">
-                <div class="container">
+                <div class="">
                     <div class="row">
                       
                         <div class="col-lg-12 ">

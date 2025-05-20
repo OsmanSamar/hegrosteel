@@ -144,7 +144,7 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
   );
 });
 
-//Images Swiper
+//Images Swiper Single vactuure
 
 document.querySelectorAll(".images-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
@@ -190,13 +190,13 @@ document.querySelectorAll(".images-slider").forEach((x) => {
 });
 
 
-// Swiper img
+// Swiper img Single project
 
 document.querySelectorAll(".image-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
   let swiper = new Swiper(x.querySelector(".image-swiper"), {
     slidesPerView: 1,
-    centeredSlides: false,
+    centeredSlides: true,
     grabCursor: true,
     spaceBetween: 20,
     loop: true,
@@ -213,7 +213,7 @@ document.querySelectorAll(".image-slider").forEach((x) => {
         slidesPerView: 3,
       },
       1440: {
-        slidesPerView: 3.3,
+        slidesPerView: 2.5,
       },
     },
 
