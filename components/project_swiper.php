@@ -16,7 +16,7 @@ if ($projects->have_posts()): ?>
         <div class="container">
             <div class="row">
                 <div class=" col-lg-12 ">
-                  <div class="d-flex justify-content-between gap-3 flex-wrap ">
+                  <div class="d-flex justify-content-between align-items-center gap-3 flex-wrap ">
                       <h2><?= $fields['title']; ?></h2>
                     <a href="<?= get_post_type_archive_link('project') ?>"
                         class="button primary-button d-none d-lg-flex"><?= __('Bekijk alle projecten', 'hegrosteel') ?>

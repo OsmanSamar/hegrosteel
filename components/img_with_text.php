@@ -21,7 +21,7 @@ $columnRight = $imageOnLeft ? 'col-lg-6 ' : 'col-lg-6 offset-lg-1 ';
             <!-- Content Column -->
             <div class="col-12 col-md-12 <?= $columnClass ?> d-flex align-items-center justify-content-center mb-5  mb-lg-0  <?= $imageOnLeft ? 'order-2' : 'order-1'; ?>">
                 <!-- my-auto py-4 -->
-                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
+                <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center my-auto py-4">
                     <div class="content">
                         <h3 style="font-family:Funnel Display"><?= $fields['title']; ?></h3>
                         <div class="regular mb-4 mt-4"><?= $fields['text']; ?></div>

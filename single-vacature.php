@@ -202,37 +202,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
         <!-- Image swiper -->
         <div class="images-swiper">
@@ -240,14 +209,16 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             <div class="images-slider">
                 <div class="container">
                     <div class="row">
-                        <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
-                            <h2><?= get_field("swiper_title")?></h2>
+                        <div class=" col-lg-12 ">
+                           <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                             <h2><?= get_field("swiper_title")?></h2>
                             <a href="<?= get_field("button")['url'] ?>"
                              class="button primary-button ">
                              <?= get_field("button")['title'] ?>
                             <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                            </a>
+                           </div>
                         </div>
                         
                         <div class="col-lg-12 ">

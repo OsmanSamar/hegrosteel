@@ -87,6 +87,7 @@
     height: 13.182px;
     display: inline-block;
   }
+
   .media-icon {
     width: 42px;
     height: 42px;
@@ -95,6 +96,8 @@
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
+      background-color: var(--Secondary-500);
+      border-radius: 9px;
     }
   }
 }

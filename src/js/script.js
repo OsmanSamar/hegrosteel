@@ -252,24 +252,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (photos.length > 0) {
     // To hide the first image
-    // gsap.set(photos, { opacity: 0, scale: 1 });
+     gsap.set(photos, { opacity: 0, scale: 1 });
     //1
-     gsap.set(photos, {yPercent:101});
+    // gsap.set(photos, {yPercent:101});
 
     // To Scroll the image
-    // const animation = gsap.to(photos, {
-    //   opacity: 1,
-    //   scale: 1,
-    //   duration: 1,
-    //   stagger: 1,
-    // });
-    //2
-
-      const animation = gsap.to(photos, {
-      yPercent:0,
+    const animation = gsap.to(photos, {
+      opacity: 1,
+      scale: 1,
       duration: 1,
       stagger: 1,
     });
+    //2
+
+    //   const animation = gsap.to(photos, {
+    //   yPercent:0,
+    //   duration: 1,
+    //   stagger: 1,
+    // });
 
     ScrollTrigger.create({
       trigger: ".gallery",

@@ -1,4 +1,7 @@
-<?php get_header() ?> 
+<?php
+get_header()
+
+?> 
    
 <main id="page" class="p404">
    

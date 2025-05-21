@@ -21,15 +21,25 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
 <footer class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="d-flex justify-content-between gap-3 flex-wrap">
+            <div class="col-12 col-lg-12">
+                <div class="d-flex justify-content-center  justify-content-lg-between gap-3 flex-wrap">
                     <?php if (!is_singular('vacature')): ?>
-                        <h2><?= get_field("footer_title", 'option') ?></h2>
+                        <div class="d-none d-lg-flex d-md-flex">
+                            <h2><?= get_field("footer_title", 'option') ?></h2>
+                        </div>
                     <?php endif; ?>
 
                     <?php if (is_singular('vacature')): ?>
                         <h2><?= get_field("second_footer_title", 'option') ?></h2>
                     <?php endif; ?>
+
+                    <?php if (!is_singular('vacature')): ?>
+                        <div class="d-flex d-md-none d-lg-none">
+                            <h2><?= get_field("footer_title_on_sm", 'option') ?></h2>
+                        </div>
+
+                    <?php endif; ?>
+
 
 
                     <!-- <a href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
@@ -44,6 +54,7 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
                             <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                     </a> -->
+
                     <div class="btn-group">
                         <button type="button" class="button secondary-button dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -67,28 +78,31 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
         <hr class="footer-divider">
 
         <div class="row">
-
-            <div class="col-lg-3 col-md-3 ">
+            <!-- Logo -->
+            <div
+                class="col-lg-3 col-md-12 d-flex flex-lg-column justify-content-between justify-content-lg-start mb-4 mb-lg-0">
                 <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>">
                     <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Hegrosteel Logo"
                         class="footer-logo mb-3" />
                 </a>
-                <div class="d-flex align-items-center gap-2 mt-3 media-container">
+                <div class="d-flex align-items-center gap-2 mt-lg-3 media-container">
                     <a href="#" target="_blank">
                         <img src="<?= get_template_directory_uri() ?>/images/whatsapp-logo.svg" alt="Whatsapp logo"
                             class="media-icon" />
                     </a>
                     <a href="#" target="_blank">
-                        <img src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg" alt="Instagram-logo"
+                      
+                         <img src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg" alt="Instagram-logo"
                             class="media-icon" />
+                       
                     </a>
                 </div>
             </div>
 
-            <div class="col-lg-8 offset-lg-1 col-md-8 offset-md-1">
+            <div class="col-lg-8 offset-lg-1 col-md-8 ">
                 <div class="row">
-
-                    <div class="col-md-3 mb-3">
+                    <!-- Contact -->
+                    <div class="col-7 col-md-3 mb-3">
                         <div class="list d-block mb-3 ">
                             <?= get_field("contact_link_title", 'option') ?>
                         </div>
@@ -97,10 +111,16 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
                             <li class="footer-li">
                                 <?= get_field("footer_adrres", 'option') ?>
                             </li>
+
+
                             <div class="d-flex flex-column gap-2">
                                 <div class="footer-li">
                                     <?= get_field("hegrosteel_adress", 'option') ?>
+
                                 </div>
+                                <li class="footer-li">
+                                    <?= get_field("hegrosteel_postcode", 'option') ?>
+                                </li>
                                 <li>
                                     <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>"
                                         class="footer-li text-decoration-none footer-link-ltr">
@@ -117,14 +137,45 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
                         </ul>
                     </div>
 
-                    <div class="col-md-3 offset-lg-1">
+                    <!-- Diensten -->
+                    <div class="col-6 col-md-3 offset-lg-1">
                         <div class="d-block mb-3 list">
                             <?= get_field("diensten_link_title", 'option') ?>
                         </div>
 
+                        <ul class="list-unstyled">
+                            <li class="footer-li">
+                                <?= get_field("footer_adrres", 'option') ?>
+                            </li>
+
+
+                            <div class="d-flex flex-column gap-2">
+                                <div class="footer-li">
+                                    <?= get_field("hegrosteel_adress", 'option') ?>
+
+                                </div>
+                                <li class="footer-li">
+                                    <?= get_field("hegrosteel_postcode", 'option') ?>
+                                </li>
+                                <li>
+                                    <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>"
+                                        class="footer-li text-decoration-none footer-link-ltr">
+                                        <?= get_field("hegrosteel_phone_num", 'option') ?>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:<?= get_field("hegrosteel_mail", 'option') ?>"
+                                        class="footer-li text-decoration-none footer-link-ltr">
+                                        <?= get_field("hegrosteel_mail", 'option') ?>
+                                    </a>
+                                </li>
+                            </div>
+                        </ul>
+
                     </div>
 
-                    <div class="col-md-3 offset-lg-1">
+                    <!-- Meer weten -->
+                    <div class="col-6 col-md-3 offset-lg-1">
                         <div class="d-block mb-3 list">
                             <?= get_field("meer_over_link_title", 'option') ?>
                         </div>

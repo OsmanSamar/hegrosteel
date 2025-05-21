@@ -1,9 +1,13 @@
 
 
-<?php get_header()
+<?php 
+$lijnen_bg = get_field('lijnen-bg'); // Get value from back-end 
+
+get_header()
  
     ?>
-<main class="diensten">
+    <!-- add has-lijnen if check is on -->
+<main class="diensten <?php echo ($lijnen_bg ? 'lijnen-bg' : ''); ?>">
     <div class="container">
         <div>
             <?= get_template_part("components/hero") ?>

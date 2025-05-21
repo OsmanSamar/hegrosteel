@@ -1,9 +1,11 @@
-<?php get_header()
+<?php
+$lijnen_bg = get_field('lijnen-bg'); // Get value from back-end 
+get_header()
 
     //Template Name: thank-you
     ?>
 
-<main id="page" class="thankyou">
+<main id="page" class="thankyou <?php echo ($lijnen_bg ? 'lijnen-bg' : ''); ?>">
     <div class="container">
         <div class="row thanks-container">
             <div class="col-lg-4  d-flex flex-column justify-content-start align-items-start gap-3 mb-5">

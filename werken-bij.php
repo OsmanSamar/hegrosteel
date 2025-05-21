@@ -1,18 +1,18 @@
-<?php get_header()
+<?php
+$lijnen_bg = get_field('lijnen-bg'); // Get value from back-end 
+get_header()
 
     //Template Name: werken bij
 
     ?>
 
-<main class="werken-bij">
+<main class="werken-bij <?php echo ($lijnen_bg ? 'lijnen-bg' : ''); ?>">
     <div class="container">
         <div>
             <?= get_template_part("components/hero") ?>
         </div>
 
-
-
-        <!-- Service-section -->
+        <!-- Services-sections -->
         <?php
         $content = get_field('content');
 
