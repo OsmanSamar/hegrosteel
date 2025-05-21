@@ -22,6 +22,7 @@ add_action('login_enqueue_scripts', 'enqueue_scripts');
 function register_menu() {
     register_nav_menu('header-menu',__( 'Header Menu' ));
     register_nav_menu('footer-menu', __('Footer Menu'));
+    register_nav_menu('diensten-menu', __('Diensten Menu'));
 
 }
 add_action( 'init', 'register_menu' );

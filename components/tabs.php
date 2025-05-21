@@ -7,7 +7,7 @@ $fields = $args['fields'];
             <div class="tabs tab-right">
                 <div class="row">
                     <div class="col-lg-12">
-                        <nav class="border-wrap d-flex flex-wrap">
+                        <nav class="tab-wrap d-flex flex-wrap">
                             <!-- Repeater inside Flexible content -->
                             <?php
                             foreach ($fields['tab'] as $i => $tab):

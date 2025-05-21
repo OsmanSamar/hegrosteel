@@ -71,9 +71,22 @@
 
 }
 
-.home{
+.home footer{
+  position: relative;
+}
+
+.home footer::before
+{
+  width: 100vw;
+  content: "";
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 80%;
+  height: 100vh;
   background-image: url(../images/lijnen.png)!important;
   background-repeat: repeat-x;
+  position: absolute;
+  z-index: -1;
   background-size: 1470px;
   background-position:bottom center;
 }
