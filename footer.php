@@ -3,6 +3,15 @@
 $menu_id = get_nav_menu_locations()['footer-menu'];
 $items = wp_get_nav_menu_items($menu_id);
 $footer_menu = array_chunk($items, ceil(count($items) / 2));
+
+//1
+$projects = new WP_Query([
+    'post_type' => 'project',
+    'posts_per_page' => -1,
+]);
+
+
+
 ?>
 
 <div class="whatsapp-fixed">
@@ -80,7 +89,7 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
         <div class="row">
             <!-- Logo -->
             <div
-                class="col-lg-3 col-md-12 d-flex flex-lg-column justify-content-between justify-content-lg-start mb-4 mb-lg-0">
+                class="col-lg-3 col-md-4 d-flex flex-lg-column flex-md-column justify-content-between justify-content-lg-start justify-content-md-start mb-4 mb-lg-0">
                 <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>">
                     <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Hegrosteel Logo"
                         class="footer-logo mb-3" />
@@ -91,10 +100,10 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
                             class="media-icon" />
                     </a>
                     <a href="#" target="_blank">
-                      
-                         <img src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg" alt="Instagram-logo"
+
+                        <img src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg" alt="Instagram-logo"
                             class="media-icon" />
-                       
+
                     </a>
                 </div>
             </div>
@@ -102,7 +111,7 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
             <div class="col-lg-8 offset-lg-1 col-md-8 ">
                 <div class="row">
                     <!-- Contact -->
-                    <div class="col-7 col-md-3 mb-3">
+                    <div class="col-7 col-lg-4 col-md-6 mb-3">
                         <div class="list d-block mb-3 ">
                             <?= get_field("contact_link_title", 'option') ?>
                         </div>
@@ -137,45 +146,71 @@ $footer_menu = array_chunk($items, ceil(count($items) / 2));
                         </ul>
                     </div>
 
+
+
                     <!-- Diensten -->
-                    <div class="col-6 col-md-3 offset-lg-1">
+                    <div class="col-6 col-lg-3 col-md-6 offset-lg-1">
                         <div class="d-block mb-3 list">
                             <?= get_field("diensten_link_title", 'option') ?>
                         </div>
 
+                        <?php while ($projects->have_posts()):
+                            $projects->the_post();
+                            $categories = get_the_terms(get_the_ID(), 'project_category');
+                            ?>
+
+                            <ul class="list-unstyled">
+                                <?php if ($categories && !is_wp_error($categories)): ?>
+                                    <?php foreach ($categories as $category): ?>
+                                        <li class="footer-li">
+                                            <?= esc_html($cat->name); ?>
+                                        </li>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+
+
+                            </ul>
+
+                        <?php endwhile; ?>
+                    </div>
+
+
+
+
+                    <!-- Diensten -->
+                    <!-- <div class="col-6 col-md-3 offset-lg-1">
+                        <div class="d-block mb-3 list">
+                            <?= get_field("diensten_link_title", 'option') ?>
+                        </div>
                         <ul class="list-unstyled">
                             <li class="footer-li">
-                                <?= get_field("footer_adrres", 'option') ?>
+                               project_category
                             </li>
-
-
                             <div class="d-flex flex-column gap-2">
                                 <div class="footer-li">
-                                    <?= get_field("hegrosteel_adress", 'option') ?>
-
+                                   project_category
                                 </div>
                                 <li class="footer-li">
-                                    <?= get_field("hegrosteel_postcode", 'option') ?>
+                                   project_category
                                 </li>
                                 <li>
                                     <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>"
                                         class="footer-li text-decoration-none footer-link-ltr">
-                                        <?= get_field("hegrosteel_phone_num", 'option') ?>
+                                        project_category
                                     </a>
                                 </li>
                                 <li>
                                     <a href="mailto:<?= get_field("hegrosteel_mail", 'option') ?>"
                                         class="footer-li text-decoration-none footer-link-ltr">
-                                        <?= get_field("hegrosteel_mail", 'option') ?>
+                                       project_category
                                     </a>
                                 </li>
                             </div>
                         </ul>
-
-                    </div>
+                    </div> -->
 
                     <!-- Meer weten -->
-                    <div class="col-6 col-md-3 offset-lg-1">
+                    <div class="col-6 col-lg-3 d-md-none d-lg-block offset-lg-1">
                         <div class="d-block mb-3 list">
                             <?= get_field("meer_over_link_title", 'option') ?>
                         </div>
