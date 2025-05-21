@@ -87,7 +87,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                    
                       <!-- Buttons -->
                             <div class="d-flex  gap-3 mt-5 flex-wrap">
-                            <a type="button" class="button secondary-button" href="#solliciteerform">Direct solliciteren
+                            <a type="button" class="button secondary-button" href="#solliciteren">Direct solliciteren
                             <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                             </a>
@@ -102,7 +102,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
         </div>
 
         <!--Gasp Swiper animation  Test Code  -->
-        <div class="container gallery">
+        <div class="container gallery"> 
             <div class="row align-items-center vacature-block mb-5 third-row">
                 <!-- Left Column: Texts -->
                 <div class="col-lg-6 left offset-1 d-flex flex-column gap-3">
@@ -144,7 +144,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
                               <?php if ($hasabutton) : ?>
                                   <div class="d-flex flex-row gap-3 mt-5">
-                                   <a type="button" class="button secondary-button" href="#solliciteerform">
+                                   <a type="button" class="button secondary-button" href="#solliciteren">
                                     Direct solliciteren
                                    <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
                                    </a>
@@ -153,10 +153,10 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                       <img src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp" class="whatsappimg" />
                                     </a>
                                  </div>
-                             <?php endif; ?>
+                                      <?php endif; ?>
                                  <!-- End of Button -->
 
-                                   <?php endif; ?>
+                                <?php endif; ?>
                        </div>
 
                                 <?php $index++; ?>
@@ -190,10 +190,49 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
+
+
+     
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <!-- Image swiper -->
         <div class="images-swiper">
 
@@ -256,7 +295,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
 
         <!-- Service-section -->
-        <div class="solliciteer-form col-12 col-lg-12" id="solliciteerform">
+        <div class="solliciteer-form col-12 col-lg-12" id="solliciteren">
             <div class="d-flex flex-column contact-form form-1 position-relative">
                 <h3>Meer weten of solliciteren?</h3>
                 <?= do_shortcode('[gravityform id="3" title="false" description="false"   cssClass="form-1"]') ?>

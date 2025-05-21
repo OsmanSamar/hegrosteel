@@ -19,6 +19,11 @@
   }
 
   /* Input field */
+  //To remove style from upload field
+  input::-webkit-file-upload-button {
+    appearance: none;
+    display: none;
+  }
   .gform-theme--foundation .gfield input,
   .gform-theme--foundation .gfield select,
   .gform-theme--foundation .textarea  {

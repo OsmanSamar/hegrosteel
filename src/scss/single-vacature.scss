@@ -41,11 +41,9 @@
     position: relative;
     overflow: hidden;
   }
-
-  .gallery {
-    // padding-top: 100vh;
-    // padding-bottom: 100vh;
-    position: relative;
+  
+  .pin-spacer{
+   place-self: baseline!important; 
   }
 
   .left .details {
@@ -131,4 +129,5 @@
       cursor: pointer;
     }
   }
+
 }

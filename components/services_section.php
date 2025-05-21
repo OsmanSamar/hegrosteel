@@ -39,9 +39,9 @@ $fields = $args['fields'];
         <div class="col-12 col-md-6  col-lg-6 offset-lg-2">
             <!-- work list Repeater -->
             <?php if (!empty($fields['work_list'])): ?>
-                <div class="row repeater-list mt-5 mb-5">
+                <div class=" repeater-list mt-5 mb-5">
                     <?php foreach ($fields['work_list'] as $list_item): ?>
-                        <div class="repeater-item d-flex align-items-start justify-content-between w-100">
+                        <div class="vacature-item repeater-item d-flex align-items-start justify-content-between w-100">
                             <?php if (!empty($list_item['number'])): ?>
                                 <p class="number typography mb-0"><?= $list_item['number']; ?></p>
                             <?php endif; ?>

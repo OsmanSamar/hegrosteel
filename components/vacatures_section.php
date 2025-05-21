@@ -52,8 +52,8 @@ if ($vacatures->have_posts()): ?>
                     // $salary = get_the_terms(get_the_ID(), 'salary');
                     $uren = get_the_terms(get_the_ID(), 'uren');
                     ?>
-                    <a href="<?php the_permalink(); ?>">
-                        <div class="row repeater-list mt-4 mb-4">
+                    <a class="vacature-item" href="<?php the_permalink(); ?>">
+                        <div class="repeater-list mt-4 mb-4">
                             <div class="repeater-item d-flex align-items-start justify-content-between w-100">
                                 <?php if ($i): ?>
                                     <p class="number typography mb-0"><?= $i < 10 ? '0' . $i : $i ?></p>
@@ -63,7 +63,7 @@ if ($vacatures->have_posts()): ?>
                                     <div class="d-flex justify-content-end gap-3">
                                         <?php if ($uren): ?>
                                             <?php foreach ($uren as $term): ?>
-                                                <div class="lead-container"><span class="lead">
+                                                <div class="tag"><span class="lead">
                                                         <?= esc_html($term->name); ?></span>
                                                 </div>
 

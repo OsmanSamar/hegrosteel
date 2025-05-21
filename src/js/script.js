@@ -264,7 +264,7 @@ document.querySelectorAll(".image-slider").forEach((x) => {
   
     if (photos.length > 0) {
       // To hide the first image
-      gsap.set(photos, { opacity: 0, scale: 0.5 });
+      gsap.set(photos, { opacity: 0, scale: 1 });
   
       // To Scroll the image
       const animation = gsap.to(photos, {

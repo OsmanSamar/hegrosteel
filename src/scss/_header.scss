@@ -16,7 +16,7 @@
     // box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
     background: var(--Secondary-500);
     .whatsappimg {
-      filter:brightness(0) invert(1);
+      filter: brightness(0) invert(1);
     }
   }
 }
@@ -304,13 +304,28 @@
   background: var(--Primary-400);
   cursor: pointer;
 
+  // &:hover {
+  //   background: var(--Secondary-500);
+  // }
+  // &:hover + h3,
+  // &:hover ~ .text-hover-underline {
+  //   text-decoration: underline;
+  //   text-decoration-style: solid;
+  // }
+}
+
+.vacature-item {
+  cursor: pointer;
   &:hover {
-    background: var(--Secondary-500);
-  }
-  &:hover + h3,
-  &:hover ~ .text-hover-underline {
-    text-decoration: underline;
-    text-decoration-style: solid;
+    .number {
+      background: var(--Secondary-500);
+    }
+    .text-hover-underline {
+      text-decoration: underline;
+      // text-decoration-style: solid;
+        font-weight: 700;
+    }
+
   }
 }
 
@@ -318,12 +333,9 @@
 .number + div > h3 {
   font-weight: 400;
 }
-.number:hover + div > h3 {
-  text-decoration: underline;
-  font-weight: 700;
-}
 
-.lead-container {
+
+.tag {
   border-radius: 10px;
   background: var(--Primary-400);
   padding: 5px 8px;
