@@ -241,6 +241,7 @@ document.querySelectorAll(".image-slider").forEach((x) => {
 //     });
 //   });
 
+
 //Gsap Scroll animation
 gsap.config({ trialWarn: false });
 document.addEventListener("DOMContentLoaded", function () {
