@@ -6,6 +6,8 @@ $email = 'stage@hegrosteel.nl';
 $search = $email;
 $replace = '<a href="mailto:' . $email . '"><strong>' . $email . '</strong></a>';
 $second_text_with_link = str_replace($search, $replace, $fields['second_text']);
+//Added a condition to dynamically change the <h2> to <h3> when the column has order-2
+$heading_tag = (strpos($textOnLeft ? 'col-lg-7 order-1' : 'col-lg-6 order-2 offset-lg-1', 'order-2') !== false) ? 'h3' : 'h2';
 
 ?>
 
@@ -14,7 +16,8 @@ $second_text_with_link = str_replace($search, $replace, $fields['second_text']);
         <div
             class="col-12 <?= $textOnLeft ? 'col-lg-7 order-1' : 'col-lg-6 order-2 offset-lg-1'; ?> d-flex flex-column mb-4 mb-lg-0 my-auto py-4">
             <!-- my-auto py-4 To algin on center -->
-            <h2><?= $fields['title']; ?></h2>
+            <!-- <h2><?= $fields['title']; ?></h2> -->
+             <<?= $heading_tag; ?>><?= $fields['title']; ?></<?= $heading_tag; ?>>
             <div class="regular  mt-4"><?= $fields['text']; ?></div>
             <div class="regular mt-5" style="font-weight:700"><?= $second_text_with_link; ?></div>
             <!--Button  -->

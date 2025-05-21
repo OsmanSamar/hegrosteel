@@ -149,6 +149,8 @@ $projects = new WP_Query([
 
 
                     <!-- Diensten -->
+
+
                     <div class="col-6 col-lg-3 col-md-6 offset-lg-1">
                         <div class="d-block mb-3 list">
                             <?= get_field("diensten_link_title", 'option') ?>
