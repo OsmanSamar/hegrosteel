@@ -101,7 +101,10 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             </div>
         </div>
 
-        <!--Gasp Swiper animation  Test Code  -->
+
+
+
+       <!--Gasp Swiper animation  Test Code  -->
         <div class="container gallery"> 
             <div class="row align-items-center vacature-block mb-5 third-row">
                 <!-- Left Column: Texts -->
@@ -139,9 +142,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                     <?php endif; ?>
                                 <?php endwhile; ?>
                                </div>
-
                                  <!-- Buttons -->
-
                               <?php if ($hasabutton) : ?>
                                   <div class="d-flex flex-row gap-3 mt-5">
                                    <a type="button" class="button secondary-button" href="#solliciteren">
@@ -155,7 +156,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                                  </div>
                                       <?php endif; ?>
                                  <!-- End of Button -->
-
                                 <?php endif; ?>
                        </div>
 
@@ -193,7 +193,8 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
         </div> 
 
 
-     
+
+
 
 
 
