@@ -6,10 +6,11 @@ $hasBackground = !empty($fields['has_background']);
 $backgroundClass= $fields['background'] ?? '';
 $columnClass = $imageOnLeft ? 'col-lg-5 offset-lg-1' : 'col-lg-5 ';
 $columnRight = $imageOnLeft ? 'col-lg-6 ' : 'col-lg-6 offset-lg-1 ';
+$anchorId = $fields['anchor_id'] ?? '';
 
 ?>
 
-<div class="img_with_text  <?= $backgroundClass ?> <?= $hasBackground ? 'with-background' : ''; ?>">
+<div id="<?= esc_attr($anchorId); ?>" class="img_with_text  <?= $backgroundClass ?> <?= $hasBackground ? 'with-background' : ''; ?>">
     <div class="container">
         <div class="row d-flex flex-wrap">
             <!-- Image Column -->

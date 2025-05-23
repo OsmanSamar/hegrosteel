@@ -121,7 +121,6 @@ $projects = new WP_Query([
                                 <?= get_field("footer_adrres", 'option') ?>
                             </li>
 
-
                             <div class="d-flex flex-column gap-2">
                                 <div class="footer-li">
                                     <?= get_field("hegrosteel_adress", 'option') ?>
@@ -146,70 +145,42 @@ $projects = new WP_Query([
                         </ul>
                     </div>
 
-
-
                     <!-- Diensten -->
-
-
-                    <div class="col-6 col-lg-3 col-md-6 offset-lg-1">
-                        <div class="d-block mb-3 list">
-                            <?= get_field("diensten_link_title", 'option') ?>
-                        </div>
-
-                        <?php while ($projects->have_posts()):
-                            $projects->the_post();
-                            $categories = get_the_terms(get_the_ID(), 'project_category');
-                            ?>
-
-                            <ul class="list-unstyled">
-                                <?php if ($categories && !is_wp_error($categories)): ?>
-                                    <?php foreach ($categories as $category): ?>
-                                        <li class="footer-li">
-                                            <?= esc_html($cat->name); ?>
-                                        </li>
-                                    <?php endforeach; ?>
-                                <?php endif; ?>
-
-
-                            </ul>
-
-                        <?php endwhile; ?>
-                    </div>
-
-
-
-
-                    <!-- Diensten -->
-                    <!-- <div class="col-6 col-md-3 offset-lg-1">
+                    <div class="col-6 col-md-3 offset-lg-1">
                         <div class="d-block mb-3 list">
                             <?= get_field("diensten_link_title", 'option') ?>
                         </div>
                         <ul class="list-unstyled">
-                            <li class="footer-li">
-                               project_category
-                            </li>
                             <div class="d-flex flex-column gap-2">
-                                <div class="footer-li">
-                                   project_category
-                                </div>
                                 <li class="footer-li">
-                                   project_category
-                                </li>
-                                <li>
-                                    <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>"
+                                    <a href="#prefabbeton"
                                         class="footer-li text-decoration-none footer-link-ltr">
-                                        project_category
+                                        Bedrijfspand
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="mailto:<?= get_field("hegrosteel_mail", 'option') ?>"
+                                <li class="footer-li">
+                                    <a href="#dak-wand"
                                         class="footer-li text-decoration-none footer-link-ltr">
-                                       project_category
+                                        Stallenbouw
                                     </a>
                                 </li>
+                                <li class="footer-li">
+                                    <a href="#woningbouw"
+                                        class="footer-li text-decoration-none footer-link-ltr">
+                                        Woningbouw
+                                    </a>
+                                </li>
+                               
+                                <li class="footer-li">
+                                    <a href="#utiliteitsbouw" class="footer-li text-decoration-none footer-link-ltr">
+                                        Utiliteitsbouw
+                                    </a>
+                                </li>
+
                             </div>
+
                         </ul>
-                    </div> -->
+                    </div>
 
                     <!-- Meer weten -->
                     <div class="col-6 col-lg-3 d-md-none d-lg-block offset-lg-1">
