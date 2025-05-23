@@ -254,9 +254,9 @@
 }
 //To remove defualt style
 
-.dropdown-item:hover, .dropdown-item:focus {
-    
-    background-color: unset !important; 
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: unset !important;
 }
 
 @media (max-width: 1199.98px) {
@@ -295,8 +295,6 @@
   }
 }
 
-
-
 .divider {
   border: 1px solid #6b6b6b;
 }
@@ -333,9 +331,8 @@
     .text-hover-underline {
       text-decoration: underline;
       // text-decoration-style: solid;
-        font-weight: 700;
+      font-weight: 700;
     }
-
   }
 }
 
@@ -343,7 +340,6 @@
 .number + div > h3 {
   font-weight: 400;
 }
-
 
 .tag {
   border-radius: 10px;
