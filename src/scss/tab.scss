@@ -2,12 +2,15 @@
   h3{
     line-height: 120%;
   }
+  h4{
+    font-size: 14px;
+  }
   margin: 80px 0px;
   position: relative;
   overflow: hidden;
   border-radius: 30px;
   .tab-wrap a {
-    padding: 20px 20px;
+    padding: 13px 8px;
     width: 100%;
     display: inline-block;
 
@@ -50,7 +53,7 @@
   .tab-content {
     position: relative;
     width: 100%;
-    border-radius: 0px 30px 30px 30px;
+    border-radius: 0px 0px 30px 30px;
     background: var(--Primary-200, #6b6b6b);
     padding: 60px;
     // height: 531px;
@@ -72,4 +75,14 @@
       display: block;
     }
   }
+
+@media(min-width: 992px){
+   .tab-wrap a {
+    padding: 20px 20px;}
+     h4{
+    font-size: 22px;
+  }
+
+}
+
 }
