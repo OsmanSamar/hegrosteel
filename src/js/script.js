@@ -145,8 +145,8 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
 document.querySelectorAll(".images-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
   let swiper = new Swiper(x.querySelector(".images-swiper"), {
-    slidesPerView: 1,
-    centeredSlides: true,
+    slidesPerView: 1.4,
+    centeredSlides: false,
     grabCursor: true,
     spaceBetween: 20,
     loop: true,
@@ -163,7 +163,7 @@ document.querySelectorAll(".images-slider").forEach((x) => {
         slidesPerView: 3,
       },
       1440: {
-        slidesPerView: 2.5,
+        slidesPerView: 3.8,
       },
     },
 
@@ -243,47 +243,95 @@ document.querySelectorAll(".image-slider").forEach((x) => {
 
 
 //Gsap Scroll animation
+// gsap.config({ trialWarn: false });
+// document.addEventListener("DOMContentLoaded", function () {
+//   gsap.registerPlugin(ScrollTrigger);
+
+//   // To check the first image
+//   const photos = document.querySelectorAll(".photo:not(:first-child)");
+
+//   if (photos.length > 0) {
+//     // To Dispaly the first image
+//      gsap.set(photos, { opacity: 0, scale: 1 });
+//     //1
+//     // gsap.set(photos, {yPercent:101});
+
+//     // To Scroll the image
+//     const animation = gsap.to(photos, {
+//       opacity: 1,
+//       scale: 1,
+//       duration: 1,
+//       stagger: 1,
+//     });
+//     //2
+
+//     //   const animation = gsap.to(photos, {
+//     //   yPercent:0,
+//     //   duration: 1,
+//     //   stagger: 1,
+//     // });
+
+//     ScrollTrigger.create({
+//       trigger: ".gallery",
+//       start: "top top",
+//       end: "bottom bottom",
+//       pin: ".right",
+//       animation: animation,
+//       scrub: true,
+//     // markers: true
+//     });
+//   } else {
+//     console.warn("No .photo:not(:first-child) found.");
+//   }
+// });
+
+
 gsap.config({ trialWarn: false });
+
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
-
-  // To check the first image
   const photos = document.querySelectorAll(".photo:not(:first-child)");
 
   if (photos.length > 0) {
-    // To hide the first image
-     gsap.set(photos, { opacity: 0, scale: 1 });
-    //1
-    // gsap.set(photos, {yPercent:101});
+    //To Dispaly the first image
+    gsap.set(photos, { opacity: 0, scale: 1 });
+    gsap.set(photos[0], { opacity: 1 });
 
-    // To Scroll the image
-    const animation = gsap.to(photos, {
-      opacity: 1,
-      scale: 1,
-      duration: 1,
-      stagger: 1,
-    });
-    //2
+    // Create a trigger for each image after the first one.
+    for (let i = 1; i < photos.length; i++) {
+      ScrollTrigger.create({
+        trigger: ".gallery",
+        start: () => `top+=${window.innerHeight * (i - 0.5)} top`,
+        end: () => `top+=${window.innerHeight * i} top`,
+        scrub: true,
+        onUpdate: (self) => {
+          const progress = self.progress;
 
-    //   const animation = gsap.to(photos, {
-    //   yPercent:0,
-    //   duration: 1,
-    //   stagger: 1,
-    // });
+          if (progress > 0.5) {
+            gsap.set(photos[i - 1], { opacity: 0 });
+            gsap.set(photos[i], { opacity: 1 });
+          } else {
+            gsap.set(photos[i - 1], { opacity: 1 });
+            gsap.set(photos[i], { opacity: 0 });
+          }
+        },
+      });
+    }
 
+    // Install the photos section
     ScrollTrigger.create({
       trigger: ".gallery",
       start: "top top",
-      end: "bottom bottom",
+      end: () => "+=" + (window.innerHeight * (photos.length - 1)),
       pin: ".right",
-      animation: animation,
       scrub: true,
-    // markers: true
+      // markers: true
     });
   } else {
-    console.warn("No .photo:not(:first-child) found.");
+    console.warn("No .photo found.");
   }
 });
+
 
 
 
