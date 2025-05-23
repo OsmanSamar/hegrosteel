@@ -253,7 +253,9 @@
   height: 19px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1199.98px) {
+  //max-width: 1199.98px
+  //max-width: 991px
   .navbar-toggler {
     display: flex;
   }
@@ -286,6 +288,8 @@
     transition-delay: 0.4s;
   }
 }
+
+
 
 .divider {
   border: 1px solid #6b6b6b;

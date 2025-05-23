@@ -47,7 +47,7 @@ unset($menu_items);
 
 <body <?php body_class(); ?>>
     <svg class="svg">
-        
+
         <clipPath id="border-wrap" clipPathUnits="objectBoundingBox">
             <path
                 d="M0.746,0 C0.767,0,0.787,0.008,0.802,0.023 L0.804,0.025 L0.974,0.2 C0.991,0.217,1,0.24,1,0.265 V0.91 C1,0.96,0.963,1,0.917,1 H0.083 C0.037,1,0,0.96,0,0.91 V0.093 C0,0.044,0.036,0.004,0.081,0.003 L0.083,0.003 L0.746,0">
@@ -157,7 +157,7 @@ unset($menu_items);
 
         }
 
-      
+
 
 
         .right-bottom-shape {
@@ -427,7 +427,7 @@ unset($menu_items);
         <!-- position-absolute //position-relative-->
         <nav class="w-100">
             <div class="container">
-                <div class="navbar navbar-expand-lg navbar-light sans-serif w-100">
+                <div class="navbar navbar-expand-xl navbar-light sans-serif w-100">
                     <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>" class="navbar-brand d-flex">
                         <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Logo" class=" logo" />
                     </a>
@@ -443,6 +443,8 @@ unset($menu_items);
                             <span class="toggler-icon bottom-bar"></span>
                         </button>
                     </div>
+
+                   
 
                     <!-- Navigation Menu -->
 
