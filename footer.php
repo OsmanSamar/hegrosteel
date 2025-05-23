@@ -153,26 +153,26 @@ $projects = new WP_Query([
                         <ul class="list-unstyled">
                             <div class="d-flex flex-column gap-2">
                                 <li class="footer-li">
-                                    <a href="#prefabbeton"
+                                    <a href="/diensten#prefabbeton"
                                         class="footer-li text-decoration-none footer-link-ltr">
                                         Bedrijfspand
                                     </a>
                                 </li>
                                 <li class="footer-li">
-                                    <a href="#dak-wand"
+                                    <a href="/diensten#dak-wand"
                                         class="footer-li text-decoration-none footer-link-ltr">
                                         Stallenbouw
                                     </a>
                                 </li>
                                 <li class="footer-li">
-                                    <a href="#woningbouw"
+                                    <a href="/diensten#woningbouw"
                                         class="footer-li text-decoration-none footer-link-ltr">
                                         Woningbouw
                                     </a>
                                 </li>
                                
                                 <li class="footer-li">
-                                    <a href="#utiliteitsbouw" class="footer-li text-decoration-none footer-link-ltr">
+                                    <a href="/diensten#utiliteitsbouw" class="footer-li text-decoration-none footer-link-ltr">
                                         Utiliteitsbouw
                                     </a>
                                 </li>
