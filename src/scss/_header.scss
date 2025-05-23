@@ -252,6 +252,12 @@
   width: 19px;
   height: 19px;
 }
+//To remove defualt style
+
+.dropdown-item:hover, .dropdown-item:focus {
+    
+    background-color: unset !important; 
+}
 
 @media (max-width: 1199.98px) {
   //max-width: 1199.98px
