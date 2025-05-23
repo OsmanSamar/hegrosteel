@@ -24,7 +24,7 @@ $fields = get_fields();
                 <!-- Gradient Overlay -->
                 <div class="overlay"></div>
 
-            
+
                 <div class="hero-content position-relative">
                     <div class="row align-items-end">
                         <div class="col-12 col-md-7 col-lg-5 text-justify">
@@ -36,7 +36,7 @@ $fields = get_fields();
                             </div>
                         </div>
 
-                        <div
+                        <!-- <div
                             class="col-12 col-md-5 col-lg-7 d-flex justify-content-lg-start justify-content-md-start  mt-4 mt-md-0">
                             <div class="go-down align-self-end">
                                 <div class="arrow-container mt-3">
@@ -46,7 +46,18 @@ $fields = get_fields();
                                     </a>
                                 </div>
                             </div>
+                        </div> -->
+                        <div
+                            class="col-12 col-md-5 col-lg-7 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0">
+                            <a href="#Service-Section" aria-label="Go to the content">
+                                <div
+                                    class="arrow-container mt-3">
+                                    <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg"
+                                        alt="Go down" class="down-arrow" />
+                                </div>
+                            </a>
                         </div>
+
                     </div>
                 </div>
 

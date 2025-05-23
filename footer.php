@@ -115,33 +115,28 @@ $projects = new WP_Query([
                         <div class="list d-block mb-3 ">
                             <?= get_field("contact_link_title", 'option') ?>
                         </div>
-
-                        <ul class="list-unstyled">
+                        <ul class="list-unstyled d-flex flex-column gap-2 ">
                             <li class="footer-li">
                                 <?= get_field("footer_adrres", 'option') ?>
                             </li>
-
-                            <div class="d-flex flex-column gap-2">
-                                <div class="footer-li">
-                                    <?= get_field("hegrosteel_adress", 'option') ?>
-
-                                </div>
-                                <li class="footer-li">
-                                    <?= get_field("hegrosteel_postcode", 'option') ?>
-                                </li>
-                                <li>
-                                    <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>"
-                                        class="footer-li text-decoration-none footer-link-ltr">
-                                        <?= get_field("hegrosteel_phone_num", 'option') ?>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="mailto:<?= get_field("hegrosteel_mail", 'option') ?>"
-                                        class="footer-li text-decoration-none footer-link-ltr">
-                                        <?= get_field("hegrosteel_mail", 'option') ?>
-                                    </a>
-                                </li>
-                            </div>
+                            <li class="footer-li">
+                                <?= get_field("hegrosteel_adress", 'option') ?>
+                            </li>
+                            <li class="footer-li">
+                                <?= get_field("hegrosteel_postcode", 'option') ?>
+                            </li>
+                            <li>
+                                <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>"
+                                    class="footer-li text-decoration-none footer-link-ltr">
+                                    <?= get_field("hegrosteel_phone_num", 'option') ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:<?= get_field("hegrosteel_mail", 'option') ?>"
+                                    class="footer-li text-decoration-none footer-link-ltr">
+                                    <?= get_field("hegrosteel_mail", 'option') ?>
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
@@ -150,34 +145,30 @@ $projects = new WP_Query([
                         <div class="d-block mb-3 list">
                             <?= get_field("diensten_link_title", 'option') ?>
                         </div>
-                        <ul class="list-unstyled">
-                            <div class="d-flex flex-column gap-2">
-                                <li class="footer-li">
-                                    <a href="/diensten#prefabbeton"
-                                        class="footer-li text-decoration-none footer-link-ltr">
-                                        Bedrijfspand
-                                    </a>
-                                </li>
-                                <li class="footer-li">
-                                    <a href="/diensten#dak-wand"
-                                        class="footer-li text-decoration-none footer-link-ltr">
-                                        Stallenbouw
-                                    </a>
-                                </li>
-                                <li class="footer-li">
-                                    <a href="/diensten#woningbouw"
-                                        class="footer-li text-decoration-none footer-link-ltr">
-                                        Woningbouw
-                                    </a>
-                                </li>
-                               
-                                <li class="footer-li">
-                                    <a href="/diensten#utiliteitsbouw" class="footer-li text-decoration-none footer-link-ltr">
-                                        Utiliteitsbouw
-                                    </a>
-                                </li>
+                        <ul class="list-unstyled d-flex flex-column gap-2">
+                            <li class="footer-li">
+                                <a href="/diensten#prefabbeton" class="footer-li text-decoration-none footer-link-ltr">
+                                    Bedrijfspand
+                                </a>
+                            </li>
+                            <li class="footer-li">
+                                <a href="/diensten#dak-wand" class="footer-li text-decoration-none footer-link-ltr">
+                                    Stallenbouw
+                                </a>
+                            </li>
+                            <li class="footer-li">
+                                <a href="/diensten#woningbouw" class="footer-li text-decoration-none footer-link-ltr">
+                                    Woningbouw
+                                </a>
+                            </li>
 
-                            </div>
+                            <li class="footer-li">
+                                <a href="/diensten#utiliteitsbouw"
+                                    class="footer-li text-decoration-none footer-link-ltr">
+                                    Utiliteitsbouw
+                                </a>
+                            </li>
+
 
                         </ul>
                     </div>

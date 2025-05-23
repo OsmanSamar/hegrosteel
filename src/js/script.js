@@ -445,3 +445,18 @@ document.addEventListener("DOMContentLoaded", () => {
   makeItHappen();
 });
 
+
+
+//Navigation delay after page load
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if there's a hash in the URL
+  if (window.location.hash) {
+    const target = document.querySelector(window.location.hash);
+    if (target) {
+      // Delay scroll to allow full rendering
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 300); // 300ms delay to wait until DOM is ready
+    }
+  }
+});
