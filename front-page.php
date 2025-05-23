@@ -10,7 +10,10 @@ $fields = get_fields();
             <div class="hero-section bg-holder hero-bevel position-relative">
 
                 <!-- Background Image -->
-                <img class="bg-content" src="<?= get_the_post_thumbnail_url() ?>" alt="" />
+                <!-- <img class="bg-content" src="<?= get_the_post_thumbnail_url() ?>" alt="" /> -->
+                <div class="bg-content"
+                    style="background: linear-gradient(180deg,  rgba(0, 0, 0, 0.00) -11.36%, rgba(0, 0, 0, 0.81) 82.88%), url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;">
+                </div>
 
                 <!-- Optional Image/Video -->
                 <?php if ($header['image']): ?>
@@ -22,9 +25,7 @@ $fields = get_fields();
                 <?php endif; ?>
 
                 <!-- Gradient Overlay -->
-                <div class="overlay"></div>
-
-
+                <!-- <div class="overlay"></div> -->
                 <div class="hero-content position-relative">
                     <div class="row align-items-end">
                         <div class="col-12 col-md-7 col-lg-5 text-justify">
@@ -35,33 +36,17 @@ $fields = get_fields();
                                 bouwen.
                             </div>
                         </div>
-
-                        <!-- <div
-                            class="col-12 col-md-5 col-lg-7 d-flex justify-content-lg-start justify-content-md-start  mt-4 mt-md-0">
-                            <div class="go-down align-self-end">
-                                <div class="arrow-container mt-3">
-                                    <a href="#Service-Section" aria-label="Go to the content">
-                                        <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg"
-                                            alt="Go down" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div> -->
                         <div
                             class="col-12 col-md-5 col-lg-7 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0">
                             <a href="#Service-Section" aria-label="Go to the content">
-                                <div
-                                    class="arrow-container mt-3">
-                                    <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg"
-                                        alt="Go down" class="down-arrow" />
+                                <div class="arrow-container mt-3">
+                                    <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg" alt="Go down"
+                                        class="down-arrow" />
                                 </div>
                             </a>
                         </div>
-
                     </div>
                 </div>
-
-
             </div>
 
             <!-- Service-section -->
