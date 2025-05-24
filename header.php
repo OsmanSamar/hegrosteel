@@ -471,13 +471,25 @@ unset($menu_items);
 
 
                     <!-- Hamburger button for mobile -->
-                    <div class="d-xl-none navbar-toggler-wrapper ">
+                    <!-- <div class="d-xl-none navbar-toggler-wrapper ">
                         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation" style="">
                             <span class="toggler-icon top-bar"></span>
                             <span class="toggler-icon middle-bar"></span>
                             <span class="toggler-icon bottom-bar"></span>
+                        </button>
+                    </div> -->
+
+                    <div class="d-xl-none wrapper">
+                        <button id="box" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <div class="hamburger">
+                                <span class="one"></span>
+                                <span class="two"></span>
+                                <span class="three"></span>
+                            </div>
                         </button>
                     </div>
 
