@@ -12,7 +12,7 @@ $projects = new WP_Query($args);
 
 if ($projects->have_posts()): ?>
 
-    <div class="projecten-slider <?= $backgroundClass ?> <?= $hasBackground ? 'with-background' : ''; ?>">
+    <div class="projecten-slider mb-5 <?= $backgroundClass ?> <?= $hasBackground ? 'with-background' : ''; ?>">
         <div class="container">
             <div class="row">
                 <div class=" col-lg-12 ">
