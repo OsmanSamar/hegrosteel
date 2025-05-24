@@ -464,5 +464,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+//#scrollbar-indicator
 
+window.addEventListener('scroll', function () {
+    const indicator = document.getElementById('scrollbar-indicator');
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    indicator.style.width = scrollPercent + '%';
+});
 

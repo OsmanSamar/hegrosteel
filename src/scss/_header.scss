@@ -1,5 +1,15 @@
 
-
+//#scrollbar-indicator
+#scrollbar-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px; 
+  width: 0%;
+  background-color: var(--Secondary-500); 
+  z-index: 9999;
+  transition: width 0.25s ease-out;
+}
 
 .whatsapp-container {
   display: flex;

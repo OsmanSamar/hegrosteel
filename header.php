@@ -64,6 +64,9 @@ unset($menu_items);
 ?>
 
 <body <?php body_class(); ?>>
+
+
+
     <svg class="svg">
         <clipPath id="hero-wrap-sm" clipPathUnits="objectBoundingBox">
             <path
@@ -459,6 +462,11 @@ unset($menu_items);
     </style>
 
     <?php wp_body_open(); ?>
+
+     <!-- Scrollbar-indicatior -->
+    <div id="scrollbar-indicator" class=" top-0 w-0 left-0 position-fixed"></div>
+
+
 
     <header class="header  d-flex justify-content-center">
         <!-- position-absolute //position-relative-->
