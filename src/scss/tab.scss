@@ -1,16 +1,18 @@
 .tabs {
-  h3{
+  h3 {
     line-height: 120%;
   }
-  h4{
-    font-size: 14px;
+  h4 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 10.4px;
   }
   margin: 80px 0px;
   position: relative;
   overflow: hidden;
   border-radius: 30px;
   .tab-wrap a {
-    padding: 13px 8px;
+    padding: 13px 15px;
     width: 100%;
     display: inline-block;
 
@@ -55,7 +57,7 @@
     width: 100%;
     border-radius: 0px 0px 30px 30px;
     background: var(--Primary-200, #6b6b6b);
-    padding: 60px;
+    padding: 36px;
     // height: 531px;
   }
 
@@ -67,7 +69,7 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    height: 353px;
+    // height: 353px;
     & img {
       width: 100%;
       height: auto;
@@ -76,13 +78,25 @@
     }
   }
 
-@media(min-width: 992px){
-   .tab-wrap a {
-    padding: 20px 20px;}
-     h4{
-    font-size: 22px;
+  @media (min-width: 768px) {
+    .tab-content {
+      padding: 60px;
+    }
+    h4 {
+      font-size: 22px;
+      line-height: 26.4px;
+    }
   }
+  @media (min-width: 992px) {
+    .tab-wrap a {
+      padding: 20px 20px;
+    }
+    h4 {
+      font-size: 22px;
+    }
 
-}
-
+    .tab-content {
+      padding: 60px;
+    }
+  }
 }
