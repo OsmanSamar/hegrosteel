@@ -7,7 +7,7 @@ $fields = get_fields();
     <div class=" position-relative">
         <div class="container">
             <!-- Hero Section -->
-            <div class="hero-section bg-holder hero-bevel position-relative">
+            <div class="hero-section bg-holder hero-responsive position-relative">
 
                 <!-- Background Image -->
                 <!-- <img class="bg-content" src="<?= get_the_post_thumbnail_url() ?>" alt="" /> -->
@@ -28,8 +28,10 @@ $fields = get_fields();
                 <!-- <div class="overlay"></div> -->
                 <div class="hero-content position-relative">
                     <div class="row align-items-end">
-                        <div class="col-12 col-md-7 col-lg-5 text-justify">
-                            <h1>HEGRO Steel. Stand strong.</h1>
+                        <div class="col-12 col-md-7 col-lg-9 col-xl-6 ">
+                            <h1><span>HEGRO Steel.</span> 
+                                <span>Stand strong.</span>
+                            </h1>
                             <div class="lead">
                                 Wij monteren staalconstructies, plaatsten daken en wanden, installeren prefab beton en
                                 bouwen huizen en bedrijfspanden vanaf nul. Als jij het kunt verzinnen, kunnen wij het
@@ -37,7 +39,7 @@ $fields = get_fields();
                             </div>
                         </div>
                         <div
-                            class="col-12 col-md-5 col-lg-7 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0">
+                            class="col-12 col-md-5 col-lg-3 col-xl-6 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0">
                             <a href="#Service-Section" aria-label="Go to the content">
                                 <div class="arrow-container mt-3">
                                     <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg" alt="Go down"

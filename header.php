@@ -1,4 +1,3 @@
-
 <!-- 
  
 
@@ -66,7 +65,16 @@ unset($menu_items);
 
 <body <?php body_class(); ?>>
     <svg class="svg">
-          <clipPath id="hero-wrap" clipPathUnits="objectBoundingBox"><path d="M0.301,0.017 C0.307,0.007,0.316,0.001,0.324,0.001 L0.967,0.001 C0.985,0.001,1,0.026,1,0.058 V0.444 V0.944 C1,0.975,0.985,1,0.967,1 L0.033,1 C0.015,1,0,0.975,0,0.944 V0.55 C0,0.535,0.004,0.521,0.01,0.51 L0.301,0.017 M0.301,0.017 C0.307,0.007,0.316,0.001,0.324,0.001 L0.967,0.001 C0.985,0.001,1,0.026,1,0.058 V0.444 V0.944 C1,0.975,0.985,1,0.967,1 L0.033,1 C0.015,1,0,0.975,0,0.944 V0.55 C0,0.535,0.004,0.521,0.01,0.51 L0.301,0.017"></path></clipPath>
+        <clipPath id="hero-wrap-sm" clipPathUnits="objectBoundingBox">
+            <path
+                d="M1,0.046 C1,0.021,0.96,0.001,0.911,0.001 L0.257,0 C0.234,0,0.211,0.004,0.195,0.012 L0.028,0.091 C0.01,0.099,0,0.111,0,0.123 V0.956 C0,0.98,0.04,1,0.09,1 H0.91 C0.96,1,1,0.98,1,0.956 L1,0.046">
+            </path>
+        </clipPath>
+        <clipPath id="hero-wrap" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0.301,0.017 C0.307,0.007,0.316,0.001,0.324,0.001 L0.967,0.001 C0.985,0.001,1,0.026,1,0.058 V0.444 V0.944 C1,0.975,0.985,1,0.967,1 L0.033,1 C0.015,1,0,0.975,0,0.944 V0.55 C0,0.535,0.004,0.521,0.01,0.51 L0.301,0.017 M0.301,0.017 C0.307,0.007,0.316,0.001,0.324,0.001 L0.967,0.001 C0.985,0.001,1,0.026,1,0.058 V0.444 V0.944 C1,0.975,0.985,1,0.967,1 L0.033,1 C0.015,1,0,0.975,0,0.944 V0.55 C0,0.535,0.004,0.521,0.01,0.51 L0.301,0.017">
+            </path>
+        </clipPath>
 
         <clipPath id="border-wrap" clipPathUnits="objectBoundingBox">
             <path
@@ -136,9 +144,15 @@ unset($menu_items);
             height: 0;
         }
 
-        .hero-bevel{
-             clip-path: url(#hero-wrap) !important;
+        .hero-bevel {
+            clip-path: url(#hero-wrap) !important;
         }
+
+        .hero-sm {
+            clip-path: url(#hero-wrap-sm) !important;
+
+        }
+
         .bevel-right {
             clip-path: url(#beveled-shape-right) !important;
         }
@@ -467,7 +481,7 @@ unset($menu_items);
                         </button>
                     </div>
 
-                   
+
 
                     <!-- Navigation Menu -->
 

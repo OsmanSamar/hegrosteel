@@ -1,4 +1,7 @@
 .front-page {
+  .hero-responsive {
+    clip-path: url(#hero-wrap-sm);
+  }
   .down-arrow {
     width: 19px;
     height: 19px;
@@ -6,29 +9,26 @@
     aspect-ratio: 1/1;
   }
 
-  .text-justify {
-    text-align: justify;
-  }
-
   .lead {
     text-align: left;
   }
 
-  .overlay {
-    position: absolute;
-    border-radius: 0px 30px 30px 30px;
-    // inset: 0;
-    top: 40px;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) -11.36%,
-      rgba(0, 0, 0, 0.81) 82.88%
-    );
-    z-index: 1;
-  }
+  // .overlay {
+  //   position: absolute;
+  //   border-radius: 0px 30px 30px 30px;
+  //   // inset: 0;
+  //   top: 40px;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   background: linear-gradient(
+  //     180deg,
+  //     rgba(0, 0, 0, 0) -11.36%,
+  //     rgba(0, 0, 0, 0.81) 82.88%
+  //   );
+  //   z-index: 1;
+  // }
+
   // Front-page Styling
   .hero-section {
     position: relative;
@@ -75,6 +75,7 @@
       position: relative;
       z-index: 3;
       min-height: 60vh;
+      // height: 704px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
@@ -92,6 +93,37 @@
       align-items: center;
       gap: 10px;
       flex-shrink: 0;
+    }
+  }
+
+  h1 {
+    color: #fff;
+    font-family: "Funnel Display";
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    .hero-content {
+      min-height: 45vh !important;
+    }
+    .hero-responsive {
+      clip-path: url(#hero-wrap);
+    }
+    h1 {
+      font-size: 46px;
+      line-height: 120%;
+      letter-spacing: 0.345px;
+    }
+  }
+  @media (min-width: 992px) {
+    .hero-content {
+      min-height: 70vh !important;
+    }
+    h1 {
+      font-size: 90px;
     }
   }
 }
