@@ -1,3 +1,9 @@
-.services_section{
-     .lead {font-size: 16px;}
+.services_section {
+  .lead {
+    font-size: 16px;
+  }
+
+  .number + div > a h3 {
+    font-weight: 400;
+  }
 }

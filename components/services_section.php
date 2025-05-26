@@ -36,10 +36,10 @@ $fields = $args['fields'];
             <?php endif; ?>
         </div>
 
-        <div class="col-12 col-md-6  col-lg-6 offset-lg-2">
+        <div class="col-12 col-md-6 col-lg-6 offset-lg-2">
             <!-- work list Repeater -->
             <?php if (!empty($fields['work_list'])): ?>
-                <div class=" repeater-list mt-5 mb-5">
+                <div class="repeater-list mt-5 mb-5">
                     <?php foreach ($fields['work_list'] as $list_item): ?>
                         <div class="vacature-item repeater-item d-flex align-items-start justify-content-between w-100">
                             <?php if (!empty($list_item['number'])): ?>
@@ -47,17 +47,36 @@ $fields = $args['fields'];
                             <?php endif; ?>
 
                             <?php if (!empty($list_item['text'])): ?>
+                                <?php
+                                // Define the correct links for each title
+                                $links = [
+                                    'Dak & wand' => '/diensten#dak-wand',
+                                    'Prefab beton' => '/diensten#prefabbeton',
+                                    'Woningbouw' => '/diensten#woningbouw',
+                                    'Utiliteitsbouw' => '/diensten#utiliteitsbouw',
+                                ];
+
+                                $link = $links[$list_item['text']] ?? '#'; // Fallback to '#' if no match
+                                ?>
+
                                 <div>
-                                    <h3 class="mb-2 text-hover-underline"><?= $list_item['text']; ?></h3>
+                                    <a href="<?= $link; ?>">
+                                        <h3 class="mb-2 text-hover-underline">
+                                            <?= $list_item['text']; ?>
+                                        </h3>
+                                    </a>
                                 </div>
+
                             <?php endif; ?>
                         </div>
-                        <hr class="divider mt-4">
 
+                        <hr class="divider mt-4">
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
         </div>
+
+
     </div>
 
 </div>
