@@ -32,7 +32,7 @@ $categories = get_terms('project_category', ['hide_empty' => true]);
 $projectPage = get_page_by_path('projecten');
 ?>
 
-<main class="projecten <?php echo ($lijnen_bg ? 'lijnen-bg' : ''); ?>">
+<main class="projecten lijnen-bg">
     <div class="container">
 
         <div>
