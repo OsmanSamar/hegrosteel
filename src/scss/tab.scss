@@ -25,9 +25,23 @@
   //   background: transparent !important;
   // }
 
+  
+  .tab-wrap{
+    &:has(.tab-col:nth-child(1) .tab-link.active){
+      .tab-link:nth-child(3)::after {
+       content:unset; 
+      }
+    }
+
+    &:has(.tab-col:nth-child(3) .tab-link.active){
+      .tab-link:nth-child(1)::after {
+       content:unset; 
+      }
+    }
+  }
 
   /* When #tab0 is active, show border between second and third tab */
-.tab-wrap a .tab-link.active:nth-child(1) ~ .tab-link:nth-child(3)::after {
+  .tab-link:nth-child(3)::after {
     content: "";
     position: absolute;
     left: 0;
@@ -38,8 +52,8 @@
     background-color: #fff;
 }
 
-/* When #tab2 is active, show border between first and second tab */
-.tab-wrap a .tab-third.active ~ .tab-link:nth-child(2)::after {
+  /* When #tab2 is active, show border between first and second tab */
+  .tab-link:nth-child(1)::after {
     content: "";
     position: absolute;
     right: 0;
