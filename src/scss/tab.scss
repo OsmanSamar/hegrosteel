@@ -25,59 +25,46 @@
   //   background: transparent !important;
   // }
 
-  
-  .tab-wrap{
-    &:has(.tab-col:nth-child(1) .tab-link.active){
-      .tab-link:nth-child(3)::after {
-       content:unset; 
-      }
-    }
 
-    &:has(.tab-col:nth-child(3) .tab-link.active){
-      .tab-link:nth-child(1)::after {
-       content:unset; 
-      }
-    }
-  }
 
-  /* When #tab0 is active, show border between second and third tab */
-  .tab-link:nth-child(3)::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 38px;
-    width: 1px;
-    background-color: #fff;
+/* The border between the second and third tab */
+.tab-2 .tab-link::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 38px;
+  width: 1px;
+  background-color: #fff;
+  display: none;
 }
 
-  /* When #tab2 is active, show border between first and second tab */
-  .tab-link:nth-child(1)::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 38px;
-    width: 1px;
-    background-color: #fff;
+/* The border between the first and second tab */
+.tab-1 .tab-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 38px;
+  width: 1px;
+  background-color: #fff;
+  display: none;
+}
+
+/* If tab 0 is active → show border on tab 2 */
+.tab-wrap:has(.tab-0 .tab-link.active) .tab-2 .tab-link::after {
+  display: block;
+}
+
+/* If tab 2 is active → show border on tab 1 */
+.tab-wrap:has(.tab-2 .tab-link.active) .tab-1 .tab-link::after {
+  display: block;
 }
 
 
 
-  // .tab-wrap a.tab-third::after {
-  //   content: "";
-  //   position: absolute;
-  //   right: 0;
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  //   height: 38px;
-  //   width: 1px;
-  //   background-color: #fff;
-  // }
-
- 
 
   .tab-wrap a {
     padding: 20px 20px;

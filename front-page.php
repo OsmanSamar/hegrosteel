@@ -24,11 +24,10 @@ $fields = get_fields();
                     </video>
                 <?php endif; ?>
 
-                <!-- Gradient Overlay -->
-                <!-- <div class="overlay"></div> -->
+               
                 <div class="hero-content position-relative">
                     <div class="row align-items-end">
-                        <div class="col-12 col-md-7 col-lg-9 col-xl-6 ">
+                        <div class="col-12 col-md-7 col-lg-9 col-xl-7 ">
                             <h1><span>HEGRO Steel.</span> 
                                 <span>Stand strong.</span>
                             </h1>
@@ -39,7 +38,7 @@ $fields = get_fields();
                             </div>
                         </div>
                         <div
-                            class="col-12 col-md-5 col-lg-3 col-xl-6 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0">
+                            class="col-12 col-md-5 col-lg-3 col-xl-5 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0 left-col">
                             <a href="#Service-Section" aria-label="Go to the content">
                                 <div class="arrow-container mt-3">
                                     <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg" alt="Go down"
