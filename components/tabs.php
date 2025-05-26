@@ -14,8 +14,9 @@ $fields = $args['fields'];
                                 ;
                                 $tab_title = $tab['tab_title'];
                                 ?>
-                                <div class="col-4 col-lg-4">
-                                    <a href="#tab<?= $i; ?>" class="tab-link <?= $i == 0 ? 'active' : ''; ?>"
+                                <div class="col-4 col-lg-4 position-relative">
+                                    <a href="#tab<?= $i; ?>"
+                                        class="tab-link <?= $i == 0 ? 'active' : ''; ?> <?= $i == 2 ? 'tab-third' : ''; ?>"
                                         data-tab="content<?= $i; ?>">
                                         <h4><?= $tab_title; ?></h4>
                                     </a>

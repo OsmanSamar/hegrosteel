@@ -1,24 +1,76 @@
 .tabs {
-  h3 {
-    line-height: 120%;
-  }
-  h4 {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 10.4px;
-  }
   margin: 80px 0px;
   position: relative;
   overflow: hidden;
   border-radius: 30px;
+
+  h3 {
+    line-height: 120%;
+  }
+  h4 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .tab-wrap {
+    border-radius: 20px 20px 0 0;
+    background: #303030;
+  }
+
+  //Clip path
+  // .tab-wrap a.tab-third.active::before {
+  //   background: transparent !important;
+  // }
+
+
+  /* When #tab0 is active, show border between second and third tab */
+.tab-wrap a .tab-link.active:nth-child(1) ~ .tab-link:nth-child(3)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 38px;
+    width: 1px;
+    background-color: #fff;
+}
+
+/* When #tab2 is active, show border between first and second tab */
+.tab-wrap a .tab-third.active ~ .tab-link:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 38px;
+    width: 1px;
+    background-color: #fff;
+}
+
+
+
+  // .tab-wrap a.tab-third::after {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  //   height: 38px;
+  //   width: 1px;
+  //   background-color: #fff;
+  // }
+
+ 
+
   .tab-wrap a {
-    padding: 13px 15px;
+    padding: 20px 20px;
     width: 100%;
     display: inline-block;
-
     position: relative;
     z-index: 1;
-
     &::before {
       z-index: -1;
       content: "";
@@ -27,10 +79,9 @@
       height: 100%;
       top: 0;
       left: 0;
-      clip-path: url(#tab-path);
+      // clip-path: url(#tab-path);
       background: var(--Primary-400, #303030);
     }
-
     &::after {
       content: "";
       position: absolute;
@@ -48,6 +99,8 @@
       &::before,
       &::after {
         background: var(--Primary-200, #6b6b6b);
+        //Added
+        border-radius: 20px 20px 0 0;
       }
     }
   }
@@ -88,11 +141,12 @@
     }
   }
   @media (min-width: 992px) {
-    .tab-wrap a {
-      padding: 20px 20px;
-    }
+    // .tab-wrap a {
+    //   padding: 20px 20px;
+    // }
     h4 {
       font-size: 22px;
+      text-align: left;
     }
 
     .tab-content {

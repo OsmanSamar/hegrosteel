@@ -1,6 +1,6 @@
 import "babel-polyfill";
 import "bootstrap";
-
+import Swiper from "swiper";
 // Styling
 import "../scss/style.scss";
 
@@ -12,6 +12,7 @@ import {
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+import { Navigation } from "swiper/modules";
 library.add(faFacebookF, faTwitter, faInstagram, faLinkedinIn);
 dom.watch();
 
@@ -109,6 +110,7 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
       nextEl: x.querySelector(".swiper-button-next"),
       prevEl: x.querySelector(".swiper-button-prev"),
     },
+    modules: [Navigation],
 
     breakpoints: {
       768: {
@@ -154,7 +156,7 @@ document.querySelectorAll(".images-slider").forEach((x) => {
       nextEl: x.querySelector(".swiper-button-next"),
       prevEl: x.querySelector(".swiper-button-prev"),
     },
-
+    modules: [Navigation],
     breakpoints: {
       768: {
         slidesPerView: 2,
@@ -194,6 +196,7 @@ document.querySelectorAll(".image-slider").forEach((x) => {
     centeredSlides: false,
     grabCursor: true,
     spaceBetween: 20,
+    modules: [Navigation],
     loop: true,
     navigation: {
       nextEl: x.querySelector(".swiper-button-next"),
@@ -241,56 +244,12 @@ document.querySelectorAll(".image-slider").forEach((x) => {
 //     });
 //   });
 
-
 //Gsap Scroll animation
-// gsap.config({ trialWarn: false });
-// document.addEventListener("DOMContentLoaded", function () {
-//   gsap.registerPlugin(ScrollTrigger);
-
-//   // To check the first image
-//   const photos = document.querySelectorAll(".photo:not(:first-child)");
-
-//   if (photos.length > 0) {
-//     // To Dispaly the first image
-//      gsap.set(photos, { opacity: 0, scale: 1 });
-//     //1
-//     // gsap.set(photos, {yPercent:101});
-
-//     // To Scroll the image
-//     const animation = gsap.to(photos, {
-//       opacity: 1,
-//       scale: 1,
-//       duration: 1,
-//       stagger: 1,
-//     });
-//     //2
-
-//     //   const animation = gsap.to(photos, {
-//     //   yPercent:0,
-//     //   duration: 1,
-//     //   stagger: 1,
-//     // });
-
-//     ScrollTrigger.create({
-//       trigger: ".gallery",
-//       start: "top top",
-//       end: "bottom bottom",
-//       pin: ".right",
-//       animation: animation,
-//       scrub: true,
-//     // markers: true
-//     });
-//   } else {
-//     console.warn("No .photo:not(:first-child) found.");
-//   }
-// });
-
-
 gsap.config({ trialWarn: false });
 
 document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
-  const photos = document.querySelectorAll(".photo:not(:first-child)");
+  const photos = document.querySelectorAll(".gallery .photo");
 
   if (photos.length > 0) {
     //To Dispaly the first image
@@ -322,7 +281,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ScrollTrigger.create({
       trigger: ".gallery",
       start: "top top",
-      end: () => "+=" + (window.innerHeight * (photos.length - 1)),
+      end: () => "+=" + window.innerHeight * (photos.length - 1),
       pin: ".right",
       scrub: true,
       // markers: true
@@ -331,12 +290,6 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn("No .photo found.");
   }
 });
-
-
-
-
-
-
 
 
 //Voor filter
@@ -445,9 +398,7 @@ document.addEventListener("DOMContentLoaded", () => {
   makeItHappen();
 });
 
-
-
-//Navigation delay after page load
+//Navigation delay after page load voor a tag on footer to open sections on Werkenbij
 document.addEventListener("DOMContentLoaded", function () {
   // Check if there's a hash in the URL
   if (window.location.hash) {
@@ -461,16 +412,14 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
-
-
 //#scrollbar-indicator
 
-window.addEventListener('scroll', function () {
-    const indicator = document.getElementById('scrollbar-indicator');
-    const scrollTop = window.scrollY;
-    const docHeight = document.body.scrollHeight - window.innerHeight;
-    const scrollPercent = (scrollTop / docHeight) * 100;
-    indicator.style.width = scrollPercent + '%';
+window.addEventListener("scroll", function () {
+  const indicator = document.getElementById("scrollbar-indicator");
+  const scrollTop = window.scrollY;
+  const docHeight = document.body.scrollHeight - window.innerHeight;
+  const scrollPercent = (scrollTop / docHeight) * 100;
+  indicator.style.width = scrollPercent + "%";
 });
+
 
