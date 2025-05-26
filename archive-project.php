@@ -1,4 +1,7 @@
-<?php get_header();
+<?php
+
+get_header();
+
 $categories = get_terms('project-category', ['hide_empty' => true]);
 //Template Name: projecten
 $args = [

@@ -1,12 +1,10 @@
-
-
-<?php 
+<?php
 $lijnen_bg = get_field('lijnen-bg'); // Get value from back-end 
 
 get_header()
- 
+
     ?>
-    <!-- add has-lijnen if check is on -->
+<!-- add has-lijnen if check is on -->
 <main class="diensten <?php echo ($lijnen_bg ? 'lijnen-bg' : ''); ?>">
     <div class="container">
         <div>
