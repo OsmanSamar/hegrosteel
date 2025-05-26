@@ -56,7 +56,7 @@ $fields = $args['fields'];
                                                         target="<?= esc_attr($button['target'] ?: '_self'); ?>"
                                                         class="button <?= esc_attr($custom_class); ?>">
                                                         <?= esc_html($button['title']); ?>
-                                                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                                                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                                                             class="dropdown-arrow">
                                                     </a>
                                                 <?php endif; endforeach; ?>
@@ -65,7 +65,7 @@ $fields = $args['fields'];
                                     </div>
                                     <div class="col-lg-6 offset-lg-1">
                                         <div class="tabs-img">
-                                            <img src="<?= $tab['image']['url'] ?>" alt="<?= $tab['image']['alt'] ?>" />
+                                            <img loading="lazy" src="<?= $tab['image']['url'] ?>" alt="<?= $tab['image']['alt'] ?>" />
                                         </div>
                                     </div>
                                 </div>

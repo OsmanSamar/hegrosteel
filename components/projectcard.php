@@ -25,9 +25,9 @@ if ($categories) {
             <div class="project-card ">
                 <?php if ($image): ?>
                     <div class="bevel-right position-relative">
-                        <img src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>" class="swiper-img">
+                        <img loading="lazy" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>" class="swiper-img">
                        <div class="open-arrow">
-                         <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow" class="swiper-arrow">
+                         <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow" class="swiper-arrow">
                        </div>
                     </div>
                 <?php endif; ?>

@@ -16,7 +16,7 @@ $fields = $args['fields'];
                             <h3 style="font-family: Funnel Display" ><?= $fields['blok_1']['title']; ?></h3>
                             <div class="lead"><?= $fields['blok_1']['text']; ?></div>
 
-                            <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
+                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
                                 class="werk-bij-arrow red-arrow">
                         </a>
                     </div>
@@ -31,7 +31,7 @@ $fields = $args['fields'];
                                 <div class="lead  "><?= $fields['blok_2']['sub_title']; ?></div>
                                 <h3 style="font-family: Funnel Display"><?= $fields['blok_2']['title']; ?></h3>
                                 <div class="lead"><?= $fields['blok_2']['text']; ?></div>
-                                <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
+                                <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
                                     class="werk-bij-arrow white-arrow">
                             </a>
                         </div>
@@ -44,7 +44,7 @@ $fields = $args['fields'];
                                 <div class="lead back-text"><?= $fields['blok_3']['sub_title']; ?></div>
                                 <h3 class="back-text" style="font-family: Funnel Display"><?= $fields['blok_3']['title']; ?></h3>
                                 <div class="lead"><?= $fields['blok_3']['text']; ?></div>
-                                <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
+                                <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow"
                                     class="werk-bij-arrow black-arrow">
                             </a>
                         </div>

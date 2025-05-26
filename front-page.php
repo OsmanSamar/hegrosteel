@@ -41,7 +41,7 @@ $fields = get_fields();
                             class="col-12 col-md-5 col-lg-3 col-xl-5 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0 left-col">
                             <a href="#Service-Section" aria-label="Go to the content">
                                 <div class="arrow-container mt-3">
-                                    <img src="<?= get_template_directory_uri() ?>/images/down-arrow.svg" alt="Go down"
+                                    <img loading="lazy"  src="<?= get_template_directory_uri() ?>/images/down-arrow.svg" alt="Go down"
                                         class="down-arrow" />
                                 </div>
                             </a>

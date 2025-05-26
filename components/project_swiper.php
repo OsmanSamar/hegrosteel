@@ -20,7 +20,7 @@ if ($projects->have_posts()): ?>
                       <h2><?= $fields['title']; ?></h2>
                     <a href="<?= get_post_type_archive_link('project') ?>"
                         class="button primary-button d-none d-lg-flex"><?= __('Bekijk alle projecten', 'hegrosteel') ?>
-                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                     </a>
                   </div>
@@ -48,10 +48,10 @@ if ($projects->have_posts()): ?>
                                         <div class="project-card">
                                             <?php if ($image): ?>
                                                 <div class="bevel-right position-relative">
-                                                        <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
+                                                        <img loading="lazy" src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
                                                         class="swiper-img" />
                                                        <div class="open-arrow">
-                                                            <img src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow" class="swiper-arrow">
+                                                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow" class="swiper-arrow">
                                                       </div>
                                                 </div>
                                             <?php endif; ?>
@@ -85,12 +85,12 @@ if ($projects->have_posts()): ?>
                             <div class="row">
                                 <div class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-5">
                                   <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
-                                    <img src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg" alt="Prev arrow"
+                                    <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg" alt="Prev arrow"
                                          class="dropdown-arrow">
                                   </div>
                                     <div class="custom-swiper-scrollbar"></div>
                                     <div class="swiper-button-next d-none d-md-flex d-lg-flex">
-                                      <img src="<?= get_template_directory_uri(); ?>/images/next-btn.svg" alt="Next arrow"
+                                      <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/next-btn.svg" alt="Next arrow"
                                       class="dropdown-arrow">
                                    </div>
                                 </div>
@@ -104,7 +104,7 @@ if ($projects->have_posts()): ?>
                <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
                     <a href="<?= get_post_type_archive_link('project') ?>"
                         class="button primary-button d-flex d-lg-none"><?= __('Bekijk alle projecten', 'hegrosteel') ?>
-                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                     </a>
                 </div>

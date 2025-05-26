@@ -19,7 +19,7 @@ $fields = $args['fields'];
                     <?php foreach ($fields['list'] as $list_item): ?>
                         <div class="repeater-item   d-flex align-items-center gap-3">
                             <?php if (!empty($list_item['text'])): ?>
-                                <img src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Arrow" class="dropdown-arrow">
+                                <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Arrow" class="dropdown-arrow">
                                 <p class=" regular mb-2"><?= $list_item['text']; ?></p>
                             <?php endif; ?>
                         </div>
@@ -31,7 +31,7 @@ $fields = $args['fields'];
                 <a href="<?= esc_url($fields['button']['url']); ?>" target="<?= esc_attr($fields['button']['target']); ?>"
                     class="button secondary-button">
                     <?= esc_html($fields['button']['title']); ?>
-                    <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+                    <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
                 </a>
             <?php endif; ?>
         </div>

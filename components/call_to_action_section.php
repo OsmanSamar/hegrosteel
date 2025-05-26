@@ -20,7 +20,7 @@ $fields = $args['fields'];
                     <a href="<?= esc_url($fields['button']['url']); ?>"
                         target="<?= esc_attr($fields['button']['target']); ?>" class="button custom-button">
                         <?= esc_html($fields['button']['title']); ?>
-                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                     </a>
                 <?php endif; ?>

@@ -45,7 +45,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                     <div class="mt-4">
                             <a type="button" class="button secondary-button" href="<?=get_field("button")['url']?>" >
                             <?=get_field("button")['title']?>
-                            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                             </a>
                     </div>
@@ -102,15 +102,15 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                      <div class="d-flex align-items-center gap-2 mt-2">
                     
                         <a href="#" target="_blank">
-                        <img src="<?= get_template_directory_uri() ?>/images/insta-icon.svg" alt="Instagram-logo"
+                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/insta-icon.svg" alt="Instagram-logo"
                             class="share-icon" />
                         </a>
                         <a href="https://www.linkedin.com/shareArticle?mini=true&url=">
-                        <img src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg" alt="Instagram-logo"
+                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg" alt="Instagram-logo"
                         class="share-icon" />
                         </a>
                          <a href="https://www.facebook.com/sharer/sharer.php?u=">  
-                            <img src="<?= get_template_directory_uri() ?>/images/facebook-icon.svg" alt="Instagram-logo"
+                            <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/facebook-icon.svg" alt="Instagram-logo"
                            class="share-icon" /></a>
                  
                       </div>
@@ -144,7 +144,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                                                     $image = get_sub_field('img');
                                                     if ($image): ?>
                                                     <div class="">
-                                                        <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
+                                                        <img loading="lazy" src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
                                                             class="swiper-img " />
                                                     </div>
                                                 <?php endif; ?>
@@ -157,12 +157,12 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                                         <div
                                             class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
                                             <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
-                                                <img src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"
+                                                <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"
                                                     alt="Prev arrow" class="dropdown-arrow">
                                             </div>
                                             <div class="custom-swiper-scrollbar"></div>
                                             <div class="swiper-button-next d-none d-md-flex d-lg-flex">
-                                                <img src="<?= get_template_directory_uri(); ?>/images/next-btn.svg"
+                                                <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/next-btn.svg"
                                                     alt="Next arrow" class="dropdown-arrow">
                                             </div>
                                         </div>

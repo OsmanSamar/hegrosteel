@@ -16,7 +16,7 @@ $anchorId = $fields['anchor_id'] ?? '';
             <!-- Image Column -->
             <div class="col-12 col-md-12 <?= $columnRight ?> d-flex flex-column mb-5 mb-lg-0 <?= $imageOnLeft ? 'order-1' : 'order-2'; ?>"
                 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <img src="<?= esc_url($fields['image']['url']); ?>" alt="<?= esc_html($fields['image']['alt']); ?>" class="img-text" />
+                <img loading="lazy" src="<?= esc_url($fields['image']['url']); ?>" alt="<?= esc_html($fields['image']['alt']); ?>" class="img-text" />
             </div>
 
             <!-- Content Column -->
@@ -31,7 +31,7 @@ $anchorId = $fields['anchor_id'] ?? '';
                             <div class="repeater-list mt- mb-4">
                                 <?php foreach ($fields['list'] as $list_item): ?>
                                     <div class="repeater-item d-flex align-items-center gap-3">
-                                        <img src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Check" class="dropdown-arrow">
+                                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Check" class="dropdown-arrow">
                                         <p class="regular mb-2"><?= $list_item['text']; ?></p>
                                     </div>
                                 <?php endforeach; ?>
@@ -59,7 +59,7 @@ $anchorId = $fields['anchor_id'] ?? '';
                                         target="<?= esc_attr($button['target'] ?: '_self'); ?>"
                                         class="button <?= esc_attr($custom_class); ?>">
                                         <?= esc_html($button['title']); ?>
-                                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                                             class="dropdown-arrow">
                                     </a>
                                 <?php endif; endforeach; ?>

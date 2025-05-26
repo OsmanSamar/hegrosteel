@@ -139,7 +139,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                         <?php $list_item = get_sub_field('text'); ?>
                         <?php if (!empty($list_item)): ?>
                           <div class="repeater-item d-flex align-items-center gap-2 w-100">
-                            <img src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Arrow" class="dropdown-arrow">
+                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Arrow" class="dropdown-arrow">
                             <p class="regular mb-2"><?= esc_html($list_item); ?></p>
                           </div>
                         <?php endif; ?>
@@ -151,12 +151,12 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                     <div class="d-flex flex-row gap-3 mt-5">
                       <a type="button" class="button secondary-button" href="#solliciteren">
                         Direct solliciteren
-                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
                       </a>
                       <a type="button" class="button primary-button"
                         href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" target="_blank">
                         Vragen? App Hermen
-                        <img src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp"
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp"
                           class="whatsappimg" />
                       </a>
                     </div>
@@ -174,7 +174,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 <?php $image = get_sub_field('image'); ?>
                 <?php if (!empty($image)): ?>
                   <div class="photo">
-                    <img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" />
+                    <img loading="lazy"  src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" />
                   </div>
                 <?php endif; ?>
               <?php endwhile; ?>
@@ -214,7 +214,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                     <?php $list_item = get_sub_field('text'); ?>
                     <?php if (!empty($list_item)): ?>
                       <li class="d-flex align-items-start gap-2 mb-2">
-                        <img src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Check" class="dropdown-arrow">
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Check" class="dropdown-arrow">
                         <span class="regular"><?= esc_html($list_item); ?></span>
                       </li>
                     <?php endif; ?>
@@ -226,11 +226,11 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 <div class="d-flex flex-row flex-wrap gap-3 mt-3">
                   <a href="#solliciteren" class="button secondary-button">
                     Direct solliciteren
-                    <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+                    <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
                   </a>
                   <a href="https://wa.me/<?= get_field('whatsappnumber', 'option'); ?>" target="_blank" class="button primary-button">
                     Vragen? App Hermen
-                    <img src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="WhatsApp"
+                    <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="WhatsApp"
                       class="whatsappimg" />
                   </a>
                 </div>
@@ -240,7 +240,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             <?php $image = get_sub_field('image'); ?>
             <?php if (!empty($image)): ?>
               <div class="photo mt-5">
-                <img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" class="img-fluid rounded">
+                <img loading="lazy" src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" class="img-fluid rounded">
               </div>
             <?php endif; ?>
 
@@ -273,7 +273,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 <h2><?= get_field("swiper_title") ?></h2>
                 <a href="<?= get_field("button")['url'] ?>" class="button primary-button ">
                   <?= get_field("button")['title'] ?>
-                  <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+                  <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
                 </a>
               </div>
             </div>
@@ -289,7 +289,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                         $image = get_sub_field('img');
                         if ($image): ?>
                           <div class="">
-                            <img src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
+                            <img loading="lazy" src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
                               class="swiper-img " />
                           </div>
                         <?php endif; ?>
@@ -301,12 +301,12 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                   <div class="row">
                     <div class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
                       <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
-                        <img src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg" alt="Prev arrow"
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg" alt="Prev arrow"
                           class="dropdown-arrow">
                       </div>
                       <div class="custom-swiper-scrollbar"></div>
                       <div class="swiper-button-next d-none d-md-flex d-lg-flex">
-                        <img src="<?= get_template_directory_uri(); ?>/images/next-btn.svg" alt="Next arrow"
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/next-btn.svg" alt="Next arrow"
                           class="dropdown-arrow">
                       </div>
                     </div>

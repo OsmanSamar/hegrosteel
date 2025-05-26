@@ -17,15 +17,24 @@ $projects = new WP_Query([
 <div class="whatsapp-fixed">
     <div class=" mt-3">
         <span class="whatsapp-container">
-            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" class="" target="_blank">
+            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=I am interested in the " class="" target="_blank">
+                <!-- <?= strip_tags(get_field("whatsapp_message", 'option')) ?> -->
                 <span class="d-flex justify-content-center align-items-center">
-                    <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
+                    <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
                         class="whatsappimg" />
                 </span>
             </a>
         </span>
     </div>
 </div>
+
+
+
+
+
+
+
+
 
 <footer class="footer">
     <div class="container">
@@ -48,37 +57,12 @@ $projects = new WP_Query([
                         </div>
 
                     <?php endif; ?>
-
-
-
                     <a href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
                         class="button secondary-button ms-lg-3 mt-2 ">
                         App, bel of mail ons
-                        <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
                     </a>
-
-                    <!-- <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" class="button secondary-button ms-lg-3 mt-2 ">
-                             App, bel of mail ons
-                            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
-                            class="dropdown-arrow">
-                    </a> -->
-
-                    <!-- <div class="btn-group">
-                        <button type="button" class="button secondary-button dropdown-toggle" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            App, bel of mail ons
-                            <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
-                                class="dropdown-arrow">
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item"
-                                    href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>">WhatsApp</a></li>
-                            <li><a class="dropdown-item" href="tel:<?= get_field('phonenumber', 'option') ?>">Bel</a>
-                            </li>
-                            <li><a class="dropdown-item" href="mailto:<?= get_field('email', 'option') ?>">Mail</a></li>
-                        </ul>
-                    </div> -->
 
                 </div>
             </div>
@@ -91,17 +75,16 @@ $projects = new WP_Query([
             <div
                 class="col-lg-3 col-md-4 d-flex flex-lg-column flex-md-column justify-content-between justify-content-lg-start justify-content-md-start mb-4 mb-lg-0">
                 <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>">
-                    <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Hegrosteel Logo"
+                    <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Hegrosteel Logo"
                         class="footer-logo mb-3" />
                 </a>
                 <div class="d-flex align-items-center gap-2 mt-lg-3 media-container">
                     <a href="#" target="_blank">
-                        <img src="<?= get_template_directory_uri() ?>/images/whatsapp-logo.svg" alt="Whatsapp logo"
+                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp-logo.svg" alt="Whatsapp logo"
                             class="media-icon" />
                     </a>
                     <a href="#" target="_blank">
-
-                        <img src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg" alt="Instagram-logo"
+                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg" alt="Instagram-logo"
                             class="media-icon" />
 
                     </a>
