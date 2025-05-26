@@ -6,13 +6,13 @@
 @import "../../node_modules/swiper/swiper-bundle.min.css";
 
 :root {
-  --Primary-200: #6B6B6B;
+  --Primary-200: #6b6b6b;
   --Primary-400: #303030;
   --Primary-500: #1c1c1c;
   --Primary-600: #020202;
   --Secondary-400: #656572;
   --Secondary-500: #dc0d1a;
-  --Neutral-light: #FFF;
+  --Neutral-light: #fff;
   --Neutral-400: #d5d3cd;
   --Neutral-500: #808282;
 }
@@ -33,7 +33,7 @@ body {
   z-index: 1;
 }
 
-*{
+* {
   scroll-margin-top: 80px;
 }
 
@@ -56,7 +56,6 @@ img {
   background-size: cover;
   background-position: center;
 }
-
 
 /* Imports */
 @import "project-swiper";
@@ -83,14 +82,20 @@ img {
 @import "text";
 @import "vacature-section";
 
-
 @import "components/swiper-scrollbar";
 
+.page:has(.lijnen-bg) {
+  background-image: url(../images/lijnen.png) !important;
+  background-repeat: repeat-x;
+  background-size: 1470px;
+  background-position: top center;
+}
 
-.page:has(.lijnen-bg){
-  
-    background-image: url(../images/lijnen.png)!important;
-    background-repeat: repeat-x;
-    background-size: 1470px;
-    background-position:top center;
+
+.single-project:has(.lijnen-bg),
+.projecten:has(.lijnen-bg) {
+  background-image: url(../images/lijnen.png) !important;
+  background-repeat: repeat-x;
+  background-size: 1470px;
+  background-position: top center;
 }

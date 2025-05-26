@@ -1,5 +1,9 @@
 .projecten {
-  margin-top: 100px;
+  .hero-section {
+    height: unset;
+  }
+
+  // margin-top: 100px;
 
   .filter-section {
     padding: 53px 30px 83px 30px;
@@ -28,8 +32,10 @@
     background-size: 24px 24px !important;
   }
 
-    background-image: url(../images/lijnen.png)!important;
-    background-repeat: repeat-x;
-    background-size: 1470px;
-    background-position:top center;
+  // background-image: url(../images/lijnen.png) !important;
+  // background-repeat: repeat-x;
+  // background-size: 1470px;
+  // background-position: top center;
+
+ 
 }

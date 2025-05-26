@@ -1,5 +1,5 @@
 <?php
-
+$lijnen_bg = get_field('lijnen-bg'); // Get value from back-end 
 get_header();
 
 $categories = get_terms('project-category', ['hide_empty' => true]);
@@ -32,14 +32,14 @@ $categories = get_terms('project_category', ['hide_empty' => true]);
 $projectPage = get_page_by_path('projecten');
 ?>
 
-<main class="projecten">
+<main class="projecten <?php echo ($lijnen_bg ? 'lijnen-bg' : ''); ?>">
     <div class="container">
 
         <div>
             <?= get_template_part("components/hero", null, ['id' => $projectPage->ID]) ?>
         </div>
 
-        <div class=" project-container">
+        <div class="project-container">
             <div class="row">
                 <!--  Left  col -->
                 <div class="col-lg-4 col-xl-4 mb-4">
@@ -95,44 +95,15 @@ $projectPage = get_page_by_path('projecten');
         </div>
 
 
-
-
-<!-- 
-        <div class="quote_section">
-            <div class="">
-                <div class="row">
-                    <div class="col-12 col-md-12 col-lg-10 offset-lg-2 col-xl-8 offset-xl-2 d-flex flex-column justify-content-start align-items-start  mb-5"
-                        data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-                        data-aos-easing="ease-in-out">
-                        <div class="d-flex flex-column   align-items-center ">
-                            <div class="content">
-                                <h3><?= get_field("title") ?></h3>
-                                <span class="regular"><?= get_field("text") ?></span>
-                            </div>
-                            <div class="d-flex  mt-4">
-                                <a href="<?= get_field("button")['url'] ?>" class="button secondary-button ">
-                                    <?= get_field("button")['title'] ?>
-                                    <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
-                                        class="dropdown-arrow">
-                                </a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-          <!-- Service-section -->
-         <?php
-             $content = get_field('content',$projectPage);
-             if (!empty($content) && is_array($content)) {
-                 foreach ($content as $block) {
-                     get_template_part('components/' . $block['acf_fc_layout'], null, ['fields' => $block]);
-                 }
-             }
-             ?> 
+        <!-- Service-section -->
+        <?php
+        $content = get_field('content', $projectPage);
+        if (!empty($content) && is_array($content)) {
+            foreach ($content as $block) {
+                get_template_part('components/' . $block['acf_fc_layout'], null, ['fields' => $block]);
+            }
+        }
+        ?>
 
 
     </div>

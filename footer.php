@@ -79,11 +79,11 @@ $projects = new WP_Query([
                         class="footer-logo mb-3" />
                 </a>
                 <div class="d-flex align-items-center gap-2 mt-lg-3 media-container">
-                    <a href="#" target="_blank">
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/" target="_blank">
                         <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp-logo.svg" alt="Whatsapp logo"
                             class="media-icon" />
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://www.instagram.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/" target="_blank">
                         <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg" alt="Instagram-logo"
                             class="media-icon" />
 
