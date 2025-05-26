@@ -47,6 +47,7 @@ $fields = $args['fields'];
 
                 <div class="bel-of-app-container mt-4">
                     <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>"
+                    target="_blank"
                         class="d-flex align-items-center justify-content-between w-100">
                         <span class="bold">
                             <?= $fields['direct_contact']; ?>

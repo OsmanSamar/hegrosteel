@@ -92,7 +92,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 class="dropdown-arrow">
             </a>
             <a type="button " class="button primary-button"
-              href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>">
+              href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" target="_blank">
               Vragen? App Hermen
               <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/white-whatsapp-icon.svg"
                 alt="Open whatsapp" class="whatsappimg" />
@@ -154,7 +154,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                         <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
                       </a>
                       <a type="button" class="button primary-button"
-                        href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>">
+                        href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" target="_blank">
                         Vragen? App Hermen
                         <img src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp"
                           class="whatsappimg" />
@@ -228,7 +228,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                     Direct solliciteren
                     <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
                   </a>
-                  <a href="https://wa.me/<?= get_field('whatsappnumber', 'option'); ?>" class="button primary-button">
+                  <a href="https://wa.me/<?= get_field('whatsappnumber', 'option'); ?>" target="_blank" class="button primary-button">
                     Vragen? App Hermen
                     <img src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="WhatsApp"
                       class="whatsappimg" />

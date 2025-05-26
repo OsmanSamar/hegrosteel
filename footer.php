@@ -17,7 +17,7 @@ $projects = new WP_Query([
 <div class="whatsapp-fixed">
     <div class=" mt-3">
         <span class="whatsapp-container">
-            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" class="">
+            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" class="" target="_blank">
                 <span class="d-flex justify-content-center align-items-center">
                     <img src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
                         class="whatsappimg" />
@@ -51,12 +51,12 @@ $projects = new WP_Query([
 
 
 
-                    <!-- <a href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
+                    <a href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
                         class="button secondary-button ms-lg-3 mt-2 ">
                         App, bel of mail ons
                         <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                             class="dropdown-arrow">
-                    </a> -->
+                    </a>
 
                     <!-- <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" class="button secondary-button ms-lg-3 mt-2 ">
                              App, bel of mail ons
@@ -64,7 +64,7 @@ $projects = new WP_Query([
                             class="dropdown-arrow">
                     </a> -->
 
-                    <div class="btn-group">
+                    <!-- <div class="btn-group">
                         <button type="button" class="button secondary-button dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             App, bel of mail ons
@@ -78,7 +78,7 @@ $projects = new WP_Query([
                             </li>
                             <li><a class="dropdown-item" href="mailto:<?= get_field('email', 'option') ?>">Mail</a></li>
                         </ul>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>

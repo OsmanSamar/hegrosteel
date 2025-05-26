@@ -53,6 +53,7 @@ $heading_tag = (strpos($textOnLeft ? 'col-lg-7 order-1' : 'col-lg-6 order-2 offs
                 <class class="regular mb-5 mt-4"> <?= $fields['left_text']; ?></class>
                 <div class="bel-of-app-container">
                     <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>"
+                    target="_blank"
                         class="d-flex align-items-center justify-content-between w-100">
                         <span class="bold">
                             <?= $fields['bel_of_app']; ?>
