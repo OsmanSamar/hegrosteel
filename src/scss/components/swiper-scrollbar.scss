@@ -13,11 +13,6 @@
     background-image: linear-gradient(#dc0d1a, #dc0d1a);
     background-repeat: no-repeat;
     outline: none;
-    // -webkit-transition: 0.2s;
-    //  transition: opacity 0.2s;
-    // ADDEd #TODO met Frank
-
- -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 
 
@@ -49,8 +44,28 @@
     opacity: 1;
   }
 
+  input[type='range']{
+    position: relative;
+
+    &::after{
+      content:'';
+      height: 15px;
+      width: 30px;
+      background: #e3e3e3;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 1px 1px 1px #604d4d, 0px 0px 1px #b18e8e;
+      left: var(--width,0%);
+      top:50%;
+      transform: translateX(-50%) translateY(-50%);
+      transition: .3s ease-in-out;
+      position: absolute;
+      z-index: 1;
+    }
+  }
   /* Input Thumb */
   input[type="range"]::-webkit-slider-thumb {
+    opacity: 0;
     -webkit-appearance: none;
     height: 15px;
     width: 30px;

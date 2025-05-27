@@ -39,7 +39,7 @@ function swiperScrollbar(swiper, scrollbarEl, slideCount) {
   inputElement.min = 0;
   inputElement.max = 1000;
   inputElement.value = 0;
-  inputElement.style.setProperty("--width", `${100 / slideCount}%`);
+  // inputElement.style.setProperty("--width", `${100 / slideCount}%`);
   let stepSize = 1000 / (slideCount - 1);
   inputElement.addEventListener("input", () => {
     let truevalue = Math.round((inputElement.value / 1000) * (slideCount - 1));
@@ -48,6 +48,7 @@ function swiperScrollbar(swiper, scrollbarEl, slideCount) {
     // Calculate progress and update red color
     let percentage = (inputElement.value / inputElement.max) * 100;
     inputElement.style.backgroundSize = (percentage % 100.5) + "%";
+    inputElement.style.setProperty("--width", (percentage % 100.5) + "%");
   });
   inputElement.addEventListener("change", () => {
     // smoothly lock onto true value for the slide in the range element
@@ -72,6 +73,8 @@ function swiperScrollbar(swiper, scrollbarEl, slideCount) {
     //Added
     let percentage = (inputElement.value / inputElement.max) * 100;
     inputElement.style.backgroundSize = (percentage % 100.5) + "%";
+
+    inputElement.style.setProperty("--width", (percentage % 100.5) + "%");
   });
 
   scrollbarEl.insertAdjacentElement("beforeend", inputElement);
