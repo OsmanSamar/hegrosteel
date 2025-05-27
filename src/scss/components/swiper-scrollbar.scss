@@ -13,8 +13,14 @@
     background-image: linear-gradient(#dc0d1a, #dc0d1a);
     background-repeat: no-repeat;
     outline: none;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
+    // -webkit-transition: 0.2s;
+    //  transition: opacity 0.2s;
+    // ADDEd #TODO met Frank
+
+ -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+
   }
 
   /* Input Track */

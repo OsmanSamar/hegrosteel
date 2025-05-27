@@ -34,7 +34,7 @@ $fields = get_fields();
                                 <span>Stand strong.</span>
                             </h1>
                             <div class="lead">
-                                Wij monteren staalconstructies, plaatsten daken en wanden, installeren prefab beton en
+                                Wij leveren en monteren staalconstructies, plaatsen daken en wanden, installeren prefab beton en
                                 bouwen huizen en bedrijfspanden vanaf nul. Als jij het kunt verzinnen, kunnen wij het
                                 bouwen.
                             </div>
