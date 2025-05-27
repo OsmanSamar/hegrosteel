@@ -395,6 +395,31 @@
 .werken-bij_section {
   margin: 80px 0px;
 }
+// Added hover effect
+.left-top-shape:hover::before {
+  background: var(--Secondary-500);
+}
+
+.left-top-shape:hover .black-arrow {
+  filter: brightness(0) invert(1);
+}
+.left-top-shape:hover .back-text,
+.left-top-shape:hover .lead {
+  color: var(--Neutral-light) !important;
+}
+
+.right-bottom-shape:hover::before {
+  background: var(--Neutral-light);
+}
+
+.right-bottom-shape:hover .lead,
+.right-bottom-shape:hover h3 {
+  color: var(--Primary-600);
+}
+
+// .left-bottom-shape:hover::before {
+//     background:#020202 !important;
+// }
 
 .shared-content {
   display: flex;

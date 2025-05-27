@@ -31,7 +31,9 @@ if ($projects->have_posts()): ?>
 
                <div class="swiper-container swipers projecten-swiper ">
                     <div class="swiper-wrapper">
-                        <?php while ($projects->have_posts()):
+                        <?php
+                        $i=0;
+                        while ($projects->have_posts()):
                             $projects->the_post();
                             $image_id = get_post_thumbnail_id(get_the_ID());
                             $image = [
@@ -41,7 +43,11 @@ if ($projects->have_posts()): ?>
                             $categories = get_the_terms(get_the_ID(), 'project_category');
                             $plaats = get_the_terms(get_the_ID(), 'plaats');
                             ?>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" <?php 
+                            if($i<6){
+                                echo"";
+                            }
+                            ?>>
                             
                              <div class="container-card border-wrap" style="<?= $hasBackground && $backgroundColor ? '--background-color: ' . esc_attr($backgroundColor) . ';' : ''; ?>"  >
                                     <a href="<?php the_permalink(); ?>" class="text-decoration-none">
@@ -78,7 +84,9 @@ if ($projects->have_posts()): ?>
                                 </div>
                              
                             </div>
-                        <?php endwhile; ?>
+                        <?php
+                    $i++;
+                    endwhile; ?>
                     </div>
 
                       <div class="container">

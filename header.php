@@ -347,7 +347,6 @@ unset($menu_items);
         }
 
 
-
         .right-bottom-border {
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
