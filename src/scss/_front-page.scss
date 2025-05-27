@@ -73,6 +73,14 @@
       align-items: center;
       gap: 10px;
       flex-shrink: 0;
+      cursor: pointer;
+
+       &:hover {
+        background: var(--Neutral-light);
+        .down-arrow {
+          filter: brightness(0);
+        }
+      }
     }
   }
 

@@ -79,6 +79,13 @@
     margin-top: 90px;
     margin-bottom: 25px;
   }
+
+ .swiper-icon {
+      width: 19px;
+      height: 19px;
+    }
+
+
   .swiper-button-prev,
   .swiper-button-next {
     position: static;
@@ -95,6 +102,13 @@
     background: var(--Primary-500);
     font-size: 18px;
     cursor: pointer;
+
+     &:hover {
+        background: var(--Neutral-light);
+        .swiper-icon {
+          filter: brightness(0);
+        }
+      }
   }
 
   &.bg-light {
