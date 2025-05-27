@@ -59,12 +59,13 @@
     background: #020202 !important;
   }
 
-  // @media(min-width:992px){
-  //    .shared-content {
-  //   margin:unset;
-  //   max-width: unset;
+  @media(min-width:768px){
+     .shared-content {
+    margin:unset;
+    max-width: unset;
+     }
     
-  // }
+  }
 
   @media(min-width:992px){
      .shared-content {
