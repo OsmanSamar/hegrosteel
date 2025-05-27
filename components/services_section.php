@@ -36,7 +36,8 @@ $fields = $args['fields'];
             <?php endif; ?>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-6 offset-lg-2">
+        <div class="col-12 col-md-6 col-lg-6 offset-lg-2"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            data-aos-easing="ease-in-out">
             <!-- work list Repeater -->
             <?php if (!empty($fields['work_list'])): ?>
                 <div class="repeater-list mt-5 mb-5">

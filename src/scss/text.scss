@@ -1,12 +1,24 @@
-.text{
-    b,strong{
-color: var(--Secondary-500, #DC0D1A);
-text-decoration: underline;
-font-family: Figtree;
-font-size: 18px;
-font-style: normal;
-font-weight: 700;
-line-height: 160%;
-cursor: pointer;
-    }
+.text {
+  .shared-content {
+    display: flex;
+    // padding: 20px;
+    padding: 53px 53px 45px 53px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  b,
+  strong {
+    color: var(--Secondary-500, #dc0d1a);
+    text-decoration: underline;
+    font-family: Figtree;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%;
+    cursor: pointer;
+  }
 }

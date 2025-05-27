@@ -239,6 +239,7 @@ unset($menu_items);
         .left-top-shape {
             position: relative;
             --background-color: #ffffff;
+            transition: .5s ease-in;
 
             &::before,
             &::after {
@@ -250,6 +251,7 @@ unset($menu_items);
                 left: 50%;
                 top: 50%;
                 clip-path: url(#left-top-shape) !important;
+                
             }
 
             &::before {
@@ -276,6 +278,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
+             transition: .5s ease-in;
 
             &::before,
             &::after {
@@ -312,6 +315,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
+             transition: .5s ease-in;
 
             &::before,
             &::after {
@@ -351,6 +355,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
+             transition: .5s ease-in;
 
             &::before,
             &::after {
@@ -389,6 +394,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
+             transition: .5s ease-in;
 
             &::before,
             &::after {
@@ -426,6 +432,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
+             transition: .5s ease-in;
 
             &::before,
             &::after {
@@ -472,7 +479,7 @@ unset($menu_items);
         <!-- position-absolute //position-relative-->
         <nav class="w-100">
             <div class="container">
-                <div class="navbar navbar-expand-xl  navbar-light sans-serif w-100">
+                <div class="navbar navbar-expand-xl  navbar-light sans-serif w-100" data-aos="fade-down" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                     <!--Added padding-left and right :20px -->
                     <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>" class="navbar-brand d-flex">
                         <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Logo" class=" logo" />

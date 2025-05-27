@@ -8,6 +8,14 @@
 
   .shared-content {
     padding: 50px 50px 60px 30px;
+    display: flex;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+    overflow: hidden;
   }
 
   @media (min-width: 768px) {

@@ -392,68 +392,40 @@
   object-fit: cover;
 }
 
-.werken-bij_section {
-  margin: 80px 0px;
-}
-// Added hover effect
-.left-top-shape:hover::before {
-  background: var(--Secondary-500);
-}
 
-.left-top-shape:hover .black-arrow {
-  filter: brightness(0) invert(1);
-}
-.left-top-shape:hover .back-text,
-.left-top-shape:hover .lead {
-  color: var(--Neutral-light) !important;
-}
-
-.right-bottom-shape:hover::before {
-  background: var(--Neutral-light);
-}
-
-.right-bottom-shape:hover .lead,
-.right-bottom-shape:hover h3 {
-  color: var(--Primary-600);
-}
-
-// .left-bottom-shape:hover::before {
-//     background:#020202 !important;
+// .shared-content {
+//   display: flex;
+//   // padding: 20px;
+//   padding: 53px 53px 45px 53px;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   gap: 10px;
+//   align-self: stretch;
+//   border-radius: 20px;
+//   overflow: hidden;
 // }
 
-.shared-content {
-  display: flex;
-  // padding: 20px;
-  padding: 53px 53px 45px 53px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  align-self: stretch;
-  border-radius: 20px;
-  overflow: hidden;
-}
-
-.werk-bij-arrow {
-  width: 51.636px;
-  height: 51.636px;
-  margin-top: 42px;
-  transform: rotate(-41deg);
-}
-// .white-arrow {
+// .werk-bij-arrow {
+//   width: 51.636px;
+//   height: 51.636px;
+//   margin-top: 42px;
 //   transform: rotate(-41deg);
 // }
-.red-arrow {
-  filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(5000%)
-    hue-rotate(340deg) brightness(90%);
-}
-.black-arrow {
-  filter: brightness(0);
-}
-.back-text {
-  color: #191919 !important;
-  position: relative;
-  z-index: 0;
-}
+// // .white-arrow {
+// //   transform: rotate(-41deg);
+// // }
+// .red-arrow {
+//   filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(5000%)
+//     hue-rotate(340deg) brightness(90%);
+// }
+// .black-arrow {
+//   filter: brightness(0);
+// }
+// .back-text {
+//   color: #191919 !important;
+//   position: relative;
+//   z-index: 0;
+// }
 
 .center_text_button {
   margin: 100px 0px;
