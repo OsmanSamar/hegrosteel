@@ -1,14 +1,12 @@
 <?php
 
 $menu_id = get_nav_menu_locations()['footer-menu'];
-$items = wp_get_nav_menu_items($menu_id);
-$footer_menu = array_chunk($items, ceil(count($items) / 2));
+$footer_menu = wp_get_nav_menu_items($menu_id);
+$menu_id = get_nav_menu_locations()['diensten-menu'];
+$diensten_menu = wp_get_nav_menu_items($menu_id);
 
-//1
-$projects = new WP_Query([
-    'post_type' => 'project',
-    'posts_per_page' => -1,
-]);
+
+
 
 
 
@@ -17,11 +15,12 @@ $projects = new WP_Query([
 <div class="whatsapp-fixed">
     <div class=" mt-3">
         <span class="whatsapp-container">
-            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=I am interested in the " class="" target="_blank">
+            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=I am interested in the " class=""
+                target="_blank">
                 <!-- <?= strip_tags(get_field("whatsapp_message", 'option')) ?> -->
                 <span class="d-flex justify-content-center align-items-center">
-                    <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
-                        class="whatsappimg" />
+                    <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
+                        alt="Open whatsapp" class="whatsappimg" />
                 </span>
             </a>
         </span>
@@ -79,13 +78,15 @@ $projects = new WP_Query([
                         class="footer-logo mb-3" />
                 </a>
                 <div class="d-flex align-items-center gap-2 mt-lg-3 media-container">
-                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/" target="_blank">
-                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp-logo.svg" alt="Whatsapp logo"
-                            class="media-icon" />
+                    <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/"
+                        target="_blank">
+                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp-logo.svg"
+                            alt="Whatsapp logo" class="media-icon" />
                     </a>
-                    <a href="https://www.instagram.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/" target="_blank">
-                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg" alt="Instagram-logo"
-                            class="media-icon" />
+                    <a href="https://www.instagram.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/"
+                        target="_blank">
+                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg"
+                            alt="Instagram-logo" class="media-icon" />
 
                     </a>
                 </div>
@@ -124,11 +125,26 @@ $projects = new WP_Query([
                     </div>
 
                     <!-- Diensten -->
+
+                   
                     <div class="col-6 col-md-3 offset-lg-1">
                         <div class="d-block mb-3 list">
                             <?= get_field("diensten_link_title", 'option') ?>
                         </div>
-                        <ul class="list-unstyled d-flex flex-column gap-2">
+
+
+                        <div class="d-flex flex-column">
+                            <?php foreach ($diensten_menu as $item):
+                                $active = get_permalink() == $item->url;
+                                ?>
+                                <a href="<?= $item->url; ?>"
+                                    class="d-block footer-link footer-link-ltr <?= $active ? 'active' : '' ?>">
+                                    <?= $item->title ?>
+                                </a>
+                            <?php endforeach; ?>
+
+                        </div>
+                        <!-- <ul class="list-unstyled d-flex flex-column gap-2">
                             <li class="footer-li">
                                 <a href="/diensten#prefabbeton" class="footer-li text-decoration-none footer-link-ltr">
                                     Bedrijfspand
@@ -153,7 +169,7 @@ $projects = new WP_Query([
                             </li>
 
 
-                        </ul>
+                        </ul> -->
                     </div>
 
                     <!-- Meer weten -->
@@ -162,19 +178,16 @@ $projects = new WP_Query([
                             <?= get_field("meer_over_link_title", 'option') ?>
                         </div>
 
-                        <div class="row">
-                            <?php foreach ($footer_menu as $items): ?>
-                                <div class="col-lg-12">
-                                    <?php foreach ($items as $item):
-                                        $active = get_permalink() == $item->url;
-                                        ?>
-                                        <a href="<?= $item->url; ?>"
-                                            class="d-block footer-link footer-link-ltr <?= $active ? 'active' : '' ?>">
-                                            <?= $item->title ?>
-                                        </a>
-                                    <?php endforeach; ?>
-                                </div>
+                        <div class="d-flex flex-column">
+                            <?php foreach ($footer_menu as $item):
+                                $active = get_permalink() == $item->url;
+                                ?>
+                                <a href="<?= $item->url; ?>"
+                                    class="d-block footer-link footer-link-ltr <?= $active ? 'active' : '' ?>">
+                                    <?= $item->title ?>
+                                </a>
                             <?php endforeach; ?>
+
                         </div>
 
 

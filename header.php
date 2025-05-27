@@ -485,7 +485,7 @@ unset($menu_items);
         <!-- position-absolute //position-relative-->
         <nav class="w-100">
             <div class="container">
-                <div class="navbar navbar-expand-xl  navbar-light sans-serif w-100" data-aos="fade-down" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                <div class="navbar navbar-expand-xl  navbar-light sans-serif w-100" data-aos="fade-down" data-aos-offset="100" data-aos-delay="50" data-aos-duration="100" data-aos-easing="ease-in-out">
                     <!--Added padding-left and right :20px -->
                     <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>" class="navbar-brand d-flex">
                         <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Logo" class=" logo" />
@@ -523,14 +523,14 @@ unset($menu_items);
                                                 alt="Dropdown Icon" style="" class="dropdownarrow">
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
-                                            style="top:52px; left: 11px;">
+                                           >
+                                           <!--  style="top:71px; left: 11px;" -->
                                             <?php foreach ($item->children as $child): ?>
                                                 <li>
                                                     <a class="dropdown-item  d-flex justify-content-between align-items-center"
                                                         href="<?= $child->url; ?>">
                                                         <?= $child->title ?>
-                                                        <!-- <img src="<?= get_template_directory_uri(); ?>/images/nextarrow.svg"
-                                                            alt="Arrow" class="dropdown-arrow"> -->
+                                                       
                                                     </a>
                                                 </li>
                                             <?php endforeach; ?>
