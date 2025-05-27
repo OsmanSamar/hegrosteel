@@ -460,12 +460,6 @@ unset($menu_items);
 
         }
 
-        .button {
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 160%;
-            margin-left: 20px;
-        }
     </style>
 
     <?php wp_body_open(); ?>
@@ -550,7 +544,7 @@ unset($menu_items);
 
                     </div>
 
-                    
+
                 </div>
             </div>
         </nav>

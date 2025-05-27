@@ -129,8 +129,8 @@
 /* NavBar Links */
 .navbar-nav .nav-link {
   //Added
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
+  // padding-left: 1.5rem !important;
+  // padding-right: 1.5rem !important;
   //
   margin: 0 10px;
   color: #fff;
@@ -439,6 +439,13 @@
 }
 
 @media (min-width: 992px) {
+
+  .navbar-nav .nav-link {
+  //Added
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+ 
+  }
   .img_with_text.with-background {
     padding: 60px;
   }
