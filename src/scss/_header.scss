@@ -182,6 +182,7 @@
   position: relative;
   width: fit-content;
   transition: all 0.3s ease;
+  color: var(--Neutral-light);
 
   &-underline {
     &::before {
@@ -200,10 +201,7 @@
   }
 }
 
-.dropdown-toggle::after {
-  display: none;
-  //Removed the defualt icon of dropdown
-}
+
 
 //Hamburger-menu
 //Added new Hamburger style
@@ -263,6 +261,43 @@
   transform: translateY(-250%) rotate(-45deg);
 }
 
+// End of Hamburger Menu
+
+
+//Dropdown-menu Style
+
+.dropdown-toggle::after {
+  display: none;
+  //Removed the defualt icon of dropdown
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute;
+  border-bottom: 1px solid var(--Primary-200, #6b6b6b);
+  background: var(--Primary-600, #020202);
+  &:hover{
+     background: var(--Primary-200) !important;
+  }
+
+}
+
+.dropdown-item{
+  color: #fff;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--Primary-200) !important;
+   color: #fff !important;
+}
+
+// To rotate the arrow once menu open
+.dropdown-toggle .dropdownarrow {
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-toggle[aria-expanded="true"] .dropdownarrow {
+    transform: rotate(180deg);
+}
+
 ///End of adding
 
 .dropdownarrow {
@@ -275,12 +310,7 @@
   width: 19px;
   height: 19px;
 }
-//To remove defualt style
 
-.dropdown-item:hover,
-.dropdown-item:focus {
-  background-color: unset !important;
-}
 
 @media (max-width: 1199.98px) {
   //max-width: 1199.98px
@@ -338,6 +368,7 @@
 
 .vacature-item {
   cursor: pointer;
+  transition: 0.3s ease;
   &:hover {
     .number {
       background: var(--Secondary-500);
@@ -391,7 +422,6 @@
     lightgray 50% / cover no-repeat, lightgray 50% / cover no-repeat;
   object-fit: cover;
 }
-
 
 // .shared-content {
 //   display: flex;

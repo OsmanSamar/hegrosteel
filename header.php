@@ -239,7 +239,7 @@ unset($menu_items);
         .left-top-shape {
             position: relative;
             --background-color: #ffffff;
-            transition: .5s ease-in;
+           
 
             &::before,
             &::after {
@@ -251,6 +251,7 @@ unset($menu_items);
                 left: 50%;
                 top: 50%;
                 clip-path: url(#left-top-shape) !important;
+                 transition: .5s ease-in;
                 
             }
 
@@ -278,7 +279,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-             transition: .5s ease-in;
+            
 
             &::before,
             &::after {
@@ -291,6 +292,7 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#left-bottom-shape) !important;
                 z-index: 0;
+                 transition: .5s ease-in;
             }
 
             &::before {
@@ -315,8 +317,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-             transition: .5s ease-in;
-
+            
             &::before,
             &::after {
                 position: absolute;
@@ -328,6 +329,8 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#bottom-right-shape) !important;
                 z-index: 0;
+                 transition: .5s ease-in;
+
             }
 
             &::before {
@@ -355,7 +358,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-             transition: .5s ease-in;
+            
 
             &::before,
             &::after {
@@ -368,6 +371,7 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#right-bottom-border) !important;
                 z-index: 0;
+                 transition: .5s ease-in;
             }
 
             &::before {
@@ -394,7 +398,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-             transition: .5s ease-in;
+             
 
             &::before,
             &::after {
@@ -407,6 +411,7 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#project-right-top) !important;
                 z-index: 0;
+                transition: .5s ease-in;
             }
 
             &::before {
@@ -432,7 +437,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-             transition: .5s ease-in;
+            
 
             &::before,
             &::after {
@@ -445,6 +450,7 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#top-right-shape) !important;
                 z-index: 0;
+                 transition: .5s ease-in;
             }
 
             &::before {
@@ -520,7 +526,7 @@ unset($menu_items);
                                             style="top:52px; left: 11px;">
                                             <?php foreach ($item->children as $child): ?>
                                                 <li>
-                                                    <a class="dropdown-item nav-link-ltr d-flex justify-content-between align-items-center"
+                                                    <a class="dropdown-item  d-flex justify-content-between align-items-center"
                                                         href="<?= $child->url; ?>">
                                                         <?= $child->title ?>
                                                         <!-- <img src="<?= get_template_directory_uri(); ?>/images/nextarrow.svg"
