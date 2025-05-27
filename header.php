@@ -214,6 +214,7 @@ unset($menu_items);
                 left: 50%;
                 top: 50%;
                 clip-path: url(#right-bottom-shape) !important;
+                 transition: .5s ease-in;
             }
 
             &::before {

@@ -92,7 +92,8 @@ if ($projects->have_posts()): ?>
                     </div>
 
                      
-                            <div class="row">
+                           <div class="">
+                             <div class="row">
                                 <div class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-5">
                                   <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
                                     <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg" alt="Prev arrow"
@@ -105,6 +106,7 @@ if ($projects->have_posts()): ?>
                                    </div>
                                 </div>
                             </div>
+                           </div>
                     
 
                 </div>
