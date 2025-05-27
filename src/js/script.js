@@ -360,6 +360,7 @@ navbar.addEventListener("hidden.bs.collapse", () => {
   navbar.classList.remove("menu-open");
 });
 
+
 //ScrollTrigger Text Reveal
 document.addEventListener("DOMContentLoaded", () => {
   console.clear();
@@ -402,6 +403,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   makeItHappen();
 });
+
 
 //Navigation delay after page load voor a tag on footer to open sections on Werkenbij
 document.addEventListener("DOMContentLoaded", function () {
