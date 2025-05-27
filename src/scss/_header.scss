@@ -39,8 +39,8 @@
 }
 .whatsapp-fixed {
   position: fixed;
-  bottom: 10px;
-  right: 51px;
+  bottom: 35px;
+  right: 23px;
   z-index: 1000;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
@@ -169,13 +169,13 @@
 
 // the arrow should turn red on hover
 .nav-link-ltr:hover .dropdownarrow {
-    filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(6690%) hue-rotate(341deg) brightness(92%) contrast(105%);
+  filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(6690%)
+    hue-rotate(341deg) brightness(92%) contrast(105%);
 }
-
 
 .nav-link-ltr:hover::before {
   // width: 100%;
-   width: 70%;
+  width: 70%;
 }
 
 .nav-link-ltr {
@@ -439,12 +439,10 @@
 }
 
 @media (min-width: 992px) {
-
   .navbar-nav .nav-link {
-  //Added
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
- 
+    //Added
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
   .img_with_text.with-background {
     padding: 60px;
@@ -452,5 +450,9 @@
 
   .center_text_button {
     padding: 60px;
+  }
+
+  .whatsapp-fixed {
+    right: 51px;
   }
 }
