@@ -459,11 +459,18 @@ unset($menu_items);
             }
 
         }
+
+        .button {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 160%;
+            margin-left: 20px;
+        }
     </style>
 
     <?php wp_body_open(); ?>
 
-     <!-- Scrollbar-indicatior -->
+    <!-- Scrollbar-indicatior -->
     <div id="scrollbar-indicator" class=" top-0 w-0 left-0 position-fixed"></div>
 
 
@@ -472,23 +479,14 @@ unset($menu_items);
         <!-- position-absolute //position-relative-->
         <nav class="w-100">
             <div class="container">
-                <div class="navbar navbar-expand-xl navbar-light sans-serif w-100">
+                <div class="navbar navbar-expand-xl  navbar-light sans-serif w-100">
+                    <!--Added padding-left and right :20px -->
                     <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>" class="navbar-brand d-flex">
                         <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Logo" class=" logo" />
                     </a>
 
 
                     <!-- Hamburger button for mobile -->
-                    <!-- <div class="d-xl-none navbar-toggler-wrapper ">
-                        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation" style="">
-                            <span class="toggler-icon top-bar"></span>
-                            <span class="toggler-icon middle-bar"></span>
-                            <span class="toggler-icon bottom-bar"></span>
-                        </button>
-                    </div> -->
-
                     <div class="d-xl-none wrapper">
                         <button id="box" class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -504,7 +502,6 @@ unset($menu_items);
 
 
                     <!-- Navigation Menu -->
-
                     <div class="collapse navbar-collapse ul-bg " id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto justify-content-center  flex-grow-1">
                             <?php foreach ($menu as $item):
@@ -552,6 +549,8 @@ unset($menu_items);
                         </a>
 
                     </div>
+
+                    
                 </div>
             </div>
         </nav>

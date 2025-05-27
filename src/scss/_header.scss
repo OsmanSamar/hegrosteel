@@ -1,12 +1,11 @@
-
 //#scrollbar-indicator
 #scrollbar-indicator {
   position: fixed;
   top: 0;
   left: 0;
-  height: 4px; 
+  height: 4px;
   width: 0%;
-  background-color: var(--Secondary-500); 
+  background-color: var(--Secondary-500);
   z-index: 9999;
   transition: width 0.25s ease-out;
 }
@@ -129,6 +128,10 @@
 
 /* NavBar Links */
 .navbar-nav .nav-link {
+  //Added
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  //
   margin: 0 10px;
   color: #fff;
   font-family: Figtree;
@@ -152,7 +155,7 @@
 .nav-link-ltr::before {
   content: "";
   position: absolute;
-  left: 0;
+  // left: 0;
   bottom: 0;
   height: 2px;
   width: 0%;
@@ -164,8 +167,15 @@
   color: var(--Secondary-500) !important;
 }
 
+// the arrow should turn red on hover
+.nav-link-ltr:hover .dropdownarrow {
+    filter: brightness(0) saturate(100%) invert(12%) sepia(84%) saturate(6690%) hue-rotate(341deg) brightness(92%) contrast(105%);
+}
+
+
 .nav-link-ltr:hover::before {
-  width: 100%;
+  // width: 100%;
+   width: 70%;
 }
 
 .nav-link-ltr {
@@ -196,69 +206,8 @@
 }
 
 //Hamburger-menu
-// .navbar-toggler {
-//   border: none;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   border-radius: 10px;
-//   border: 2px solid #dc0d1a;
-//   width: 52px;
-//   height: 52px;
-//   padding: 15px 8px;
-// }
-
-// .navbar-toggler:focus {
-//   box-shadow: unset !important;
-// }
-// .toggler-icon {
-//   // width: 20px;
-//   // height: 1px;
-//    width: 100%;
-//   height: 10%;
-//   background-color: #ffffff;
-//   display: block;
-//   transition: all 0.2s ease-in-out;
-//   opacity: 1;
-//   margin: 3px 0;
-// }
-// /*  toggled state */
-
-// .navbar-toggler:not(.collapsed) .top-bar {
-//   transform: rotate(39deg) translate(2px, 1px);
-// }
-// .navbar-toggler:not(.collapsed) .middle-bar {
-//   opacity: 0;
-// }
-// .navbar-toggler:not(.collapsed) .bottom-bar {
-//   transform: rotate(-37deg) translate(1px, -2px);
-// }
-// .navbar-toggler .top-bar {
-//   transform: rotate(34deg);
-//   transform-origin: 10% 10%;
-// }
-// .navbar-toggler .middle-bar {
-//   opacity: 0;
-//   filter: alpha(opacity=0);
-// }
-// .navbar-toggler .bottom-bar {
-//   transform: rotate(-40deg);
-//   transform-origin: 10% 10%;
-// }
-// .navbar-toggler.collapsed .top-bar {
-//   transform: rotate(0);
-// }
-// .navbar-toggler.collapsed .middle-bar {
-//   opacity: 1;
-//   filter: alpha(opacity=100);
-// }
-// .navbar-toggler.collapsed .bottom-bar {
-//   transform: rotate(0);
-// }
-
 //Added new Hamburger style
-.wrapper{
+.wrapper {
   height: 52px;
   width: 52px;
   padding: 15px 8px;
@@ -267,7 +216,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 52px; 
+  width: 52px;
   height: 52px;
   border: 2px solid #dc0d1a;
 }
@@ -315,8 +264,6 @@
 }
 
 ///End of adding
-
-
 
 .dropdownarrow {
   width: 12px;
@@ -387,15 +334,6 @@
   border-radius: 10px;
   background: var(--Primary-400);
   cursor: pointer;
-
-  // &:hover {
-  //   background: var(--Secondary-500);
-  // }
-  // &:hover + h3,
-  // &:hover ~ .text-hover-underline {
-  //   text-decoration: underline;
-  //   text-decoration-style: solid;
-  // }
 }
 
 .vacature-item {
@@ -405,17 +343,15 @@
       background: var(--Secondary-500);
     }
     .text-hover-underline {
+      // transition: font-weight 0.3s ease, letter-spacing 0.3s ease;
+      // transition: all 0.3s ease;
+      transition: font-weight 0.3s ease;
+
       text-decoration: underline;
-      // text-decoration-style: solid;
       font-weight: 700;
     }
   }
 }
-
-//Style for Vactures section
-// .number + div >  h3 {
-//   font-weight: 400;
-// }
 
 .tag {
   border-radius: 10px;

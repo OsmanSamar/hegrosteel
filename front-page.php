@@ -10,10 +10,12 @@ $fields = get_fields();
             <div class="hero-section bg-holder hero-responsive position-relative">
 
                 <!-- Background Image -->
-                <!-- <img class="bg-content" src="<?= get_the_post_thumbnail_url() ?>" alt="" /> -->
-                <div class="bg-content"
+              
+               
+                 <div class="bg-content"
                     style="background: linear-gradient(180deg,  rgba(0, 0, 0, 0.00) -11.36%, rgba(0, 0, 0, 0.81) 82.88%), url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;">
                 </div>
+              
 
                 <!-- Optional Image/Video -->
                 <?php if ($header['image']): ?>
