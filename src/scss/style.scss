@@ -83,6 +83,7 @@ img {
 @import "vacature-section";
 
 @import "components/swiper-scrollbar";
+@import 'aos/dist/aos.css';
 
 .page:has(.lijnen-bg) {
   background-image: url(../images/lijnen.png) !important;

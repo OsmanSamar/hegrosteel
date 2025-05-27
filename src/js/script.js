@@ -3,6 +3,8 @@ import "bootstrap";
 import Swiper from "swiper";
 // Styling
 import "../scss/style.scss";
+import AOS from 'aos';
+AOS.init();
 
 // Fontawesome
 import { dom, library } from "@fortawesome/fontawesome-svg-core";
@@ -102,7 +104,7 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
   let swiper = new Swiper(x.querySelector(".projecten-swiper"), {
     slidesPerView: 1,
-    centeredSlides: true,
+    // centeredSlides: true,
     grabCursor: true,
     spaceBetween: 20,
     loop: true,

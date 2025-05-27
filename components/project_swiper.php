@@ -33,6 +33,8 @@ if ($projects->have_posts()): ?>
                     <div class="swiper-wrapper">
                         <?php
                         $i=0;
+
+                        
                         while ($projects->have_posts()):
                             $projects->the_post();
                             $image_id = get_post_thumbnail_id(get_the_ID());
@@ -44,8 +46,8 @@ if ($projects->have_posts()): ?>
                             $plaats = get_the_terms(get_the_ID(), 'plaats');
                             ?>
                             <div class="swiper-slide" <?php 
-                            if($i<6){
-                                echo"";
+                            if($i<7){
+                                echo' data-aos="fade-up" data-aos-delay="'.(100+$i*50).'"';
                             }
                             ?>>
                             
