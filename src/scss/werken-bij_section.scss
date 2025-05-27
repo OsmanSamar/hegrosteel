@@ -1,6 +1,8 @@
 .werken-bij_section {
   margin: 80px 0px;
   .shared-content {
+    margin: 0 auto;
+    max-width: 350px;
     display: flex;
     padding: 53px 53px 45px 53px;
     flex-direction: column;
@@ -55,5 +57,21 @@
 
   .left-bottom-shape:hover::after {
     background: #020202 !important;
+  }
+
+  // @media(min-width:992px){
+  //    .shared-content {
+  //   margin:unset;
+  //   max-width: unset;
+    
+  // }
+
+  @media(min-width:992px){
+     .shared-content {
+    margin:unset;
+    max-width: unset;
+    
+  }
+
   }
 }
