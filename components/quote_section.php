@@ -10,7 +10,7 @@ $fields = $args['fields'];
                   
                      <div  id="smooth-content">
                          <div class="content">
-                        <h2 class="text-center"><?= $fields['text']; ?></h2>
+                        <h2 class="text-center "><?= $fields['text']; ?></h2>
                     </div>
                      </div>
                   

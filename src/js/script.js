@@ -362,47 +362,107 @@ navbar.addEventListener("hidden.bs.collapse", () => {
 
 
 //ScrollTrigger Text Reveal
+// document.addEventListener("DOMContentLoaded", () => {
+//   console.clear();
+//   gsap.registerPlugin(ScrollTrigger, SplitText);
+
+//   let split = new SplitText("h2", { type: "lines" });
+//   let masks;
+//   function makeItHappen() {
+//     masks = [];
+//     split.lines.forEach((target) => {
+//       let mask = document.createElement("span");
+//       mask.className = "mask";
+//       target.append(mask);
+//       masks.push(mask);
+//       gsap.to(mask, {
+//         scaleX: 0,
+//         transformOrigin: "right center",
+//         ease: "none",
+//         scrollTrigger: {
+//           trigger: target,
+
+//           scrub: true,
+//           start: "top center",
+//           end: "bottom center",
+//         },
+//       });
+//     });
+//   }
+
+//   window.addEventListener("resize", newTriggers);
+
+//   function newTriggers() {
+//     ScrollTrigger.getAll().forEach((trigger, i) => {
+//       trigger.kill();
+//       masks[i].remove();
+//     });
+//     split.split();
+//     makeItHappen();
+//   }
+
+//   makeItHappen();
+// });
+
+
 document.addEventListener("DOMContentLoaded", () => {
   console.clear();
   gsap.registerPlugin(ScrollTrigger, SplitText);
 
-  let split = new SplitText("h2", { type: "lines" });
-  let masks;
+// Target h2 inside .quote_section only
+  const quoteText = document.querySelector(".quote_section h2");
+
+  if (!quoteText) return;
+
+  // Divide the text into lines
+  let split = new SplitText(quoteText, { type: "lines" });
+  let masks = [];
+
+// Implement the animation
   function makeItHappen() {
     masks = [];
-    split.lines.forEach((target) => {
-      let mask = document.createElement("span");
-      mask.className = "mask";
-      target.append(mask);
-      masks.push(mask);
-      gsap.to(mask, {
-        scaleX: 0,
-        transformOrigin: "right center",
-        ease: "none",
-        scrollTrigger: {
-          trigger: target,
 
-          scrub: true,
-          start: "top center",
-          end: "bottom center",
-        },
-      });
+    split.lines.forEach((line) => {
+      const mask = document.createElement("span");
+      mask.className = "mask";
+      line.append(mask);
+      masks.push(mask);
+    });
+
+    gsap.to(masks, {
+      scaleX: 0,
+      transformOrigin: "right center",
+      ease: "none",
+      stagger: 0.1,
+      scrollTrigger: {
+        trigger: document.querySelector(".quote_section"),
+        start: "top 90%",     // The effect starts early
+        end: "bottom 28%",    // Ends late
+        // scrub: true,
+        scrub: 0.5
+        // markers: true,      // Enable it if you want to see the start and end of the trigger
+      },
+       stagger: 0.3 // Gradual delay between elements
     });
   }
 
-  window.addEventListener("resize", newTriggers);
-
+// To reactivate when changing the screen size
   function newTriggers() {
-    ScrollTrigger.getAll().forEach((trigger, i) => {
-      trigger.kill();
-      masks[i].remove();
-    });
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    masks.forEach(mask => mask?.remove());
     split.split();
     makeItHappen();
   }
 
+  window.addEventListener("resize", newTriggers);
   makeItHappen();
 });
+
+
+
+
+
+///
 
 
 //Navigation delay after page load voor a tag on footer to open sections on Werkenbij
