@@ -33,6 +33,13 @@ body {
   color:#fff;
 }
 
+a{
+  color:inherit;
+  &:hover{
+    color:inherit;
+  }
+}
+
 * {
   scroll-margin-top: 80px;
 }
