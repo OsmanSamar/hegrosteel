@@ -19,7 +19,11 @@ if ($categories) {
     }
 }
 ?>
-<div class="col-md-6  col-lg-4 col-xl-6  mb-4 projectcard">
+<div class="col-md-6  col-lg-4 col-xl-6  mb-4 projectcard"
+ data-aos="fade-up"
+  data-aos-delay="<?= 100 + ($args['index'] * 50) ?>"
+
+>
     <a href="<?= get_permalink($post) ?>" class="text-decoration-none">
         <div class="container-card project-right-top position-relative">
             <div class="project-card ">

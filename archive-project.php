@@ -79,19 +79,22 @@ $projectPage = get_page_by_path('projecten');
 
                 <!--Right col -->
                 <div class="col-lg-8 col-xl-8">
-
                     <div class="row post-holder" data-type="project">
                         <?php
+                        $i = 0;
                         foreach ($posts as $post) {
                             // Fetch the "General" tab fields directly
-                            get_template_part('components/projectcard', null, ['post' => $post]);
+                            get_template_part('components/projectcard', null, ['post' => $post, 'index' => $i]);
+                              $i++;
+
                         }
                         wp_reset_postdata();
                         ?>
                     </div>
-
                 </div>
-                <!-- End of col -->
+
+
+                
 
                 <!-- Pagination -->
                 <div class="pagination-wrap">
