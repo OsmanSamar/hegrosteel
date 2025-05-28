@@ -27,10 +27,10 @@ body {
   overflow-x: clip;
   background: var(--Primary-500);
   scroll-behavior: smooth;
-
   // TODO To add background -img
   position: relative;
   z-index: 1;
+  color:#fff;
 }
 
 * {
