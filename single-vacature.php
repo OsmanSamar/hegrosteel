@@ -77,7 +77,8 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
     <!-- Second Section -->
     <div class="row second-row">
-      <div class="col-lg-7 offset-lg-1 ">
+      <div class="col-lg-7 offset-lg-1" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
+        data-aos-duration="70" data-aos-easing="ease-in-out">
         <div class="d-flex flex-column gap-3">
           <!--  -->
           <span class="regular left-text">
@@ -101,9 +102,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
         </div>
       </div>
     </div>
-
-
-
 
 
 
@@ -139,7 +137,8 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                         <?php $list_item = get_sub_field('text'); ?>
                         <?php if (!empty($list_item)): ?>
                           <div class="repeater-item d-flex align-items-center gap-2 w-100">
-                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Arrow" class="dropdown-arrow">
+                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Arrow"
+                              class="dropdown-arrow">
                             <p class="regular mb-2"><?= esc_html($list_item); ?></p>
                           </div>
                         <?php endif; ?>
@@ -151,13 +150,14 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                     <div class="d-flex flex-row gap-3 mt-5">
                       <a type="button" class="button secondary-button" href="#solliciteren">
                         Direct solliciteren
-                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                          class="dropdown-arrow">
                       </a>
                       <a type="button" class="button primary-button"
                         href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" target="_blank">
                         Vragen? App Hermen
-                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="Open whatsapp"
-                          class="whatsappimg" />
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg"
+                          alt="Open whatsapp" class="whatsappimg" />
                       </a>
                     </div>
                   <?php endif; ?>
@@ -174,7 +174,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 <?php $image = get_sub_field('image'); ?>
                 <?php if (!empty($image)): ?>
                   <div class="photo">
-                    <img loading="lazy"  src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" />
+                    <img loading="lazy" src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" />
                   </div>
                 <?php endif; ?>
               <?php endwhile; ?>
@@ -214,7 +214,8 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                     <?php $list_item = get_sub_field('text'); ?>
                     <?php if (!empty($list_item)): ?>
                       <li class="d-flex align-items-start gap-2 mb-2">
-                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Check" class="dropdown-arrow">
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/ckeck.svg" alt="Check"
+                          class="dropdown-arrow">
                         <span class="regular"><?= esc_html($list_item); ?></span>
                       </li>
                     <?php endif; ?>
@@ -226,12 +227,14 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 <div class="d-flex flex-row flex-wrap gap-3 mt-3">
                   <a href="#solliciteren" class="button secondary-button">
                     Direct solliciteren
-                    <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+                    <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                      class="dropdown-arrow">
                   </a>
-                  <a href="https://wa.me/<?= get_field('whatsappnumber', 'option'); ?>" target="_blank" class="button primary-button">
+                  <a href="https://wa.me/<?= get_field('whatsappnumber', 'option'); ?>" target="_blank"
+                    class="button primary-button">
                     Vragen? App Hermen
-                    <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg" alt="WhatsApp"
-                      class="whatsappimg" />
+                    <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-whatsapp-icon.svg"
+                      alt="WhatsApp" class="whatsappimg" />
                   </a>
                 </div>
               <?php endif; ?>
@@ -240,7 +243,8 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             <?php $image = get_sub_field('image'); ?>
             <?php if (!empty($image)): ?>
               <div class="photo mt-5">
-                <img loading="lazy" src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" class="img-fluid rounded">
+                <img loading="lazy" src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>"
+                  class="img-fluid rounded">
               </div>
             <?php endif; ?>
 
@@ -251,15 +255,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
 
     <?php endif; ?>
-
-
-
-
-
-
-
-
-
 
 
     <!-- Image swiper -->
@@ -273,7 +268,8 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 <h2><?= get_field("swiper_title") ?></h2>
                 <a href="<?= get_field("button")['url'] ?>" class="button primary-button ">
                   <?= get_field("button")['title'] ?>
-                  <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow" class="dropdown-arrow">
+                  <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
+                    class="dropdown-arrow">
                 </a>
               </div>
             </div>
@@ -281,7 +277,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             <div class="col-lg-12 ">
               <div class="swiper-container swiper images-swiper ">
                 <div class="swiper-wrapper">
-                  <?php if (have_rows('images_repeater')): ?>
+                  <!-- <?php if (have_rows('images_repeater')): ?>
                     <?php while (have_rows('images_repeater')):
                       the_row(); ?>
                       <div class="swiper-slide">
@@ -295,35 +291,65 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                         <?php endif; ?>
                       </div>
                     <?php endwhile; ?>
-                  <?php endif; ?>
+                    <?php endif; ?> -->
+
+                  <?php
+                  $i = 0;
+                  if (have_rows('images_repeater')):
+                    while (have_rows('images_repeater')):
+                      the_row(); ?>
+                      <div class="swiper-slide" <?php
+                      if ($i < 7) {
+                        echo 'data-aos="fade-up" data-aos-delay="' . (100 + $i * 50) . '"';
+                      }
+                      ?>>
+                        <?php
+                        $image = get_sub_field('img');
+                        if ($image): ?>
+                          <div class="swiper-img-container">
+                            <img loading="lazy" src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
+                              class="swiper-img" />
+                          </div>
+                        <?php endif; ?>
+                      </div>
+                      <?php
+                      $i++;
+                    endwhile;
+                  endif; ?>
+
+
+
                 </div>
                 <div class="container">
                   <div class="row">
                     <div class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
                       <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
-                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg" alt="Prev arrow"
-                          class="dropdown-arrow">
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"
+                          alt="Prev arrow" class="dropdown-arrow">
                       </div>
                       <div class="custom-swiper-scrollbar"></div>
                       <div class="swiper-button-next d-none d-md-flex d-lg-flex">
-                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/next-btn.svg" alt="Next arrow"
-                          class="dropdown-arrow">
+                        <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/next-btn.svg"
+                          alt="Next arrow" class="dropdown-arrow">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+
+
+
+
           </div>
         </div>
       </div>
     </div>
 
 
-
-
     <!-- Service-section -->
-    <div class="solliciteer-form col-12 col-lg-12" id="solliciteren">
+    <div class="solliciteer-form col-12 col-lg-12" id="solliciteren"  data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+            data-aos-easing="ease-in-out">
       <div class="d-flex flex-column contact-form form-1 position-relative">
         <h3>Meer weten of solliciteren?</h3>
         <?= do_shortcode('[gravityform id="3" title="false" description="false"   cssClass="form-1"]') ?>

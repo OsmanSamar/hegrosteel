@@ -2,17 +2,18 @@
 $fields = $args['fields'];
 ?>
 
-<div class="text_with_button">
+<div class="text_with_button" >
     <div class="container">
-        <div class="row d-flex flex-wrap">
+        <div class="row d-flex flex-wrap" >
 
             <div class="col-12 col-md-6 col-lg-5 offset-lg-1 d-flex flex-column" data-aos="fade-up"
-                data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                 <div class="regular mb-4 mt-4"><?= $fields['left_text']; ?></div>
             </div>
 
             <!-- Content Column -->
-            <div class="col-12 col-md-6 col-lg-5  d-flex align-items-center justify-content-center ">
+            <div class="col-12 col-md-6 col-lg-5  d-flex align-items-center justify-content-center " data-aos="fade-up"
+                data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                 <div
                     class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
                     <div class="content">
@@ -39,8 +40,8 @@ $fields = $args['fields'];
                                             target="<?= esc_attr($button['target'] ?: '_self'); ?>"
                                             class="button <?= esc_attr($custom_class); ?>">
                                             <?= esc_html($button['title']); ?>
-                                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
-                                                class="dropdown-arrow">
+                                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg"
+                                                alt="Arrow" class="dropdown-arrow">
                                         </a>
                                     <?php endif; endforeach; ?>
                             <?php endif; ?>

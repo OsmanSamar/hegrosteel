@@ -24,11 +24,11 @@ $bgImg = get_the_post_thumbnail_url($id);
                   <?= $bgImg ? 'col-lg-8 col-md-12' : 'col-lg-8 offset-lg-2' ?> 
                          my-auto d-flex flex-column 
                      <?= $bgImg ? 'justify-content-start align-items-start align-self-start' : 'justify-content-center align-items-center align-self-center mx-auto' ?>">
-                    <h1 data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                    <h1 data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
                         data-aos-easing="ease-in-out">
                         <?php if (get_field("hero_title")): ?>
-                            <?= get_field("hero_title", $id) ?> 
-                            <?php else: ?>
+                            <?= get_field("hero_title", $id) ?>
+                        <?php else: ?>
                             <?= get_the_title($id); ?>
                             <?php
                         endif; ?>

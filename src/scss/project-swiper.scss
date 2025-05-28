@@ -12,8 +12,8 @@
   .container-card {
     padding: 18px;
     overflow: hidden;
-
     transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
   }
 
   .container-card:hover {

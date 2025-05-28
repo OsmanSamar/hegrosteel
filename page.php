@@ -11,7 +11,7 @@ get_header()
             <?= get_template_part("components/hero") ?>
         </div>
 
-        <!-- Service-section -->
+        <!-- Service-Blocks -->
         <?php
         $content = get_field('content');
 

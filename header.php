@@ -486,7 +486,8 @@ unset($menu_items);
         <!-- position-absolute //position-relative-->
         <nav class="w-100">
             <div class="container">
-                <div class="navbar navbar-expand-xl  navbar-light sans-serif w-100" data-aos="fade-down" data-aos-offset="100" data-aos-delay="50" data-aos-duration="100" data-aos-easing="ease-in-out">
+                <div class="navbar navbar-expand-xl  navbar-light sans-serif w-100" data-aos="slide-down"
+        data-aos-duration="70" data-aos-easing="bounce">
                     <!--Added padding-left and right :20px -->
                     <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>" class="navbar-brand d-flex">
                         <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Logo" class=" logo" />

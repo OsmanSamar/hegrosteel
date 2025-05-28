@@ -4,7 +4,8 @@ $fields = $args['fields'];
 <?php if ($fields['tab']): ?>
     <div class="row">
         <div class="col-lg-12">
-            <div class="tabs tab-right">
+            <div class="tabs tab-right"  data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+            data-aos-easing="ease-in-out">
                 <div class="row">
                     <div class="col-lg-12">
                         <nav class="tab-wrap d-flex flex-wrap">

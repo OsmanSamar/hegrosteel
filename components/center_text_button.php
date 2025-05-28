@@ -1,11 +1,11 @@
 <?php
 $fields = $args['fields'];
 ?>
-<div class="center_text_button">
+<div class="center_text_button"  data-aos="fade-up"
+                data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
         <div class="row">
             <div class="col-12 col-md-12 col-lg-10 offset-lg-2 col-xl-8 offset-xl-2 d-flex flex-column justify-content-center align-items-center text-center"
-                data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-                data-aos-easing="ease-in-out">
+               >
                 <div class="d-flex flex-column align-items-center justify-content-center gap-3 ">
                     
                     <h3><?= $fields['title']; ?></h3>

@@ -5,11 +5,6 @@ $footer_menu = wp_get_nav_menu_items($menu_id);
 $menu_id = get_nav_menu_locations()['diensten-menu'];
 $diensten_menu = wp_get_nav_menu_items($menu_id);
 
-
-
-
-
-
 ?>
 
 <div class="whatsapp-fixed">
@@ -31,15 +26,14 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
 
 
 
-
-
-
-
 <footer class="footer">
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-12">
-                <div class="d-flex justify-content-center  justify-content-lg-between gap-3 flex-wrap">
+
+                <div class="d-flex justify-content-center  justify-content-lg-between gap-3 flex-wrap"
+                    data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+                    data-aos-easing="ease-in-out">
                     <?php if (!is_singular('vacature')): ?>
                         <div class="d-none d-lg-flex d-md-flex">
                             <h2><?= get_field("footer_title", 'option') ?></h2>
@@ -73,11 +67,13 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
             <!-- Logo -->
             <div
                 class="col-lg-3 col-md-4 d-flex flex-lg-column flex-md-column justify-content-between justify-content-lg-start justify-content-md-start mb-4 mb-lg-0">
-                <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>">
+                <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>" data-aos="fade-up"
+                    data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                     <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Hegrosteel Logo"
                         class="footer-logo mb-3" />
                 </a>
-                <div class="d-flex align-items-center gap-2 mt-lg-3 media-container">
+                <div class="d-flex align-items-center gap-2 mt-lg-3 media-container" data-aos="fade-up"
+                    data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                     <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/"
                         target="_blank">
                         <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp-logo.svg"
@@ -95,7 +91,8 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
             <div class="col-lg-8 offset-lg-1 col-md-8 ">
                 <div class="row">
                     <!-- Contact -->
-                    <div class="col-7 col-lg-4 col-md-6 mb-3">
+                    <div class="col-7 col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-offset="120"
+                        data-aos-delay="100" data-aos-duration="70" data-aos-easing="ease-in-out">
                         <div class="list d-block mb-3 ">
                             <?= get_field("contact_link_title", 'option') ?>
                         </div>
@@ -126,8 +123,8 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
 
                     <!-- Diensten -->
 
-                   
-                    <div class="col-6 col-md-3 offset-lg-1">
+                    <div class="col-6 col-md-3 offset-lg-1" data-aos="fade-up" data-aos-offset="120" data-aos-delay="150"
+                        data-aos-duration="70" data-aos-easing="ease-in-out">
                         <div class="d-block mb-3 list">
                             <?= get_field("diensten_link_title", 'option') ?>
                         </div>
@@ -144,36 +141,12 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
                             <?php endforeach; ?>
 
                         </div>
-                        <!-- <ul class="list-unstyled d-flex flex-column gap-2">
-                            <li class="footer-li">
-                                <a href="/diensten#prefabbeton" class="footer-li text-decoration-none footer-link-ltr">
-                                    Bedrijfspand
-                                </a>
-                            </li>
-                            <li class="footer-li">
-                                <a href="/diensten#dak-wand" class="footer-li text-decoration-none footer-link-ltr">
-                                    Stallenbouw
-                                </a>
-                            </li>
-                            <li class="footer-li">
-                                <a href="/diensten#woningbouw" class="footer-li text-decoration-none footer-link-ltr">
-                                    Woningbouw
-                                </a>
-                            </li>
 
-                            <li class="footer-li">
-                                <a href="/diensten#utiliteitsbouw"
-                                    class="footer-li text-decoration-none footer-link-ltr">
-                                    Utiliteitsbouw
-                                </a>
-                            </li>
-
-
-                        </ul> -->
                     </div>
 
                     <!-- Meer weten -->
-                    <div class="col-6 col-lg-3 d-md-none d-lg-block offset-lg-1">
+                    <div class="col-6 col-lg-3 d-md-none d-lg-block offset-lg-1" data-aos="fade-up"
+                        data-aos-offset="120" data-aos-delay="200" data-aos-duration="70" data-aos-easing="ease-in-out">
                         <div class="d-block mb-3 list">
                             <?= get_field("meer_over_link_title", 'option') ?>
                         </div>
@@ -189,7 +162,6 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
                             <?php endforeach; ?>
 
                         </div>
-
 
                     </div>
 

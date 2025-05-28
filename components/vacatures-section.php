@@ -12,7 +12,7 @@ if ($vacatures->have_posts()): ?>
     <div class="vacatures-section">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-start mb-5 mb-lg-0"
-                data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+                 data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
                 data-aos-easing="ease-in-out">
                 <h2>
                     <?= $fields['title']; ?>
@@ -43,7 +43,9 @@ if ($vacatures->have_posts()): ?>
                 <?php endif; ?>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-6 offset-lg-2">
+            <div class="col-12 col-md-6 col-lg-6 offset-lg-2"  
+            data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+                data-aos-easing="ease-in-out">
                 <!-- vacatures list Repeater -->
                 <?php
                 $i = 1;
@@ -53,7 +55,7 @@ if ($vacatures->have_posts()): ?>
                     $uren = get_the_terms(get_the_ID(), 'uren');
                     ?>
                     <a class="vacature-item" href="<?php the_permalink(); ?>">
-                        <div class="repeater-list mt-4 mb-4">
+                        <div class="repeater-list mt-4 mb-4" >
                             <div class="repeater-item d-flex align-items-start justify-content-between w-100">
                                 <?php if ($i): ?>
                                     <p class="number typography mb-0"><?= $i < 10 ? '0' . $i : $i ?></p>

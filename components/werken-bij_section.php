@@ -3,8 +3,8 @@ $fields = $args['fields'];
 ?>
 <div class="werken-bij_section">
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-5 offset-lg-1  mb-4 mb-lg-0" data-aos="fade-up" data-aos-offset="100"
-            data-aos-delay="100" data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="col-12 col-md-6 col-lg-5 offset-lg-1  mb-4 mb-lg-0" data-aos="fade-up" data-aos-offset="120"
+            data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
             <!-- Used Group -->
             <div class="shared-content right-bottom-shape">
                 <a href="<?= esc_url($fields['blok_1']['link']['url']); ?>">
@@ -18,8 +18,8 @@ $fields = $args['fields'];
             </div>
         </div>
 
-        <div class="col-lg-5 col-md-6 mt-auto" data-aos="fade-up" data-aos-offset="100" data-aos-delay="250"
-            data-aos-duration="1000" data-aos-easing="ease-in-out">
+        <div class="col-lg-5 col-md-6 mt-auto" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
+            data-aos-duration="70" data-aos-easing="ease-in-out">
             <div class="shared-content  left-bottom-shape  position-relative">
                 <a href="<?= esc_url($fields['blok_2']['link']['url']); ?>">
                     <div class="lead  "><?= $fields['blok_2']['sub_title']; ?></div>
@@ -34,7 +34,7 @@ $fields = $args['fields'];
 
         <div class="row">
             <div class="col-lg-5 offset-lg-6 col-xl-4 col-md-6 offset-md-6 mt-4" data-aos="fade-up"
-                data-aos-offset="100" data-aos-delay="300" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                 <div class="shared-content  left-top-shape">
                     <a href="<?= esc_url($fields['blok_3']['link']['url']); ?>">
                         <div class="lead back-text"><?= $fields['blok_3']['sub_title']; ?></div>

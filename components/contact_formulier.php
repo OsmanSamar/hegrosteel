@@ -5,7 +5,8 @@ $fields = $args['fields'];
 
 <div class="contact-formulier">
     <div class="row">
-        <div class="col-12 col-lg-5 mb-5">
+        <div class="col-12 col-lg-5 mb-5" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
+            data-aos-duration="70" data-aos-easing="ease-in-out">
 
             <div class="shared-content  top-right-shape  position-relative">
                 <h3> <?= $fields['left_tilte']; ?></h3>
@@ -31,7 +32,7 @@ $fields = $args['fields'];
                     <span class=" regular diffrent-color "><?= $fields['telephone_title']; ?></span>
                     <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>" class=" regular footer-link-ltr">
                         <!-- <?= $fields['telephone']; ?> -->
-                        <?= get_field("hegrosteel_phone_num", 'option') ?> 
+                        <?= get_field("hegrosteel_phone_num", 'option') ?>
                     </a>
                 </div>
 
@@ -46,24 +47,23 @@ $fields = $args['fields'];
                 </div>
 
                 <div class="bel-of-app-container mt-4">
-                    <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>"
-                    target="_blank"
+                    <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" target="_blank"
                         class="d-flex align-items-center justify-content-between w-100">
                         <span class="bold">
                             <?= $fields['direct_contact']; ?>
                         </span>
 
                         <span class="whatsapp-container">
-                            <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
-                                class="whatsappimg" />
+                            <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
+                                alt="Open whatsapp" class="whatsappimg" />
                         </span>
                     </a>
                 </div>
             </div>
         </div>
 
-        <div class="col-12 col-lg-7">
-
+        <div class="col-12 col-lg-7" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+            data-aos-easing="ease-in-out">
 
             <!-- Contact form -->
             <div class="solliciteer-form">

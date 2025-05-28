@@ -5,7 +5,7 @@ $fields = $args['fields'];
 
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start align-items-start mb-5 mb-lg-0"
-            data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+            data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
             data-aos-easing="ease-in-out">
             <h2 class="mb-4">
                 <?= $fields['title']; ?>
@@ -36,7 +36,8 @@ $fields = $args['fields'];
             <?php endif; ?>
         </div>
 
-        <div class="col-12 col-md-6 col-lg-6 offset-lg-2"  data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
+        <div class="col-12 col-md-6 col-lg-6 offset-lg-2" 
+         data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
             data-aos-easing="ease-in-out">
             <!-- work list Repeater -->
             <?php if (!empty($fields['work_list'])): ?>

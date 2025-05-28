@@ -15,8 +15,9 @@ $textId = $fields['text_id'] ?? '';
 
 <div id="<?= esc_attr($textId); ?>" class="text">
     <div class="row  mt-5 mb-5">
-        <div
-            class="col-12 <?= $textOnLeft ? 'col-lg-7 order-1' : 'col-lg-6 order-2 offset-lg-1'; ?> d-flex flex-column mb-4 mb-lg-0 my-auto py-4">
+        <div class="col-12 <?= $textOnLeft ? 'col-lg-7 order-1' : 'col-lg-6 order-2 offset-lg-1'; ?> d-flex flex-column mb-4 mb-lg-0 my-auto py-4"
+            data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+            data-aos-easing="ease-in-out">
             <!-- my-auto py-4 To algin on center -->
             <!-- <h2><?= $fields['title']; ?></h2> -->
             <<?= $heading_tag; ?>><?= $fields['title']; ?></<?= $heading_tag; ?>>
@@ -49,7 +50,8 @@ $textId = $fields['text_id'] ?? '';
                 </div>
         </div>
 
-        <div class="col-12 col-lg-4 <?= $textOnLeft ? 'order-2 offset-lg-1' : 'order-1'; ?>">
+        <div class="col-12 col-lg-4 <?= $textOnLeft ? 'order-2 offset-lg-1' : 'order-1'; ?>" data-aos="fade-up"
+            data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
 
             <div class="shared-content  top-right-shape  position-relative">
                 <h3> <?= $fields['left_title']; ?></h3>
@@ -61,8 +63,8 @@ $textId = $fields['text_id'] ?? '';
                             <?= $fields['bel_of_app']; ?>
                         </span>
                         <span class="whatsapp-container">
-                            <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg" alt="Open whatsapp"
-                                class="whatsappimg" />
+                            <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
+                                alt="Open whatsapp" class="whatsappimg" />
                         </span>
                     </a>
                 </div>

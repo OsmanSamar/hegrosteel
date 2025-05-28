@@ -40,7 +40,6 @@
   .gallery {
     position: relative;
     overflow: hidden;
-   
   }
 
   .pin-spacer {
@@ -121,8 +120,6 @@
     }
   }
 
-  
-
   // Images swiper Style
   .images-swiper {
     width: 100vw;
@@ -138,6 +135,15 @@
       object-fit: cover;
       width: 100%;
       height: auto;
+    }
+
+    .swiper-img-container {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+    }
+    .swiper-img-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 50px 0px rgba(36, 44, 48, 0.4);
     }
 
     .images-slider {

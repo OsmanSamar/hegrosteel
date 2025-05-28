@@ -7,16 +7,29 @@
 
   .filter-section {
     padding: 53px 30px 83px 30px;
-    flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
     align-self: stretch;
     border-radius: 20px;
-    overflow: hidden;
+    // overflow: hidden;
+     overflow: visible;
   }
 
-  .form-select .filter-input {
+  div.sticky-wrapper {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 10;
   }
+  div.sticky {
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 30px;
+  font-size: 20px;
+}
+
+
+  //
 
   #project_category,
   #plaats {
@@ -31,11 +44,4 @@
     background-image: url("../images/filtter-icon.svg") !important;
     background-size: 24px 24px !important;
   }
-
-  // background-image: url(../images/lijnen.png) !important;
-  // background-repeat: repeat-x;
-  // background-size: 1470px;
-  // background-position: top center;
-
- 
 }
