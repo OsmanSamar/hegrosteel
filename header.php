@@ -214,7 +214,7 @@ unset($menu_items);
                 left: 50%;
                 top: 50%;
                 clip-path: url(#right-bottom-shape) !important;
-                 transition: .5s ease-in;
+                transition: .5s ease;
             }
 
             &::before {
@@ -240,7 +240,8 @@ unset($menu_items);
         .left-top-shape {
             position: relative;
             --background-color: #ffffff;
-           
+            transition: .5s ease;
+
 
             &::before,
             &::after {
@@ -252,21 +253,21 @@ unset($menu_items);
                 left: 50%;
                 top: 50%;
                 clip-path: url(#left-top-shape) !important;
-                 transition: .5s ease-in;
-                
+
+
             }
 
             &::before {
                 z-index: 0;
                 background-color: var(--background-color);
-
+                transition: .5s ease;
             }
 
             &::after {
                 z-index: -1;
                 width: calc(100% - calc(2 * var(--border-width)));
                 height: calc(100% - calc(2 * var(--border-width)));
-
+                transition: .5s ease;
             }
 
             >* {
@@ -280,7 +281,8 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-            
+            transition: .5s ease;
+
 
             &::before,
             &::after {
@@ -293,12 +295,13 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#left-bottom-shape) !important;
                 z-index: 0;
-                 transition: .5s ease-in;
+                transition: .5s ease;
             }
 
             &::before {
                 /* z-index: 2; */
                 background-color: var(--border-color);
+                transition: .5s ease;
             }
 
             &::after {
@@ -306,6 +309,7 @@ unset($menu_items);
                 background-color: var(--background-color);
                 width: calc(100% - calc(2 * var(--border-width)));
                 height: calc(100% - calc(2 * var(--border-width)));
+                transition: .5s ease;
             }
 
             >* {
@@ -318,7 +322,8 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-            
+            transition: .5s ease;
+
             &::before,
             &::after {
                 position: absolute;
@@ -330,13 +335,14 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#bottom-right-shape) !important;
                 z-index: 0;
-                 transition: .5s ease-in;
+                transition: .5s ease;
 
             }
 
             &::before {
                 /* z-index: 2; */
                 background-color: var(--border-color);
+                transition: .5s ease;
             }
 
             &::after {
@@ -344,6 +350,7 @@ unset($menu_items);
                 background-color: var(--background-color);
                 width: calc(100% - calc(2 * var(--border-width)));
                 height: calc(100% - calc(2 * var(--border-width)));
+                transition: .5s ease;
             }
 
             >* {
@@ -359,7 +366,8 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-            
+            transition: .5s ease;
+
 
             &::before,
             &::after {
@@ -372,12 +380,14 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#right-bottom-border) !important;
                 z-index: 0;
-                 transition: .5s ease-in;
+                transition: .5s ease;
+               
             }
 
             &::before {
                 /* z-index: 2; */
                 background-color: var(--border-color);
+                transition: .5s ease;
             }
 
             &::after {
@@ -385,6 +395,7 @@ unset($menu_items);
                 background-color: var(--background-color);
                 width: calc(100% - calc(2 * var(--border-width)));
                 height: calc(100% - calc(2 * var(--border-width)));
+                transition: .5s ease;
             }
 
             >* {
@@ -399,7 +410,8 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-             
+            transition: .5s ease;
+
 
             &::before,
             &::after {
@@ -412,12 +424,13 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#project-right-top) !important;
                 z-index: 0;
-                transition: .5s ease-in;
+                transition: .5s ease;
             }
 
             &::before {
                 /* z-index: 2; */
                 background-color: var(--border-color);
+                transition: .5s ease;
             }
 
             &::after {
@@ -425,6 +438,7 @@ unset($menu_items);
                 background-color: var(--background-color);
                 width: calc(100% - calc(2 * var(--border-width)));
                 height: calc(100% - calc(2 * var(--border-width)));
+                transition: .5s ease;
             }
 
             >* {
@@ -438,7 +452,7 @@ unset($menu_items);
             --background-color: #1c1c1c;
             --border-color: #6B6B6B;
             --border-width: 2px;
-            
+
 
             &::before,
             &::after {
@@ -451,12 +465,13 @@ unset($menu_items);
                 top: 50%;
                 clip-path: url(#top-right-shape) !important;
                 z-index: 0;
-                 transition: .5s ease-in;
+                transition: .5s ease;
             }
 
             &::before {
                 /* z-index: 2; */
                 background-color: var(--border-color);
+                transition: .5s ease;
             }
 
             &::after {
@@ -464,6 +479,7 @@ unset($menu_items);
                 background-color: var(--background-color);
                 width: calc(100% - calc(2 * var(--border-width)));
                 height: calc(100% - calc(2 * var(--border-width)));
+                transition: .5s ease;
             }
 
             >* {
@@ -472,7 +488,6 @@ unset($menu_items);
             }
 
         }
-
     </style>
 
     <?php wp_body_open(); ?>
@@ -487,7 +502,7 @@ unset($menu_items);
         <nav class="w-100">
             <div class="container">
                 <div class="navbar navbar-expand-xl  navbar-light sans-serif w-100" data-aos="slide-down"
-        data-aos-duration="70" data-aos-easing="bounce">
+                    data-aos-duration="70" data-aos-easing="bounce">
                     <!--Added padding-left and right :20px -->
                     <a href="<?= esc_url(get_permalink(get_page_by_path('front-page'))) ?>" class="navbar-brand d-flex">
                         <img src="<?= get_template_directory_uri() ?>/images/logo.svg" alt="Logo" class=" logo" />
@@ -514,9 +529,9 @@ unset($menu_items);
                         <ul class="navbar-nav ms-auto justify-content-center  flex-grow-1">
                             <?php foreach ($menu as $item):
                                 $active = get_permalink() == $item->url;
-                                if(is_archive()){
-                                    $post_type=get_post_type(  );
-                                    $active= $item->url==get_post_type_archive_link($post_type);
+                                if (is_archive()) {
+                                    $post_type = get_post_type();
+                                    $active = $item->url == get_post_type_archive_link($post_type);
                                 }
                                 ?>
                                 <li class="nav-item dropdown">
@@ -528,15 +543,14 @@ unset($menu_items);
                                             <img src="<?= get_template_directory_uri(); ?>/images/downarrow.svg"
                                                 alt="Dropdown Icon" style="" class="dropdownarrow">
                                         </a>
-                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
-                                           >
-                                           <!--  style="top:71px; left: 11px;" -->
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <!--  style="top:71px; left: 11px;" -->
                                             <?php foreach ($item->children as $child): ?>
                                                 <li>
                                                     <a class="dropdown-item  d-flex justify-content-between align-items-center"
                                                         href="<?= $child->url; ?>">
                                                         <?= $child->title ?>
-                                                       
+
                                                     </a>
                                                 </li>
                                             <?php endforeach; ?>

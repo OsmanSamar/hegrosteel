@@ -20,8 +20,6 @@
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease;
-
-  
 }
 
 .button::before {
@@ -33,8 +31,6 @@
   height: 100%;
   transition: 0.5s;
 }
-
-
 
 .secondary-button {
   background: var(--Secondary-500);
@@ -57,13 +53,9 @@
 //To make the hover animation smoother by adding a transition
 .primary-button {
   border: 2px solid var(--Secondary-500);
-  // transition: border-color 0.3s ease, color 0.3s ease, filter 0.3s ease;
-  // transition:0.3s ease ;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 
-
   &:hover {
-    // border: 2px solid #fff;
     background: var(--Secondary-500);
     color: #fff !important;
     .arrow {
@@ -75,19 +67,17 @@
   border: 2px solid #fff;
   //  transition:0.3s ease ;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
-
   &:hover {
-    background: var(--Primary-500);
-    color: #fff !important;
-    .arrow {
-      filter: brightness(0) invert(1);
+    background: var(--Neutral-light);
+    color: var(--Primary-600) !important;
+    .dropdown-arrow {
+      filter: brightness(0);
     }
   }
 }
 .outline-white-button {
   background: var(--Primary-200, #6b6b6b);
   border: 2px solid #fff;
-  //  transition:0.3s ease ;
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 
   &:hover {
