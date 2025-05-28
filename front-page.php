@@ -7,7 +7,8 @@ $fields = get_fields();
     <div class=" position-relative">
         <div class="container">
             <!-- Hero Section -->
-            <div class="hero-section bg-holder hero-responsive position-relative">
+            <div class="hero-section bg-holder hero-responsive position-relative" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+                        data-aos-easing="ease-in-out">
 
                 <!-- Background Image -->
                 <div class="bg-content"

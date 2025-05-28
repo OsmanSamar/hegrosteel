@@ -76,6 +76,26 @@
     margin-bottom: 0.5rem;
   }
 
+  .project-categories {
+    border-radius: 10px;
+    background: var(--Primary-400, #303030);
+    padding: 9px 8px;
+  }
+
+  // .border-wrap:hover::after {
+  //   background: var(--Primary-500);
+  // }
+   .border-wrap:hover::after {
+    background: var(--Neutral-light);
+  }
+    .border-wrap:hover:hover h4,
+     .border-wrap:hover:hover .lead
+    {
+   color: var(--Primary-600);
+  }
+
+
+
   .swiper-button-prev::after,
   .swiper-button-next::after {
     display: none !important;

@@ -4,7 +4,8 @@ $bgImg = get_the_post_thumbnail_url($id);
 ?>
 
 <div class="hero" >
-    <div class="hero-section bg-holder d-flex align-items-start flex-column">
+    <div class="hero-section bg-holder d-flex align-items-start flex-column" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
+                        data-aos-easing="ease-in-out">
         <div class="bg-img" style="
             <?php if ($bgImg): ?>
                 background: linear-gradient(180deg, rgba(43, 5, 4, 0.00) 0%, rgba(0, 0, 0, 0.64) 100%), url('<?= esc_url($bgImg) ?>') center / cover no-repeat;

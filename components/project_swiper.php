@@ -66,13 +66,13 @@ if ($projects->have_posts()): ?>
 
                                             <div class="project-content p-3">
                                                 <?php if ($categories): ?>
-                                                    <div class="project-categories">
+                                                    <div class="mt-2">
                                                         <?php foreach ($categories as $cat): ?>
-                                                            <span class="lead"><?= esc_html($cat->name); ?></span>
+                                                            <span class="lead project-categories"><?= esc_html($cat->name); ?></span>
                                                         <?php endforeach; ?>
                                                     </div>
                                                 <?php endif; ?>
-                                                <h4><?php the_title(); ?></h4>
+                                                <h4 class="mt-3"><?php the_title(); ?></h4>
 
                                                 <?php if ($plaats): ?>
                                                     <?php foreach ($plaats as $term): ?>
