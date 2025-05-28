@@ -405,7 +405,15 @@
 
 .vacature-item {
   cursor: pointer;
-   transition: 0.3s ease;
+  
+  .number{
+    transition: 0.3s ease;
+  }
+  .text-hover-underline{
+    transition: 0.3s ease;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+  }
   //transition: font-weight 0.3s ease;
   &:hover {
     .number {
@@ -414,7 +422,7 @@
     .text-hover-underline {
       // transition: font-weight 0.3s ease, letter-spacing 0.3s ease;
       // transition: all 0.3s ease;
-      text-decoration: underline;
+      text-decoration-color:currentColor;
       font-weight: 700;
     }
   }

@@ -19,6 +19,11 @@
   .container-card:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 50px 0px rgba(36, 44, 48, 0.4);
+    color:#000;
+
+    .project-categories{
+      color:#fff;
+    }
   }
 
   .projecten-swiper {
@@ -88,12 +93,6 @@
    .border-wrap:hover::after {
     background: var(--Neutral-light);
   }
-    .border-wrap:hover:hover h4,
-     .border-wrap:hover:hover .lead
-    {
-   color: var(--Primary-600);
-  }
-
 
 
   .swiper-button-prev::after,
