@@ -101,8 +101,7 @@ $projectPage = get_page_by_path('projecten');
             <!-- End of row -->
         </div>
 
-       <div class="sticky">I will stick to the screen when you reach my scroll position</div>
-
+       
 
 
         <!-- Services-bloks -->

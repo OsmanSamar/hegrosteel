@@ -3,7 +3,7 @@ $id = $args['id'] ?? 0;
 $bgImg = get_the_post_thumbnail_url($id);
 ?>
 
-<div class="hero" style="margin-top: 130px">
+<div class="hero" >
     <div class="hero-section bg-holder d-flex align-items-start flex-column">
         <div class="bg-img" style="
             <?php if ($bgImg): ?>

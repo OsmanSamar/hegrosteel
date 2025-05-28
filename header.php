@@ -514,6 +514,10 @@ unset($menu_items);
                         <ul class="navbar-nav ms-auto justify-content-center  flex-grow-1">
                             <?php foreach ($menu as $item):
                                 $active = get_permalink() == $item->url;
+                                if(is_archive()){
+                                    $post_type=get_post_type(  );
+                                    $active= $item->url==get_post_type_archive_link($post_type);
+                                }
                                 ?>
                                 <li class="nav-item dropdown">
 
