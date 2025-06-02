@@ -19,42 +19,40 @@ if ($categories) {
     }
 }
 ?>
-<div class="col-md-6  col-lg-4 col-xl-6  mb-4 projectcard"
- data-aos="fade-up"
-  data-aos-delay="<?= 100 + ($args['index'] * 50) ?>"
+<div class="col-md-6  col-lg-4 col-xl-6  mb-4 projectcard" data-aos="fade-up"
+    data-aos-delay="<?= 100 + ($args['index'] * 50) ?>">
+    <div class="container-card project-right-top position-relative">
+        <a href="<?= get_permalink($post) ?>" class="text-decoration-none">
 
->
-    <a href="<?= get_permalink($post) ?>" class="text-decoration-none">
-        <div class="container-card project-right-top position-relative">
             <div class="project-card ">
                 <?php if ($image): ?>
                     <div class="bevel-right position-relative">
                         <img loading="lazy" src="<?= $image['url'] ?>" alt="<?= $image['alt'] ?>" class="swiper-img">
-                       <div class="open-arrow">
-                         <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg" alt="Arrow" class="swiper-arrow">
-                       </div>
+                        <div class="open-arrow">
+                            <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/white-arrow.svg"
+                                alt="Arrow" class="swiper-arrow">
+                        </div>
                     </div>
                 <?php endif; ?>
                 <div class="project-content p-3">
-                    <div class="project-content p-3">
-                        <?php if ($categories): ?>
+                    <?php if ($categories): ?>
+                        <div class="mt-2">
                             <?php foreach ($categories as $cat): ?>
                                 <span class="lead project-categories"><?= esc_html($cat->name); ?></span>
                             <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
 
-                        <?php endif; ?>
-                        <h4 class="mt-3"><?php the_title(); ?></h4>
+                    <h4 class="mt-3"><?php the_title(); ?></h4>
 
-                        <?php if ($plaats): ?>
-                            <?php foreach ($plaats as $term): ?>
-                                <span class="lead "><?= esc_html($term->name); ?></span>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
+                    <?php if ($plaats): ?>
+                        <?php foreach ($plaats as $term): ?>
+                            <span class="lead "><?= esc_html($term->name); ?></span>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
 
-                    </div>
                 </div>
             </div>
-        </div>
-
-    </a>
+        </a>
+    </div>
 </div>

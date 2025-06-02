@@ -65,9 +65,9 @@ img {
 }
 
 /* Imports */
-@import "project-swiper";
+@import "components/project-swiper";
 @import "button";
-@import "hero";
+@import "components/hero";
 @import "header";
 @import "front-page";
 @import "footer";
@@ -75,20 +75,20 @@ img {
 @import "pages/page";
 @import "pages/login";
 @import "werken-bij";
-@import "tab";
-@import "solliciteer_form";
-@import "contact_formulier";
+@import "components/tab";
+@import "components/solliciteer_form";
+@import "components/contact_formulier";
 @import "single-vacature";
 @import "projecten";
-@import "projectcard";
+@import "components/projectcard";
 @import "single-project";
 @import "thankyou";
 @import "404";
-@import "quote_section";
-@import "services_section";
-@import "text";
-@import "vacature-section";
-@import "werken-bij_section";
+@import "components/quote_section";
+@import "components/services_section";
+@import "components/text";
+@import "components/vacature-section";
+@import "components/werken-bij_section";
 
 @import "components/swiper-scrollbar";
 @import 'aos/dist/aos.css';

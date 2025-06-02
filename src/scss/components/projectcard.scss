@@ -3,7 +3,29 @@
     padding: 18px;
     overflow: hidden;
     cursor: pointer;
+    transition: 0.5s ease;
   }
+
+  .container-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 50px 0px rgba(36, 44, 48, 0.4);
+    color: #000;
+
+    .project-categories {
+     color: #fff !important;
+    }
+  }
+
+   
+
+ .project-right-top:hover::after {
+    background: var(--Neutral-light);
+     .project-categories {
+     background: var(--Primary-400, #303030);
+    }
+  }
+
+
 
   .project-card {
     border-radius: 12px;
@@ -19,8 +41,8 @@
   }
 
   .project-categories {
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+background: var(--Primary-400, #303030);
     padding: 9px 8px;
   }
 
