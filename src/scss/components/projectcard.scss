@@ -12,20 +12,16 @@
     color: #000;
 
     .project-categories {
-     color: #fff !important;
+      color: #fff !important;
     }
   }
 
-   
-
- .project-right-top:hover::after {
+  .project-right-top:hover::after {
     background: var(--Neutral-light);
-     .project-categories {
-     background: var(--Primary-400, #303030);
+    .project-categories {
+      background: var(--Primary-400, #303030);
     }
   }
-
-
 
   .project-card {
     border-radius: 12px;
@@ -41,9 +37,10 @@
   }
 
   .project-categories {
-   border-radius: 10px;
-background: var(--Primary-400, #303030);
+    border-radius: 10px;
+    background: var(--Primary-400, #303030);
     padding: 9px 8px;
+   
   }
 
   .project-content h5 {
@@ -81,7 +78,7 @@ background: var(--Primary-400, #303030);
     background: #dc0d1a;
   }
 
-  .lead {
-    font-size: 16px !important;
-  }
+  // .lead {
+  //   font-size: 16px !important;
+  // }
 }
