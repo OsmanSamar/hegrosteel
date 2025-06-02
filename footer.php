@@ -100,6 +100,7 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
                             <li class="footer-li">
                                 <?= get_field("footer_adrres", 'option') ?>
                             </li>
+                            
                             <li class="footer-li">
                                 <?= get_field("hegrosteel_adress", 'option') ?>
                             </li>
@@ -123,8 +124,8 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
 
                     <!-- Diensten -->
 
-                    <div class="col-6 col-md-3 offset-lg-1" data-aos="fade-up" data-aos-offset="120" data-aos-delay="150"
-                        data-aos-duration="70" data-aos-easing="ease-in-out">
+                    <div class="col-6 col-md-3 offset-lg-1" data-aos="fade-up" data-aos-offset="120"
+                        data-aos-delay="150" data-aos-duration="70" data-aos-easing="ease-in-out">
                         <div class="d-block mb-3 list">
                             <?= get_field("diensten_link_title", 'option') ?>
                         </div>

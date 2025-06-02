@@ -159,6 +159,7 @@
     .swiper-button-prev,
     .swiper-button-next {
       position: static;
+      z-index: 1;
       color: #fff;
       display: flex !important;
       width: 52px;
@@ -172,6 +173,15 @@
       background: var(--Primary-400);
       font-size: 18px;
       cursor: pointer;
+      transition: 0.5s ease;
+
+      &:hover {
+        background: var(--Neutral-light);
+        .dropdown-arrow {
+          filter: brightness(0);
+        }
+      }
     }
+   
   }
 }

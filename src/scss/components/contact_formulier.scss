@@ -34,10 +34,13 @@
   .regular {
     flex: 1;
   }
-  a:hover {
-    color: var(--Secondary-500);
-  }
+  // a:hover {
+  //   color: var(--Secondary-500);
+  // }
 
+  a{
+    cursor: pointer;
+  }
   .contact-form {
     border-radius: 30px !important;
     background: var(--Primary-600, #020202) !important;

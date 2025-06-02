@@ -107,6 +107,7 @@
   .swiper-button-prev,
   .swiper-button-next {
     position: static;
+    z-index: 1;
     color: #fff;
     display: flex;
     width: 52px;

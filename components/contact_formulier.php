@@ -15,7 +15,6 @@ $fields = $args['fields'];
                     <span class=" regular diffrent-color"><?= $fields['adress_title']; ?></span>
                     <a href="https://www.google.com/maps/search/?api=1&query=<?= urlencode($fields['adress']); ?>"
                         target="_blank" class="regular">
-                        <!-- <?= $fields['adress']; ?> -->
                         <?= get_field("hegrosteel_adress", 'option') ?>
                     </a>
                 </div>
@@ -23,7 +22,6 @@ $fields = $args['fields'];
                 <div class="contact-row">
                     <span class="regular diffrent-color "><?= $fields['email_title']; ?></span>
                     <a href="mailto:<?= get_field("hegrosteel_mail", 'option') ?>" class=" regular footer-link-ltr">
-                        <!-- <?= $fields['email']; ?> -->
                         <?= get_field("hegrosteel_mail", 'option') ?>
                     </a>
                 </div>
@@ -31,7 +29,6 @@ $fields = $args['fields'];
                 <div class="contact-row">
                     <span class=" regular diffrent-color "><?= $fields['telephone_title']; ?></span>
                     <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>" class=" regular footer-link-ltr">
-                        <!-- <?= $fields['telephone']; ?> -->
                         <?= get_field("hegrosteel_phone_num", 'option') ?>
                     </a>
                 </div>
