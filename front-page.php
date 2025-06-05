@@ -34,7 +34,7 @@ $fields = get_fields();
                                 data-aos-easing="ease-in-out">
                                 <span>HEGRO Steel.</span> <span>Stand strong.</span>
                             </h1>
-                            <div class="lead" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
+                            <div class="lead col-lg-9 col-xxl-12" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
                                 data-aos-duration="70" data-aos-easing="ease-in-out">
                                 Wij leveren en monteren staalconstructies, plaatsen daken en wanden, installeren prefab
                                 beton en
