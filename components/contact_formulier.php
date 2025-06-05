@@ -51,6 +51,7 @@ $fields = $args['fields'];
                         </span>
 
                         <span class="whatsapp-container">
+                             <span class="whatsapp-badge">1</span>
                             <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
                                 alt="Open whatsapp" class="whatsappimg" />
                         </span>

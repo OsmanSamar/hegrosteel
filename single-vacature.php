@@ -95,6 +95,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             <a type="button " class="button primary-button"
               href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" target="_blank">
               Vragen? App Hermen
+              
               <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/white-whatsapp-icon.svg"
                 alt="Open whatsapp" class="whatsappimg" />
             </a>

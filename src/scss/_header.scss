@@ -11,6 +11,7 @@
 }
 
 .whatsapp-container {
+  position: relative;
   display: flex;
   width: 52px;
   height: 52px;
@@ -32,17 +33,34 @@
     }
   }
 }
+
 .whatsappimg {
   width: 22.048px;
   height: 22.04px;
   flex-shrink: 0;
 }
+
 .whatsapp-fixed {
   position: fixed;
   bottom: 35px;
   right: 23px;
   z-index: 1000;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.whatsapp-badge {
+    position: absolute;
+    top: -6px;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-color:var(--Secondary-500);
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 16px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
 }
 
 .bel-of-app-container {
