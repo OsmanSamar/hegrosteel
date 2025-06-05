@@ -7,10 +7,10 @@ $fields = get_fields();
     <div class=" position-relative">
         <div class="container">
             <!-- Hero Section -->
-            <div class="hero-section bg-holder hero-responsive position-relative" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
-                        data-aos-easing="ease-in-out">
+            <div class="hero-section bg-holder hero-responsive position-relative" data-aos="fade-up"
+                data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
 
-                <!-- Background Image -->
+
                 <div class="bg-content"
                     style="background: linear-gradient(180deg,  rgba(0, 0, 0, 0.00) -11.36%, rgba(0, 0, 0, 0.81) 82.88%), url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;">
                 </div>
@@ -26,11 +26,13 @@ $fields = get_fields();
 
 
                 <div class="hero-content position-relative">
+
+                 
                     <div class="row align-items-end">
-                        <div class="col-12 col-md-7 col-lg-9 col-xl-7 ">
+                        <div class="col-12 col-md-8 col-lg-8 col-xl-7 col-xxl-6">
                             <h1 data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
-                                data-aos-easing="ease-in-out"><span>HEGRO Steel.</span>
-                                <span>Stand strong.</span>
+                                data-aos-easing="ease-in-out">
+                                <span>HEGRO Steel.</span> <span>Stand strong.</span>
                             </h1>
                             <div class="lead" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
                                 data-aos-duration="70" data-aos-easing="ease-in-out">
@@ -41,7 +43,7 @@ $fields = get_fields();
                             </div>
                         </div>
                         <div
-                            class="col-12 col-md-5 col-lg-3 col-xl-5 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0 left-col">
+                            class="col-12 col-md-1 offset-md-3 col-lg-1 offset-lg-3 col-xl-1 offset-xl-4 col-xxl-1 offset-xxl-5 d-flex justify-content-lg-start justify-content-md-start mt-4 mt-md-0 left-col">
                             <a href="#Service-Section" aria-label="Go to the content">
                                 <div class="arrow-container mt-3">
                                     <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/down-arrow.svg"
@@ -50,7 +52,11 @@ $fields = get_fields();
                             </a>
                         </div>
                     </div>
+
+
+
                 </div>
+
             </div>
 
             <!-- Service-section -->
