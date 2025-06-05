@@ -1,0 +1,33 @@
+.img_with_text {
+  .btn-wrap {
+    margin-top: 60px;
+  }
+
+  .img_with_text .order-1 {
+    order: 1;
+  }
+  .img_with_text .order-2 {
+    order: 2;
+  }
+
+  .img_with_text.with-background {
+    border-radius: 40px;
+    padding: 60px 10px;
+    &.bg-light {
+      background: var(--Primary-400) !important;
+    }
+
+    &.bg-dark {
+      background: var(--Primary-600, #020202) !important;
+    }
+    @media (min-width: 992px) {
+      padding: 60px;
+    }
+  }
+
+  .img_with_text {
+    margin-bottom: 60px;
+  }
+
+ 
+}

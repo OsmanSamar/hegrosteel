@@ -12,8 +12,8 @@ $anchorId = $fields['anchor_id'] ?? '';
 
 <div id="<?= esc_attr($anchorId); ?>"
     class="img_with_text  <?= $backgroundClass ?> <?= $hasBackground ? 'with-background' : ''; ?>">
-    <div class="">
-        <!-- container -->
+   
+       
         <div class="row d-flex flex-wrap">
             <!-- Image Column -->
             <div class="col-12 col-md-6 <?= $columnRight ?> d-flex flex-column mb-5 mb-lg-0 <?= $imageOnLeft ? 'order-1' : 'order-2'; ?>"
@@ -27,13 +27,13 @@ $anchorId = $fields['anchor_id'] ?? '';
             <div class=" col-12 col-md-6 <?= $columnClass ?> d-flex align-items-center justify-content-center mb-5  mb-lg-0  <?= $imageOnLeft ? 'order-2' : 'order-1'; ?>"
                 data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
                 data-aos-easing="ease-in-out">
-                <!-- my-auto py-4 -->
+               
                 <div
                     class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
-                    <!--  my-auto py-4 -->
+                    
                     <div class="content">
                         <h3 style="font-family:Funnel Display"><?= $fields['title']; ?></h3>
-                        <div class="regular mb-4 mt-4"><?= $fields['text']; ?></div>
+                        <div class="regular mt-4"><?= $fields['text']; ?></div>
 
                         <?php if (!empty($fields['list'])): ?>
                             <div class="repeater-list mt- mb-4">
@@ -48,7 +48,7 @@ $anchorId = $fields['anchor_id'] ?? '';
                         <?php endif; ?>
 
                         <!-- Button in Repeater  -->
-                        <div class="d-flex  gap-3 flex-wrap">
+                        <div class="btn-wrap d-flex  gap-3 flex-wrap">
                             <?php if (!empty($fields['buttons'])): ?>
                                 <?php foreach ($fields['buttons'] as $button_row):
                                     $button = $button_row['button'];
@@ -78,5 +78,5 @@ $anchorId = $fields['anchor_id'] ?? '';
                 </div>
             </div>
         </div>
-    </div>
+    
 </div>
