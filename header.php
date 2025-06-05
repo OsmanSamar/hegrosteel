@@ -44,6 +44,7 @@ code-blauw.nl
 
 
 </head>
+
 <?php
 $menu_id = get_nav_menu_locations()['header-menu'];
 $items = wp_get_nav_menu_items($menu_id);
