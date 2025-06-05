@@ -1,9 +1,18 @@
 .services_section {
+  margin: 80px 0px;
+
   .lead {
     font-size: 16px;
   }
 
   .number + div > a h3 {
     font-weight: 400;
+  }
+
+   @media (min-width: 992px) {
+    h2{
+      
+    line-height: 49px;
+    }
   }
 }
