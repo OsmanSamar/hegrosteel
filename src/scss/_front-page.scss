@@ -40,12 +40,12 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 0px 30px 30px 30px !important;
+        // border-radius: 0px 30px 30px 30px !important;
         width: min(100vw, calc(100% + 100px));
-        clip-path: url(#hero-wrap);
+        // clip-path: url(#hero-wrap);
 
         @media screen and (max-width:768px) {
-          clip-path: url(#hero-wrap-sm);
+          // clip-path: url(#hero-wrap-sm);
         }
         
       }

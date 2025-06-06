@@ -94,13 +94,30 @@ img {
 @import "components/swiper-scrollbar";
 @import 'aos/dist/aos.css';
 
-.page:has(.lijnen-bg) {
+.page:has(.lijnen-bg):not(:has(.contact-formulier)) {
   background-image: url(../images/lijnen.png) !important;
   background-repeat: repeat-x;
   background-size: 1470px;
   background-position: top center;
 }
 
+.page:has(.contact-formulier){
+  background-image: none !important;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    rotate: 180deg;
+    background-image: url(../images/lijnen.png) !important;
+    background-repeat: repeat-x;
+    background-size: 1470px;
+    background-position: bottom center;
+  
+  }
+}
 
 .single-project:has(.lijnen-bg),
 .archive:has(.lijnen-bg) {

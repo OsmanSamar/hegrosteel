@@ -47,7 +47,7 @@
   }
 
   .right-bottom-shape:hover::before {
-    background: var(--Neutral-light);
+    --background: var(--Neutral-light);
   }
 
   .right-bottom-shape:hover .lead,
@@ -55,8 +55,8 @@
     color: var(--Primary-600);
   }
 
-  .left-bottom-shape:hover::after {
-    background: #6B6B6B !important;
+  .left-bottom-shape:hover::before {
+    --background: #575757 !important;
   }
 
   @media(min-width:768px){

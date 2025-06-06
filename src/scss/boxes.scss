@@ -2,14 +2,15 @@
     --all: 0px;
     --background: pink;
 
+    transition: .5s ease;
     display: inline-block;
-    margin: 10px;
-    filter: url(#round);
+    filter: url(#semiround);
     position: relative;
 
     &::before {
+        transition: .5s ease;
 
-        filter: url(#round);
+        filter: url(#semiround);
         content: "";
         position: absolute;
         top: 0;
@@ -17,10 +18,13 @@
         right: 0;
         bottom: 0;
         background: var(--background, red);
-        mask: linear-gradient(45deg, transparent 0 var(--bottom-left, var(--all)), #fff 0) bottom left, linear-gradient(-45deg, transparent 0 var(--bottom-right, var(--all)), #fff 0) bottom right,
-            linear-gradient(135deg, transparent 0 var(--top-left, var(--all)), #fff 0) top left, linear-gradient(-135deg, transparent 0 var(--top-right, var(--all)), #fff 0) top right;
+        mask: linear-gradient(39deg, transparent 0 var(--bottom-left, var(--all)), #fff 0) bottom left, linear-gradient(-39deg, transparent 0 var(--bottom-right, var(--all)), #fff 0) bottom right,
+            linear-gradient(141deg, transparent 0 var(--top-left, var(--all)), #fff 0) top left, linear-gradient(-141deg, transparent 0 var(--top-right, var(--all)), #fff 0) top right;
         mask-size: 50.5% 50.5%;
         mask-repeat: no-repeat;
         z-index: -1;
+    }
+    &.rounded{
+        filter: url(#round);
     }
 }

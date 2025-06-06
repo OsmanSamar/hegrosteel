@@ -6,7 +6,7 @@ $fields = $args['fields'];
         <div class="col-12 col-md-6 col-lg-5 offset-lg-1  mb-4 mb-lg-0" data-aos="fade-up" data-aos-offset="120"
             data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
             <!-- Used Group -->
-            <div class="shared-content right-bottom-shape">
+            <div class="shared-content right-bottom-shape fancybox" style="--bottom-right:50px">
                 <a href="<?= esc_url($fields['blok_1']['link']['url']); ?>">
                     <div class="lead "><?= $fields['blok_1']['sub_title']; ?></div>
                     <h3 style="font-family: Funnel Display"><?= $fields['blok_1']['title']; ?></h3>
@@ -20,7 +20,7 @@ $fields = $args['fields'];
 
         <div class="col-lg-5 col-md-6 mt-auto" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
             data-aos-duration="70" data-aos-easing="ease-in-out">
-            <div class="shared-content  left-bottom-shape  position-relative">
+            <div class="shared-content  left-bottom-shape  position-relative fancybox" style="--bottom-left:50px">
                 <a href="<?= esc_url($fields['blok_2']['link']['url']); ?>">
                     <div class="lead  "><?= $fields['blok_2']['sub_title']; ?></div>
                     <h3 style="font-family: Funnel Display"><?= $fields['blok_2']['title']; ?></h3>
@@ -35,7 +35,7 @@ $fields = $args['fields'];
         <div class="row">
             <div class="col-lg-5 offset-lg-6 col-xl-4 col-md-6 offset-md-6 mt-4" data-aos="fade-up"
                 data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
-                <div class="shared-content  left-top-shape">
+                <div class="shared-content  left-top-shape fancybox" style="--top-left:50px">
                     <a href="<?= esc_url($fields['blok_3']['link']['url']); ?>">
                         <div class="lead back-text"><?= $fields['blok_3']['sub_title']; ?></div>
                         <h3 class="back-text" style="font-family: Funnel Display"><?= $fields['blok_3']['title']; ?>
