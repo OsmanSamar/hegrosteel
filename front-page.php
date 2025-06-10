@@ -13,6 +13,7 @@ $fields = get_fields();
 
                 <div class="bg-content fancybox rounded"
                     style="--top-left:300px;--background:linear-gradient(180deg,  rgba(0, 0, 0, 0.00) -11.36%, rgba(0, 0, 0, 0.81) 82.88%), url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;">
+                    <video src="<?= $fields['header_video']['url'] ?>" autoplay muted loop></video>
                     
                 </div>
 
