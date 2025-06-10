@@ -49,7 +49,7 @@ $projectPage = get_page_by_path('projecten');
 
                             <!-- Woningbouw Dropdown -->
                             <div class="plaats-group mb-3">
-                                <label for="project_category" class="bold">Categorie</label>
+                                <label for="project_category" class="bold mb-2">Categorie</label>
                                 <select name="project_category" id="project_category" class="form-select filter-input">
                                     <option selected value="">Alle Categorieën</option>
                                     <?php foreach ($categories as $category) { ?>
@@ -61,7 +61,7 @@ $projectPage = get_page_by_path('projecten');
 
                             <!-- Plaats Dropdown -->
                             <div class="plaats-group mb-3">
-                                <label for="plaats" class="bold">Plaats</label>
+                                <label for="plaats" class="bold mb-2">Plaats</label>
                                 <select name="plaats" id="plaats" class="form-select filter-input">
                                     <option selected value="">Alle Plaatsen</option>
                                     <?php foreach ($plaaten as $plaat) { ?>

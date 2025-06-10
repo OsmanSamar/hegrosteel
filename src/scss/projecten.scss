@@ -4,7 +4,7 @@
   }
 
   .filter-section {
-    padding: 53px 30px 83px 30px;
+    padding: 35px 30px 83px 30px;
     align-items: flex-start;
     align-self: stretch;
     border-radius: 20px;
@@ -29,5 +29,6 @@
     line-height: 160%;
     background-image: url("../images/filtter-icon.svg") !important;
     background-size: 24px 24px !important;
+    padding: 16px !important;
   }
 }
