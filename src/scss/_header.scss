@@ -190,8 +190,8 @@
 }
 
 .nav-link-ltr:hover::before {
-  // width: 100%;
-  width: 70%;
+  
+  width: calc(100% - 3rem) !important;
 }
 
 .nav-link-ltr {
