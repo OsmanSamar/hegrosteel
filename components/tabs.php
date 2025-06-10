@@ -55,7 +55,7 @@ $fields = $args['fields'];
                                                     ?>
                                                     <a href="<?= esc_url($button['url']); ?>"
                                                         target="<?= esc_attr($button['target'] ?: '_self'); ?>"
-                                                        class="button <?= esc_attr($custom_class); ?>">
+                                                        class="mt-3 button <?= esc_attr($custom_class); ?>">
                                                         <?= esc_html($button['title']); ?>
                                                         <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                                                             class="dropdown-arrow">

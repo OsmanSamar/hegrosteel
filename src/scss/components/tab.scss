@@ -38,6 +38,12 @@
   //   background: transparent !important;
   // }
 
+//To moves the text down 
+  .tab-link:not(.active) h4 {
+    position: relative;
+    top: 10px; 
+   
+}
   /* The border between the second and third tab */
   .tab-2 .tab-link::after {
     content: "";
