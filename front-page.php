@@ -11,8 +11,9 @@ $fields = get_fields();
                 data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
 
 
-                <div class="bg-content"
-                    style="background: linear-gradient(180deg,  rgba(0, 0, 0, 0.00) -11.36%, rgba(0, 0, 0, 0.81) 82.88%), url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;">
+                <div class="bg-content fancybox rounded"
+                    style="--top-left:300px;--background:linear-gradient(180deg,  rgba(0, 0, 0, 0.00) -11.36%, rgba(0, 0, 0, 0.81) 82.88%), url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;">
+                    
                 </div>
 
                 <!-- Optional Image/Video -->

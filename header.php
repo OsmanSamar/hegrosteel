@@ -69,14 +69,20 @@ unset($menu_items);
 
 
     
+
 <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
   <defs>
-        <filter id="round">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-            <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-        </filter>
-    </defs>
+    <filter id="round">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+    </filter>
+    <filter id="semiround">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+      <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+    </filter>
+  </defs>
 </svg>
 
     <svg class="svg">
@@ -159,14 +165,6 @@ unset($menu_items);
             height: 0;
         }
 
-        .hero-bevel {
-            clip-path: url(#hero-wrap) !important;
-        }
-
-        .hero-sm {
-            clip-path: url(#hero-wrap-sm) !important;
-
-        }
 
         .bevel-right {
             clip-path: url(#beveled-shape-right) !important;
@@ -214,34 +212,7 @@ unset($menu_items);
 
         .right-bottom-shape {
             position: relative;
-            --background-color: var(--Primary-600);
-
-            &::before,
-            &::after {
-                position: absolute;
-                content: "";
-                width: 100%;
-                height: 100%;
-                transform: translateX(-50%) translateY(-50%);
-                left: 50%;
-                top: 50%;
-                clip-path: url(#right-bottom-shape) !important;
-                transition: .5s ease;
-            }
-
-            &::before {
-                z-index: 0;
-                background-color: var(--background-color);
-
-            }
-
-            &::after {
-                z-index: -1;
-                /* background-color: var(--background-color); */
-                width: calc(100% - calc(2 * var(--border-width)));
-                height: calc(100% - calc(2 * var(--border-width)));
-            }
-
+            --background: var(--Primary-600);
             >* {
                 position: relative;
                 z-index: 2;
@@ -251,83 +222,11 @@ unset($menu_items);
 
         .left-top-shape {
             position: relative;
-            --background-color: #ffffff;
-            transition: .5s ease;
-
-
-            &::before,
-            &::after {
-                position: absolute;
-                content: "";
-                width: 100%;
-                height: 100%;
-                transform: translateX(-50%) translateY(-50%);
-                left: 50%;
-                top: 50%;
-                clip-path: url(#left-top-shape) !important;
-
-
-            }
-
-            &::before {
-                z-index: 0;
-                background-color: var(--background-color);
-                transition: .5s ease;
-            }
-
-            &::after {
-                z-index: -1;
-                width: calc(100% - calc(2 * var(--border-width)));
-                height: calc(100% - calc(2 * var(--border-width)));
-                transition: .5s ease;
-            }
-
-            >* {
-                position: relative;
-                z-index: 2;
-            }
-
+            --background: #ffffff;
         }
 
         .left-bottom-shape {
-            --background-color: #1c1c1c;
-            --border-color: #6B6B6B;
-            --border-width: 2px;
-            transition: .5s ease;
-
-
-            &::before,
-            &::after {
-                position: absolute;
-                content: "";
-                width: 100%;
-                height: 100%;
-                transform: translateX(-50%) translateY(-50%);
-                left: 50%;
-                top: 50%;
-                clip-path: url(#left-bottom-shape) !important;
-                z-index: 0;
-                transition: .5s ease;
-            }
-
-            &::before {
-                /* z-index: 2; */
-                background-color: var(--border-color);
-                transition: .5s ease;
-            }
-
-            &::after {
-                /* z-index: 2; */
-                background-color: var(--background-color);
-                width: calc(100% - calc(2 * var(--border-width)));
-                height: calc(100% - calc(2 * var(--border-width)));
-                transition: .5s ease;
-            }
-
-            >* {
-                position: relative !important;
-                z-index: 1 !important;
-            }
+            --background: #6B6B6B;
         }
 
         .bottom-right-shape {
