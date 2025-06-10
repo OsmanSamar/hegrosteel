@@ -26,7 +26,7 @@
   transition: all 0.5s ease;
   &:hover {
     transform: scale(1.05);
-    // box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
+   
     background: var(--Secondary-500);
     .whatsappimg {
       filter: brightness(0) invert(1);
@@ -147,10 +147,7 @@
 
 /* NavBar Links */
 .navbar-nav .nav-link {
-  //Added
-  // padding-left: 1.5rem !important;
-  // padding-right: 1.5rem !important;
-  //
+  
   margin: 0 10px;
   color: #fff;
   font-family: Figtree;
@@ -219,7 +216,7 @@
   }
 }
 
-//Hamburger-menu
+
 //Added new Hamburger style
 .wrapper {
   height: 52px;
@@ -443,14 +440,13 @@
     text-decoration: underline;
     text-decoration-color: transparent;
   }
-  //transition: font-weight 0.3s ease;
+  
   &:hover {
     .number {
       background: var(--Secondary-500);
     }
     .text-hover-underline {
-      // transition: font-weight 0.3s ease, letter-spacing 0.3s ease;
-      // transition: all 0.3s ease;
+     
       text-decoration-color:currentColor;
       font-weight: 700;
     }
@@ -484,6 +480,9 @@
 }
 .text_with_button {
   margin: 0px 0px 60px 0px;
+   @media (min-width: 768px) {
+    margin: 0px 0px 120px 0px;
+  }
 }
 
 .img-text {
@@ -504,7 +503,6 @@
 
 @media (min-width: 992px) {
   .navbar-nav .nav-link {
-    //Added
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
   }
@@ -521,6 +519,9 @@
   }
 }
 
+.projecten-slider{
+  margin-bottom: 60px !important;
+}
 
 .pagination-btn {
   color: var(--Primary-500);
