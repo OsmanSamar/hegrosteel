@@ -23,7 +23,8 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
         <!-- First section -->
         <div class="first-section">
             <div class="row">
-                <div class="col-lg-7 d-flex flex-column justify-content-start align-items-start gap-3 mb-5 mb-lg-0">
+                <div class="col-lg-7 d-flex flex-column justify-content-start align-items-start gap-3 mb-5 mb-lg-0" data-aos="fade-up"
+                data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                     <?php if ($categories): ?>
                         <?php foreach ($categories as $term): ?>
                             <div class="project-items mb-3 gap-2">
@@ -34,7 +35,6 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php endforeach; ?>
                     <?php endif; ?>
 
-                    <!-- <h3 class="mb-3 mt-3"><?php the_title(); ?></h3> -->
                     <h3 class="mb-3 mt-3"><?= get_field("title") ?></h3>
                     <span class="regular"> <?= get_field("text") ?></span>
 
@@ -48,7 +48,9 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                     </div>
                 </div>
 
-                <div class="col-lg-4 offset-lg-1">
+                   
+                <div class="col-lg-4 offset-lg-1" data-aos="fade-up"
+                data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                     <div class="right-section  right-bottom-border position-relative" style="padding: 50px;">
                         <h4>
                             Ontwerp
@@ -138,7 +140,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                             <div class="container">
                                 <div class="row">
                                     <div
-                                        class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
+                                        class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-5 ">
                                         <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
                                             <img loading="lazy"
                                                 src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"

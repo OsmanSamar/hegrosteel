@@ -2,7 +2,7 @@
   .img_with_text{
     margin-bottom: unset !important;
     @media (min-width: 768px) {
-    margin-bottom: 80px !important;
+    margin-bottom: 100px !important;
   }
  
   }
@@ -18,10 +18,7 @@
     border-radius: 5px;
     background: #454545;
     transition: all 0.5s ease;
-    // &:hover {
-    //   transform: scale(1.05);
-    //   box-shadow: 0 0 15px 5px rgba(220, 13, 26, 0.6);
-    // }
+
 
     .right-section {
       padding: 53px 50px 83px 50px;
@@ -44,7 +41,8 @@
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
     display: flex;
-    padding: 60px 0px;
+    // padding: 60px 0px;
+    margin-bottom: 40px;
     flex-direction: column;
     gap: 10px;
     flex-shrink: 0;
@@ -74,8 +72,8 @@
       display: none !important;
     }
     .swiper-navigation {
-      margin-top: 90px;
-      margin-bottom: 25px;
+      margin-top: 60px;
+      // margin-bottom: 25px;
     }
 
     .swiper-arrow {
