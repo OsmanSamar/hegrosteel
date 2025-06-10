@@ -1,4 +1,14 @@
 .single-project {
+  .img_with_text{
+    margin-bottom: unset !important;
+    @media (min-width: 768px) {
+    margin-bottom: 80px !important;
+  }
+ 
+  }
+  .projecten-slider{
+      margin-bottom: 80px !important;
+  }
   .first-section {
     margin: 80px 0px;
   }
