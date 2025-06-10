@@ -45,7 +45,7 @@ $anchorId = $fields['anchor_id'] ?? '';
                     <?php endif; ?>
 
                     <!-- Button in Repeater  -->
-                    <div class="btn-wrap d-flex  gap-3 flex-wrap">
+                    <div class="btn-wrap d-flex  gap-3 flex-wrap ">
                         <?php if (!empty($fields['buttons'])): ?>
                             <?php foreach ($fields['buttons'] as $button_row):
                                 $button = $button_row['button'];

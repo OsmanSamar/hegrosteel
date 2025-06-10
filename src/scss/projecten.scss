@@ -1,7 +1,5 @@
 .projecten {
-  .hero-section {
-    height: unset;
-  }
+ 
 
   .filter-section {
     padding: 35px 30px 83px 30px;
@@ -30,5 +28,6 @@
     background-image: url("../images/filtter-icon.svg") !important;
     background-size: 24px 24px !important;
     padding: 16px !important;
+    border-radius: 8px !important;
   }
 }
