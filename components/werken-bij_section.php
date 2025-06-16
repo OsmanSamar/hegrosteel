@@ -18,7 +18,7 @@ $fields = $args['fields'];
             </div>
         </div>
 
-        <div class="col-lg-5 col-md-6 mt-auto" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
+        <div class="col-12 col-md-6 col-lg-5  mt-auto" data-aos="fade-up" data-aos-offset="120" data-aos-delay="50"
             data-aos-duration="70" data-aos-easing="ease-in-out">
             <div class="shared-content  left-bottom-shape  position-relative fancybox" style="--bottom-left:50px">
                 <a href="<?= esc_url($fields['blok_2']['link']['url']); ?>">
@@ -32,8 +32,9 @@ $fields = $args['fields'];
         </div>
 
 
-        <div class="row">
-            <div class="col-lg-5 offset-lg-6 col-xl-4 col-md-6 offset-md-6 mt-4" data-aos="fade-up"
+        <div class="">
+            <!-- row -->
+            <div class="col-12 col-lg-5 offset-lg-6 col-xl-4 col-md-6 offset-md-6 mt-4" data-aos="fade-up"
                 data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                 <div class="shared-content  left-top-shape fancybox" style="--top-left:50px">
                     <a href="<?= esc_url($fields['blok_3']['link']['url']); ?>">
