@@ -48,7 +48,7 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
                     <?php endif; ?>
 
                     <?php if (!is_singular('vacature')): ?>
-                        <div class="d-flex d-md-none d-lg-none">
+                        <div class="d-flex d-md-none d-lg-none text-center">
                             <h2><?= get_field("footer_title_on_sm", 'option') ?></h2>
                         </div>
 
