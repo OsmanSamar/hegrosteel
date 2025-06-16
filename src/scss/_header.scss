@@ -26,7 +26,7 @@
   transition: all 0.5s ease;
   &:hover {
     transform: scale(1.05);
-   
+
     background: var(--Secondary-500);
     .whatsappimg {
       filter: brightness(0) invert(1);
@@ -48,19 +48,19 @@
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .whatsapp-badge {
-    position: absolute;
-    top: -6px;
-    right: 0;
-    width: 16px;
-    height: 16px;
-    background-color:var(--Secondary-500);
-    color: white;
-    font-size: 11px;
-    font-weight: bold;
-    text-align: center;
-    line-height: 16px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+  position: absolute;
+  top: -6px;
+  right: 0;
+  width: 16px;
+  height: 16px;
+  background-color: var(--Secondary-500);
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .bel-of-app-container {
@@ -73,10 +73,9 @@
   background: var(--Primary-400, #303030);
 }
 
-
 .btn-wrap {
-    margin-top: 60px;
-  }
+  margin-top: 60px;
+}
 
 .img_with_text .order-1 {
   order: 1;
@@ -148,7 +147,6 @@
 
 /* NavBar Links */
 .navbar-nav .nav-link {
-  
   margin: 0 10px;
   color: #fff;
   font-family: Figtree;
@@ -189,10 +187,10 @@
     hue-rotate(341deg) brightness(92%) contrast(105%);
 }
 
-.nav-link-ltr:hover::before {
-  
-  width: calc(100% - 3rem) !important;
-}
+// .nav-link-ltr:hover::before {
+
+//   width: calc(100% - 3rem) !important;
+// }
 
 .nav-link-ltr {
   position: relative;
@@ -217,7 +215,6 @@
   }
 }
 
-
 //Added new Hamburger style
 .wrapper {
   height: 52px;
@@ -230,7 +227,7 @@
   align-items: center;
   width: 52px;
   height: 52px;
-  border: 2px solid #dc0d1a;
+  border: 2px solid var(--Neutral-light);
 }
 
 .hamburger {
@@ -328,7 +325,6 @@
   }
 }
 
-
 .dropdownarrow {
   width: 12px;
   height: 7.41px;
@@ -340,11 +336,9 @@
   height: 19px;
 }
 
-
- .navbar-nav .dropdown-menu {
-    padding: 0;
-  
-  }
+.navbar-nav .dropdown-menu {
+  padding: 0;
+}
 
 @media (max-width: 1199.98px) {
   .navbar-nav .dropdown-menu {
@@ -370,15 +364,29 @@
     line-height: 160%;
     position: relative;
     text-decoration: none;
+    transition: all 0.3s ease;
 
     &:hover {
-      background: var(--Primary-200) !important;
+      color: var(--Secondary-500) !important;
     }
+
+    // .nav-link-ltr::before {
+    //   content: "";
+    //   position: absolute;
+      
+    //   bottom: 0;
+    //   height: 1px;
+    //   width: 0%;
+    //   background-color: var(--Secondary-500);
+    //   transition: width 0.3s ease;
+    // }
   }
 
-  //Added
-  //max-width: 1199.98px
-  //max-width: 991px
+  // 1
+  .nav-link-ltr:hover::before {
+    width: calc(100% - 0rem) !important;
+  }
+
   .navbar-toggler {
     display: flex;
   }
@@ -432,23 +440,22 @@
 
 .vacature-item {
   cursor: pointer;
-  
-  .number{
+
+  .number {
     transition: 0.3s ease;
   }
-  .text-hover-underline{
+  .text-hover-underline {
     transition: 0.3s ease;
     text-decoration: underline;
     text-decoration-color: transparent;
   }
-  
+
   &:hover {
     .number {
       background: var(--Secondary-500);
     }
     .text-hover-underline {
-     
-      text-decoration-color:currentColor;
+      text-decoration-color: currentColor;
       font-weight: 700;
     }
   }
@@ -459,8 +466,6 @@
   background: var(--Primary-400);
   padding: 5px 8px;
 }
-
-
 
 .call_to_action_section {
   margin: 80px 0px;
@@ -481,7 +486,7 @@
 }
 .text_with_button {
   margin: 0px 0px 60px 0px;
-   @media (min-width: 768px) {
+  @media (min-width: 768px) {
     margin: 0px 0px 120px 0px;
   }
 }
@@ -493,7 +498,6 @@
   object-fit: cover;
 }
 
-
 .center_text_button {
   margin: 100px 0px;
   padding: 40px;
@@ -503,6 +507,11 @@
 }
 
 @media (min-width: 992px) {
+  // 2
+  .nav-link-ltr:hover::before {
+    width: calc(100% - 3rem) !important;
+  }
+
   .navbar-nav .nav-link {
     padding-left: 1.5rem !important;
     padding-right: 1.5rem !important;
@@ -520,7 +529,7 @@
   }
 }
 
-.projecten-slider{
+.projecten-slider {
   margin-bottom: 60px !important;
 }
 
@@ -551,7 +560,7 @@
   background-repeat: no-repeat;
   border: unset;
   background-color: var(--Primary-500);
-   cursor: pointer;
+  cursor: pointer;
 }
 
 .pagination-prev {
@@ -564,4 +573,3 @@
   background-color: var(--Primary-500);
   cursor: pointer;
 }
-

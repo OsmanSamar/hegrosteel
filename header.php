@@ -68,22 +68,25 @@ unset($menu_items);
 
 
 
-    
 
-<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-  <defs>
-    <filter id="round">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-      <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-    </filter>
-    <filter id="semiround">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
-      <feComposite in="SourceGraphic" in2="goo" operator="atop" />
-    </filter>
-  </defs>
-</svg>
+
+    <svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg"
+        version="1.1">
+        <defs>
+            <filter id="round">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+            <filter id="semiround">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
 
     <svg class="svg">
         <clipPath id="hero-wrap-sm" clipPathUnits="objectBoundingBox">
@@ -213,6 +216,7 @@ unset($menu_items);
         .right-bottom-shape {
             position: relative;
             --background: var(--Primary-600);
+
             >* {
                 position: relative;
                 z-index: 2;
@@ -292,7 +296,7 @@ unset($menu_items);
                 clip-path: url(#right-bottom-border) !important;
                 z-index: 0;
                 transition: .5s ease;
-               
+
             }
 
             &::before {
@@ -455,11 +459,12 @@ unset($menu_items);
                                                 alt="Dropdown Icon" style="" class="dropdownarrow">
                                         </a>
                                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <!--  style="top:71px; left: 11px;" -->
+
                                             <?php foreach ($item->children as $child): ?>
                                                 <li>
                                                     <a class="dropdown-item  d-flex justify-content-between align-items-center"
                                                         href="<?= $child->url; ?>">
+                                                        <!-- nav-link-ltr -->
                                                         <?= $child->title ?>
 
                                                     </a>
@@ -478,9 +483,9 @@ unset($menu_items);
                             <?php endforeach; ?>
 
                         </ul>
-                        <a href="<?= esc_url(get_permalink(get_page_by_path('contact'))) ?>"
-                            class="button secondary-button ms-lg-3 mt-2 ">
-                            Neem contact op
+                        <a href="<?= get_field("btn", 'option')['url'] ?>"
+                            class="button secondary-button ms-lg-3 mt-2 mb-3">
+                            <?= get_field("btn", 'option')['title'] ?>
                             <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                                 class="dropdown-arrow">
                         </a>
