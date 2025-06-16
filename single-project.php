@@ -41,8 +41,9 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
 
                     <!-- Buttons -->
                     <div class="mt-4">
-                        <a type="button" class="button secondary-button" href="<?= get_field("button")['url'] ?>">
-                            <?= get_field("button")['title'] ?>
+                        <!-- Hard Code -->
+                         <a type="button" class="button secondary-button" href="<?= esc_url(get_permalink(get_page_by_path('projecten'))) ?>">
+                            Soortgelijk project?
                             <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                                 class="dropdown-arrow">
                         </a>
@@ -56,23 +57,17 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <h4>
                             Ontwerp
                         </h4>
-
-
                         <div class=" mb-3 gap-2">
                             <span class="regular">
                                 <?= get_field("ontwerp_title")?>
                             </span>
                         </div>
-                       
-
                         <h4>Opdrachtgever</h4>
-
                         <div class=" mb-3 gap-2">
                             <span class="regular ">
                                 <?= get_field("opdrachtgever")?>
                             </span>
                         </div>
-                       
                         <h4>Plaats</h4>
                         <?php if ($plaats): ?>
                             <?php foreach ($plaats as $term): ?>
@@ -85,7 +80,6 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php endif; ?>
                         <h4>Delen</h4>
                         <div class="d-flex align-items-center gap-2 mt-2">
-
                             <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= get_permalink() ?>">
                                 <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg"
                                     alt="Instagram-logo" class="share-icon" />
@@ -101,7 +95,8 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
         </div>
 
         <!-- Image swiper -->
-        hier
+       
+        <?php if (have_rows('images_swiper')): ?>
         <div class="image-swiper">
             <div class="image-slider">
                 <div class="container">
@@ -113,7 +108,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
 
                                     <?php
                                     $i = 0;
-                                    if (have_rows('images_swiper')):
+                                    // if (have_rows('images_swiper')):
                                         while (have_rows('images_swiper')):
                                             the_row(); ?>
                                             <div class="swiper-slide" <?php
@@ -133,7 +128,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                                             <?php
                                             $i++;
                                         endwhile;
-                                    endif; ?>
+                                    // endif; ?>
                                 </div>
                                 <div class="container">
                                     <div class="row">
@@ -159,7 +154,9 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                 </div>
             </div>
         </div>
-        tot hier
+     <?php endif; ?>
+         
+       
 
         <!-- Content-section -->
         <?php
