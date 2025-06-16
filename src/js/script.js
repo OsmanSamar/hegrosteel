@@ -152,10 +152,10 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
 document.querySelectorAll(".images-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
   let swiper = new Swiper(x.querySelector(".images-swiper"), {
-    slidesPerView: 1.4,
+    slidesPerView: 1.3,
     centeredSlides: false,
     grabCursor: true,
-    spaceBetween: 20,
+    spaceBetween: 24,
     loop: true,
     navigation: {
       nextEl: x.querySelector(".swiper-button-next"),
@@ -197,10 +197,11 @@ document.querySelectorAll(".images-slider").forEach((x) => {
 document.querySelectorAll(".image-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
   let swiper = new Swiper(x.querySelector(".image-swiper"), {
-    slidesPerView: 1.4,
+    slidesPerView: 1.3,
     centeredSlides: false,
+     //centeredSlides: true,
     grabCursor: true,
-    spaceBetween: 20,
+    spaceBetween: 24,
     modules: [Navigation],
     loop: true,
     navigation: {

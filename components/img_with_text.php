@@ -45,7 +45,7 @@ $anchorId = $fields['anchor_id'] ?? '';
                     <?php endif; ?>
 
                     <!-- Button in Repeater  -->
-                    <div class="btn-wrap d-flex  gap-3 flex-wrap ">
+                    <div class=" d-flex  gap-3 flex-wrap ">
                         <?php if (!empty($fields['buttons'])): ?>
                             <?php foreach ($fields['buttons'] as $button_row):
                                 $button = $button_row['button'];
@@ -61,13 +61,15 @@ $anchorId = $fields['anchor_id'] ?? '';
 
                                 if (!empty($button['url'])):
                                     ?>
-                                    <a href="<?= esc_url($button['url']); ?>"
+                                    <div class="btn-wrap ">
+                                        <a href="<?= esc_url($button['url']); ?>"
                                         target="<?= esc_attr($button['target'] ?: '_self'); ?>"
                                         class="button <?= esc_attr($custom_class); ?>">
                                         <?= esc_html($button['title']); ?>
                                         <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                                             class="dropdown-arrow">
                                     </a>
+                                    </div>
                                 <?php endif; endforeach; ?>
                         <?php endif; ?>
                     </div>

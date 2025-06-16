@@ -108,8 +108,10 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
         <!-- Image swiper -->
         <div class="image-swiper">
             <div class="image-slider">
-                <div class="row">
+              <div class="container">
+                  <div class="row">
                     <div class="col-lg-12 ">
+                       
                         <div class="swiper-container swiper image-swiper ">
                             <div class="swiper-wrapper">
 
@@ -140,7 +142,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                             <div class="container">
                                 <div class="row">
                                     <div
-                                        class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-5 ">
+                                        class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
                                         <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
                                             <img loading="lazy"
                                                 src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"
@@ -158,6 +160,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
         </div>
 

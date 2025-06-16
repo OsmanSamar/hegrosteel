@@ -278,21 +278,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
             <div class="col-lg-12 ">
               <div class="swiper-container swiper images-swiper ">
                 <div class="swiper-wrapper">
-                  <!-- <?php if (have_rows('images_repeater')): ?>
-                    <?php while (have_rows('images_repeater')):
-                      the_row(); ?>
-                      <div class="swiper-slide">
-                        <?php
-                        $image = get_sub_field('img');
-                        if ($image): ?>
-                          <div class="">
-                            <img loading="lazy" src="<?= esc_url($image['url']) ?>" alt="<?= esc_attr($image['alt']) ?>"
-                              class="swiper-img " />
-                          </div>
-                        <?php endif; ?>
-                      </div>
-                    <?php endwhile; ?>
-                    <?php endif; ?> -->
+                 
 
                   <?php
                   $i = 0;
@@ -317,10 +303,9 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                       $i++;
                     endwhile;
                   endif; ?>
-
-
-
                 </div>
+
+                
                 <div class="container">
                   <div class="row">
                     <div class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">

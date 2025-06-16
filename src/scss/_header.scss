@@ -443,6 +443,8 @@
 }
 
 .vacature-item {
+  position: relative;
+  z-index: 1000;
   cursor: pointer;
 
   .number {

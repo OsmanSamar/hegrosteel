@@ -1,13 +1,16 @@
 .single-project {
-  .img_with_text{
+  .img_with_text {
     margin-bottom: unset !important;
     @media (min-width: 768px) {
-    margin-bottom: 100px !important;
+      margin-bottom: 100px !important;
+    }
   }
- 
-  }
-  .projecten-slider{
-      margin-bottom: 80px !important;
+  .projecten-slider {
+    margin-bottom: 80px !important;
+    margin-top: 30px;
+    @media (min-width: 768px) {
+      margin-top: unset;
+    }
   }
   .first-section {
     margin: 80px 0px;
@@ -18,7 +21,6 @@
     border-radius: 5px;
     background: #454545;
     transition: all 0.5s ease;
-
 
     .right-section {
       padding: 53px 50px 83px 50px;
@@ -37,24 +39,34 @@
 
   // Images swiper Style
   .image-swiper {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    // width: 100vw;
+    // margin-left: calc(-50vw + 50%);
+    // margin-right: calc(-50vw + 50%);
+    width: 100%;
+    overflow: visible;
+    padding-left: 10px;
     display: flex;
-    // padding: 60px 0px;
-    margin-bottom: 40px;
     flex-direction: column;
+    margin-bottom: 40px;
+    padding: 6px 0px 0px 0px;
+
     gap: 10px;
     flex-shrink: 0;
-    border-radius: 40px;
+    border-radius: 15px;
+
+    // @media (max-width: 768px) {
+    //   margin-left: calc(-50vw + 50%);
+    //   margin-left: calc(-45vw + 50%);
+    //   margin-right: calc(-50vw + 50%);
+    // }
+
     .swiper-img {
       object-fit: cover;
       width: 100%;
       height: auto;
     }
 
-
-     .swiper-img-container {
+    .swiper-img-container {
       transition: transform 0.5s ease, box-shadow 0.5s ease;
       cursor: pointer;
     }
@@ -65,7 +77,13 @@
     .images-slider {
       padding: 80px 0;
     }
-   
+
+    .swiper-slide {
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
     //Removed the defualt
     .swiper-button-prev::after,
     .swiper-button-next::after {
