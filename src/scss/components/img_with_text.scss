@@ -1,0 +1,26 @@
+.img_with_text {
+  .order-1 {
+    order: 1;
+  }
+  .order-2 {
+    order: 2;
+  }
+ 
+
+  .with-background {
+    border-radius: 40px;
+    padding: 60px 10px 12px 10px;
+    @media (min-width: 992px) {
+      padding: 60px;
+    }
+    &.bg-light {
+      background: var(--Primary-400) !important;
+    }
+
+    &.bg-dark {
+      background: var(--Primary-600, #020202) !important;
+    }
+  }
+
+  margin-bottom: 60px;
+}
