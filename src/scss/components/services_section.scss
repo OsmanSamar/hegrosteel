@@ -1,5 +1,6 @@
 .services_section {
-  margin: 80px 0px;
+    // TODO Met David
+  margin: 20px 0px 35px 0px;
 
   .lead {
     font-size: 16px;
@@ -10,8 +11,8 @@
   }
 
    @media (min-width: 992px) {
+     margin: 80px 0px;
     h2{
-      
     line-height: 49px;
     }
   }

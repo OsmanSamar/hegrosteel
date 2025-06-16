@@ -4,9 +4,10 @@ $fields = $args['fields'];
 <div class="services_section" id="Service-Section">
 
     <div class="row">
-        <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start align-items-stretch mb-5 mb-lg-0 "
+        <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-start align-items-stretch  mb-lg-0 "
             data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
             data-aos-easing="ease-in-out">
+            <!-- mb-4 -->
             <div class="mt-5 mb-5">
                 <h2 class="mb-5">
                     <?= $fields['title']; ?>
