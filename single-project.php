@@ -87,10 +87,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php endif; ?>
                         <h4>Delen</h4>
                         <div class="d-flex align-items-center gap-2 mt-2">
-                            <!-- <a href="#" target="_blank">
-                                <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/insta-icon.svg"
-                                    alt="Instagram-logo" class="share-icon" />
-                            </a> -->
+                            
                             <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= get_permalink()?>">
                                 <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg"
                                     alt="Instagram-logo" class="share-icon" />
@@ -106,6 +103,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
         </div>
 
         <!-- Image swiper -->
+         hier
         <div class="image-swiper">
             <div class="image-slider">
               <div class="container">
@@ -163,6 +161,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
               </div>
             </div>
         </div>
+        tot hier
 
         <!-- Content-section -->
         <?php
