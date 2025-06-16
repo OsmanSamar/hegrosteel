@@ -113,7 +113,7 @@ if ($projects->have_posts()): ?>
 
                </div>
 
-               <div class=" col-lg-12 d-flex justify-content-between gap-3 flex-wrap">
+               <div class=" col-lg-12 d-flex justify-content-center gap-3 flex-wrap">
                     <a href="<?= get_post_type_archive_link('project') ?>"
                         class="button primary-button d-flex d-lg-none"><?= __('Bekijk alle projecten', 'hegrosteel') ?>
                         <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
