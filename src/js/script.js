@@ -220,7 +220,7 @@ document.querySelectorAll(".image-slider").forEach((x) => {
       },
     },
 
-    // Reinitialize AOS after Swiper initialization
+    
     on: {
       init: function () {
         // AOS.refresh();
