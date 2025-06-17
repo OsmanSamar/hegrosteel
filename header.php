@@ -484,7 +484,7 @@ unset($menu_items);
 
                         </ul>
                         <a href="<?= get_field("btn", 'option')['url'] ?>"
-                            class="button secondary-button ms-lg-3 mt-2 mb-3">
+                            class="button secondary-button ms-lg-3 mt-2 mb-3 mb-lg-0">
                             <?= get_field("btn", 'option')['title'] ?>
                             <img src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                                 class="dropdown-arrow">

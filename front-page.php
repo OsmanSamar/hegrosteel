@@ -4,15 +4,14 @@ $fields = get_fields();
 ?>
 
 <main class="front-page">
-    <div class=" position-relative">
+    <div class=" position-relative ">
         <div class="container">
             <!-- Hero Section -->
             <div class="hero-section bg-holder hero-responsive position-relative" data-aos="fade-up"
                 data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
                 <div class="bg-content fancybox rounded"
                     style="--top-left:300px;">
-                    <!-- --background:linear-gradient(180deg,  rgba(43, 5, 4, 0.00) 0%, rgba(0, 0, 0,0.64) 100%), url('<?= get_the_post_thumbnail_url() ?>')  cover no-repeat; -->
-                    <!--   style="--top-left:300px;--background:linear-gradient(180deg,  rgba(0, 0, 0, 0.00) -11.36%, rgba(0, 0, 0, 0.81) 82.88%), url('<?= get_the_post_thumbnail_url() ?>') lightgray 50% / cover no-repeat;" -->
+                  
                        <div class="overlay"></div>
                     <video src="<?= $fields['header_video']['url'] ?>" autoplay muted loop></video>
                 </div>
