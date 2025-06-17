@@ -17,14 +17,14 @@ $anchorId = $fields['anchor_id'] ?? '';
     <div class="row d-flex flex-wrap">
         <!-- Image Column -->
         <div
-            class="col-12 col-md-6 <?= $columnRight ?> d-flex flex-column mb-5 mb-lg-0 <?= $imageOnLeft ? 'order-1' : 'order-2'; ?>">
+            class="col-12 col-md-6 <?= $columnRight ?> d-flex flex-column mb-5  mb-lg-0 <?= $imageOnLeft ? 'order-lg-1' : 'order-lg-2'; ?>">
             <img loading="lazy" src="<?= esc_url($fields['image']['url']); ?>"
                 alt="<?= esc_html($fields['image']['alt']); ?>" class="img-text" />
         </div>
 
         <!-- Content Column -->
         <div
-            class=" col-12  col-md-6 <?= $columnClass ?> d-flex align-items-center justify-content-center mb-5  mb-lg-0  <?= $imageOnLeft ? 'order-2' : 'order-1'; ?>">
+            class=" col-12  col-md-6 <?= $columnClass ?> d-flex align-items-center justify-content-center   mb-lg-0  <?= $imageOnLeft ? 'order-lg-2' : 'order-lg-1'; ?>">
 
             <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
 
