@@ -2,13 +2,13 @@
     --all: 0px;
     --background: pink;
 
-    transition: .5s ease;
+    transition: 0.5s ease;
     display: inline-block;
     filter: url(#semiround);
     position: relative;
 
     &::before {
-        transition: .5s ease;
+        transition: 0.5s ease;
 
         filter: url(#semiround);
         content: "";
@@ -24,11 +24,11 @@
         mask-repeat: no-repeat;
         z-index: -1;
     }
-    &.rounded{
+    &.rounded {
         filter: url(#round);
     }
 
-    .overlay{
+    .overlay {
         position: absolute;
         top: 0;
         left: 0;
@@ -36,24 +36,85 @@
         bottom: 0;
         background: linear-gradient(180deg, rgba(0, 0, 0, 0) -11.36%, rgba(0, 0, 0, 0.81) 82.88%);
         clip-path: polygon(39% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
-        @media(min-width:768px){
+        @media (min-width: 768px) {
             clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 48%);
         }
         z-index: 1;
     }
-    video{
-         clip-path: polygon(39% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
+    video {
+        clip-path: polygon(39% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
         // clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 18%);
         width: 100%;
         height: 100%;
         object-fit: cover;
-        @media(min-width:768px){
+        @media (min-width: 768px) {
             clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 48%);
         }
     }
-
 }
 
-.fancyboxMath{
-    clip-path: polygon(calc(100% - 28.5px) calc(100% - 0.90000000000001px), 32.2px calc(100% - 0.90000000000001px), 32.2px calc(100% - 0.90000000000001px), 26.973px calc(100% - 1.321px), 22.016px calc(100% - 2.54px), 17.395px calc(100% - 4.491px), 13.176px calc(100% - 7.108px), 9.425px calc(100% - 10.325px), 6.208px calc(100% - 14.076px), 3.591px calc(100% - 18.295px), 1.64px calc(100% - 22.916px), 0.421px calc(100% - 27.873px), 5.3248111102418E-31px calc(100% - 33.1px), 0px 87.4px, 0px 87.4px, 0.1942px 84.5609px, 0.7616px 81.8232px, 1.6794px 79.2163px, 2.9248px 76.7696px, 4.475px 74.5125px, 6.3072px 72.4744px, 8.3986px 70.6847px, 10.7264px 69.1728px, 13.2678px 67.9681px, 16px 67.1px, calc(100% - 30.8px) 0.700002px, calc(100% - 30.8px) 0.700002px, calc(100% - 26.1225px) 0.019601458px, calc(100% - 21.568px) 0.212801024px, calc(100% - 17.2235px) 1.211200686px, calc(100% - 13.176px) 2.946400432px, calc(100% - 9.5125px) 5.35000025px, calc(100% - 6.3200000000001px) 8.353600128px, calc(100% - 3.6855px) 11.888800054px, calc(100% - 1.696px) 15.887200016px, calc(100% - 0.43850000000003px) 20.280400002px, calc(100% - 5.6843418860808E-14px) 25px, calc(100% - 0px) calc(100% - 29.4px), calc(100% - 0px) calc(100% - 29.4px), calc(100% - 0.37139999999999px) calc(100% - 24.7869px), calc(100% - 1.4471999999999px) calc(100% - 20.4072px), calc(100% - 3.1698px) calc(100% - 16.3203px), calc(100% - 5.4816px) calc(100% - 12.5856px), calc(100% - 8.325px) calc(100% - 9.2625px), calc(100% - 11.6424px) calc(100% - 6.4104px), calc(100% - 15.3762px) calc(100% - 4.0887px), calc(100% - 19.4688px) calc(100% - 2.3568px), calc(100% - 23.8626px) calc(100% - 1.2741px), calc(100% - 28.5px) calc(100% - 0.90000000000001px));
-}
+.fancyboxMath {
+    background:green;
+      --bevel-size: 28.5px; 
+      --bevel-offset: 0.9px;
+      --bevel-curve: 0.7;
+      
+      --corner-top: var(--bevel-size);
+      --corner-side: calc(var(--bevel-size) * 1.13); 
+      --corner-inner-offset: calc(var(--bevel-size) * 0.2); 
+      
+      clip-path: polygon(
+          calc(100% - var(--corner-top)) calc(100% - var(--bevel-offset)),
+          var(--corner-side) calc(100% - var(--bevel-offset)),
+          var(--corner-side) calc(100% - var(--bevel-offset)),
+          calc(var(--corner-side) * 0.8377) calc(100% - calc(var(--bevel-offset) * 1.4678)),
+          calc(var(--corner-side) * 0.6837) calc(100% - calc(var(--bevel-offset) * 2.8222)),
+          calc(var(--corner-side) * 0.5402) calc(100% - calc(var(--bevel-offset) * 4.99)),
+          calc(var(--corner-side) * 0.4092) calc(100% - calc(var(--bevel-offset) * 7.8978)),
+          calc(var(--corner-side) * 0.2927) calc(100% - calc(var(--bevel-offset) * 11.4722)),
+          calc(var(--corner-side) * 0.1928) calc(100% - calc(var(--bevel-offset) * 15.64)),
+          calc(var(--corner-side) * 0.1115) calc(100% - calc(var(--bevel-offset) * 20.4622)),
+          calc(var(--corner-side) * 0.0509) calc(100% - calc(var(--bevel-offset) * 25.4622)),
+          calc(var(--corner-side) * 0.0131) calc(100% - calc(var(--corner-top) * 1.16)),
+          
+          0px calc(var(--corner-top) * 3.0667),
+          0px calc(var(--corner-top) * 3.0667),
+          calc(0.0068 * var(--corner-top)) calc(var(--corner-top) * 2.9674),
+          calc(0.0267 * var(--corner-top)) calc(var(--corner-top) * 2.871),
+          calc(0.0589 * var(--corner-top)) calc(var(--corner-top) * 2.7794),
+          calc(0.1026 * var(--corner-top)) calc(var(--corner-top) * 2.6937),
+          calc(0.157 * var(--corner-top)) calc(var(--corner-top) * 2.614),
+          calc(0.2213 * var(--corner-top)) calc(var(--corner-top) * 2.543),
+          calc(0.2947 * var(--corner-top)) calc(var(--corner-top) * 2.4804),
+          calc(0.3764 * var(--corner-top)) calc(var(--corner-top) * 2.4269),
+          calc(0.4655 * var(--corner-top)) calc(var(--corner-top) * 2.3848),
+          calc(0.5614 * var(--corner-top)) calc(var(--corner-top) * 2.3544),
+          
+          calc(100% - calc(var(--corner-side) * 0.9565)) calc(var(--bevel-offset) * 0.7778),
+          calc(100% - calc(var(--corner-side) * 0.9565)) calc(var(--bevel-offset) * 0.7778),
+          calc(100% - calc(var(--corner-side) * 0.8113)) calc(var(--bevel-offset) * 0.0218),
+          calc(100% - calc(var(--corner-side) * 0.6698)) calc(var(--bevel-offset) * 0.2364),
+          calc(100% - calc(var(--corner-side) * 0.5349)) calc(var(--bevel-offset) * 1.3458),
+          calc(100% - calc(var(--corner-side) * 0.4093)) calc(var(--bevel-offset) * 3.2738),
+          calc(100% - calc(var(--corner-side) * 0.2954)) calc(var(--bevel-offset) * 5.9444),
+          calc(100% - calc(var(--corner-side) * 0.1963)) calc(var(--bevel-offset) * 9.2819),
+          calc(100% - calc(var(--corner-side) * 0.1145)) calc(var(--bevel-offset) * 13.208),
+          calc(100% - calc(var(--corner-side) * 0.0527)) calc(var(--bevel-offset) * 17.6525),
+          calc(100% - calc(var(--corner-side) * 0.0136)) calc(var(--bevel-offset) * 22.5339),
+          calc(100% - 0px) calc(var(--corner-top) * 0.8772),
+          
+          calc(100% - 0px) calc(100% - var(--corner-top) * 1.0316),
+          calc(100% - 0px) calc(100% - var(--corner-top) * 1.0316),
+          calc(100% - 0.013 * var(--corner-top)) calc(100% - var(--corner-top) * 0.8697),
+          calc(100% - 0.0508 * var(--corner-top)) calc(100% - var(--corner-top) * 0.716),
+          calc(100% - 0.1112 * var(--corner-top)) calc(100% - var(--corner-top) * 0.5726),
+          calc(100% - 0.1923 * var(--corner-top)) calc(100% - var(--corner-top) * 0.4416),
+          calc(100% - 0.2921 * var(--corner-top)) calc(100% - var(--corner-top) * 0.325),
+          calc(100% - 0.4084 * var(--corner-top)) calc(100% - var(--corner-top) * 0.2249),
+          calc(100% - 0.5395 * var(--corner-top)) calc(100% - var(--corner-top) * 0.1435),
+          calc(100% - 0.683 * var(--corner-top)) calc(100% - var(--corner-top) * 0.0827),
+          calc(100% - 0.8372 * var(--corner-top)) calc(100% - var(--corner-top) * 0.0447),
+          calc(100% - var(--corner-top)) calc(100% - var(--bevel-offset))
+      );
+  }
+  

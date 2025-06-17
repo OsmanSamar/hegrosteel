@@ -9,7 +9,7 @@ $fields = get_fields();
             <!-- Hero Section -->
             <div class="hero-section bg-holder hero-responsive position-relative" data-aos="fade-up"
                 data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
-                <div class="bg-content fancybox rounded"
+                <div class="bg-content fancyboxMath rounded"
                     style="--top-left:300px;">
                   
                        <div class="overlay"></div>
