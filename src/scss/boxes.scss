@@ -28,6 +28,19 @@
         filter: url(#round);
     }
 
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) -11.36%, rgba(0, 0, 0, 0.81) 82.88%);
+        clip-path: polygon(39% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
+        @media(min-width:768px){
+            clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 48%);
+        }
+        z-index: 1;
+    }
     video{
          clip-path: polygon(39% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
         // clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 18%);
