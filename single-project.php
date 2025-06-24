@@ -165,6 +165,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
 
 
 
+
         <!-- Content-section -->
         <?php
         $content = get_field('content');
