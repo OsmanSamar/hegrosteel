@@ -25,8 +25,9 @@
     border-radius: 30px;
     width: 100%;
     @media (min-width: 992px) {
+      // To expand the image out of container
       width: 108%;
-      transform: translateX(-45px);
+      transform: translateX(-45px) !important;
     }
   }
   .bg-content {

@@ -47,37 +47,34 @@ $fields = $args['fields'];
             <?php if (!empty($fields['work_list'])): ?>
                 <div class="repeater-list mt-5 mb-5">
                     <?php foreach ($fields['work_list'] as $list_item): ?>
-                        <div class="vacature-item repeater-item d-flex align-items-start justify-content-between w-100">
-                            <?php if (!empty($list_item['number'])): ?>
-                                <p class="number typography mb-0"><?= $list_item['number']; ?></p>
-                            <?php endif; ?>
+                        <?php
+                        $links = [
+                            'Dak & wand' => '/diensten#dak-wand',
+                            'Prefab beton' => '/diensten#prefabbeton',
+                            'Woningbouw' => '/diensten#woningbouw',
+                            'Utiliteitsbouw' => '/diensten#utiliteitsbouw',
+                        ];
+                        $link = $links[$list_item['text']] ?? '#';
+                        ?>
 
-                            <?php if (!empty($list_item['text'])): ?>
-                                <?php
-                                // Define the correct links for each title
-                                $links = [
-                                    'Dak & wand' => '/diensten#dak-wand',
-                                    'Prefab beton' => '/diensten#prefabbeton',
-                                    'Woningbouw' => '/diensten#woningbouw',
-                                    'Utiliteitsbouw' => '/diensten#utiliteitsbouw',
-                                ];
+                        <a href="<?= $link; ?>"
+                            class="">
+                            <div class="vacature-item repeater-item d-flex align-items-start justify-content-between w-100 ">
+                                <?php if (!empty($list_item['number'])): ?>
+                                    <p class="number typography mb-0 me-3"><?= $list_item['number']; ?></p>
+                                <?php endif; ?>
 
-                                $link = $links[$list_item['text']] ?? '#'; // Fallback to '#' if no match
-                                ?>
-
-                                <div>
-                                    <a href="<?= $link; ?>">
+                                <?php if (!empty($list_item['text'])): ?>
+                                    <div>
                                         <h3 class="mb-4 text-hover-underline">
-                                            <?= $list_item['text']; ?>
-                                        </h3>
-                                    </a>
-                                </div>
+                                        <?= $list_item['text']; ?>
+                                    </h3>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+                        </a>
 
-                            <?php endif; ?>
-                        </div>
-
-                        <hr class="divider  ">
-                        <!-- mt-4 -->
+                        <hr class="divider">
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>

@@ -497,6 +497,9 @@
 }
 
 .text {
+   position: relative;
+    z-index: 1000;
+
   margin: 80px 0px;
 }
 
