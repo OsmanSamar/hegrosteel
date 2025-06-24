@@ -11,13 +11,21 @@ $fields = $args['fields'];
             <div class="shared-content  top-right-shape  position-relative">
                 <h3> <?= $fields['left_tilte']; ?></h3>
                 <div class="h4 mb-4 mt-4"> <?= $fields['left_sub_title']; ?></div>
+               
                 <div class="contact-row">
-                    <span class=" regular diffrent-color"><?= $fields['adress_title']; ?></span>
-                    <a href="https://www.google.com/maps/search/?api=1&query=<?= urlencode($fields['adress']); ?>"
-                        target="_blank" class="regular">
-                        <?= get_field("hegrosteel_adress", 'option') ?>
+                    <span class="regular diffrent-color"><?= $fields['adress_title']; ?></span>
+                    <?php
+                    $address = get_field("hegrosteel_adress", 'option');
+                    $postcode = get_field("hegrosteel_postcode", 'option');
+                    $full_address = $address . ', ' . $postcode;
+                    ?>
+                    <a href="https://www.google.com/maps/search/?api=1&query=<?= urlencode($full_address); ?>"
+                        target="_blank" class="regular d-block">
+                        <?= $address ?><br>
+                        <?= $postcode ?>
                     </a>
                 </div>
+
 
                 <div class="contact-row">
                     <span class="regular diffrent-color "><?= $fields['email_title']; ?></span>
@@ -51,7 +59,7 @@ $fields = $args['fields'];
                         </span>
 
                         <span class="whatsapp-container">
-                             <span class="whatsapp-badge">1</span>
+                            <span class="whatsapp-badge">1</span>
                             <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
                                 alt="Open whatsapp" class="whatsappimg" />
                         </span>

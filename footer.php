@@ -100,15 +100,18 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
                             <?= get_field("contact_link_title", 'option') ?>
                         </div>
                         <ul class="list-unstyled d-flex flex-column gap-2 ">
-                            <li class="footer-li">
+                            <li class="footer-li text-decoration-none footer-link-ltr">
                                 <?= get_field("footer_adrres", 'option') ?>
-                            </li>
-
-                            <li class="footer-li">
-                                <?= get_field("hegrosteel_adress", 'option') ?>
-                            </li>
-                            <li class="footer-li">
-                                <?= get_field("hegrosteel_postcode", 'option') ?>
+                                <?php
+                                $address = get_field("hegrosteel_adress", 'option');
+                                $postcode = get_field("hegrosteel_postcode", 'option');
+                                $full_address = $address . ', ' . $postcode;
+                                ?>
+                                <a href="https://www.google.com/maps/search/?api=1&query=<?= urlencode($full_address); ?>"
+                                    target="_blank">
+                                    <?= $address ?><br>
+                                    <?= $postcode ?>
+                                </a>
                             </li>
                             <li>
                                 <a href="tel:<?= get_field("hegrosteel_phone_num", 'option') ?>"
@@ -183,17 +186,17 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
         <div class="col-lg-5 d-flex align-items-center justify-content-between flex-column flex-lg-row gap-3 gap-lg-0">
             <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
                 <?= get_field("hegrosteel", 'option') ?>
-                </span>
+            </span>
             <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
                 <a target="_blank" href=" <?= get_field("algemenevoorwaarden", 'option')['url'] ?>">
                     <?= get_field("algemenevoorwaarden", 'option')['title'] ?>
                 </a>
-           </span>
+            </span>
             <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
                 <a target="_blank" href=" <?= get_field("privacystatement", 'option')['url'] ?>">
                     <?= get_field("privacystatement", 'option')['title'] ?>
                 </a>
-                
+
             </span>
         </div>
 
