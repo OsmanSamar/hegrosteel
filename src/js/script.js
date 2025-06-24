@@ -171,7 +171,7 @@ document.querySelectorAll(".images-slider,.image-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
   let swiper = new Swiper(x.querySelector(".images-swiper,.image-swiper"), {
     slidesPerView: 1.3,
-    centeredSlides: false,
+   // centeredSlides: false,
     grabCursor: true,
     spaceBetween: 24,
     loop: true,
@@ -185,10 +185,10 @@ document.querySelectorAll(".images-slider,.image-slider").forEach((x) => {
         slidesPerView: 2,
       },
       1280: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
       1440: {
-        slidesPerView: 3.8,
+        slidesPerView: 2,
       },
     },
 

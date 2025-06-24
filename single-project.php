@@ -42,7 +42,8 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                     <!-- Buttons -->
                     <div class="mt-4">
                         <!-- Hard Code -->
-                         <a type="button" class="button secondary-button" href="<?= esc_url(get_permalink(get_page_by_path('projecten'))) ?>">
+                        <a type="button" class="button secondary-button"
+                            href="<?= esc_url(get_permalink(get_page_by_path('projecten'))) ?>">
                             Soortgelijk project?
                             <img loading="lazy" src="<?= get_template_directory_uri(); ?>/images/vector.svg" alt="Arrow"
                                 class="dropdown-arrow">
@@ -59,13 +60,13 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         </h4>
                         <div class=" mb-3 gap-2">
                             <span class="regular">
-                                <?= get_field("ontwerp_title")?>
+                                <?= get_field("ontwerp_title") ?>
                             </span>
                         </div>
                         <h4>Opdrachtgever</h4>
                         <div class=" mb-3 gap-2">
                             <span class="regular ">
-                                <?= get_field("opdrachtgever")?>
+                                <?= get_field("opdrachtgever") ?>
                             </span>
                         </div>
                         <h4>Plaats</h4>
@@ -80,7 +81,8 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php endif; ?>
                         <h4>Delen</h4>
                         <div class="d-flex align-items-center gap-2 mt-2">
-                            <a href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url=<?= get_permalink() ?>">
+                            <a
+                                href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url=<?= get_permalink() ?>">
                                 <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg"
                                     alt="Instagram-logo" class="share-icon" />
                             </a>
@@ -95,7 +97,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
         </div>
 
         <!-- Image swiper -->
-       
+
         <?php if (have_rows('images_swiper')): ?>
         <div class="image-swiper">
             <div class="image-slider">
@@ -108,9 +110,9 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
 
                                     <?php
                                     $i = 0;
-                                    // if (have_rows('images_swiper')):
-                                        while (have_rows('images_swiper')):
-                                            the_row(); ?>
+
+                                    while (have_rows('images_swiper')):
+                                        the_row(); ?>
                                             <div class="swiper-slide" <?php
                                             if ($i < 7) {
                                                 echo 'data-aos="fade-up" data-aos-delay="' . (100 + $i * 50) . '"';
@@ -127,8 +129,8 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                                             </div>
                                             <?php
                                             $i++;
-                                        endwhile;
-                                    // endif; ?>
+                                    endwhile;
+                                    ?>
                                 </div>
                                 <div class="container">
                                     <div class="row">
@@ -155,8 +157,13 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
             </div>
         </div>
      <?php endif; ?>
-         
-       
+
+
+        <!-- <?php
+            get_template_part('components/swiper-component');
+        ?> -->
+
+
 
         <!-- Content-section -->
         <?php

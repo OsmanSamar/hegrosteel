@@ -1,40 +1,6 @@
-.single-project {
- 
-  .projecten-slider {
-    margin-bottom: 80px !important;
-    margin-top: 30px;
-    @media (min-width: 768px) {
-      margin-top: unset;
-    }
-  }
-  .first-section {
-    margin: 80px 0px;
-  }
-
-  .project-items {
-    padding: 5px 8px;
-    border-radius: 5px;
-    background: #454545;
-    transition: all 0.5s ease;
-
-    .right-section {
-      padding: 53px 50px 83px 50px;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      align-self: stretch;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .content-container {
-      padding: 50px;
-    }
-  }
-
-  // Images swiper Style
+.swiper-component{
+     // Images swiper Style
   .image-swiper {
-    
     width: 100%;
     overflow: visible;
     padding-left: 10px;
@@ -46,6 +12,8 @@
     gap: 10px;
     flex-shrink: 0;
     border-radius: 15px;
+
+    
     .swiper-img {
       object-fit: cover;
       width: 100%;
@@ -60,7 +28,7 @@
       transform: scale(1.05);
       box-shadow: 0px 0px 50px 0px rgba(36, 44, 48, 0.4);
     }
-    .images-slider {
+    .image-slider {
       padding: 80px 0;
     }
 
@@ -109,23 +77,4 @@
     }
   }
 
-  .share-icon {
-    display: flex;
-    width: 52px;
-    height: 52px;
-    padding: 14px 8px;
-    gap: 10px;
-    transition: all 0.5s ease;
-    border-radius: 10px;
-    background: var(--Primary-400);
-    &:hover {
-      transform: scale(1.05);
-      background: var(--Secondary-500);
-    }
-  }
-
-  .lead {
-    font-size: 16px;
-    line-height: 160%;
-  }
 }

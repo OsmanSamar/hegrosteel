@@ -282,8 +282,8 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
                   <?php
                   $i = 0;
-                  if (have_rows('images_repeater')):
-                    while (have_rows('images_repeater')):
+                  if (have_rows('images_swiper')):
+                    while (have_rows('images_swiper')):
                       the_row(); ?>
                       <div class="swiper-slide" <?php
                       if ($i < 7) {
@@ -323,14 +323,15 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 </div>
               </div>
             </div>
-
-
-
-
           </div>
         </div>
       </div>
     </div>
+<!-- 
+    <?php
+  get_template_part('components/swiper-component');
+    ?> -->
+
 
 
     <!-- Service-section -->
