@@ -52,7 +52,7 @@ $fields = $args['fields'];
                 </div>
 
                 <div class="bel-of-app-container mt-4">
-                    <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" target="_blank"
+                    <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=Hi%20je%20bent%20met%20HEGRO%20Steel%2C%20ik%20ben%20geïnteresseerd%20in%20de%20... " target="_blank"
                         class="d-flex align-items-center justify-content-between w-100">
                         <span class="bold">
                             <?= $fields['direct_contact']; ?>

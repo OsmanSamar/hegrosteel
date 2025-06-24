@@ -131,6 +131,7 @@
   position: fixed;
   width: 100vw;
   z-index: 4;
+  top:0;
 }
 
 .navbar {
@@ -498,7 +499,7 @@
 
 .text {
    position: relative;
-    z-index: 1000;
+    z-index: 1;
 
   margin: 80px 0px;
 }
@@ -530,7 +531,7 @@
 
 @media (min-width: 992px) {
   .navbar {
-    padding: 15px 39px;
+    padding: 15px 10px;
   }
   // 2
   .nav-link-ltr:hover::before {

@@ -93,7 +93,7 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
                 class="dropdown-arrow">
             </a>
             <a type="button " class="button primary-button"
-              href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>" target="_blank">
+              href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=Hi%20je%20bent%20met%20HEGRO%20Steel%2C%20ik%20ben%20geïnteresseerd%20in%20de%20... " target="_blank">
               Vragen? App Hermen
               
               <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/white-whatsapp-icon.svg"

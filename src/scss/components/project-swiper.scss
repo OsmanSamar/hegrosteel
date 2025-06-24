@@ -13,6 +13,9 @@
     padding: 18px;
     overflow: hidden;
     transition: 0.3s ease;
+    &:after{
+      transition: .3s ease;
+    }
     cursor: pointer;
   }
 
@@ -32,7 +35,7 @@
   .project-card {
     border-radius: 12px;
     overflow: hidden;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
   }
 
   .swiper-slide {
@@ -83,7 +86,9 @@
   .project-categories {
     border-radius: 10px;
     background: var(--Primary-400, #303030);
-    padding: 9px 8px;
+    padding: 9px 8px;  
+    color:white;
+  
   }
 
   .border-wrap:hover::after {

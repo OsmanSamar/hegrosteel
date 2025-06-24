@@ -80,7 +80,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php endif; ?>
                         <h4>Delen</h4>
                         <div class="d-flex align-items-center gap-2 mt-2">
-                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=<?= get_permalink() ?>">
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url=<?= get_permalink() ?>">
                                 <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg"
                                     alt="Instagram-logo" class="share-icon" />
                             </a>

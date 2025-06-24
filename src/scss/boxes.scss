@@ -54,6 +54,18 @@
 }
 
 .fancyboxMath {
+
+    .overlay{
+            height: 100%!important;
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+
+        @media screen and (max-width:992px) {
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0) 100%);
+        }
+    }
+
     background:green;
       --bevel-size: 28.5px; 
       --bevel-offset: 0.9px;

@@ -162,6 +162,13 @@ unset($menu_items);
         </clipPath>
     </svg>
     <style>
+        * {
+            scroll-margin-top: 100px;
+            &[data-aos]:not(.aos-animate){
+                scroll-margin:200px;
+            }
+        }
+        
         .svg {
             position: absolute;
             width: 0;

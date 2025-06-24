@@ -27,6 +27,23 @@ jQuery(document).ready(function ($) {
 });
 
 //Scrollbar
+var target = window.location.hash,
+    target = target.replace('#', '');
+
+// delete hash so the page won't scroll to it
+window.location.hash = "";
+
+// now whenever you are ready do whatever you want
+// (in this case I use jQuery to scroll to the tag after the page has loaded)
+jQuery(window).on('load', function() {
+    if (target) {
+      setTimeout(() => {
+        
+       document.getElementById(target).scrollIntoView()
+       window.location.hash=target;
+      }, 400);
+    }
+});
 
 function swiperScrollbar(swiper, scrollbarEl, slideCount) {
   if (typeof scrollbarEl == "string") {
@@ -147,11 +164,12 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
   );
 });
 
+// Swiper img Single project
 //Images Swiper Single vactuure
 
-document.querySelectorAll(".images-slider").forEach((x) => {
+document.querySelectorAll(".images-slider,.image-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
-  let swiper = new Swiper(x.querySelector(".images-swiper"), {
+  let swiper = new Swiper(x.querySelector(".images-swiper,.image-swiper"), {
     slidesPerView: 1.3,
     centeredSlides: false,
     grabCursor: true,
@@ -192,52 +210,6 @@ document.querySelectorAll(".images-slider").forEach((x) => {
   );
 });
 
-// Swiper img Single project
-
-document.querySelectorAll(".image-slider").forEach((x) => {
-  let slideCount = x.querySelectorAll(".swiper-slide").length;
-  let swiper = new Swiper(x.querySelector(".image-swiper"), {
-    slidesPerView: 1.3,
-    centeredSlides: false,
-     //centeredSlides: true,
-    grabCursor: true,
-    spaceBetween: 24,
-    modules: [Navigation],
-    loop: true,
-    navigation: {
-      nextEl: x.querySelector(".swiper-button-next"),
-      prevEl: x.querySelector(".swiper-button-prev"),
-    },
-
-    breakpoints: {
-      768: {
-        slidesPerView: 2,
-      },
-      1280: {
-        slidesPerView: 3,
-      },
-      1440: {
-        slidesPerView: 3.8,
-      },
-    },
-
-    
-    on: {
-      init: function () {
-        // AOS.refresh();
-      },
-      slideChangeTransitionEnd: function () {
-        // AOS.refresh();
-      },
-    },
-  });
-
-  swiperScrollbar(
-    swiper,
-    x.querySelector(".custom-swiper-scrollbar"),
-    slideCount
-  );
-});
 
 // Scroll to down
 

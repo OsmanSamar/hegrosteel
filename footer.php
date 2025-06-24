@@ -10,15 +10,13 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
 <div class="whatsapp-fixed">
     <div class=" mt-3">
         <span class="whatsapp-container">
-            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=I am interested in the " class=""
+            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=<?= urlencode(get_field('whatsapp_text','option'))?>" class=""
                 target="_blank">
                 <!-- <?= strip_tags(get_field("whatsapp_message", 'option')) ?> -->
                 <span class="d-flex justify-content-center align-items-center">
                     <span class="whatsapp-badge">1</span>
                     <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
                         alt="Open whatsapp" class="whatsappimg" />
-
-
                 </span>
             </a>
         </span>
