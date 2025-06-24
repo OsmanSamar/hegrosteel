@@ -14,10 +14,10 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
                 target="_blank">
                 <!-- <?= strip_tags(get_field("whatsapp_message", 'option')) ?> -->
                 <span class="d-flex justify-content-center align-items-center">
-                      <span class="whatsapp-badge">1</span>
+                    <span class="whatsapp-badge">1</span>
                     <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp.svg"
                         alt="Open whatsapp" class="whatsappimg" />
-                       
+
 
                 </span>
             </a>
@@ -103,7 +103,7 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
                             <li class="footer-li">
                                 <?= get_field("footer_adrres", 'option') ?>
                             </li>
-                            
+
                             <li class="footer-li">
                                 <?= get_field("hegrosteel_adress", 'option') ?>
                             </li>
@@ -176,15 +176,25 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
 
 
 </footer>
+
+
 <div class="container mt-3 mb-3">
     <div class="row">
         <div class="col-lg-5 d-flex align-items-center justify-content-between flex-column flex-lg-row gap-3 gap-lg-0">
-            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">© HegroSteel,
-                2025</span>
-            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Algemene
-                voorwaarden</span>
-            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">Privacy
-                statement</span>
+            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
+                <?= get_field("hegrosteel", 'option') ?>
+                </span>
+            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
+                <a target="_blank" href=" <?= get_field("algemenevoorwaarden", 'option')['url'] ?>">
+                    <?= get_field("algemenevoorwaarden", 'option')['title'] ?>
+                </a>
+           </span>
+            <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
+                <a target="_blank" href=" <?= get_field("privacystatement", 'option')['url'] ?>">
+                    <?= get_field("privacystatement", 'option')['title'] ?>
+                </a>
+                
+            </span>
         </div>
 
         <div class="col-lg-2 offset-lg-5 d-flex justify-content-lg-end justify-content-center mt-3 mt-lg-0">
@@ -195,6 +205,7 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
         </div>
     </div>
 </div>
+
 
 
 
