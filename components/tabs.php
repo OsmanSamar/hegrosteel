@@ -33,7 +33,7 @@ $fields = $args['fields'];
                             ?>
                             <div class="tab-content" <?= $i == 0 ? "" : 'style="display: none;"' ?> id="content<?= $i ?>">
                                 <div class="row">
-                                    <div class="col-lg-5 mb-4 mb-lg-0">
+                                    <div class="col-lg-5  my-auto order-2 order-lg-1">
                                         <h3 class="mb-4"><?= $tab['title']; ?></h3>
                                         <div class="regular mb-4"><?= $tab['text']; ?></div>
 
@@ -64,7 +64,7 @@ $fields = $args['fields'];
                                         <?php endif; ?>
 
                                     </div>
-                                    <div class="col-lg-6 offset-lg-1">
+                                    <div class="col-lg-6 offset-lg-1 order-1 order-lg-2 mb-4 mb-lg-0">
                                         <div class="tabs-img">
                                             <img loading="lazy" src="<?= $tab['image']['url'] ?>" alt="<?= $tab['image']['alt'] ?>" />
                                         </div>
