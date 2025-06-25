@@ -60,10 +60,7 @@ if (have_rows($images_repeater)): ?>
                 </div>
               </div>
 
-            </div>
-          </div>
-
-          <div class=" col-lg-12 d-flex d-lg-none justify-content-center gap-3 flex-wrap">
+   <div class=" col-lg-12 d-flex d-lg-none justify-content-center gap-3 flex-wrap">
            <!-- To Check if the Btn empty or not because some post have no btn -->
               <?php
               if (!empty($button) && isset($button['url']) && isset($button['title'])): ?>
@@ -76,6 +73,13 @@ if (have_rows($images_repeater)): ?>
                 </div>
               <?php endif; ?>
           </div>
+
+
+
+            </div>
+          </div>
+
+       
 
 
 
