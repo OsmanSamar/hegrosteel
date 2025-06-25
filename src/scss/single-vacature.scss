@@ -44,6 +44,7 @@
 
   .left .details {
     height: 100vh;
+     max-height: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,10 +71,12 @@
   }
   .photo img {
     width: 100%;
-    height: 85%;
+    // height: 85%;
+    height: 85vh; /* relative to viewport height */
+    max-height: 800px; /* prevents it from getting too tall */
     object-fit: cover;
     display: block;
-    border-radius: 40px 40px 40px 40px;
+    border-radius: 40px;
   }
 
   //Added
@@ -108,6 +111,4 @@
       border-radius: 40px !important;
     }
   }
-
- 
 }

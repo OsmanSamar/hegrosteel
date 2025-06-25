@@ -98,7 +98,6 @@ function swiperScrollbar(swiper, scrollbarEl, slideCount) {
 }
 
 //Tabs
-
 document.addEventListener("DOMContentLoaded", function () {
   const tabLinks = document.querySelectorAll(".tab-link");
   const tabContents = document.querySelectorAll(".tab-content");
@@ -166,7 +165,6 @@ document.querySelectorAll(".projecten-slider").forEach((x) => {
 
 // Swiper img Single project
 //Images Swiper Single vactuure
-
 document.querySelectorAll(".images-slider,.image-slider").forEach((x) => {
   let slideCount = x.querySelectorAll(".swiper-slide").length;
   let swiper = new Swiper(x.querySelector(".images-swiper,.image-swiper"), {
@@ -211,16 +209,7 @@ document.querySelectorAll(".images-slider,.image-slider").forEach((x) => {
 });
 
 
-// Scroll to down
 
-// document
-//   .querySelector(".arrow-container a")
-//   .addEventListener("click", function (e) {
-//     e.preventDefault();
-//     document.querySelector("#Service-Section").scrollIntoView({
-//       behavior: "smooth",
-//     });
-//   });
 
 //Gsap Scroll animation
 gsap.config({ trialWarn: false });

@@ -193,8 +193,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
         <?php while (have_rows('vacature_repeater')):
           the_row(); ?>
           <div class="vacature-block mb-5">
-
-
             <div class="details mb-5">
               <?php $title = get_sub_field('title'); ?>
               <?php $text = get_sub_field('text'); ?>
@@ -260,8 +258,6 @@ $vacature_repeater = get_the_terms(get_the_ID(), 'vacature_repeater');
 
 
     <!-- Image swiper -->
-
-
     <?php
     get_template_part('components/images-swiper', null, [
       'field_name' => 'images_swiper',
