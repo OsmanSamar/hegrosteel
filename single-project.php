@@ -96,72 +96,15 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
             </div>
         </div>
 
+
+        
         <!-- Image swiper -->
-
-        <?php if (have_rows('images_swiper')): ?>
-        <div class="image-swiper">
-            <div class="image-slider">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 ">
-
-                            <div class="swiper-container swiper image-swiper ">
-                                <div class="swiper-wrapper">
-
-                                    <?php
-                                    $i = 0;
-
-                                    while (have_rows('images_swiper')):
-                                        the_row(); ?>
-                                            <div class="swiper-slide" <?php
-                                            if ($i < 7) {
-                                                echo 'data-aos="fade-up" data-aos-delay="' . (100 + $i * 50) . '"';
-                                            }
-                                            ?>>
-                                                <?php
-                                                $image = get_sub_field('img');
-                                                if ($image): ?>
-                                                    <div class="swiper-img-container">
-                                                        <img loading="lazy" src="<?= esc_url($image['url']) ?>"
-                                                            alt="<?= esc_attr($image['alt']) ?>" class="swiper-img" />
-                                                    </div>
-                                                <?php endif; ?>
-                                            </div>
-                                            <?php
-                                            $i++;
-                                    endwhile;
-                                    ?>
-                                </div>
-                                <div class="container">
-                                    <div class="row">
-                                        <div
-                                            class="swiper-navigation col-12 col-lg-6 col-md-6  offset-lg-3 offset-md-3  d-flex gap-3 ">
-                                            <div class="swiper-button-prev d-none d-md-flex d-lg-flex">
-                                                <img loading="lazy"
-                                                    src="<?= get_template_directory_uri(); ?>/images/prev-btn.svg"
-                                                    alt="Prev arrow" class="swiper-arrow">
-                                            </div>
-                                            <div class="custom-swiper-scrollbar"></div>
-                                            <div class="swiper-button-next d-none d-md-flex d-lg-flex">
-                                                <img loading="lazy"
-                                                    src="<?= get_template_directory_uri(); ?>/images/next-btn.svg"
-                                                    alt="Next arrow" class="swiper-arrow">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-     <?php endif; ?>
-
-
-        <!-- <?php
-            get_template_part('components/swiper-component');
-        ?> -->
+        <?php
+        get_template_part('components/images-swiper', null, [
+            'field_name' => 'images_swiper',
+            'unique_id' => 'swiper_' . get_the_ID()
+        ]);
+        ?>
 
 
 
