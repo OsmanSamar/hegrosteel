@@ -60,26 +60,26 @@ if (have_rows($images_repeater)): ?>
                 </div>
               </div>
 
-   <div class=" col-lg-12 d-flex d-lg-none justify-content-center gap-3 flex-wrap">
-           <!-- To Check if the Btn empty or not because some post have no btn -->
-              <?php
-              if (!empty($button) && isset($button['url']) && isset($button['title'])): ?>
-                <div class="">
-                  <a href="<?= esc_url($button['url']) ?>" class="button primary-button">
-                    <?= esc_html($button['title']) ?>
-                    <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/vector.svg" alt="Arrow"
-                      class="dropdown-arrow" />
-                  </a>
-                </div>
-              <?php endif; ?>
-          </div>
+              <div class=" col-lg-12 d-flex d-lg-none justify-content-center gap-3 flex-wrap mt-5">
+                <!-- To Check if the Btn empty or not because some post have no btn -->
+                <?php
+                if (!empty($button) && isset($button['url']) && isset($button['title'])): ?>
+                  <div class="">
+                    <a href="<?= esc_url($button['url']) ?>" class="button primary-button">
+                      <?= esc_html($button['title']) ?>
+                      <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/vector.svg" alt="Arrow"
+                        class="dropdown-arrow" />
+                    </a>
+                  </div>
+                <?php endif; ?>
+              </div>
 
 
 
             </div>
           </div>
 
-       
+
 
 
 
