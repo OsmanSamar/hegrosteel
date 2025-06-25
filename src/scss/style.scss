@@ -18,6 +18,15 @@
   --Neutral-500: #808282;
 }
 
+// To Change Text Selection color
+::-moz-selection { /* Code for Firefox */
+  background: var(--Secondary-500);
+}
+::selection {
+  background:var(--Secondary-500);
+}
+
+
 /* General styling */
 html,
 body {
