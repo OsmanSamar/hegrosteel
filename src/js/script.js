@@ -408,3 +408,17 @@ window.addEventListener("scroll", function () {
 });
 
 
+// Instagram Share
+
+document.getElementById('share-button').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (navigator.share) {
+    navigator.share({
+      title: 'Check out this website!',
+      url: 'https://hegrosteel.develop.code-blauw.nl/',
+    }).catch((err) => console.error('Share failed:', err));
+  } else {
+    alert('Sharing is not supported on this device.');
+  }
+});

@@ -10,8 +10,8 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
 <div class="whatsapp-fixed">
     <div class=" mt-3">
         <span class="whatsapp-container">
-            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=<?= urlencode(get_field('whatsapp_text','option'))?>" class=""
-                target="_blank">
+            <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=<?= urlencode(get_field('whatsapp_text', 'option')) ?>"
+                class="" target="_blank">
                 <!-- <?= strip_tags(get_field("whatsapp_message", 'option')) ?> -->
                 <span class="d-flex justify-content-center align-items-center">
                     <span class="whatsapp-badge">1</span>
@@ -80,12 +80,17 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
                         <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/whatsapp-logo.svg"
                             alt="Whatsapp logo" class="media-icon" />
                     </a>
-                    <a href="https://www.instagram.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/"
+                    <!-- <a href="https://www.instagram.com/send?text=Check%20out%20this%20website:%20https://hegrosteel.develop.code-blauw.nl/"
                         target="_blank">
                         <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg"
                             alt="Instagram-logo" class="media-icon" />
 
+                    </a> -->
+                    <a href="#" id="share-button">
+                        <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/instagram-logo.svg"
+                            alt="Instagram-logo" class="media-icon" />
                     </a>
+
                 </div>
             </div>
 
