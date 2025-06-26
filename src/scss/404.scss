@@ -1,7 +1,8 @@
 .p404{
   height: 100vh;
   .p404-container{
-        padding-top: 200px;
+    // position: relative;
+     padding-top: 200px;
   }
  .p404-img{
       object-fit: cover;
@@ -13,6 +14,6 @@
   background-repeat: repeat-x;
   background-size: 1470px;
   background-position:top center;
-pointer-events: none;
+  // pointer-events: none;
  
 }

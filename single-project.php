@@ -81,14 +81,21 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
                         <?php endif; ?>
                         <h4>Delen</h4>
                         <div class="d-flex align-items-center gap-2 mt-2">
-                            <a
+                            <!-- <a
                                 href="https://www.linkedin.com/sharing/share-offsite/?mini=true&url=<?= get_permalink() ?>">
                                 <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg"
                                     alt="Instagram-logo" class="share-icon" />
+                            </a> -->
+
+                            <a
+                                href="https://www.linkedin.com/shareArticle?mini=true&url=<?= get_permalink() ?>" target="_blank">
+                                <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/linkedinicon.svg"
+                                    alt="Linkedin-logo" class="share-icon" />
                             </a>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?= get_permalink() ?>">
+
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=<?= get_permalink() ?>" target="_blank">
                                 <img loading="lazy" src="<?= get_template_directory_uri() ?>/images/facebook-icon.svg"
-                                    alt="Instagram-logo" class="share-icon" />
+                                    alt="Facebook-logo" class="share-icon" />
                             </a>
                         </div>
                     </div>
@@ -97,7 +104,7 @@ $opdrachtgever = get_the_terms(get_the_ID(), 'opdrachtgever');
         </div>
 
 
-        
+
         <!-- Image swiper -->
         <?php
         get_template_part('components/images-swiper', null, [
