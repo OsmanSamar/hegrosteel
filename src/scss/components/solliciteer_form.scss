@@ -1,5 +1,5 @@
 .solliciteer-form {
-  h3{
+  h3 {
     margin-bottom: 30px !important;
   }
   .contact-form {
@@ -29,7 +29,7 @@
   }
   .gform-theme--foundation .gfield input,
   .gform-theme--foundation .gfield select,
-  .gform-theme--foundation .textarea  {
+  .gform-theme--foundation .textarea {
     width: 96% !important;
     box-sizing: border-box !important;
     border-radius: 8px !important;
@@ -44,6 +44,12 @@
     font-weight: 400 !important;
     line-height: 160% !important;
     --gf-local-height: unset !important;
+  }
+
+  .gform-theme--foundation .gfield input:focus,
+  .gform-theme--foundation .gfield select:focus,
+  .gform-theme--foundation .gfield textarea:focus {
+    outline-color: var(--Secondary-500, #dc0d1a) !important;
   }
 
   .gform_wrapper .gform_footer .gform_button {
