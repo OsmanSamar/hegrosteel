@@ -18,8 +18,6 @@ $textId = $fields['text_id'] ?? '';
         <div class="col-12 <?= $textOnLeft ? 'col-lg-7 order-1' : 'col-lg-6 order-2 offset-lg-1'; ?> d-flex flex-column mb-4 mb-lg-0 my-auto py-4"
             data-aos="fade-up" data-aos-offset="120" data-aos-delay="50" data-aos-duration="70"
             data-aos-easing="ease-in-out">
-            <!-- my-auto py-4 To algin on center -->
-            <!-- <h2><?= $fields['title']; ?></h2> -->
             <<?= $heading_tag; ?>><?= $fields['title']; ?></<?= $heading_tag; ?>>
                 <div class="regular  mt-4"><?= $fields['text']; ?></div>
                 <div class="regular mt-5" style="font-weight:700"><?= $second_text_with_link; ?></div>
@@ -57,7 +55,7 @@ $textId = $fields['text_id'] ?? '';
                 <h3> <?= $fields['left_title']; ?></h3>
                 <class class="regular mb-5 mt-4"> <?= $fields['left_text']; ?></class>
                 <div class="bel-of-app-container">
-                    <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=Hi%20je%20bent%20met%20HEGRO%20Steel%2C%20ik%20ben%20geïnteresseerd%20in%20de%20... " target="_blank"
+                    <a href="https://wa.me/<?= get_field('whatsappnumber', 'option') ?>?text=Hi!%20je%20bent%20met%20HEGRO%20Steel%2C%20ik%20ben%20geïnteresseerd%20in%20de%20... " target="_blank"
                         class="d-flex align-items-center justify-content-between w-100">
                         <span class="bold">
                             <?= $fields['bel_of_app']; ?>

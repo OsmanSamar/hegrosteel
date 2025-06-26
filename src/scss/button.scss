@@ -81,10 +81,13 @@
   transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 
   &:hover {
-    background: var(--Primary-500);
-    color: #fff !important;
-    .arrow {
-      filter: brightness(0) invert(1);
+    // background: var(--Primary-500);
+    background: var(--Neutral-light);
+    // color: #fff !important;
+    color: var(--Primary-600);
+    .dropdown-arrow {
+      // filter: brightness(0) invert(1);
+       filter: brightness(0) !important;
     }
   }
 }
