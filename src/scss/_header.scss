@@ -516,12 +516,11 @@
 
 .img-text {
   border-radius: 30px;
-  background: lightgray 0px -128.77px / 100% 206.49% no-repeat,
-    lightgray 50% / cover no-repeat, lightgray 50% / cover no-repeat;
   object-fit: cover;
 }
 
 .center_text_button {
+  position: relative !important;
   margin: 100px 0px;
   padding: 40px;
   gap: 40px;
