@@ -1,4 +1,4 @@
-//#scrollbar-indicator
+
 #scrollbar-indicator {
   position: fixed;
   top: 0;
@@ -8,14 +8,18 @@
   background-color: var(--Secondary-500);
   z-index: 9999;
   transition: width 0.25s ease-out;
+  -webkit-transition: width 0.25s ease-out; // Safari prefix fallback
+
 }
 
 .whatsapp-container {
   position: relative;
   display: flex;
+  display: -webkit-flex; // Safari prefix
   width: 52px;
   height: 52px;
   padding: 14px 8px;
+   -webkit-flex-direction: column; // Safari fallback
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,12 +28,16 @@
   border-radius: 60px;
   background: #fff;
   transition: all 0.5s ease;
+   -webkit-transition: all 0.5s ease; // Safari fallback
+
   &:hover {
     transform: scale(1.05);
 
     background: var(--Secondary-500);
     .whatsappimg {
       filter: brightness(0) invert(1);
+       -webkit-filter: brightness(0) invert(1); // Safari fix
+
     }
   }
 }
@@ -90,7 +98,6 @@
 .img_with_text.with-background {
   position: relative;
   border-radius: 40px;
-  // padding: 60px 10px 12px 10px;
     padding: 30px 20px;
   &.bg-light {
     background: var(--Primary-400) !important;
@@ -137,7 +144,6 @@
 
 .navbar {
   display: flex;
-  // padding: 15px 39px;
   flex-direction: row;
   align-items: flex-start;
   gap: 10px;
@@ -160,7 +166,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
-  //Added to apply the hover effect
   position: relative;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -175,7 +180,6 @@
 .nav-link-ltr::before {
   content: "";
   position: absolute;
-  // left: 0;
   bottom: 0;
   height: 1px;
   width: 0%;
@@ -193,10 +197,7 @@
     hue-rotate(341deg) brightness(92%) contrast(105%);
 }
 
-// .nav-link-ltr:hover::before {
 
-//   width: calc(100% - 3rem) !important;
-// }
 
 .nav-link-ltr {
   position: relative;
@@ -363,7 +364,6 @@
   .navbar-nav .dropdown-menu {
     padding: 0;
     width: 100%;
-    // background: var(--Primary-500);
       background: inherit !important;
 
   }
@@ -394,7 +394,7 @@
    
   }
 
-  // 1
+ 
   .nav-link-ltr:hover::before {
     width: calc(100% - 0rem) !important;
   }
@@ -403,12 +403,8 @@
     display: flex;
   }
 
-  //Added Nav links appear one by one from left to right
+ 
   .navbar-nav .nav-link {
-    // opacity: 0;
-    // transform: translateX(-20px);
-    // transition: opacity 0.5s ease, transform 0.5s ease;
-    // To Stop
      opacity: 1;
     transform: translateX(0);
     transition: none;
@@ -418,26 +414,7 @@
     transform: translateX(0);
     transition: none;
 }
-  // .ul-bg.menu-open .nav-item:nth-child(1) .nav-link {
-  //   opacity: 1;
-  //   transform: translateX(0);
-  //   transition-delay: 0.1s;
-  // }
-  // .ul-bg.menu-open .nav-item:nth-child(2) .nav-link {
-  //   opacity: 1;
-  //   transform: translateX(0);
-  //   transition-delay: 0.2s;
-  // }
-  // .ul-bg.menu-open .nav-item:nth-child(3) .nav-link {
-  //   opacity: 1;
-  //   transform: translateX(0);
-  //   transition-delay: 0.3s;
-  // }
-  // .ul-bg.menu-open .nav-item:nth-child(4) .nav-link {
-  //   opacity: 1;
-  //   transform: translateX(0);
-  //   transition-delay: 0.4s;
-  // }
+  
 }
 
 .divider {
@@ -533,7 +510,7 @@
   .navbar {
     padding: 15px 10px;
   }
-  // 2
+ 
   .nav-link-ltr:hover::before {
     width: calc(100% - 3rem) !important;
   }
