@@ -188,7 +188,7 @@ $diensten_menu = wp_get_nav_menu_items($menu_id);
     <div class="row">
         <div class="col-lg-5 d-flex align-items-center justify-content-between flex-column flex-lg-row gap-3 gap-lg-0">
             <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
-                <?= get_field("hegrosteel", 'option') ?>
+                © HegroSteel, <?= date('Y') ?>
             </span>
             <span class="made-with-link d-inline-flex align-items-center gap-1 footer-link-ltr">
                 <a target="_blank" href=" <?= get_field("algemenevoorwaarden", 'option')['url'] ?>">
