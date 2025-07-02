@@ -6,13 +6,9 @@
   // display: inline-block;
    display: flex;
   display: -webkit-flex;
- 
- 
-
-
   filter: url(#semiround);
   position: relative;
-
+  
   &::before {
     transition: 0.5s ease;
 
@@ -46,10 +42,14 @@
         top right;
     mask-size: 50.5% 50.5%;
     mask-repeat: no-repeat;
-    z-index: -1;
   }
+
+  & > a {
+    z-index: 1;
+  }
+
   &.rounded {
-    filter: url(#round);
+    filter: url(#round); 
   }
 
   .overlay {
