@@ -52,7 +52,7 @@
       // clip-path: shape(from 74.6% 0%,curve by 5.6% 2.3% with 2.1% 0%/4.1% 0.8%,line by 0.2% 0.2%,line by 17% 17.5%,curve by 2.6% 6.5% with 1.7% 1.7%/2.6% 4%,line by 0% 64.5%,curve by -8.3% 9% with 0% 5%/-3.7% 9%,line by -83.4% 0%,curve by -8.3% -9% with -4.6% 0%/-8.3% -4%,line by 0% -81.7%,curve by 8.1% -9% with 0% -4.9%/3.6% -8.9%,line by 0.2% 0%,line by 66.3% -0.3%);
       // clip-path: shape(from 74.6% 0%, curve by 5.6% 2.3% with 2.1% 0%/4.1% 0.8%, line by 0.2% 0.2%, line by 17% 17.5%, curve by 2.6% 6.5% with 1.7% 1.7%/2.6% 4%, line by 0% 64.5%, curve by -117px 72px with -1px 81px/0px 9%, line by -83.4% 0%, curve by -8.3% -9% with -4.6% 0%/-8.3% -4%, line by 0% -81.7%, curve by 8.1% -9% with 0% -4.9%/3.6% -8.9%, line by 0.2% 0%, line by 66.3% -0.3%)
     @media (min-width: 768px) {
-      clip-path: url(#border-wrap-tl);
+      clip-path: url(#border-wrap-hero);
       // clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 48%);
       // clip-path: polygon(30% 0%, 100% 0, 100% 105%, 0 105%, 0% 48%);
     }
@@ -67,7 +67,7 @@
     height: 100%;
     object-fit: cover;
     @media (min-width: 768px) {
-    clip-path: url(#border-wrap-tl);
+    clip-path: url(#border-wrap-hero);
 
       // clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 48%);
     }
