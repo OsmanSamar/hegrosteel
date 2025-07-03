@@ -10,7 +10,7 @@ $fields = get_fields();
             <div class="hero-section-wrap">
                 <div class="hero-section bg-holder hero-responsive position-relative" data-aos="fade-down"
                     data-aos-offset="120" data-aos-delay="50" data-aos-duration="70" data-aos-easing="ease-in-out">
-                    <div class="bg-content fancybox rounded" style="--top-left:300px;">
+                    <div class="bg-content fancybox fancy-video rounded" style="--top-left:300px;">
                         <!-- Volgens David -->
                         <div class="overlay"></div>
                         <video src="<?= $fields['header_video']['url'] ?>" autoplay muted loop></video>

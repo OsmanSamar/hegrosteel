@@ -55,8 +55,17 @@ foreach ($items as $item) {
 unset($menu_items);
 ?>
 
-<body <?php body_class(); ?>>
+<?php
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+$class = "";
+if (stripos($user_agent, 'Chrome') !== false) {
+    $class = 'chrome';
+} elseif (stripos($user_agent, 'Safari') !== false) {
+    $class = 'legacy-safari';
+}
+?>
 
+<body <?php body_class($class); ?>>
 
 
 
@@ -95,6 +104,19 @@ unset($menu_items);
             <path
                 d="M0.746,0 C0.767,0,0.787,0.008,0.802,0.023 L0.804,0.025 L0.974,0.2 C0.991,0.217,1,0.24,1,0.265 V0.91 C1,0.96,0.963,1,0.917,1 H0.083 C0.037,1,0,0.96,0,0.91 V0.093 C0,0.044,0.036,0.004,0.081,0.003 L0.083,0.003 L0.746,0">
             </path>
+        </clipPath>
+        <clipPath id="border-wrap-br" clipPathUnits="objectBoundingBox">
+            <path transform="rotate(90 0.5 0.5)"
+                d="m0.746,0c0.021,0 0.041,0.008 0.056,0.023l0.002,0.002l0.17,0.175c0.017,0.017 0.026,0.04 0.026,0.065l0,0.645c0,0.05 -0.037,0.09 -0.083,0.09l-0.834,0c-0.046,0 -0.083,-0.04 -0.083,-0.09l0,-0.817c0,-0.049 0.036,-0.089 0.081,-0.09l0.002,0l0.663,-0.003" />
+        </clipPath>
+        <clipPath id="border-wrap-bl" clipPathUnits="objectBoundingBox">
+            <path transform="rotate(180 0.5 0.5)"
+                d="m0.746,0c0.021,0 0.041,0.008 0.056,0.023l0.002,0.002l0.17,0.175c0.017,0.017 0.026,0.04 0.026,0.065l0,0.645c0,0.05 -0.037,0.09 -0.083,0.09l-0.834,0c-0.046,0 -0.083,-0.04 -0.083,-0.09l0,-0.817c0,-0.049 0.036,-0.089 0.081,-0.09l0.002,0l0.663,-0.003" />
+        </clipPath>
+        <clipPath id="border-wrap-tl" clipPathUnits="objectBoundingBox">
+
+            <path transform="rotate(270 0.5 0.5)"
+                d="m0.746,0c0.021,0 0.041,0.008 0.056,0.023l0.002,0.002l0.17,0.175c0.017,0.017 0.026,0.04 0.026,0.065l0,0.645c0,0.05 -0.037,0.09 -0.083,0.09l-0.834,0c-0.046,0 -0.083,-0.04 -0.083,-0.09l0,-0.817c0,-0.049 0.036,-0.089 0.081,-0.09l0.002,0l0.663,-0.003" />
         </clipPath>
         <clipPath id="beveled-shape-right" clipPathUnits="objectBoundingBox">
             <path
@@ -152,16 +174,17 @@ unset($menu_items);
             </path>
         </clipPath>
 
-        
+
     </svg>
     <style>
         * {
             scroll-margin-top: 100px;
-            &[data-aos]:not(.aos-animate){
-                scroll-margin:200px;
+
+            &[data-aos]:not(.aos-animate) {
+                scroll-margin: 200px;
             }
         }
-        
+
         .svg {
             position: absolute;
             width: 0;
@@ -403,8 +426,6 @@ unset($menu_items);
             }
 
         }
-
-   
     </style>
 
     <?php wp_body_open(); ?>

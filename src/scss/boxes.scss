@@ -4,15 +4,14 @@
 
   transition: 0.5s ease;
   // display: inline-block;
-   display: flex;
+  display: flex;
   display: -webkit-flex;
-  filter: url(#semiround);
+
   position: relative;
-  
-  &::before {
+
+  &:before {
     transition: 0.5s ease;
 
-    filter: url(#semiround);
     content: "";
     position: absolute;
     top: 0;
@@ -20,28 +19,11 @@
     right: 0;
     bottom: 0;
     background: var(--background, red);
-    mask: linear-gradient(
-          39deg,
-          transparent 0 var(--bottom-left, var(--all)),
-          #fff 0
-        )
-        bottom left,
-      linear-gradient(
-          -39deg,
-          transparent 0 var(--bottom-right, var(--all)),
-          #fff 0
-        )
-        bottom right,
-      linear-gradient(141deg, transparent 0 var(--top-left, var(--all)), #fff 0)
-        top left,
-      linear-gradient(
-          -141deg,
-          transparent 0 var(--top-right, var(--all)),
-          #fff 0
-        )
-        top right;
-    mask-size: 50.5% 50.5%;
-    mask-repeat: no-repeat;
+  }
+
+  &.fancy-video,
+  &.fancy-video:before{
+    background: none;
   }
 
   & > a {
@@ -49,7 +31,7 @@
   }
 
   &.rounded {
-    filter: url(#round); 
+    filter: url(#round);
   }
 
   .overlay {
@@ -64,22 +46,51 @@
       rgba(0, 0, 0, 0.81) 82.88%
     );
     // clip-path: polygon(39% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
-    clip-path: polygon(39% 0%, 100% 0, 100% 105%, 0 105%, 0% 26%);
+      clip-path: url(#border-wrap-tl);
+
+    // clip-path: polygon(39% 0%, 100% 0, 100% 105%, 0 105%, 0% 26%);
+      // clip-path: shape(from 74.6% 0%,curve by 5.6% 2.3% with 2.1% 0%/4.1% 0.8%,line by 0.2% 0.2%,line by 17% 17.5%,curve by 2.6% 6.5% with 1.7% 1.7%/2.6% 4%,line by 0% 64.5%,curve by -8.3% 9% with 0% 5%/-3.7% 9%,line by -83.4% 0%,curve by -8.3% -9% with -4.6% 0%/-8.3% -4%,line by 0% -81.7%,curve by 8.1% -9% with 0% -4.9%/3.6% -8.9%,line by 0.2% 0%,line by 66.3% -0.3%);
+      // clip-path: shape(from 74.6% 0%, curve by 5.6% 2.3% with 2.1% 0%/4.1% 0.8%, line by 0.2% 0.2%, line by 17% 17.5%, curve by 2.6% 6.5% with 1.7% 1.7%/2.6% 4%, line by 0% 64.5%, curve by -117px 72px with -1px 81px/0px 9%, line by -83.4% 0%, curve by -8.3% -9% with -4.6% 0%/-8.3% -4%, line by 0% -81.7%, curve by 8.1% -9% with 0% -4.9%/3.6% -8.9%, line by 0.2% 0%, line by 66.3% -0.3%)
     @media (min-width: 768px) {
+      clip-path: url(#border-wrap-tl);
       // clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 48%);
-      clip-path: polygon(30% 0%, 100% 0, 100% 105%, 0 105%, 0% 48%);
+      // clip-path: polygon(30% 0%, 100% 0, 100% 105%, 0 105%, 0% 48%);
     }
     z-index: 1;
   }
   video {
-    clip-path: polygon(39% 0%, 100% 0, 100% 105%, 0 105%, 0% 26%);
+    clip-path: url(#border-wrap-tl);
+    // clip-path: polygon(39% 0%, 100% 0, 100% 105%, 0 105%, 0% 26%);
     //  clip-path: polygon(39% 0%, 100% 0, 100% 100%, 0 100%, 0% 26%);
     // clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 18%);
     width: 100%;
     height: 100%;
     object-fit: cover;
     @media (min-width: 768px) {
-      clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 48%);
+    clip-path: url(#border-wrap-tl);
+
+      // clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0 100%, 0% 48%);
+    }
+  }
+
+  &.right-bottom-shape{
+    &:before{
+      clip-path: url(#border-wrap-br);
+    }
+  }
+  &.left-bottom-shape{
+    &:before{
+      clip-path: url(#border-wrap-bl);
+    }
+  }
+  &.right-top-shape{
+    &:before{
+      clip-path: url(#border-wrap-tr);
+    }
+  }
+  &.left-top-shape{
+    &:before{
+      clip-path: url(#border-wrap-tl);
     }
   }
 }
