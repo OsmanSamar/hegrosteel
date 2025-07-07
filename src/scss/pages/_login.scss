@@ -58,7 +58,7 @@
         input {
             text-align: left;
             visibility: visible;
-            border-radius: 20px;
+            border-radius: var(--border-radius);
             width: 100%;
             height: 40px;
             line-height: 40px;
@@ -81,7 +81,7 @@
         .submit input.button {
             width: 100%;
             height: 40px;
-            border-radius: 20px;
+            border-radius: var(--border-radius);
             border: none;
             line-height: 40px;
             box-shadow: none;

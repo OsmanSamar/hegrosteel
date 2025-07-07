@@ -183,6 +183,11 @@ if (stripos($user_agent, 'Chrome') !== false) {
 
     </svg>
     <style>
+        :root {   
+            --border-radius: 12px;
+            --border-radius-mobile: 12px;
+            --border-radius-hero: 5rem;
+        }
         * {
             scroll-margin-top: 100px;
 
@@ -197,7 +202,7 @@ if (stripos($user_agent, 'Chrome') !== false) {
             height: 0;
         }
 
-
+/* 
         .bevel-right {
             clip-path: url(#beveled-shape-right) !important;
         }
@@ -205,15 +210,17 @@ if (stripos($user_agent, 'Chrome') !== false) {
         .beveled-left {
             clip-path: url(#beveled-shape-left) !important;
 
-        }
+        } */
 
         .border-wrap {
             position: relative;
             --background-color: #000000;
             --border-color: #ffffff;
             --border-width: 1px;
+            border-radius: var(--border-radius);
+            border: var(--border-width) solid var(--border-color);
 
-            &::before,
+            /* &::before,
             &::after {
                 position: absolute;
                 content: "";
@@ -222,10 +229,11 @@ if (stripos($user_agent, 'Chrome') !== false) {
                 transform: translateX(-50%) translateY(-50%);
                 left: 50%;
                 top: 50%;
-                clip-path: url(#border-wrap) !important;
-            }
+                border-radius: var(--border-radius);
+                clip-path: url(#border-wrap) !important; 
+            } */
 
-            &::before {
+            /* &::before {
                 z-index: -2;
                 background-color: var(--border-color);
             }
@@ -235,8 +243,13 @@ if (stripos($user_agent, 'Chrome') !== false) {
                 background-color: var(--background-color);
                 width: calc(100% - calc(2 * var(--border-width)));
                 height: calc(100% - calc(2 * var(--border-width)));
-            }
+            } */
 
+        }
+
+        .border-wrap:hover {
+            background-color: #ffffff;
+            border-color: #000000;
         }
 
 
@@ -277,7 +290,9 @@ if (stripos($user_agent, 'Chrome') !== false) {
                 transform: translateX(-50%) translateY(-50%);
                 left: 50%;
                 top: 50%;
-                clip-path: url(#bottom-right-shape) !important;
+                border-radius: var(--border-radius);
+
+                /* clip-path: url(#bottom-right-shape) !important; */
                 z-index: 0;
                 transition: .5s ease;
 
@@ -322,7 +337,8 @@ if (stripos($user_agent, 'Chrome') !== false) {
                 transform: translateX(-50%) translateY(-50%);
                 left: 50%;
                 top: 50%;
-                clip-path: url(#right-bottom-border) !important;
+                border-radius: var(--border-radius);
+                /* clip-path: url(#right-bottom-border) !important; */
                 z-index: 0;
                 transition: .5s ease;
 
@@ -366,7 +382,8 @@ if (stripos($user_agent, 'Chrome') !== false) {
                 transform: translateX(-50%) translateY(-50%);
                 left: 50%;
                 top: 50%;
-                clip-path: url(#project-right-top) !important;
+                border-radius: var(--border-radius);
+                /* clip-path: url(#project-right-top) !important; */
                 z-index: 0;
                 transition: .5s ease;
             }
@@ -407,7 +424,8 @@ if (stripos($user_agent, 'Chrome') !== false) {
                 transform: translateX(-50%) translateY(-50%);
                 left: 50%;
                 top: 50%;
-                clip-path: url(#top-right-shape) !important;
+                border-radius: var(--border-radius);
+                /* clip-path: url(#top-right-shape) !important; */
                 z-index: 0;
                 transition: .5s ease;
             }

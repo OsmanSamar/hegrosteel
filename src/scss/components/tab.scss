@@ -19,6 +19,8 @@
     font-weight: 700;
     line-height: 120%;
     text-align: center;
+    transition: .2s all linear;
+    top: 0;    
     @media (min-width: 768px) {
       font-size: 22px !important;
       line-height: 26.4px !important;
@@ -29,7 +31,7 @@
   }
 
   .tab-wrap {
-    border-radius: 20px 20px 0 0;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
     background: #303030;
   }
 
@@ -94,6 +96,8 @@
       height: 100%;
       top: 0;
       left: 0;
+      border-radius: var(--border-radius);
+
       // clip-path: url(#tab-path);
       background: var(--Primary-400, #303030);
     }
@@ -114,7 +118,7 @@
       &::before,
       &::after {
         background: var(--Primary-200, #6b6b6b);
-        border-radius: 20px 20px 0 0;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
       }
     }
   }
@@ -136,7 +140,7 @@
   }
 
   .tabs-img {
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     // TODO Frank vragen
     //   background: lightgray 0px -96.305px / 100% 206.49% no-repeat,
     //  lightgray 50% / cover no-repeat;
