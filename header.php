@@ -100,24 +100,30 @@ if (stripos($user_agent, 'Chrome') !== false) {
             </path>
         </clipPath>
 
-        <clipPath id="border-wrap" clipPathUnits="objectBoundingBox">
+        <clipPath id="border-wrap" data-info="top-right" clipPathUnits="objectBoundingBox">
             <path
                 d="M0.746,0 C0.767,0,0.787,0.008,0.802,0.023 L0.804,0.025 L0.974,0.2 C0.991,0.217,1,0.24,1,0.265 V0.91 C1,0.96,0.963,1,0.917,1 H0.083 C0.037,1,0,0.96,0,0.91 V0.093 C0,0.044,0.036,0.004,0.081,0.003 L0.083,0.003 L0.746,0">
             </path>
         </clipPath>
-        <clipPath id="border-wrap-br" clipPathUnits="objectBoundingBox">
+        <clipPath id="border-wrap-br" data-info="bottom-right" clipPathUnits="objectBoundingBox">
             <path transform="rotate(90 0.5 0.5)"
                 d="m0.746,0c0.021,0 0.041,0.008 0.056,0.023l0.002,0.002l0.17,0.175c0.017,0.017 0.026,0.04 0.026,0.065l0,0.645c0,0.05 -0.037,0.09 -0.083,0.09l-0.834,0c-0.046,0 -0.083,-0.04 -0.083,-0.09l0,-0.817c0,-0.049 0.036,-0.089 0.081,-0.09l0.002,0l0.663,-0.003" />
         </clipPath>
-        <clipPath id="border-wrap-bl" clipPathUnits="objectBoundingBox">
+        <clipPath id="border-wrap-bl" data-info="bottom-left" clipPathUnits="objectBoundingBox">
             <path transform="rotate(180 0.5 0.5)"
                 d="m0.746,0c0.021,0 0.041,0.008 0.056,0.023l0.002,0.002l0.17,0.175c0.017,0.017 0.026,0.04 0.026,0.065l0,0.645c0,0.05 -0.037,0.09 -0.083,0.09l-0.834,0c-0.046,0 -0.083,-0.04 -0.083,-0.09l0,-0.817c0,-0.049 0.036,-0.089 0.081,-0.09l0.002,0l0.663,-0.003" />
         </clipPath>
-        <clipPath id="border-wrap-tl" clipPathUnits="objectBoundingBox">
+        <clipPath id="border-wrap-tl" data-info="top-left" clipPathUnits="objectBoundingBox">
 
             <path transform="rotate(270 0.5 0.5)"
                 d="m0.746,0c0.021,0 0.041,0.008 0.056,0.023l0.002,0.002l0.17,0.175c0.017,0.017 0.026,0.04 0.026,0.065l0,0.645c0,0.05 -0.037,0.09 -0.083,0.09l-0.834,0c-0.046,0 -0.083,-0.04 -0.083,-0.09l0,-0.817c0,-0.049 0.036,-0.089 0.081,-0.09l0.002,0l0.663,-0.003" />
         </clipPath>
+        <clipPath id="border-wrap-hero" data-info="hero" clipPathUnits="objectBoundingBox">
+            <path
+                d="M0.302,0.014 C0.308,0.005,0.314,0,0.321,0 L0.971,0 C0.987,0,1,0.025,1,0.057 V0.443 V0.943 C1,0.975,0.987,1,0.971,1 L0.029,1 C0.013,1,0,0.975,0,0.943 V0.552 C0,0.535,0.004,0.52,0.01,0.509 L0.302,0.014" />
+        </clipPath>
+
+
         <clipPath id="beveled-shape-right" clipPathUnits="objectBoundingBox">
             <path
                 d="M0,0.184 C0,0.086,0.042,0.005,0.095,0.005 L0.741,0 C0.766,0,0.789,0.018,0.807,0.049 L0.97,0.341 C0.989,0.375,1,0.423,1,0.472 V1 H0.095 C0.043,1,0,0.92,0,0.82 L0,0.184">
