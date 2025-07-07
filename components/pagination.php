@@ -4,11 +4,16 @@ if ($paginator['max_num_pages'] > 1) { ?>
     <nav class="d-flex justify-content-center w-100 mt-4 mb-5 flex-md-row align-items-center gap-3 " aria-label="Pagination">
 
         <?php if ($paginator['current_page'] == 1) { ?>
-            <button disabled class="pagination-prev disabled" aria-disabled="true" aria-label="<?= __('Vorige', 'codeblauw') ?>">
-
+            <button disabled class="pagination-prev pagination-item disabled" aria-disabled="true" aria-label="<?= __('Vorige', 'codeblauw') ?>">
+                <div class="open-arrow" >
+                    <img loading="lazy" src="https://hegrosteel.local/wp-content/themes/hegrosteel/images/prev-btn.svg" alt="Arrow" class="swiper-arrow">
+                </div>
             </button>
         <?php } else { ?>
             <button data-page="<?= $paginator['current_page'] - 1 ?>" class="pagination-prev pagination-item" aria-label="<?= __('Vorige', 'codeblauw') ?>">
+                  <div class="open-arrow" >
+                    <img loading="lazy" src="https://hegrosteel.local/wp-content/themes/hegrosteel/images/prev-btn.svg" alt="Arrow" class="swiper-arrow">
+                </div>
             </button>
         <?php } ?>
 
@@ -44,10 +49,15 @@ if ($paginator['max_num_pages'] > 1) { ?>
 
         <?php if ($paginator['max_num_pages'] > $paginator['current_page']) { ?>
             <button data-page="<?= $paginator['current_page'] + 1 ?>" class="pagination-next pagination-item" aria-label="<?= __('Volgende', 'codeblauw') ?>">
-
+                <div class="open-arrow" >
+                    <img loading="lazy" src="https://hegrosteel.local/wp-content/themes/hegrosteel/images/white-arrow.svg" alt="Arrow" class="swiper-arrow">
+                </div>
             </button>
         <?php } else { ?>
-            <button disabled class="pagination-next" aria-label="<?= __('Volgende', 'codeblauw') ?>" aria-disabled="true">
+            <button disabled class="pagination-next pagination-item disabled" aria-label="<?= __('Volgende', 'codeblauw') ?>" aria-disabled="true">
+                  <div class="open-arrow" >
+                    <img loading="lazy" src="https://hegrosteel.local/wp-content/themes/hegrosteel/images/white-arrow.svg" alt="Arrow" class="swiper-arrow">
+                </div>
             </button>
         <?php } ?>
     </nav>

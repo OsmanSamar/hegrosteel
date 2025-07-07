@@ -20,7 +20,7 @@
     padding: 35px 30px 83px 30px;
     align-items: flex-start;
     align-self: stretch;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
 
@@ -51,71 +51,76 @@
     font-size: 18px;
     border-radius: 10px;
     display: flex;
+    border: unset;
     width: 40px;
     height: 40px;
     flex-direction: column;
     justify-content: center;
-     cursor: pointer;
+    cursor: pointer;
+    transition: .2s all linear;
+
+    &.pagination-item{
+      &:hover {
+        background-color: var(--Secondary-500);
+        color: var(--Neutral-light);
+      }
+    }
   }
 
+
+  .pagination-item {
+    .open-arrow {
+      position: relative;
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+        display: flex;
+        width: 1rem;
+        height: 1rem;
+        object-fit: contain;
+        transition: filter 0.3s ease;
+      }
+    }
+    &:hover {
+      background-color: var(--Neutral-light);
+
+      & .open-arrow img {
+        filter: brightness(0);
+      }
+    }
+    &.disabled {
+      background-color: var(--Neutral-400);
+      cursor: not-allowed;
+
+      & .open-arrow img {
+        filter: brightness(0.5);
+      }
+    }
+  }
 
  
   .pagination-next {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    padding: 13px 15px;
     border: unset;
-    position: relative;
     cursor: pointer;
-    background: var(--Primary-200);
+    background: var(--Primary-400);
     transition: background 0.3s ease, filter 0.3s ease;
 
-    &:after {
-      content: "";
-      mask-image: url("../images/next-btn.svg");
-      mask-position: center;
-      mask-size: 19px;
-      mask-repeat: no-repeat;
-      background-color: var(--Primary-600);
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-    &:hover {
-      background-color: var(--Neutral-light);
-      //  filter: brightness(0);
-    }
+   
   }
 
   .pagination-prev {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    padding: 13px 15px;
-    position: relative;
     border: unset;
     cursor: pointer;
     transition: background 0.3s ease, filter 0.3s ease;
-    &:after {
-      content: "";
-      mask-image: url("../images/prev-btn.svg");
-      mask-position: center;
-      mask-size: 19px;
-      mask-repeat: no-repeat;
-      background-color: var(--Primary-600);
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
-
-    &:hover {
-      background-color: var(--Neutral-light);
-      // filter: brightness(0);
-    }
+    background: var(--Primary-400);
   }
 }

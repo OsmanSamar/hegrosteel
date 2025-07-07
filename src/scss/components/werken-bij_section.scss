@@ -14,7 +14,7 @@
    align-items: flex-start;
      gap: 10px;
      align-self: stretch;
-    border-radius: 20px;
+    border-radius: var(--border-radius);
     overflow: hidden;
   }
 

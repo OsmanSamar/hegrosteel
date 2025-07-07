@@ -33,9 +33,13 @@
     padding: 40px 0;
   }
   .project-card {
-    border-radius: 12px;
-    overflow: hidden;
     transition: 0.3s ease;
+    
+    & > div {
+      border-radius: 12px;
+      overflow: hidden;
+
+    }
   }
 
   .swiper-slide {
